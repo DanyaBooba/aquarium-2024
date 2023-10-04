@@ -1,5 +1,4 @@
-<?php # PHP. Author: Daniil Dybka, daniil@dybka.ru
-?>
+<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 
 <?php include_once "app/php/content/head.php"; ?>
 
@@ -9,45 +8,33 @@
     <?php include_once "app/php/content/header.php"; ?>
 
     <main>
-        <div class="row row-cols-2" style="margin-bottom: 30px">
-            <div class="col p-2">
-                <div class="p-4 bg-light rounded-3">
-                    <h1>🐠 Аквариум</h1>
-                    <p class="mb-0 fs-5">
-                        Социальная сеть для всех. Первый клиент, авторизация в аккаунт, поиск
-                        друзей и общения здесь и сейчас!
-                    </p>
+        <div class="row align-items-center">
+            <div class="col-md-8 d-flex justify-content-center">
+                <div class="p-3 d-flex">
+                    <a href="#" aria-label="Скачать для Android" style="margin-right: -30px">
+                        <img src="/app/img/content/mainpage/android.png" class="img-fluid" width="200">
+                    </a>
+                    <a href="#" aria-label="Скачать для iOS">
+                        <img src="/app/img/content/mainpage/iphone.png" class="img-fluid" width="220">
+                    </a>
                 </div>
             </div>
-            <div class="col p-2">
-                <div class="p-4 bg-light rounded-3">
-                    <h1>🤖 Защита данных</h1>
-                    <p class="mb-0 fs-5">
-                        Шифрование пароля, защищенные запросы и полная конфиденциальность
-                        данных.
-                    </p>
+            <div class="col-md-4">
+                <div class="p-3 bg-light d-flex flex-column">
+                    <img src="/app/img/logo/aquarium.svg" alt="Логотип Аквариума">
+                    <h3 class="text-center">Вход</h3>
+                    <form action="">
+                        <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта">
+                        <input class="form-control" type="password" name="password" placeholder="Пароль" aria-label="Пароль">
+                        <button class="btn btn-success" type="submit">
+                            Войти
+                            <svg>
+                                <use xlink:href="/app/img/icons/bootstrap.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="col p-2">
-                <div class="p-4 bg-light rounded-3">
-                    <h1>👭 Поиск друзей</h1>
-                    <p class="mb-0 fs-5">
-                        Найдите себе людей по вкусу: подпишитесь на человека, следите
-                        за его новостями.
-                    </p>
-                </div>
-            </div>
-            <div class="col p-2">
-                <div class="p-4 bg-light rounded-3">
-                    <h1>💫 Персонализация</h1>
-                    <p class="mb-0 fs-5">
-                        Ваша лента с новостями, без рекламы. Только полезные рекомендации.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div>
-            Example
         </div>
     </main>
 
