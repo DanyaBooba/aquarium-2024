@@ -1,0 +1,60 @@
+:root {
+    /* Default */
+    --bg-color: #17152b;
+    --text-default: #fff;
+    --text-invert: #000;
+
+    --bg-color-rgba: rgba(23, 21, 43, .5);
+    --bg-color-rgba-2: 23, 21, 43;
+    --bg-color-rgba-3: rgba(23, 21, 43, .7);
+
+    /* Colors */
+    --text-color-1: #000;
+    --text-color-2: #aaa;
+    --text-color-3: #252239;
+    --text-color-4: #999;
+    --text-color-5: #999;
+    --text-color-6: #2f294e;
+    --text-color-7: #4b4373;
+
+    --text-link-1: #4B94FF;
+    --text-link-2: #0D6EFD;
+
+    --bg-light-1: #4C4966;
+    --bg-light-2: #5f4966;
+    --bg-light-3: #495f66;
+
+    --bg-warning: #664e49;
+
+    --color-danger: #ca9a0b;
+    --color-danger-hover: #e6b216;
+
+    --color-primary: #0d6efd;
+    --color-primary-hover: #0d6efd;
+
+    --color-code-copy: #557682;
+    --color-code-copy-hover: #638f9f;
+
+    --bottom-button: #123;
+
+    /* Bootstrap */
+    --bs-tertiary-bg-me: #635F83 !important;
+    --bg-theme-color: #333;
+    --bs-btn-active-bg: #fff !important;
+    --bs-border-color: #252239 !important;
+
+    --bs-tertiary-bg-me-2: #2E2A4D;
+    --bs-secondary-bg-me: #403B66;
+
+    /* Border */
+    --bg-warning-border: #795e58;
+    --bg-light-2-border: #71587a;
+    --bg-light-3-border: #516b73;
+
+    /* Open */
+    --open-color-1: #656565;
+
+    /* Course Color */
+    --course-color-3: rgb(73, 95, 102);
+    --course-color-gradient-3: linear-gradient(45deg, rgba(73, 95, 102, 1) 0%, rgba(91, 121, 130, 1) 100%);
+}

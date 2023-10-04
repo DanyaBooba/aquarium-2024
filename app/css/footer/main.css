@@ -1,0 +1,33 @@
+/* Main */
+
+.footer {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px 0px;
+
+    border-top: 1px solid var(--text-color-3);
+    align-items: center;
+}
+
+.footer__left
+{
+    display: flex;
+    align-items: center;
+}
+
+.footer__left img {
+    width: 24px;
+    margin-right: 5px;
+}
+
+.footer__left p {
+    padding: 0;
+    margin: 0;
+}
+
+@media(max-width: 767px) {
+    .footer {
+        margin-bottom: 100px;
+    }
+}

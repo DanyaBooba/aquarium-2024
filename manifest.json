@@ -1,0 +1,14 @@
+{
+  "name": "Aquarium",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "browser",
+  "orientation": "any",
+  "background_color": "white",
+  "description": "Aquarium",
+  "icon": {
+    "src": "/app/img/logo/favicon.ico",
+    "sizes": "256x256",
+    "type": "image/x-icon"
+  }
+}

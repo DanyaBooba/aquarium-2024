@@ -1,0 +1,11 @@
+@media(max-width: 767px) {
+    .see-at-pc {
+        display: none !important;
+    }
+}
+
+@media(min-width: 768px) {
+    .see-at-mobile {
+        display: none !important;
+    }
+}

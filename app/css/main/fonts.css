@@ -1,0 +1,81 @@
+/* Load */
+
+@font-face {
+    font-family: Geologica-Light;
+    font-style: normal;
+    src: url("/app/fonts/Geologica/Geologica-Light.woff") format("woff"),
+        url("/app/fonts/Geologica/Geologica-Light.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Geologica-Bold;
+    font-style: bold;
+    src: url("/app/fonts/Geologica/Geologica-Bold.woff") format("woff"),
+        url("/app/fonts/Geologica/Geologica-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: HalvarBreit;
+    font-style: bold;
+    src: url("/app/fonts/HalvarBreit/HalvarBreit.woff") format("woff"),
+        url("/app/fonts/HalvarBreit/HalvarBreit.woff2") format("woff2");
+}
+
+/* Set */
+p,
+div,
+nobr,
+a,
+nav,
+main,
+header,
+footer {
+    font-family: Geologica-Light;
+}
+
+b,
+.fw-bold {
+    font-family: Geologica-Bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: HalvarBreit;
+}
+
+h1 b,
+h1 nobr,
+h2 b,
+h2 nobr,
+h3 b,
+h3 nobr,
+h4 b,
+h4 nobr,
+h5 b,
+h5 nobr,
+h6 b,
+h6 nobr,
+.h1 b,
+.h1 nobr,
+.h2 b,
+.h2 nobr,
+.h3 b,
+.h3 nobr,
+.h4 b,
+.h4 nobr,
+.h5 b,
+.h5 nobr,
+.h6 b,
+.h6 nobr {
+    font-family: HalvarBreit;
+}

@@ -1,0 +1,34 @@
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+/* Link */
+
+a.header__logo {
+    transition: .3s;
+}
+
+a.header__logo:hover,
+a.header__logo:focus {
+    transform: scale(1.1);
+}
+
+/* SVG */
+
+.header__logo svg
+{
+    width: 300px;
+}
+
+@media(max-width: 991px) {
+    .header__logo svg {
+        width: 150px;
+    }
+}

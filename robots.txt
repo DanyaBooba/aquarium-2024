@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /app/
+Sitemap: https://social.creagoo.ru/sitemap.xml
+Clean-param: utm
