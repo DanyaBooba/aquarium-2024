@@ -1,0 +1,8 @@
+.svg-normal {
+    fill: var(--text-default) !important;
+}
+
+.svg-invert
+{
+    fill: var(--text-invert) !important;
+}

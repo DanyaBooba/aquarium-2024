@@ -4,9 +4,8 @@ body {
     background: var(--bg-color);
 }
 
-*, svg {
+* {
     color: var(--text-default);
-    fill: var(--text-default);
     word-wrap: break-word;
 }
 

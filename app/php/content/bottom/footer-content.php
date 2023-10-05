@@ -4,7 +4,15 @@
             <img src="/app/img/logo/short.svg" alt="Логотип Аквариума">
             <p>© Аквариум, 2020-2023</p>
         </div>
-        <div class="d-flex justify-content-between align-items-center theme-toggle">
+        <div class="d-flex">
+            <a href="/about/" class="link mx-3">
+                О Аквариуме
+            </a>
+            <a href="/about/user/" class="link mx-3">
+                Пользователю
+            </a>
+        </div>
+        <div class="ms-auto d-flex justify-content-between align-items-center theme-toggle">
             <input onClick="CheckValueThemeColor()" type="radio" class="btn-check" name="color-theme" id="radio1" value="light" autocomplete="off">
             <label class="btn btn-secondary" for="radio1">Светлая</label>
             <input onClick="CheckValueThemeColor()" type="radio" class="btn-check" name="color-theme" id="radio2" value="auto" autocomplete="off" checked>
