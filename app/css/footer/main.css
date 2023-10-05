@@ -2,6 +2,7 @@
 
 .footer {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 5px 0px;
@@ -10,10 +11,24 @@
     align-items: center;
 }
 
+.footer__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 12px;
+}
+
+.footer__center {
+    margin-bottom: 12px;
+}
+
 .footer__left
 {
     display: flex;
     align-items: center;
+    margin-right: auto;
+    margin-bottom: 12px;
 }
 
 .footer__left img {
@@ -28,6 +43,16 @@
 
 @media(max-width: 767px) {
     .footer {
+        flex-direction: column;
         margin-bottom: 100px;
+        justify-content: start !important;
+    }
+
+    .footer__right {
+        margin-left: 0 !important;
+    }
+
+    .footer__left {
+        margin-right: 0 !important;
     }
 }

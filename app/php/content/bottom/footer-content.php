@@ -1,10 +1,10 @@
 <footer>
     <div class="container footer">
-        <div class="footer__left me-auto">
+        <div class="footer__left">
             <img src="/app/img/logo/short.svg" alt="Логотип Аквариума">
             <p>© Аквариум, 2020-2023</p>
         </div>
-        <div class="d-flex">
+        <div class="d-flex footer__center">
             <a href="/about/" class="link mx-3">
                 О Аквариуме
             </a>
@@ -12,7 +12,7 @@
                 Пользователю
             </a>
         </div>
-        <div class="ms-auto d-flex justify-content-between align-items-center theme-toggle">
+        <div class="footer__right theme-toggle">
             <input onClick="CheckValueThemeColor()" type="radio" class="btn-check" name="color-theme" id="radio1" value="light" autocomplete="off">
             <label class="btn btn-secondary" for="radio1">Светлая</label>
             <input onClick="CheckValueThemeColor()" type="radio" class="btn-check" name="color-theme" id="radio2" value="auto" autocomplete="off" checked>
