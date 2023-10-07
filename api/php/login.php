@@ -3,8 +3,14 @@
 include_once "../basic-methods.php";
 
 $user = [
-    "email" => $_POST["email"],
+    "email" => ClearStr($_POST["email"]),
     "password" => $_POST["password"]
 ];
 
-var_dump($user);
+// var_dump(CheckDataUser($user));
+
+$check = CheckDataUser($user);
+
+if ($check != "ok") {
+    echo "error";
+}

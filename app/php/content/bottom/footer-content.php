@@ -8,6 +8,9 @@
             <a href="/about/" class="link mx-3">
                 О Аквариуме
             </a>
+            <a href="/about/faq/" class="link mx-3">
+                Вопросы
+            </a>
             <a href="/about/user/" class="link mx-3">
                 Пользователю
             </a>

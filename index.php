@@ -39,8 +39,8 @@
                 </div>
                 <div class="page-login-privacy">
                     <div class="page-login-privacy--link">
-                        <a href="/about/faq/#login" class="link">
-                            Помочь со входом?
+                        <a href="/login/" class="link">
+                            Забыли пароль?
                         </a>
                     </div>
                     <div class="page-login-privacy--link">
