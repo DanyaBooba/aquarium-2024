@@ -4,7 +4,7 @@
             <img src="/app/img/logo/short.svg" alt="Логотип Аквариума">
             <p>© Аквариум, 2020-2023</p>
         </div>
-        <div class="d-flex footer__center">
+        <div class="footer__center">
             <a href="/about/" class="link mx-3">
                 О Аквариуме
             </a>

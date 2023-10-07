@@ -2,22 +2,21 @@
 
 <?php include_once "app/php/content/head.php"; ?>
 
-<title>Начальная страница</title>
+<title>Начальная страница | Аквариум</title>
 
 <body class="container">
     <div class="see-at-pc">
         <?php include_once "app/php/content/header.php"; ?>
     </div>
-
     <main>
         <div class="row align-items-center">
-            <div class="col-md-6 see-at-pc d-flex justify-content-end">
+            <div class="col-md-6 see-at-pc d-flex justify-content-end px-0">
                 <div class="p-3 d-flex">
-                    <a href="#" aria-label="Скачать для Android" style="margin-right: -30px">
-                        <img src="/app/img/content/mainpage/android.png" class="img-fluid" width="200">
+                    <a href="/download/#android" aria-label="Скачать для Android" style="margin-right: -30px">
+                        <img src="/app/img/content/mainpage/android.png" class="img-fluid" width="240">
                     </a>
-                    <a href="#" aria-label="Скачать для iOS">
-                        <img src="/app/img/content/mainpage/iphone.png" class="img-fluid" width="220">
+                    <a href="/download/#ios" aria-label="Скачать для iOS">
+                        <img src="/app/img/content/mainpage/iphone.png" class="img-fluid" width="260">
                     </a>
                 </div>
             </div>
@@ -33,10 +32,23 @@
                         </button>
                     </form>
                 </div>
-                <div class="page-login--content">
-                    <button class="btn btn-success button-login-success" type="submit">
+                <div class="page-login--registation">
+                    <a href="/registration/" class="btn btn-success button-login-success" type="submit">
                         Зарегистрироваться
-                    </button>
+                    </a>
+                </div>
+                <div class="page-login-privacy">
+                    <div class="page-login-privacy--link">
+                        <a href="/about/faq/#login" class="link">
+                            Помочь со входом?
+                        </a>
+                    </div>
+                    <div class="page-login-privacy--link">
+                        Принимаете
+                        <a href="/about/user/privacypolicy" class="link">
+                            политику конфиденциальности
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

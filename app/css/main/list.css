@@ -1,0 +1,12 @@
+/* List */
+
+ol li,
+ul li {
+    padding-left: 10px;
+    padding-bottom: 7px;
+}
+
+ul li::marker,
+ol li::marker {
+    color: var(--text-color-4) !important;
+}

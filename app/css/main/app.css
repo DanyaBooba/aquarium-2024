@@ -31,3 +31,8 @@ ul,
 ol {
     color: var(--text-default);
 }
+
+hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

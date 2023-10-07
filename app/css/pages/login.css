@@ -2,21 +2,46 @@
 
 .page-login {
     flex: 0 0 auto;
-    width: 50%;
+    width: 30%;
+    padding-left: 60px;
+}
+
+.page-login-privacy {
+    margin-top: 20px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.page-login-privacy .page-login-privacy--link {
+    margin-bottom: 7px;
 }
 
 @media(max-width: 767px) {
     .page-login {
         width: 100% !important;
+        padding: 0 !important;
     }
 
     .page-login--content {
         width: 100% !important;
         background: var(--bg-color) !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 60px !important;
     }
 
     .page-login--content img {
         margin-bottom: 30px !important;
+    }
+
+    .page-login--content.page-login--reg {
+        padding-top: 0 !important;
+    }
+
+    .page-login--registation {
+        background: var(--bg-color) !important;
+        width: 100% !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
     }
 }
 
@@ -25,7 +50,7 @@
 .page-login--content
 {
     background: var(--bs-tertiary-bg-me-2);
-    padding: 50px 30px;
+    padding: 40px 30px;
     border-radius: 12px;
 
     display: flex;
@@ -34,6 +59,18 @@
 
     margin-bottom: 30px;
     width: 320px;
+}
+
+.page-login--registation {
+    padding: 30px;
+    width: 320px;
+
+    background: var(--bs-tertiary-bg-me-2);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .page-login--content img {
