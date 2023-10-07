@@ -1,0 +1,16 @@
+.download-text {
+    margin-top: 150px;
+    margin-bottom: 0px;
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+    .download-text {
+        margin-top: 100px;
+    }
+}
+
+@media(max-width: 993px) {
+    .download-text {
+        margin-top: 0 !important;
+    }
+}

@@ -29,7 +29,7 @@
         margin-bottom: 60px !important;
     }
 
-    .page-login--content img {
+    .page-login--content svg {
         margin-bottom: 30px !important;
     }
 
@@ -73,9 +73,9 @@
     justify-content: center;
 }
 
-.page-login--content img {
-    height: 45px;
-    margin-bottom: 15px;
+.page-login--content svg {
+    height: 55px;
+    margin-bottom: 20px;
 }
 
 .page-login--content h3 {
