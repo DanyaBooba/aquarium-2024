@@ -2,13 +2,15 @@
 
 <?php include_once "../api/auth-errors.php"; ?>
 
-<?php include_once "../app/php/content/head.php"; ?>
+<?php include_once "../../app/php/content/head.php"; ?>
 
-<?php $error = RegistrationError($_GET["e"]) ?>
+<?php $active = empty($_GET["active"]) == false ?>
+
+<?php $error = RestoreError($_GET["e"]) ?>
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
-<title>Регистрация | Аквариум</title>
+<title>Авторизация | Аквариум</title>
 
 <body>
     <main class="form-signin w-100 m-auto">
@@ -27,72 +29,25 @@
                     </svg>
                 </a>
             </div>
-            <h1 class="h4">Регистрация</h1>
-            <?php if (empty($error) == false) : ?>
+            <h1 class="h2">Забыл пароль</h1>
+            <?php if ($active == false) : ?>
                 <div class="alert alert-danger" role="alert">
-                    <?php echo $error ?>
+                    Пользователя не существует
                 </div>
-            <?php endif; ?>
-            <form class="needs-validation" action="/api/php/registration.php" method="post" novalidate>
-                <div>
-                    <input class="form-control" type="text" name="nickname" placeholder="Никнейм" aria-label="Никнейм" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, введите никнейм.
-                    </div>
-                    <p class="form-more">
-                        Другие пользователи по никнему смогут найти вас.
-                    </p>
-                </div>
-                <div>
-                    <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, введите почту.
-                    </div>
-                    <p class="form-more">
-                        Используется для входа, видно только вам.
-                    </p>
-                </div>
-                <div>
-                    <input class="form-control" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, введите пароль.
-                    </div>
-                    <p class="form-more">
-                        Вы сможете восстановить его после регистрации.
-                    </p>
-                </div>
-                <div>
-                    <input class="form-control" type="password" name="password_confirm" placeholder="Подтвердите пароль" aria-label="Подтвердите пароль" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, подтвердите введеный пароль.
-                    </div>
-                    <p class="form-more">
-                        Повторите введенный вами пароль.
-                    </p>
-                </div>
-
-                <div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
-                            Подтверждаете <a href="/about/user/privacypolicy/" class="link">
-                                политику конфиденциальности
-                            </a>
-                        </label>
+                <form class="needs-validation" action="/api/php/restore.php" method="post" novalidate>
+                    <div>
+                        <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта" required>
                         <div class="invalid-feedback">
-                            Пожалуйста, подтвердите политику.
+                            Пожалуйста, введите почту.
                         </div>
                     </div>
-                </div>
-                <button class="btn btn-primary w-100" type="submit">
-                    Зарегистрироваться
-                </button>
-            </form>
-            <div class="auth-login--restore">
-                <a href="/login/" class="link">
-                    Уже зарегистрированы?
-                </a>
-            </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">
+                        Восстановить
+                    </button>
+                </form>
+            <?php else : ?>
+                else
+            <?php endif ?>
         </div>
     </main>
 

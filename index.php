@@ -50,7 +50,7 @@
                 </div>
                 <div class="page-login-privacy">
                     <div class="page-login-privacy--link">
-                        <a href="/login/" class="link">
+                        <a href="/login/restore/" class="link">
                             Забыли пароль?
                         </a>
                     </div>

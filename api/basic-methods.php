@@ -16,3 +16,10 @@ function CheckDataUser($user)
 
     return "error";
 }
+
+function RestorePassword($email)
+{
+    if (strlen($email) <= 3) return "email_null";
+
+    return "ok";
+}
