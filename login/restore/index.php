@@ -1,10 +1,10 @@
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 
-<?php include_once "../api/auth-errors.php"; ?>
+<?php include_once "../../api/auth-errors.php"; ?>
 
 <?php include_once "../../app/php/content/head.php"; ?>
 
-<?php $active = empty($_GET["active"]) == false ?>
+<?php $active = empty($_GET["a"]) == false ?>
 
 <?php $error = RestoreError($_GET["e"]) ?>
 
@@ -29,11 +29,13 @@
                     </svg>
                 </a>
             </div>
-            <h1 class="h2">Забыл пароль</h1>
+            <h1 class="h4">Забыл пароль</h1>
             <?php if ($active == false) : ?>
-                <div class="alert alert-danger" role="alert">
-                    Пользователя не существует
-                </div>
+                <?php if (empty($error) == false) : ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo $error ?>
+                    </div>
+                <?php endif; ?>
                 <form class="needs-validation" action="/api/php/restore.php" method="post" novalidate>
                     <div>
                         <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта" required>
@@ -45,8 +47,23 @@
                         Восстановить
                     </button>
                 </form>
+                <div class="auth-login--restore d-flex flex-column">
+                    <div>
+                        <a href="/login/" class="link">
+                            Войти в аккаунт
+                        </a>
+                    </div>
+                </div>
             <?php else : ?>
-                else
+                <p class="text-center mb-3">
+                    На указанную почту было выслано письмо для восстановления
+                    доступа к аккаунту.
+                </p>
+                <div class="text-center">
+                    <a href="/login/" class="link">
+                        Войти в аккаунт
+                    </a>
+                </div>
             <?php endif ?>
         </div>
     </main>

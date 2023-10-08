@@ -6,6 +6,12 @@
     padding-left: 60px;
 }
 
+.page-login .page-login--new-page {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
 .page-login-privacy {
     margin-top: 20px;
     font-size: 10px;

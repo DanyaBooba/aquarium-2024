@@ -14,10 +14,10 @@
         <div class="row align-items-center" style="margin-bottom: 100px">
             <div class="col-md-6 see-at-pc d-flex justify-content-end px-0">
                 <div class="p-3 d-flex">
-                    <a href="/download/#android" aria-label="Скачать для Android" style="margin-right: -30px">
+                    <a href="#download" aria-label="Скачать для Android" style="margin-right: -30px">
                         <img src="/app/img/content/mainpage/android.png" class="img-fluid" width="240">
                     </a>
-                    <a href="/download/#ios" aria-label="Скачать для iOS">
+                    <a href="#download" aria-label="Скачать для iOS">
                         <img src="/app/img/content/mainpage/iphone.png" class="img-fluid" width="260">
                     </a>
                 </div>
@@ -42,6 +42,11 @@
                             Войти
                         </button>
                     </form>
+                    <div class="page-login--new-page">
+                        <a href="/login/" class="link">
+                            Открыть на отдельной странице
+                        </a>
+                    </div>
                 </div>
                 <div class="page-login--registation">
                     <a href="/registration/" class="btn btn-success button-login-success" type="submit">
@@ -64,18 +69,22 @@
             </div>
         </div>
         <div>
-            <h2 class="text-center mb-5">Мобильное приложение</h2>
+            <h2 class="text-center mb-5" id="download">Мобильное приложение</h2>
             <div class="row row-cols-1 row-cols-lg-3">
                 <div class="col mb-5">
                     <h3 class="text-center mb-3">Для Android</h3>
                     <div class="text-center">
-                        <img src="/app/img/content/mainpage/android.png" class="img-fluid" width="240">
+                        <a href="#">
+                            <img src="/app/img/content/mainpage/android.png" class="img-fluid" width="240">
+                        </a>
                     </div>
                 </div>
                 <div class="col mb-5">
                     <h3 class="text-center mb-3">Для iPhone / iPad</h3>
                     <div class="text-center">
-                        <img src="/app/img/content/mainpage/iphone.png" class="img-fluid" width="250">
+                        <a href="#">
+                            <img src="/app/img/content/mainpage/iphone.png" class="img-fluid" width="250">
+                        </a>
                     </div>
                 </div>
                 <div class="col mb-5">
