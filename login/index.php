@@ -6,6 +6,8 @@
 
 <?php $error = LoginError($_GET["e"]) ?>
 
+<?php $email = $_GET["g"] ?>
+
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
 <title>Авторизация | Аквариум</title>
@@ -35,7 +37,7 @@
             <?php endif; ?>
             <form class="needs-validation" action="/api/php/login.php" method="post" novalidate>
                 <div>
-                    <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта" required>
+                    <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите почту.
                     </div>
@@ -54,6 +56,11 @@
                 <div>
                     <a href="restore" class="link">
                         Забыли пароль?
+                    </a>
+                </div>
+                <div>
+                    <a href="code" class="link">
+                        Войти по коду
                     </a>
                 </div>
                 <div>

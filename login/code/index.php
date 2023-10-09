@@ -1,16 +1,16 @@
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 
-<?php include_once "../api/auth-errors.php"; ?>
+<?php include_once "../../api/auth-errors.php"; ?>
 
-<?php include_once "../app/php/content/head.php"; ?>
+<?php include_once "../../app/php/content/head.php"; ?>
 
-<?php $error = RegistrationError($_GET["e"]) ?>
+<?php $active = empty($_GET["a"]) == false ?>
 
-<?php $g = $_GET["g"] ?>
+<?php $error = RestoreError($_GET["e"]) ?>
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
-<title>Регистрация | Аквариум</title>
+<title>Авторизация | Аквариум</title>
 
 <body>
     <main class="form-signin w-100 m-auto">
@@ -29,72 +29,42 @@
                     </svg>
                 </a>
             </div>
-            <h1 class="h4">Регистрация</h1>
-            <?php if (empty($error) == false) : ?>
-                <div class="alert alert-danger" role="alert">
-                    <?php echo $error ?>
-                </div>
-            <?php endif; ?>
-            <form class="needs-validation" action="/api/php/registration.php" method="post" novalidate>
-                <div>
-                    <input class="form-control" type="text" name="nickname" placeholder="Никнейм" aria-label="Никнейм" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, введите никнейм.
+            <h1 class="h4">Забыл пароль</h1>
+            <?php if ($active == false) : ?>
+                <?php if (empty($error) == false) : ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo $error ?>
                     </div>
-                    <p class="form-more">
-                        Другие пользователи по никнему смогут найти вас.
-                    </p>
-                </div>
-                <div>
-                    <input class="form-control" type="email" name="email" placeholder="Почта" value="<?php echo $g ?>" aria-label="Почта" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, введите почту.
-                    </div>
-                    <p class="form-more">
-                        Используется для входа, видно только вам.
-                    </p>
-                </div>
-                <div>
-                    <input class="form-control" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, введите пароль.
-                    </div>
-                    <p class="form-more">
-                        Вы сможете восстановить его после регистрации. Запрещены символы: «!#<>«»;,* ».
-                    </p>
-                </div>
-                <div>
-                    <input class="form-control" type="password" name="confirm_password" placeholder="Подтвердите пароль" aria-label="Подтвердите пароль" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, подтвердите введеный пароль.
-                    </div>
-                    <p class="form-more">
-                        Повторите введенный вами пароль.
-                    </p>
-                </div>
-
-                <div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="1" name="confirm" id=" invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
-                            Подтверждаете <a href="/about/user/privacypolicy/" class="link">
-                                политику конфиденциальности
-                            </a>
-                        </label>
+                <?php endif; ?>
+                <form class="needs-validation" action="/api/php/restore.php" method="post" novalidate>
+                    <div>
+                        <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта" required>
                         <div class="invalid-feedback">
-                            Пожалуйста, подтвердите политику.
+                            Пожалуйста, введите почту.
                         </div>
                     </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">
+                        Восстановить
+                    </button>
+                </form>
+                <div class="auth-login--restore d-flex flex-column">
+                    <div>
+                        <a href="/login/" class="link">
+                            Войти в аккаунт
+                        </a>
+                    </div>
                 </div>
-                <button class="btn btn-primary w-100" type="submit">
-                    Зарегистрироваться
-                </button>
-            </form>
-            <div class="auth-login--restore">
-                <a href="/login/" class="link">
-                    Уже зарегистрированы?
-                </a>
-            </div>
+            <?php else : ?>
+                <p class="text-center mb-3">
+                    На указанную почту было выслано письмо для восстановления
+                    доступа к аккаунту.
+                </p>
+                <div class="text-center">
+                    <a href="/login/" class="link">
+                        Войти в аккаунт
+                    </a>
+                </div>
+            <?php endif ?>
         </div>
     </main>
 

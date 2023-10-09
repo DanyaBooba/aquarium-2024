@@ -7,10 +7,11 @@ $user = [
     "password" => $_POST["password"]
 ];
 
-// var_dump(CheckDataUser($user));
-
 $check = CheckDataUser($user);
 
 if ($check != "ok") {
-    echo "error";
+    header("Location: /login/?e=$check&g=" . $user["email"]);
+    return;
 }
+
+echo "OK";

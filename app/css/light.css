@@ -1,12 +1,12 @@
 :root {
     /* Default */
-    --bg-color: #fbfeff;
+    --bg-color: #fff;
     --text-default: #000;
     --text-invert: #fff;
 
-    --bg-color-rgba: rgba(251, 254, 255, .7);
-    --bg-color-rgba-2: 251, 254, 255;
-    --bg-color-rgba-3: rgba(251, 254, 255, .9);
+    --bg-color-rgba: rgba(255, 255, 255, .7);
+    --bg-color-rgba-2: 255, 255, 255;
+    --bg-color-rgba-3: rgba(255, 255, 255, .9);
 
     /* Colors */
     --text-color-1: #000;

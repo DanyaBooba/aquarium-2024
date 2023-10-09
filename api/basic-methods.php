@@ -2,7 +2,13 @@
 
 function ClearStr($str)
 {
-    $chars = ['!', '#', '<', '>', '«', '»'];
+    $chars = ['!', '#', '<', '>', '«', '»', ' ', ';', ',', '*'];
+    return mb_strtolower(str_replace($chars, '', trim($str)));
+}
+
+function ClearNickname($str)
+{
+    $chars = ['!', '#', '<', '>', '«', '»', ' ', ';', ',', '*', '?', '@', '$', '%', '^', '&', '(', ')', '+'];
     return mb_strtolower(str_replace($chars, '', trim($str)));
 }
 
@@ -22,4 +28,13 @@ function RestorePassword($email)
     if (strlen($email) <= 3) return "email_null";
 
     return "ok";
+}
+
+function CheckSimplePassword($password)
+{
+    if ($password == "qwerty" || $password == "1234" || $password == "123456" || $password == "qwerty123" || $password == "abc" || $password == "password" || $password == "pass") {
+        return 0;
+    }
+
+    return 1;
 }
