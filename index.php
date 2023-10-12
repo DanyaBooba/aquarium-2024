@@ -49,9 +49,9 @@
                     </div>
                 </div>
                 <div class="page-login--registation">
-                    <a href="/registration/" class="btn btn-success button-login-success" type="submit">
+                    <button onClick="Registration()" class="btn btn-success button-login-success" type="submit">
                         Зарегистрироваться
-                    </a>
+                    </button>
                 </div>
                 <div class="page-login-privacy">
                     <div class="page-login-privacy--link">
@@ -97,6 +97,12 @@
             </div>
         </div>
     </main>
+
+    <script>
+        function Registration() {
+            window.open("/registration/");
+        }
+    </script>
 
     <?php include_once "app/php/content/bottom/footer-content.php"; ?>
 

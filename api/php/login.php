@@ -14,4 +14,12 @@ if ($check != "ok") {
     return;
 }
 
-echo "OK";
+include_once "../token.php";
+
+include_once "../rb-mysql.php";
+
+R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
+
+var_dump(R::getAll("SELECT * FROM users"));
+
+header("Location: /");
