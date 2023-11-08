@@ -1,14 +1,19 @@
 :root {
+
     /* Default */
+
     --bg-color: #fff;
     --text-default: #000;
     --text-invert: #fff;
+
+    /* Main Background color */
 
     --bg-color-rgba: rgba(255, 255, 255, .7);
     --bg-color-rgba-2: 255, 255, 255;
     --bg-color-rgba-3: rgba(255, 255, 255, .9);
 
-    /* Colors */
+    /* Text colors */
+
     --text-color-1: #000;
     --text-color-2: #555;
     --text-color-3: #eee;
@@ -17,44 +22,31 @@
     --text-color-6: #f0f0f0;
     --text-color-7: #d6d6d6;
 
-    --text-link-1: #0D6EFD;
-    --text-link-2: #4B94FF;
+    /* Backgrounds */
 
+    --bg-light: #f9f9f9;
     --bg-light-1: #ECF5F8;
     --bg-light-2: #F2ECF8;
     --bg-light-3: #ecf8f0;
-
     --bg-warning: #f8f6ec;
+
+    /* Danger */
 
     --color-danger: #ffc107;
     --color-danger-hover: #ffd043;
 
-    --color-primary: #0d6efd;
-    --color-primary-hover: #0d6efd;
-
-    --color-code-copy: #d4e6d9;
-    --color-code-copy-hover: #C8FFDE;
-
-    --bottom-button: #fff;
-
     /* Bootstrap */
+
     --bs-tertiary-bg-me: #CFECF8 !important;
     --bg-theme-color: #dedede;
     --bs-btn-active-bg: #fff !important;
     --bs-border-color: #eee !important;
-
     --bs-tertiary-bg-me-2: #f8f9fa;
     --bs-secondary-bg-me: #e9ecef;
 
     /* Border */
+
     --bg-warning-border: #f3f1e6;
     --bg-light-2-border: #e8e0f1;
     --bg-light-3-border: #e4f1e8;
-
-    /* Open */
-    --open-color-1: #c9c9c9;
-
-    /* Course Color */
-    --course-color-3: rgb(210, 245, 221);
-    --course-color-gradient-3: linear-gradient(45deg, rgba(210, 245, 221, 1) 0%, rgba(236, 248, 240, 1) 100%);
 }

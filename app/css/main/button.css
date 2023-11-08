@@ -1,0 +1,10 @@
+.accordion-button
+{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.accordion-body
+{
+    background: var(--bg-color);
+}
