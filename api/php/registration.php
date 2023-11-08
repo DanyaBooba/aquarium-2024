@@ -56,7 +56,7 @@ if ($user["confirm"] != 1) {
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$check = SqlRequestCreateCheck($user["email"]);
+$check = SqlRequestFind($user["email"]);
 
 $checkrow = R::getAll($check);
 

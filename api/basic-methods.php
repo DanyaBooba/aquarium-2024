@@ -135,7 +135,7 @@ function SqlRequestCreate($user)
 // SQL запрос: проверка на существование пользователя
 //
 
-function SqlRequestCreateCheck($email)
+function SqlRequestFind($email)
 {
     return "SELECT * FROM `users` WHERE email like '" . $email . "'";
 }
