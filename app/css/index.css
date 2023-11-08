@@ -17,3 +17,6 @@
 @import "theme/theme-toggle.css";
 
 @import "pages/login.css";
+
+@import "person/left-bar.css";
+@import "person/content.css";

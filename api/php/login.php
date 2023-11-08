@@ -30,6 +30,13 @@ $findsql = SqlRequestFind($user["email"]);
 
 $find = R::getAll($findsql);
 
-var_dump($find);
+if (password_verify($user["password"], $find[0]["passhash"]) != 1) {
+    header("Location: /login/?e=passw_null&g=" . $user["email"]);
+    return;
+}
 
-// header("Location: /");
+##
+## Logined
+##
+
+header("Location: /");
