@@ -32,7 +32,7 @@
                 </h2>
                 <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordion">
                     <div class="accordion-body">
-                        ...
+                        Для регистрации в соцсети требуется от пользователя требуется только почта.
                     </div>
                 </div>
             </div>

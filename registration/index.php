@@ -37,21 +37,12 @@
             <?php endif; ?>
             <form class="needs-validation" action="/api/php/registration.php" method="post" novalidate>
                 <div>
-                    <input class="form-control" type="text" name="nickname" placeholder="Никнейм" aria-label="Никнейм" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, введите никнейм.
-                    </div>
-                    <p class="form-more">
-                        Другие пользователи по никнему смогут найти вас.
-                    </p>
-                </div>
-                <div>
                     <input class="form-control" type="email" name="email" placeholder="Почта" value="<?php echo $g ?>" aria-label="Почта" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите почту.
                     </div>
                     <p class="form-more">
-                        Используется для входа, видно только вам.
+                        Используется для авторизации.
                     </p>
                 </div>
                 <div>
@@ -60,7 +51,7 @@
                         Пожалуйста, введите пароль.
                     </div>
                     <p class="form-more">
-                        Вы сможете восстановить его после регистрации. Запрещены символы: «!#<>«»;,* ».
+                        Можно восстановить после регистрации.
                     </p>
                 </div>
                 <div>
