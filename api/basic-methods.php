@@ -1,16 +1,28 @@
 <?php
 
+//
+// Очищаем строку от спецсимволов
+//
+
 function ClearStr($str)
 {
     $chars = ['!', '#', '<', '>', '«', '»', ' ', ';', ',', '*'];
     return mb_strtolower(str_replace($chars, '', trim($str)));
 }
 
+//
+// Убираем спецсимволы из никнейма
+//
+
 function ClearNickname($str)
 {
     $chars = ['!', '#', '<', '>', '«', '»', ' ', ';', ',', '*', '?', '@', '$', '%', '^', '&', '(', ')', '+'];
     return mb_strtolower(str_replace($chars, '', trim($str)));
 }
+
+//
+// Проверка данных пользователя
+//
 
 function CheckDataUser($user)
 {
@@ -23,12 +35,20 @@ function CheckDataUser($user)
     return "error";
 }
 
+//
+// Проверка введенного пароля
+//
+
 function RestorePassword($email)
 {
     if (strlen($email) <= 3) return "email_null";
 
     return "ok";
 }
+
+//
+// Проверка: пароль не является простым
+//
 
 function CheckSimplePassword($password)
 {
@@ -38,6 +58,10 @@ function CheckSimplePassword($password)
 
     return 0;
 }
+
+//
+// SQL запрос: создание пользователя
+//
 
 function SqlRequestCreate($user)
 {
@@ -105,4 +129,13 @@ function SqlRequestCreate($user)
     }
 
     return "INSERT INTO `users`($sqlname) VALUES ($sqlvalue)";
+}
+
+//
+// SQL запрос: проверка на существование пользователя
+//
+
+function SqlRequestCreateCheck($email)
+{
+    return "SELECT * FROM `users` WHERE email like '" . $email . "'";
 }

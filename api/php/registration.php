@@ -24,17 +24,17 @@ $email = $user["email"];
 $password = $user["password"];
 
 if ($user["password"] != $user["confirm_password"]) {
-    header("Location: /registration/?e=passw_confirm&g=" . $user["email"] . "&n=" . $user["nickname"]);
+    header("Location: /registration/?e=passw_confirm&g=" . $user["email"]);
     return;
 }
 
 if (strlen($password) <= 3) {
-    header("Location: /registration/?e=passw_null&g=" . $user["email"] . "&n=" . $user["nickname"]);
+    header("Location: /registration/?e=passw_null&g=" . $user["email"]);
     return;
 }
 
 if (CheckSimplePassword($password)) {
-    header("Location: /registration/?e=passw_simple&g=" . $user["email"] . "&n=" . $user["nickname"]);
+    header("Location: /registration/?e=passw_simple&g=" . $user["email"]);
     return;
 }
 
@@ -46,7 +46,22 @@ if (CheckSimplePassword($password)) {
 ##
 
 if ($user["confirm"] != 1) {
-    header("Location: /registration/?e=confirm&g=" . $user["email"] . "&n=" . $user["nickname"]);
+    header("Location: /registration/?e=confirm&g=" . $user["email"]);
+    return;
+}
+
+##
+## Check data Server
+##
+
+R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
+
+$check = SqlRequestCreateCheck($user["email"]);
+
+$checkrow = R::getAll($check);
+
+if (count($checkrow) > 0) {
+    header("Location: /registration/?e=email_set");
     return;
 }
 
@@ -54,18 +69,8 @@ if ($user["confirm"] != 1) {
 ## Request to Server
 ##
 
-// R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
+$sql = SqlRequestCreate($user);
 
-R::setup('mysql:host=localhost;dbname=aquarium', 'root', '123');
+R::getAll($sql);
 
-$row = R::getAll("SELECT * FROM users");
-
-// echo "EX: ";
-
-var_dump($row);
-
-// $sql = SqlRequestCreate($user);
-
-$sql = "ex";
-
-var_dump($sql);
+header("Location: /");
