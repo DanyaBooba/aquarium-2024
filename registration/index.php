@@ -2,7 +2,7 @@
 
 <?php include_once "../api/auth-errors.php"; ?>
 
-<?php include_once "../app/php/content/head.php"; ?>
+<?php include_once "../app/php/head.php"; ?>
 
 <?php $error = RegistrationError($_GET["e"]) ?>
 
@@ -91,7 +91,7 @@
 
     <script src="/app/js/confirm-form.js"></script>
 
-    <?php include_once "../app/php/content/bottom/javascript.php"; ?>
+    <?php include_once "../app/php/bottom/javascript.php"; ?>
 </body>
 
 </html>

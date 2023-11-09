@@ -1,6 +1,6 @@
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 
-<?php include_once "app/php/content/head.php"; ?>
+<?php include_once "app/php/head.php"; ?>
 
 <link rel="stylesheet" href="/app/css/pages/main.css">
 
@@ -8,7 +8,7 @@
 
 <body class="container">
     <div class="see-at-pc">
-        <?php include_once "app/php/content/header.php"; ?>
+        <?php include_once "app/php/header.php"; ?>
     </div>
     <main>
         <div class="row align-items-center" style="margin-bottom: 100px">
@@ -116,9 +116,9 @@
 
     <script src="/app/js/confirm-form.js"></script>
 
-    <?php include_once "app/php/content/bottom/footer-content.php"; ?>
+    <?php include_once "app/php/bottom/footer-content.php"; ?>
 
-    <?php include_once "app/php/content/bottom/javascript.php"; ?>
+    <?php include_once "app/php/bottom/javascript.php"; ?>
 </body>
 
 </html>

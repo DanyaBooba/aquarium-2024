@@ -1,11 +1,11 @@
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 
-<?php include_once "../../app/php/content/head.php"; ?>
+<?php include_once "../../app/php/head.php"; ?>
 
 <title>Начальная страница | Аквариум</title>
 
 <body class="container">
-    <?php include_once "../../app/php/content/header.php"; ?>
+    <?php include_once "../../app/php/header.php"; ?>
 
     <main>
         <h1>Пользователю</h1>
@@ -31,7 +31,7 @@
         </ul>
     </main>
 
-    <?php include_once "../../app/php/content/footer.php"; ?>
+    <?php include_once "../../app/php/footer.php"; ?>
 </body>
 
 </html>
