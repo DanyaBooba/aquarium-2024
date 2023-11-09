@@ -45,11 +45,11 @@
     border: 0;
 }
 
-.btn-check:checked+.btn,
-.btn.active,
-.btn.show,
-.btn:first-child:active,
-:not(.btn-check)+.btn:active {
+.btn-check:checked+.btn-secondary,
+.btn-secondary.active,
+.btn-secondary.show,
+.btn-secondary:first-child:active,
+:not(.btn-check)+.btn-secondary:active {
     color: var(--text-default) !important;
     background: var(--bg-color);
     border: 0;

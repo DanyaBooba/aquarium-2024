@@ -12,6 +12,24 @@
 
 .person-profile-content {
     display: flex;
+    padding-bottom: 20px;
+}
+
+.person-profile-content-name {
+    display: flex;
+    flex-direction: column;
+    padding-left: 220px;
+    padding-top: 20px;
+    margin-right: auto;
+}
+
+.person-profile-content-name-1 {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.person-profile-content-buttons {
+    padding: 20px;
 }
 
 .person-profile-bg
