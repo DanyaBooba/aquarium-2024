@@ -1,16 +1,18 @@
+/* List */
+
 ul.person-leftbar {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-ul.person-leftbar li {
+/* ul.person-leftbar li {
     background: var(--bg-light);
     border-radius: 12px;
     margin-bottom: 10px;
     font-size: 20px;
     padding: 15px;
-}
+} */
 
 ul.person-leftbar li a {
     color: var(--text-color);
@@ -19,4 +21,31 @@ ul.person-leftbar li a {
     padding-left: 10px;
 
     display: flex;
+}
+
+ul.person-leftbar li button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 20px;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background: var(--bg-light);
+    border-radius: 12px;
+    margin-bottom: 4px;
+
+    transition: .3s background;
+}
+
+ul.person-leftbar li button svg {
+    margin-left: 20px;
+}
+
+ul.person-leftbar li button:hover {
+    background: var(--bg-light-hover);
 }

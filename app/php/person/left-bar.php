@@ -1,44 +1,44 @@
 <div class="col-md-3">
     <ul class="person-leftbar see-at-pc">
         <li>
-            <a href="/feed/">
+            <button onClick="ButtonLeftBar(0)" class="w-100">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#house"></use>
                 </svg>
                 Лента
-            </a>
+            </button>
         </li>
         <li>
-            <a href="/person/">
+            <button onClick="ButtonLeftBar(1)" class="w-100">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#person"></use>
                 </svg>
                 Профиль
-            </a>
+            </button>
         </li>
         <li>
-            <a href="/notifications/">
+            <button onClick="ButtonLeftBar(2)" class="w-100">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#bell"></use>
                 </svg>
                 Уведомления
-            </a>
+            </button>
         </li>
         <li>
-            <a href="/search/">
+            <button onClick="ButtonLeftBar(3)" class="w-100">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#search"></use>
                 </svg>
                 Поиск
-            </a>
+            </button>
         </li>
         <li>
-            <a href="/settings/">
+            <button onClick="ButtonLeftBar(4)" class="w-100">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#gear-wide-connected"></use>
                 </svg>
                 Настройки
-            </a>
+            </button>
         </li>
     </ul>
 </div>
