@@ -110,7 +110,7 @@
 
     <script>
         function Registration() {
-            window.open("/registration/");
+            window.open("/registration/", "_self");
         }
     </script>
 

@@ -39,4 +39,4 @@ if (password_verify($user["password"], $find[0]["passhash"]) != 1) {
 ## Logined
 ##
 
-header("Location: /");
+header("Location: /person/");

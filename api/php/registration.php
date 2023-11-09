@@ -73,4 +73,8 @@ $sql = SqlRequestCreate($user);
 
 R::getAll($sql);
 
-header("Location: /");
+##
+## Logined
+##
+
+header("Location: /person/");
