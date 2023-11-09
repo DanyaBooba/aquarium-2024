@@ -2,3 +2,33 @@
 {
     margin-bottom: 30px;
 }
+
+/* Profile */
+
+.person-profile {
+    background: var(--bg-light);
+    border-radius: 12px;
+}
+
+.person-profile-content {
+    display: flex;
+}
+
+.person-profile-bg
+{
+    border-radius: 12px 12px 0 0;
+    background-position: center;
+    padding: 50px 25px;
+    height: 250px;
+    margin-bottom: -10px;
+}
+
+.person-profile-bg img {
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    margin-top: 100px;
+    max-width: 100%;
+    height: auto;
+    border: 10px solid var(--bg-light);
+}
