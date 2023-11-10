@@ -55,7 +55,7 @@
 
 /* Add post */
 
-.person-add-post {
+.person-form {
     margin-bottom: 30px;
     border-radius: 12px;
     background: var(--bg-light);
@@ -72,4 +72,24 @@
     width: 100%;
     height: auto;
     border-radius: 12px;
+}
+
+/* Search */
+
+.person-search-list ul li {
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.person-search-list ul li a
+{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.person-search-list ul li a img {
+    border-radius: 50%;
+    margin-right: 15px;
 }

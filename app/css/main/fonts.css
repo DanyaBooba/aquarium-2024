@@ -17,8 +17,9 @@
 @font-face {
     font-family: HalvarBreit;
     font-style: bold;
-    src: url("/app/fonts/HalvarBreit/HalvarBreit.woff") format("woff"),
-        url("/app/fonts/HalvarBreit/HalvarBreit.woff2") format("woff2");
+    /* src: url("/app/fonts/HalvarBreit/HalvarBreit.woff") format("woff"),
+        url("/app/fonts/HalvarBreit/HalvarBreit.woff2") format("woff2"); */
+    src: url("/app/fonts/NeueMachina/NeueMachina-Regular.otf");
 }
 
 /* Set */

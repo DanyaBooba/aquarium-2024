@@ -6,14 +6,6 @@ ul.person-leftbar {
     margin: 0;
 }
 
-/* ul.person-leftbar li {
-    background: var(--bg-light);
-    border-radius: 12px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    padding: 15px;
-} */
-
 ul.person-leftbar li a {
     color: var(--text-color);
     text-decoration: none;
@@ -33,7 +25,6 @@ ul.person-leftbar li button {
     padding: 10px 20px;
 
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     background: var(--bg-light);
     border-radius: 12px;

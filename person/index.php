@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="person-add-post">
+            <div class="person-form">
                 <form action="?" method="post">
                     <div class="input-group">
                         <input type="text" name="post" class="form-control" aria-label="Что у вас нового" placeholder="Что у вас нового...">

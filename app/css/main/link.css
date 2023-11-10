@@ -2,7 +2,7 @@ a.link {
     color: var(--text-default);
     text-decoration: none;
     border-bottom: 1px solid var(--text-color-4);
-    transition: .3s;
+    transition: .3s border-bottom;
 }
 
 a.link:hover,
