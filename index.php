@@ -10,6 +10,7 @@
     <div class="see-at-pc">
         <?php include_once "app/php/header.php"; ?>
     </div>
+    <!-- include ('tpl/index.html'); -->
     <main>
         <div class="row align-items-center" style="margin-bottom: 100px">
             <div class="col-md-6 see-at-pc d-flex justify-content-end px-0">
@@ -116,9 +117,7 @@
 
     <script src="/app/js/confirm-form.js"></script>
 
-    <?php include_once "app/php/bottom/footer-content.php"; ?>
-
-    <?php include_once "app/php/bottom/javascript.php"; ?>
+    <?php include_once "app/php/footer.php"; ?>
 </body>
 
 </html>

@@ -13,6 +13,9 @@ function LoginError($data)
 
 function RestoreError($data)
 {
+    if ($data == "email_null") return "Пользователя не существует.";
+
+    return null;
 }
 
 function RegistrationError($data)
