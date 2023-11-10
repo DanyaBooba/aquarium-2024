@@ -2,7 +2,7 @@
 
 <?php include_once "../../app/php/head.php"; ?>
 
-<title>Социальная сеть Аквариум</title>
+<title>Ответы на вопросы | Аквариум</title>
 
 <body class="container">
     <?php include_once "../../app/php/header.php"; ?>

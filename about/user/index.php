@@ -2,7 +2,7 @@
 
 <?php include_once "../../app/php/head.php"; ?>
 
-<title>Начальная страница | Аквариум</title>
+<title>Пользователю | Аквариум</title>
 
 <body class="container">
     <?php include_once "../../app/php/header.php"; ?>

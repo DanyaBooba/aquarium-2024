@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="/app/css/pages/main.css">
 
-<title>Личный кабинет | Аквариум</title>
+<title>Поиск | Аквариум</title>
 
 <body class="container">
     <?php include_once "../app/php/header.php"; ?>

@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
-<title>Авторизация | Аквариум</title>
+<title>Войти по коду | Аквариум</title>
 
 <body>
     <main class="form-signin w-100 m-auto">
@@ -29,7 +29,7 @@
                     </svg>
                 </a>
             </div>
-            <h1 class="h4">Забыл пароль</h1>
+            <h1 class="h4">Войти по коду</h1>
             <?php if ($active == false) : ?>
                 <?php if (empty($error) == false) : ?>
                     <div class="alert alert-danger" role="alert">
@@ -43,7 +43,7 @@
                             Пожалуйста, введите почту.
                         </div>
                     </div>
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">
+                    <button class="w-100 btn btn-primary" type="submit">
                         Восстановить
                     </button>
                 </form>

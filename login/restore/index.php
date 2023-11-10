@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
-<title>Авторизация | Аквариум</title>
+<title>Восстановить пароль | Аквариум</title>
 
 <body>
     <main class="form-signin w-100 m-auto">
@@ -43,7 +43,7 @@
                             Пожалуйста, введите почту.
                         </div>
                     </div>
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">
+                    <button class="w-100 btn btn-primary" type="submit">
                         Восстановить
                     </button>
                 </form>

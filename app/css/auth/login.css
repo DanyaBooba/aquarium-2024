@@ -86,7 +86,7 @@ body {
 /* Me */
 
 .auth-login {
-    background: var(--bg-color);
+    background: var(--bg-color-auth);
     border-radius: 12px;
     padding: 50px 30px;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
