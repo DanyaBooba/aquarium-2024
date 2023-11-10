@@ -1,6 +1,6 @@
 .person-content h1
 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* Profile */
@@ -92,4 +92,41 @@
 .person-search-list ul li a img {
     border-radius: 50%;
     margin-right: 15px;
+}
+
+/* Settings */
+
+.person-setting-bg {
+    background: var(--bg-light);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.person-setting-bg ul {
+    margin: 0;
+    padding: 0;
+}
+
+.person-setting-bg ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.person-setting-bg ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.person-setting-bg ul li a:hover {
+    border-bottom: 1px solid var(--text-color-2);
+}
+
+.person-setting-content h2 {
+    margin-top: 10px;
+}
+
+.person-setting-content form {
+    margin-bottom: 10px;
 }

@@ -2,3 +2,9 @@
 {
     margin-bottom: 10px;
 }
+
+form .form-more {
+    color: var(--text-color-2);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
