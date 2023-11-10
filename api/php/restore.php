@@ -3,6 +3,7 @@
 include_once "../basic-methods.php";
 include_once "../rb-mysql.php";
 include_once "../token.php";
+include_once "../mail.php";
 
 ##
 ## Check data
@@ -32,4 +33,19 @@ if (count($find) <= 0) {
     return;
 }
 
-echo "OK";
+$findrestoresql = SqlRequestFindRestore($email_restore);
+
+$findrestore = R::getAll($findrestoresql);
+
+$url = RandomString(80) . $findrestore[0]["id"];
+
+if (count($findrestore) <= 0) {
+    $resetsql = SqlResetPassword($email_restore, $url);
+    R::getAll($resetsql);
+}
+
+##
+## Mail
+##
+
+EmailRestorePassword($email_restore, $url);

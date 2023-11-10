@@ -63,7 +63,7 @@ function CheckSimplePassword($password)
 // SQL запрос: создание пользователя
 //
 
-function SqlRequestCreate($user)
+function SqlRequestCreate($user, $unique)
 {
     $login = [
         0 => [
@@ -100,7 +100,7 @@ function SqlRequestCreate($user)
         ],
         8 => [
             "name" => "uniquehash",
-            "value" => 0,
+            "value" => $unique,
         ],
         9 => [
             "name" => "usertype",
@@ -138,4 +138,42 @@ function SqlRequestCreate($user)
 function SqlRequestFind($email)
 {
     return "SELECT * FROM `users` WHERE email like '" . $email . "'";
+}
+
+//
+// SQL запрос: записываем данные о восстановлении пароля
+//
+
+function SqlResetPassword($email, $url)
+{
+    return "INSERT INTO `reset`(`email`, `timecreate`, `url`) VALUES ('$email', " . time() . ", '$url')";
+}
+
+//
+// SQL запрос: ищем запись в восстановлении пароля
+//
+
+function SqlRequestFindRestore($email)
+{
+    return "SELECT * FROM `reset` WHERE email like '$email'";
+}
+
+//
+// Генерация рандомных строк
+//
+
+function RandomString($len)
+{
+    if ($len <= 0) return "";
+
+    $permitted = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    $input_length = strlen($permitted);
+    $random_string = '';
+    for ($i = 0; $i < $len; $i++) {
+        $random_character = $permitted[mt_rand(0, $input_length - 1)];
+        $random_string .= $random_character;
+    }
+
+    return $random_string;
 }
