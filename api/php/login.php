@@ -28,9 +28,9 @@ R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Tok
 
 $findsql = SqlRequestFind($user["email"]);
 
-$find = R::getAll($findsql);
+$find = R::getAll($findsql)[0];
 
-if (password_verify($user["password"], $find[0]["passhash"]) != 1) {
+if (password_verify($find["saltpass"] . $user["password"] . $find["saltpass"], $find["passhash"]) != 1) {
     header("Location: /login/?e=passw_null&g=" . $user["email"]);
     return;
 }

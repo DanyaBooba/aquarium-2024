@@ -69,16 +69,15 @@ if (count($checkrow) > 0) {
 ## Request to Server
 ##
 
-$sql = SqlRequestCreate($user, RandomString(80) . "ID");
+$maxid = R::getAll("SELECT MAX(`id`) FROM `users` LIMIT 1")[0]["MAX(`id`)"];
+$maxid += 1;
 
-// SELECT MAX(`id`) FROM `table` WHERE `uid`='36';
+$sql = SqlRequestCreate($user, RandomString(80), $maxid);
 
-echo "OK";
-
-// R::getAll($sql);
+R::getAll($sql);
 
 ##
 ## Logined
 ##
 
-// header("Location: /person/");
+header("Location: /person/");

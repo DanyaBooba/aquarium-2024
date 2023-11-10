@@ -26,10 +26,10 @@
                         </p>
                     </div>
                     <div class="person-profile-content-buttons">
-                        <button onClick="ButtonLeftBar(4)" class="btn btn-primary me-2">
+                        <button onClick="ButtonLeftBar(4)" class="btn btn-secondary me-2">
                             Редактировать профиль
                         </button>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#desc">
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#desc">
                             Ещё
                             <svg height="22" width="22" fill="white">
                                 <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>

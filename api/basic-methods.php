@@ -63,54 +63,60 @@ function CheckSimplePassword($password)
 // SQL запрос: создание пользователя
 //
 
-function SqlRequestCreate($user, $unique)
+function SqlRequestCreate($user, $randomstr, $maxid)
 {
+    $salt = RandomString(16);
+
     $login = [
-        0 => [
+        [
             "name" => "email",
             "value" => $user["email"],
         ],
-        1 => [
+        [
             "name" => "emailverify",
             "value" => 0,
         ],
-        2 => [
+        [
             "name" => "passhash",
-            "value" => password_hash($user["password"], PASSWORD_DEFAULT),
+            "value" => password_hash($salt . $user["password"] . $salt, PASSWORD_DEFAULT),
         ],
-        3 => [
+        [
+            "name" => "saltpass",
+            "value" => $salt,
+        ],
+        [
             "name" => "nickname",
-            "value" => "user" . time(),
+            "value" => "user" . $maxid . time(),
         ],
-        4 => [
+        [
             "name" => "firstName",
             "value" => "empty",
         ],
-        5 => [
+        [
             "name" => "lastName",
             "value" => "empty",
         ],
-        6 => [
+        [
             "name" => "datereg",
             "value" => time(),
         ],
-        7 => [
+        [
             "name" => "countlogin",
             "value" => 1,
         ],
-        8 => [
+        [
             "name" => "uniquehash",
-            "value" => $unique,
+            "value" => $randomstr . $maxid,
         ],
-        9 => [
+        [
             "name" => "usertype",
             "value" => "usr",
         ],
-        10 => [
+        [
             "name" => "isubs",
             "value" => "[]",
         ],
-        11 => [
+        [
             "name" => "atmesubs",
             "value" => "[]",
         ],

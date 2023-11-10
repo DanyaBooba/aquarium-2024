@@ -46,10 +46,10 @@
 }
 
 .btn-check:checked+.btn-secondary,
-.btn-secondary.active,
-.btn-secondary.show,
-.btn-secondary:first-child:active,
-:not(.btn-check)+.btn-secondary:active {
+.theme-toggle .btn-secondary.active,
+.theme-toggle .btn-secondary.show,
+.theme-toggle .btn-secondary:first-child:active,
+:not(.btn-check)+.theme-toggle .btn-secondary:active {
     color: var(--text-default) !important;
     background: var(--bg-color);
     border: 0;
