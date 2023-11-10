@@ -8,6 +8,7 @@
 .person-profile {
     background: var(--bg-light);
     border-radius: 12px;
+    margin-bottom: 30px;
 }
 
 .person-profile-content {
@@ -50,4 +51,25 @@
     max-width: 100%;
     height: auto;
     border: 10px solid var(--bg-light);
+}
+
+/* Add post */
+
+.person-add-post {
+    margin-bottom: 30px;
+    border-radius: 12px;
+    background: var(--bg-light);
+    padding: 10px;
+}
+
+/* Posts */
+
+.person-posts {
+    margin-bottom: 30px;
+}
+
+.person-posts-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
 }

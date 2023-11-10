@@ -12,7 +12,7 @@
     <main class="row row-cols-1 g-4">
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content">
-            <div class="person-profile-bg" style="background-image: url('/app/img/users/bg/BG1.jpg');">
+            <div class="person-profile-bg" style="background-image: url('/app/img/users/bg/BG2.jpg');">
                 <img src="/app/img/users/icons/MAN1.jpg">
             </div>
             <div class="person-profile">
@@ -36,6 +36,40 @@
                             </svg>
                         </button>
                     </div>
+                </div>
+            </div>
+            <div class="person-add-post">
+                <form action="?" method="post">
+                    <div class="input-group">
+                        <input type="text" name="post" class="form-control" aria-label="Что у вас нового" placeholder="Что у вас нового...">
+                    </div>
+                </form>
+            </div>
+            <div class="row row-cols-1 g-4 person-posts">
+                <div class="col-md-4">
+                    <a href="#">
+                        <img src="/app/img/users/icons/MAN1.jpg" class="person-posts-img" alt="Изображение записи">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#">
+                        <img src="/app/img/users/icons/MAN1.jpg" class="person-posts-img" alt="Изображение записи">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#">
+                        <img src="/app/img/users/icons/MAN1.jpg" class="person-posts-img" alt="Изображение записи">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#">
+                        <img src="/app/img/users/icons/MAN1.jpg" class="person-posts-img" alt="Изображение записи">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#">
+                        <img src="/app/img/users/icons/MAN1.jpg" class="person-posts-img" alt="Изображение записи">
+                    </a>
                 </div>
             </div>
         </div>

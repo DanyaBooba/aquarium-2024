@@ -9,17 +9,6 @@
     padding: 0;
 }
 
-/* Link */
-
-a.header__logo {
-    transition: .3s;
-}
-
-a.header__logo:hover,
-a.header__logo:focus {
-    transform: scale(1.1);
-}
-
 /* SVG */
 
 .header__logo svg
