@@ -66,6 +66,22 @@
                 </div>
             <?php endif ?>
         </div>
+        <div class="auth-login-bottom">
+            <ul>
+                <li>
+                    Техническая поддержка:
+                    <a href="mailto:daniil@dybka.ru" class="link">
+                        daniil@dybka.ru
+                    </a>
+                </li>
+                <li>
+                    Подтверждаете
+                    <a href="/about/user/privacypolicy/" class="link">
+                        политику конфиденциальности
+                    </a>
+                </li>
+            </ul>
+        </div>
     </main>
 
     <script src="/app/js/confirm-form.js"></script>

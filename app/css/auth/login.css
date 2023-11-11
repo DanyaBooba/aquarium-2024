@@ -92,6 +92,26 @@ body {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
 }
 
+.auth-login-bottom ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.auth-login-bottom ul li {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: white !important;
+}
+
+.auth-login-bottom ul li a {
+    font-size: 14px;
+    color: white !important;
+}
+
 .auth-login--logo
 {
     height: 70px;

@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary w-100" type="submit">
+                <button class="btn btn-success w-100" type="submit">
                     Зарегистрироваться
                 </button>
             </form>
@@ -86,6 +86,22 @@
                     Уже зарегистрированы?
                 </a>
             </div>
+        </div>
+        <div class="auth-login-bottom">
+            <ul>
+                <li>
+                    Техническая поддержка:
+                    <a href="mailto:daniil@dybka.ru" class="link">
+                        daniil@dybka.ru
+                    </a>
+                </li>
+                <li>
+                    Подтверждаете
+                    <a href="/about/user/privacypolicy/" class="link">
+                        политику конфиденциальности
+                    </a>
+                </li>
+            </ul>
         </div>
     </main>
 

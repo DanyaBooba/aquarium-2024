@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <button class="w-100 btn btn-primary" type="submit">
-                        Восстановить
+                        Войти
                     </button>
                 </form>
                 <div class="auth-login--restore d-flex flex-column">
@@ -65,6 +65,22 @@
                     </a>
                 </div>
             <?php endif ?>
+        </div>
+        <div class="auth-login-bottom">
+            <ul>
+                <li>
+                    Техническая поддержка:
+                    <a href="mailto:daniil@dybka.ru" class="link">
+                        daniil@dybka.ru
+                    </a>
+                </li>
+                <li>
+                    Подтверждаете
+                    <a href="/about/user/privacypolicy/" class="link">
+                        политику конфиденциальности
+                    </a>
+                </li>
+            </ul>
         </div>
     </main>
 
