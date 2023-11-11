@@ -3,13 +3,14 @@
 <?php
 
 include_once "../../../api/rb-mysql.php";
+include_once "../../../api/basic-methods.php";
 include_once "../../../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
 $code = $_GET["c"];
 
-$find = R::getAll("SELECT * FROM `reset` WHERE url like '$code'");
+$find = R::getAll(SqlRequestFindRestoreByCode($code));
 
 if (count($find) <= 0) {
     header("Location: /login/restore/?e=error_url");
@@ -31,7 +32,7 @@ $email = $find[0]["email"];
 
 <?php include_once "../../../app/php/head.php"; ?>
 
-<?php $error = RestoreError($_GET["e"]) ?>
+<?php $error = UpdatePasswordError($_GET["e"]) ?>
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
@@ -82,6 +83,7 @@ $email = $find[0]["email"];
                         Повторите введенный вами пароль.
                     </p>
                 </div>
+                <input type="text" name="code" class="d-none" value="<?php echo $_GET["c"] ?>">
                 <button class="w-100 btn btn-primary" type="submit">
                     Восстановить
                 </button>

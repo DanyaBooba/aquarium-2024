@@ -52,9 +52,15 @@ function RestorePassword($email)
 
 function CheckSimplePassword($password)
 {
-    if ($password == "qwerty" || $password == "1234" || $password == "123456" || $password == "qwerty123" || $password == "abc" || $password == "password" || $password == "pass") {
-        return 1;
-    }
+    $p = $password;
+
+    if (strlen($p) < 3) return 1;
+
+    if ($p == "qwerty" || $p == "1234" || $p == "123456") return 1;
+
+    if ($p == "abc" || $p == "password" || $p == "pass") return 1;
+
+    if ($p == "0000" || $password == "qwerty123") return 1;
 
     return 0;
 }
@@ -185,10 +191,15 @@ function RandomString($len)
 }
 
 //
-//
+// Удалить запись из восстановления паролей
 //
 
 function SqlRequestDeleteRestore($id)
 {
     return "DELETE FROM `reset` WHERE id=$id";
+}
+
+function SqlRequestFindRestoreByCode($code)
+{
+    return "SELECT * FROM `reset` WHERE url like '$code'";
 }
