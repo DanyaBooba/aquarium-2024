@@ -106,7 +106,7 @@
     width: 100%;
 }
 
-.page-login--content form .input-group input {
+.page-login--content form .input-group-sm input {
     margin-bottom: 6px;
     border-radius: 8px !important;
 }

@@ -88,6 +88,7 @@
         </div>
     </main>
 
+    <script src="/app/js/form-button-active.js"></script>
     <script src="/app/js/confirm-form.js"></script>
 
     <?php include_once "../app/php/bottom/javascript.php"; ?>
