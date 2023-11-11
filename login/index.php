@@ -36,13 +36,13 @@
                 </div>
             <?php endif; ?>
             <form class="needs-validation" action="/api/php/login.php" method="post" novalidate>
-                <div>
+                <div class="input-group-sm">
                     <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите почту.
                     </div>
                 </div>
-                <div>
+                <div class="input-group-sm">
                     <input class="form-control" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите пароль.

@@ -36,7 +36,7 @@
                 </div>
             <?php endif; ?>
             <form class="needs-validation" action="/api/php/registration.php" method="post" novalidate>
-                <div>
+                <div class="input-group-sm">
                     <input class="form-control" type="email" name="email" placeholder="Почта" value="<?php echo $g ?>" aria-label="Почта" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите почту.
@@ -45,7 +45,7 @@
                         Используется для авторизации.
                     </p>
                 </div>
-                <div>
+                <div class="input-group-sm">
                     <input class="form-control" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите пароль.
@@ -54,7 +54,7 @@
                         Можно восстановить после регистрации.
                     </p>
                 </div>
-                <div>
+                <div class="input-group-sm">
                     <input class="form-control" type="password" name="confirm_password" placeholder="Подтвердите пароль" aria-label="Подтвердите пароль" required>
                     <div class="invalid-feedback">
                         Пожалуйста, подтвердите введеный пароль.

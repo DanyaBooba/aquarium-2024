@@ -26,6 +26,10 @@
     margin-bottom: 12px;
 }
 
+.footer__center .link {
+    font-size: 14px;
+}
+
 .footer__left
 {
     display: flex;
@@ -44,7 +48,7 @@
     margin: 0;
 }
 
-@media(max-width: 767px) {
+@media(max-width: 991px) {
     .footer {
         flex-direction: column;
         margin-bottom: 100px;

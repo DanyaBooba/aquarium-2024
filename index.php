@@ -37,13 +37,13 @@
                     </svg>
                     <h3 class="h4">Войти</h3>
                     <form class="needs-validation" action="/api/php/login.php" method="post" novalidate>
-                        <div class="input-group input-group-sm">
+                        <div class="input-group-sm">
                             <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
                             <div class="invalid-feedback">
                                 Пожалуйста, введите почту.
                             </div>
                         </div>
-                        <div class="input-group input-group-sm">
+                        <div class="input-group-sm">
                             <input class="form-control" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
                             <div class="invalid-feedback">
                                 Пожалуйста, введите пароль.
@@ -66,18 +66,18 @@
                     <button onClick="Registration()" class="btn btn-success button-login-success" type="submit">
                         Зарегистрироваться
                     </button>
-                </div>
-                <div class="page-login-privacy">
-                    <div class="page-login-privacy--link">
-                        <a href="/login/restore/" class="link">
-                            Забыли пароль?
-                        </a>
-                    </div>
-                    <div class="page-login-privacy--link">
-                        Принимаете
-                        <a href="/about/user/privacypolicy" class="link">
-                            политику конфиденциальности
-                        </a>
+                    <div class="page-login-privacy">
+                        <div class="page-login-privacy--link">
+                            <a href="/login/restore/" class="link">
+                                Забыли пароль?
+                            </a>
+                        </div>
+                        <div class="page-login-privacy--link">
+                            Принимаете
+                            <a href="/about/user/privacypolicy" class="link">
+                                политику конфиденциальности
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

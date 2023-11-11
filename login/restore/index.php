@@ -37,7 +37,7 @@
                     </div>
                 <?php endif; ?>
                 <form class="needs-validation" action="/api/php/restore.php" method="post" novalidate>
-                    <div>
+                    <div class="input-group-sm">
                         <input class="form-control" type="email" name="email_restore" placeholder="Почта" aria-label="Почта" required>
                         <div class="invalid-feedback">
                             Пожалуйста, введите почту.

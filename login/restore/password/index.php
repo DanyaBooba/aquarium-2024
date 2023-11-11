@@ -65,7 +65,7 @@ $email = $find[0]["email"];
                 Почта: <b><?php echo $email; ?></b>
             </p>
             <form class="needs-validation" action="/api/php/restore-password.php" method="post" novalidate>
-                <div>
+                <div class="input-group-sm">
                     <input class="form-control" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите пароль.
@@ -74,7 +74,7 @@ $email = $find[0]["email"];
                         Введите новый пароль
                     </p>
                 </div>
-                <div>
+                <div class="input-group-sm">
                     <input class="form-control" type="password" name="confirm_password" placeholder="Подтвердите пароль" aria-label="Подтвердите пароль" required>
                     <div class="invalid-feedback">
                         Пожалуйста, подтвердите введеный пароль.
