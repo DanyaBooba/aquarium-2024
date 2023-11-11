@@ -42,4 +42,30 @@ $findrestoresql = SqlRequestFindRestoreByCode($code);
 
 $findrestore = R::getAll($findrestoresql);
 
-var_dump($findrestore);
+if (abs(time() - $findrestore[0]["timecreate"]) > 1800) {
+    header("Location: /login/restore/?e=time_url");
+    die();
+}
+
+$findusersql = SqlRequestFind($findrestore[0]["email"]);
+
+$finduser = R::getAll($findusersql);
+
+if (count($finduser) <= 0) {
+    header("Location: /login/restore/?e=email_null");
+    die();
+}
+
+$updatepasssql = SqlRequestUpdatePassword($finduser[0]["email"], $password, RandomString(16));
+
+R::getAll($updatepasssql);
+
+##
+## Clear reset
+##
+
+$deleteresetsql = SqlRequestDeleteRestore($findrestore[0]["id"]);
+
+R::getAll($deleteresetsql);
+
+header("Location: /login/");

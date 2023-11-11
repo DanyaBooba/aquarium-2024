@@ -199,7 +199,21 @@ function SqlRequestDeleteRestore($id)
     return "DELETE FROM `reset` WHERE id=$id";
 }
 
+//
+// SQL запрос: поиск восстановления пароля по коду
+//
+
 function SqlRequestFindRestoreByCode($code)
 {
     return "SELECT * FROM `reset` WHERE url like '$code'";
+}
+
+//
+//
+//
+
+function SqlRequestUpdatePassword($email, $password, $salt)
+{
+    $newpass = password_hash($salt . $password . $salt, PASSWORD_DEFAULT);
+    return "UPDATE `users` SET `passhash` = '$newpass', `saltpass` = '$salt' WHERE email like '$email'";
 }
