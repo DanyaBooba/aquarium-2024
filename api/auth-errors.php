@@ -15,6 +15,10 @@ function RestoreError($data)
 {
     if ($data == "email_null") return "Пользователя не существует.";
 
+    if ($data == "error_url") return "Неверная ссылка для восстановления пароля.";
+
+    if ($data == "time_url") return "Превышено время ожидания.";
+
     return null;
 }
 
