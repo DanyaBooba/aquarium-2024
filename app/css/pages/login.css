@@ -65,7 +65,7 @@
 .page-login--content
 {
     background: var(--bs-tertiary-bg-me-2);
-    padding: 40px 30px;
+    padding: 30px;
     border-radius: 12px;
 
     display: flex;

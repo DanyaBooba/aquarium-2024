@@ -32,7 +32,7 @@ function CheckDataUser($user)
 
     if (strlen($user["password"]) <= 3) return "passw_null";
 
-    return "error";
+    return "ok";
 }
 
 //
@@ -209,7 +209,7 @@ function SqlRequestFindRestoreByCode($code)
 }
 
 //
-//
+// Обновление пароля
 //
 
 function SqlRequestUpdatePassword($email, $password, $salt)

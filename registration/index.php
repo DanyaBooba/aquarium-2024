@@ -105,6 +105,7 @@
         </div>
     </main>
 
+    <script src="/app/js/form-edit-url.js"></script>
     <script src="/app/js/form-button-active.js"></script>
     <script src="/app/js/confirm-form.js"></script>
 
