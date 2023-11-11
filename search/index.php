@@ -21,16 +21,23 @@
                 </form>
             </div>
             <div class="person-search-list list-group">
-                <ul class="nav nav-pills flex-column">
-                    <li class="nav-item">
-                        <a href="#" class="list-group-item list-group-item-action">
-                            <img src="/app/img/users/icons/MAN1.jpg" width="100" alt="Даниил Дыбка">
-                            <div>
-                                <p class="person-profile-content-name-1">Даниил Дыбка</p>
-                                <p class="person-profile-content-name-2">Описание профиля</p>
-                            </div>
-                        </a>
-                    </li>
+                <ul class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="/app/img/users/icons/MAN1.jpg" alt="Даниил Дыбка">
+                        Даниил Дыбка
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="/app/img/users/icons/MAN1.jpg" alt="Даниил Дыбка">
+                        Даниил Дыбка
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="/app/img/users/icons/MAN1.jpg" alt="Даниил Дыбка">
+                        Даниил Дыбка
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="/app/img/users/icons/MAN1.jpg" alt="Даниил Дыбка">
+                        Даниил Дыбка
+                    </a>
                 </ul>
             </div>
         </div>

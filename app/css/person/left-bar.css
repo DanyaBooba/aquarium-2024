@@ -10,7 +10,6 @@ ul.person-leftbar li a {
     color: var(--text-color);
     text-decoration: none;
     margin: 0;
-    padding-left: 10px;
 
     display: flex;
 }
@@ -26,17 +25,18 @@ ul.person-leftbar li button {
 
     display: flex;
     align-items: center;
-    background: var(--bg-light);
     border-radius: 12px;
-    margin-bottom: 4px;
 
     transition: .3s background;
 }
 
-ul.person-leftbar li button svg {
-    margin-left: 20px;
+ul.person-leftbar li button:hover,
+ul.person-leftbar li button:focus {
+    background: var(--bg-light-hover);
 }
 
-ul.person-leftbar li button:hover {
-    background: var(--bg-light-hover);
+@media(max-width: 991px) {
+    ul.person-leftbar li button svg {
+        display: none !important;
+    }
 }

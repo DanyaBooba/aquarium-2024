@@ -76,17 +76,24 @@
 
 /* Search */
 
-.person-search-list ul li {
-    border-radius: 12px;
+.person-search-list ul a::after {
     margin-bottom: 16px;
+    padding-bottom: 16px;
     padding: 0;
 }
 
-.person-search-list ul li a
+.person-search-list ul a img {
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.person-search-list ul a
 {
     display: flex;
     align-items: center;
-    padding: 10px;
+    font-size: 20px;
+    font-family: HalvarBreit;
 }
 
 .person-search-list ul li a img {
