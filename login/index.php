@@ -65,7 +65,7 @@
                 </div>
                 <div>
                     <a href="/registration/" class="link">
-                        Ещё не зарегистрированы?
+                        Регистрация
                     </a>
                 </div>
             </div>
