@@ -121,7 +121,7 @@ body {
 
 .auth-login h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .auth-login .alert
@@ -144,7 +144,7 @@ body {
 
 .auth-login .auth-login--restore
 {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .auth-login .auth-login--restore a {

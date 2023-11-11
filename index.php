@@ -35,15 +35,15 @@
                         <path d="M331.58 65.9V269.6H306.98V193.1L311.18 176.3H303.98C297.68 199.4 277.88 218 243.98 218C200.48 218 172.58 184.7 172.58 140.6C172.58 96.2 200.48 62.9 243.98 62.9C277.88 62.9 297.68 81.5 303.98 104.9H311.18L306.98 87.8V65.9H331.58ZM306.98 140.6C306.98 100.7 281.78 83.9 250.88 83.9C219.98 83.9 197.18 101.3 197.18 140.6C197.18 179.6 219.98 197 250.88 197C281.78 197 306.98 180.2 306.98 140.6Z" />
                         <path d="M0.900024 173.6C0.900024 149.9 15 133.7 49.8 130.1L109.2 124.4C107.7 97.1 93 83.6 67.2 83.6C45.6 83.6 25.5 93.2 25.5 121.4H1.50003C1.50003 90.5 24.9 62.9 67.2 62.9C108.9 62.9 133.8 90.5 133.8 130.4V194H155.7V215H129.3C117.9 215 111.6 208.7 111.6 197.6V189.5L115.5 173.9H108.3C102.6 196.7 86.7 218 50.7 218C7.50003 218 0.900024 189.2 0.900024 173.6ZM25.5 170.6C25.5 187.7 36.3 197 53.7 197C87.6 197 109.2 173.6 109.2 142.7L54 148.4C35.1 150.2 25.5 155.9 25.5 170.6Z" />
                     </svg>
-                    <h3>Войти</h3>
+                    <h3 class="h4">Войти</h3>
                     <form class="needs-validation" action="/api/php/login.php" method="post" novalidate>
-                        <div>
+                        <div class="input-group input-group-sm">
                             <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
                             <div class="invalid-feedback">
                                 Пожалуйста, введите почту.
                             </div>
                         </div>
-                        <div>
+                        <div class="input-group input-group-sm">
                             <input class="form-control" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
                             <div class="invalid-feedback">
                                 Пожалуйста, введите пароль.
@@ -55,8 +55,11 @@
                     </form>
                     <div class="page-login--new-page">
                         <a href="/login/" class="link">
-                            Открыть на отдельной странице
+                            Открыть в отдельном окне
                         </a>
+                        <svg class="svg-normal mb-0 ms-2" width="14" height="14">
+                            <use xlink:href="/app/img/icons/bootstrap.svg#box-arrow-up-right"></use>
+                        </svg>
                     </div>
                 </div>
                 <div class="page-login--registation">

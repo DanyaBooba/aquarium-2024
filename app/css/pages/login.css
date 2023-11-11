@@ -8,8 +8,15 @@
 
 .page-login .page-login--new-page {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-login .page-login--new-page svg {
+    margin-bottom: 0 !important;
 }
 
 .page-login-privacy {
@@ -33,6 +40,7 @@
         background: var(--bg-color) !important;
         padding-bottom: 0 !important;
         margin-bottom: 60px !important;
+        border: 0 !important;
     }
 
     .page-login--content svg {
@@ -65,6 +73,7 @@
 
     margin-bottom: 30px;
     width: 320px;
+    border: 1px solid var(--text-color-3);
 }
 
 .page-login--registation {
@@ -73,6 +82,7 @@
 
     background: var(--bs-tertiary-bg-me-2);
     border-radius: 12px;
+    border: 1px solid var(--text-color-3);
 
     display: flex;
     flex-direction: column;
@@ -80,7 +90,7 @@
 }
 
 .page-login--content svg {
-    height: 55px;
+    height: 35px;
     margin-bottom: 20px;
 }
 
@@ -95,8 +105,12 @@
     width: 100%;
 }
 
-.page-login--content form input {
+.page-login--content form .input-group input {
     margin-bottom: 6px;
+    border-radius: 8px !important;
+}
+
+.page-login--content form button {
     border-radius: 8px;
 }
 
