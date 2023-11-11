@@ -39,9 +39,21 @@ $findrestore = R::getAll($findrestoresql);
 
 $url = RandomString(80) . $findrestore[0]["id"];
 
+if (count($findrestore) > 0) {
+    if (abs(time() - $findrestore[0]["timecreate"]) > 1800) {
+        $deleterestore = SqlRequestDeleteRestore($findrestore[0]["id"]);
+
+        R::getAll($deleterestore);
+
+        $findrestore = [];
+    }
+}
+
 if (count($findrestore) <= 0) {
     $resetsql = SqlResetPassword($email_restore, $url);
     R::getAll($resetsql);
+} else {
+    $url = $findrestore[0]["url"];
 }
 
 ##

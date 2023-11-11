@@ -183,3 +183,12 @@ function RandomString($len)
 
     return $random_string;
 }
+
+//
+//
+//
+
+function SqlRequestDeleteRestore($id)
+{
+    return "DELETE FROM `reset` WHERE id=$id";
+}
