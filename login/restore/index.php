@@ -38,7 +38,7 @@
                 <?php endif; ?>
                 <form class="needs-validation" action="/api/php/restore.php" method="post" novalidate>
                     <div class="input-group-sm">
-                        <input class="form-control" type="email" name="email_restore" placeholder="Почта" aria-label="Почта" required>
+                        <input class="form-control" onInput="CheckFormData()" type="email" name="email_restore" placeholder="Почта" aria-label="Почта" required>
                         <div class="invalid-feedback">
                             Пожалуйста, введите почту.
                         </div>
@@ -84,6 +84,7 @@
         </div>
     </main>
 
+    <script src="/app/js/form-button-active.js"></script>
     <script src="/app/js/confirm-form.js"></script>
 
     <?php include_once "../../app/php/bottom/javascript.php"; ?>
