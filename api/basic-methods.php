@@ -217,3 +217,32 @@ function SqlRequestUpdatePassword($email, $password, $salt)
     $newpass = password_hash($salt . $password . $salt, PASSWORD_DEFAULT);
     return "UPDATE `users` SET `passhash` = '$newpass', `saltpass` = '$salt' WHERE email like '$email'";
 }
+
+//
+// Sql запрос: записываем в логин по коду запись
+//
+
+function SqlRequestSetLoginByCode($email, $code)
+{
+    return "INSERT INTO `loginbycode`(`email`, `code`, `timecreate`) VALUES ('$email', $code, " . time() . ")";
+}
+
+//
+// Случайный код
+//
+
+function RandomCode($len)
+{
+    if ($len <= 0) return "";
+
+    $permitted = '0123456789';
+
+    $input_length = strlen($permitted);
+    $random_code = '';
+    for ($i = 0; $i < $len; $i++) {
+        $random_character = $permitted[mt_rand(0, $input_length - 1)];
+        $random_code .= $random_character;
+    }
+
+    return $random_code;
+}

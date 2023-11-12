@@ -3,7 +3,7 @@ function CheckFormData() {
 	let active = true;
 	for (let i = 0; i < inputs.length; i++) {
 		let value = inputs[i].value;
-		if (value == "") {
+		if (value.length <= 3) {
 			active = false;
 			break;
 		}
