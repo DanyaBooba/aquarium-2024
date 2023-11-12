@@ -3,6 +3,7 @@
 include_once "../basic-methods.php";
 include_once "../rb-mysql.php";
 include_once "../token.php";
+include_once "../mail.php";
 
 $email = $_POST["email"];
 
@@ -21,6 +22,28 @@ if (count($find) <= 0) {
     return;
 }
 
-$savesql = SqlRequestSetLoginByCode($email, RandomCode(6));
+$findsavesql = SqlRequestFindLoginByCode($email);
 
-var_dump($savesql);
+$findsave = R::getAll($findsavesql);
+
+$code = RandomCode(6);
+
+if (count($findsave) > 0) {
+    if (abs(time() - $findsave[0]["timecreate"]) > 1800) {
+        $deletesql = SqlRequestDeleteLoginByCode($findsave[0]["id"]);
+
+        R::getAll($deletesql);
+
+        $findsave = [];
+    } else {
+        $code = $findsave[0]["code"];
+    }
+}
+
+if (count($findsave) <= 0) {
+    $savesql = SqlRequestSetLoginByCode($email, $code);
+
+    $save = R::getAll($savesql);
+}
+
+var_dump($code);

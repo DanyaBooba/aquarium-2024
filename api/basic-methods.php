@@ -246,3 +246,21 @@ function RandomCode($len)
 
     return $random_code;
 }
+
+//
+// Sql запрос: поиск записи входа по коду
+//
+
+function SqlRequestFindLoginByCode($email)
+{
+    return "SELECT * FROM `loginbycode` WHERE email like '$email'";
+}
+
+//
+// Sql запрос: удаление записи входа по коду
+//
+
+function SqlRequestDeleteLoginByCode($id)
+{
+    return "DELETE FROM `loginbycode` WHERE id=$id";
+}
