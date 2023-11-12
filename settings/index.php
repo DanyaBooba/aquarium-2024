@@ -31,13 +31,13 @@ if (count($find) <= 0) {
                 <div class="row row-cols-1 g-2">
                     <div class="col-md-8">
                         <div class="person-setting-bg person-setting-content">
-                            <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                <svg height="32" width="32" class="me-3" fill="dark">
+                            <div class="alert alert-background d-flex align-items-center" role="alert">
+                                <svg height="32" width="32" class="me-3 svg-normal">
                                     <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
                                 </svg>
                                 <span>
                                     Ваш аккаунт не подтвержден, введите <span class="dashed">имя</span>, <span class="dashed">фамилию</span>,
-                                    <span class="dashed">никнейм</span> и <a href="/api/php/send-verify-email.php" class="link">подтвердите почту</a>.
+                                    <span class="dashed">никнейм</span> и <a href="/api/php/person/send-verify-email.php" class="link">подтвердите почту</a>.
                                 </span>
                             </div>
                             <h2 id="data">Личные данные</h2>
@@ -108,6 +108,11 @@ if (count($find) <= 0) {
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="person-setting-bg person-setting-bar">
+                            <a href="/api/php/person/person-exit.php" class="link">
+                                Выйти из аккаунта
+                            </a>
                         </div>
                     </div>
                 </div>

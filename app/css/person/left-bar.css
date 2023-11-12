@@ -6,6 +6,10 @@ ul.person-leftbar {
     margin: 0;
 }
 
+ul.person-leftbar li {
+    padding-bottom: 2px;
+}
+
 ul.person-leftbar li a {
     color: var(--text-color);
     text-decoration: none;

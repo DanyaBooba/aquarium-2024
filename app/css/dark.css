@@ -6,6 +6,7 @@
     --bg-color-auth: #2e2a4d;
     --text-default: #fff;
     --text-invert: #000;
+    --bg-input: #231d40;
 
     /* Main Background color */
 
@@ -25,8 +26,8 @@
 
     /* Backgrounds color */
 
-    --bg-light: #4c4966;
-    --bg-light-hover: #585576;
+    --bg-light: #241e41;
+    --bg-light-hover: #241e41;
     --bg-light-1: #4C4966;
     --bg-light-2: #5f4966;
     --bg-light-3: #495f66;

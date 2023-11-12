@@ -1,6 +1,6 @@
 .person-content h1
 {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .person-content .alert {
@@ -12,7 +12,7 @@
 .person-profile {
     background: var(--bg-light);
     border-radius: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .person-profile-content {
@@ -111,7 +111,7 @@
     background: var(--bg-light);
     border-radius: 12px;
     padding: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .person-setting-bg ul {
@@ -159,4 +159,27 @@
 .person-setting-bg form button[type="submit"] {
     margin-top: 10px;
     border-radius: 8px;
+}
+
+/* Notifications */
+
+ul.person-content-notifications li {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+ul.person-content-notifications li h2 {
+    margin-top: 1rem;
+}
+
+ul.person-content-notifications li div {
+    margin-bottom: 1rem;
+}
+
+ul.person-content-notifications li:first-child h2 {
+    margin-top: 0 !important;
+}
+
+ul.person-content-notifications li:last-child h2 {
+    margin-bottom: 0 !important;
 }

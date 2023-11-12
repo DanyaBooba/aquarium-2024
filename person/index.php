@@ -27,7 +27,7 @@ if (count($find) <= 0) {
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content">
             <div class="alert alert-warning d-flex align-items-center">
-                <svg height="32" width="32" class="me-3" fill="dark">
+                <svg height="32" width="32" class="me-3 svg-normal">
                     <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
                 </svg>
                 <span>

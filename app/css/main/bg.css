@@ -2,3 +2,9 @@
 {
     background: var(--bg-light);
 }
+
+.alert-warning
+{
+    background: var(--bg-warning);
+    border: 1px solid var(--bg-warning-border);
+}
