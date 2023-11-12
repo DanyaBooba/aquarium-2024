@@ -17,36 +17,39 @@
                 <div class="row row-cols-1 g-2">
                     <div class="col-md-8">
                         <div class="person-setting-bg person-setting-content">
+                            <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                <svg height="32" width="32" class="me-3" fill="dark">
+                                    <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
+                                </svg>
+                                <span>
+                                    Ваш аккаунт не подтвержден, введите <span class="dashed">имя</span>, <span class="dashed">фамилию</span>,
+                                    <span class="dashed">никнейм</span> и <a href="/api/php/send-verify-email.php" class="link">подтвердите почту</a>.
+                                </span>
+                            </div>
                             <h2 id="data">Личные данные</h2>
                             <form class="needs-validation col-md-6" action="?" method="post" novalidate>
                                 <div>
-                                    <input class="form-control" type="email" name="email" placeholder="Имя" aria-label="Имя" required>
+                                    <input class="form-control" type="text" name="name1" placeholder="Имя" aria-label="Имя" required>
                                     <div class="invalid-feedback">
-                                        Пожалуйста, введите почту.
+                                        Пожалуйста, введите имя.
                                     </div>
-                                    <p class="form-more">
-                                        Используется для авторизации.
-                                    </p>
                                 </div>
                                 <div>
-                                    <input class="form-control" type="password" name="password" placeholder="Фамилия" aria-label="Фамилия" required>
+                                    <input class="form-control" type="text" name="name2" placeholder="Фамилия" aria-label="Фамилия" required>
                                     <div class="invalid-feedback">
-                                        Пожалуйста, введите пароль.
+                                        Пожалуйста, введите фамилию.
                                     </div>
-                                    <p class="form-more">
-                                        Можно восстановить после регистрации.
-                                    </p>
                                 </div>
                                 <div>
-                                    <input class="form-control" type="password" name="confirm_password" placeholder="Никнейм" aria-label="Никнейм" required>
+                                    <input class="form-control" type="text" name="nickname" placeholder="Никнейм" aria-label="Никнейм" required>
                                     <div class="invalid-feedback">
-                                        Пожалуйста, подтвердите введеный пароль.
+                                        Пожалуйста, введите уникальный никнейм.
                                     </div>
                                     <p class="form-more">
-                                        Повторите введенный вами пароль.
+                                        Уникальное короткое имя.
                                     </p>
                                 </div>
-                                <button class="btn btn-primary w-100 mt-2" type="submit">
+                                <button class="btn btn-primary w-100" type="submit">
                                     Сохранить изменения
                                 </button>
                             </form>

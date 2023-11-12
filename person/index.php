@@ -12,6 +12,15 @@
     <main class="row row-cols-1 g-4">
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content">
+            <div class="alert alert-warning d-flex align-items-center">
+                <svg height="32" width="32" class="me-3" fill="dark">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
+                </svg>
+                <span>
+                    Для подтверждения аккаунта <a href="/settings/" class="link">введите ваши данные</a>
+                    и <span class="dashed">пройдите по ссылке</span>, отправленную на вашу почту.
+                </span>
+            </div>
             <div class="person-profile-bg" style="background-image: url('/app/img/users/bg/BG2.jpg');">
                 <img src="/app/img/users/icons/MAN1.jpg">
             </div>

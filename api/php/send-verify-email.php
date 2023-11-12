@@ -1,0 +1,5 @@
+<?php
+
+##
+## Send verify email
+##

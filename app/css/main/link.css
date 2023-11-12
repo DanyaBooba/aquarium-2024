@@ -9,3 +9,8 @@ a.link:hover,
 a.link:focus {
     border-bottom: 1px solid var(--text-default);
 }
+
+.dashed
+{
+    border-bottom: 1px dashed var(--text-color-4);
+}

@@ -3,6 +3,10 @@
     margin-bottom: 20px;
 }
 
+.person-content .alert {
+    border-radius: 8px;
+}
+
 /* Profile */
 
 .person-profile {
@@ -119,6 +123,11 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.person-setting-bg ul li:last-child {
+    margin-bottom: 0 !important;
 }
 
 .person-setting-bg ul li a {
@@ -136,4 +145,18 @@
 
 .person-setting-content form {
     margin-bottom: 10px;
+}
+
+.person-setting-bg form input {
+    margin-bottom: 6px;
+    border-radius: 8px;
+}
+
+.person-setting-bg .alert {
+    border-radius: 8px;
+}
+
+.person-setting-bg form button[type="submit"] {
+    margin-top: 10px;
+    border-radius: 8px;
 }
