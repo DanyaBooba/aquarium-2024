@@ -84,13 +84,13 @@ if (count($find) > 0) {
             <ul>
                 <li>
                     Техническая поддержка:
-                    <a href="mailto:daniil@dybka.ru" class="link">
+                    <a href="mailto:daniil@dybka.ru" class="link-white">
                         daniil@dybka.ru
                     </a>
                 </li>
                 <li>
                     Подтверждаете
-                    <a href="/about/user/privacypolicy/" class="link">
+                    <a href="/about/user/privacypolicy/" class="link-white">
                         политику конфиденциальности
                     </a>
                 </li>

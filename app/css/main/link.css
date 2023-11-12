@@ -10,6 +10,18 @@ a.link:focus {
     border-bottom: 1px solid var(--text-default);
 }
 
+a.link-white {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+    transition: .3s border-bottom;
+}
+
+a.link-white:hover,
+a.link-white:focus {
+    border-bottom: 1px solid #fff;
+}
+
 .dashed
 {
     border-bottom: 1px dashed var(--text-color-4);

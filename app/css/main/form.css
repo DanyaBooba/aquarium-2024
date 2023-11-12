@@ -19,9 +19,11 @@ form input[type="text"],
 form input[type="number"] {
     background: var(--bg-input) !important;
     color: var(--text-color) !important;
+    border: 1px solid var(--bg-input-border);
 }
 
 form input.form-check-input
 {
     background: var(--bg-input);
+    border: 1px solid var(--bg-input-border);
 }
