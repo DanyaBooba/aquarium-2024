@@ -52,4 +52,6 @@ R::getAll($deletesql);
 ## Logined
 ##
 
+$_SESSION["login"] = $user["email"];
+
 header("Location: /person/");

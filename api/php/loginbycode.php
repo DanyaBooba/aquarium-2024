@@ -42,7 +42,6 @@ if (count($findsave) > 0) {
 
 if (count($findsave) <= 0) {
     $savesql = SqlRequestSetLoginByCode($email, $code);
-
     $save = R::getAll($savesql);
 } else {
     $code = $findsave[0]["code"];

@@ -79,4 +79,6 @@ R::getAll($sql);
 ## Logined
 ##
 
+$_SESSION["login"] = $user["email"];
+
 header("Location: /person/");
