@@ -1,8 +1,8 @@
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 
-<?php include_once "app/php/head.php"; ?>
-
 <?php
+include_once "app/php/head.php";
+
 include_once "api/rb-mysql.php";
 include_once "api/basic-methods.php";
 include_once "api/token.php";
