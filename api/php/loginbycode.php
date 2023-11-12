@@ -53,4 +53,4 @@ if (count($findsave) <= 0) {
 
 EmailLoginByCode($email, $code);
 
-// header("Location: /login/code/enter/");
+header("Location: /login/code/enter/");

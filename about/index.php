@@ -1,7 +1,7 @@
-<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
-
 <?php include_once "../app/php/head.php"; ?>
 
+
+<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Социальная сеть Аквариум</title>
 
 <body class="container">

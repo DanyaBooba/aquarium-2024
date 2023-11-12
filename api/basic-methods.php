@@ -1,28 +1,24 @@
 <?php
 
-//
-// Очищаем строку от спецсимволов
-//
-
 function ClearStr($str)
 {
     $chars = ['!', '#', '<', '>', '«', '»', ' ', ';', ',', '*'];
     return mb_strtolower(str_replace($chars, '', trim($str)));
-}
 
-//
-// Убираем спецсимволы из никнейма
-//
+    //
+    // Очищаем строку от спецсимволов
+    //
+}
 
 function ClearNickname($str)
 {
     $chars = ['!', '#', '<', '>', '«', '»', ' ', ';', ',', '*', '?', '@', '$', '%', '^', '&', '(', ')', '+'];
     return mb_strtolower(str_replace($chars, '', trim($str)));
-}
 
-//
-// Проверка данных пользователя
-//
+    //
+    // Убираем спецсимволы из никнейма
+    //
+}
 
 function CheckDataUser($user)
 {
@@ -33,22 +29,22 @@ function CheckDataUser($user)
     if (strlen($user["password"]) <= 3) return "passw_null";
 
     return "ok";
-}
 
-//
-// Проверка введенного пароля
-//
+    //
+    // Проверка данных пользователя
+    //
+}
 
 function RestorePassword($email)
 {
     if (strlen($email) <= 3) return "email_null";
 
     return "ok";
-}
 
-//
-// Проверка: пароль не является простым
-//
+    //
+    // Проверка введенного пароля
+    //
+}
 
 function CheckSimplePassword($password)
 {
@@ -63,11 +59,11 @@ function CheckSimplePassword($password)
     if ($p == "0000" || $password == "qwerty123") return 1;
 
     return 0;
-}
 
-//
-// SQL запрос: создание пользователя
-//
+    //
+    // Проверка: пароль не является простым
+    //
+}
 
 function SqlRequestCreate($user, $randomstr, $maxid)
 {
@@ -141,38 +137,39 @@ function SqlRequestCreate($user, $randomstr, $maxid)
     }
 
     return "INSERT INTO `users`($sqlname) VALUES ($sqlvalue)";
-}
 
-//
-// SQL запрос: проверка на существование пользователя
-//
+    //
+    // SQL запрос: создание пользователя
+    //
+
+}
 
 function SqlRequestFind($email)
 {
     return "SELECT * FROM `users` WHERE email like '" . $email . "'";
-}
 
-//
-// SQL запрос: записываем данные о восстановлении пароля
-//
+    //
+    // SQL запрос: проверка на существование пользователя
+    //
+}
 
 function SqlResetPassword($email, $url)
 {
     return "INSERT INTO `reset`(`email`, `timecreate`, `url`) VALUES ('$email', " . time() . ", '$url')";
-}
 
-//
-// SQL запрос: ищем запись в восстановлении пароля
-//
+    //
+    // SQL запрос: записываем данные о восстановлении пароля
+    //
+}
 
 function SqlRequestFindRestore($email)
 {
     return "SELECT * FROM `reset` WHERE email like '$email'";
-}
 
-//
-// Генерация рандомных строк
-//
+    //
+    // SQL запрос: ищем запись в восстановлении пароля
+    //
+}
 
 function RandomString($len)
 {
@@ -188,48 +185,48 @@ function RandomString($len)
     }
 
     return $random_string;
-}
 
-//
-// Удалить запись из восстановления паролей
-//
+    //
+    // Генерация рандомных строк
+    //
+}
 
 function SqlRequestDeleteRestore($id)
 {
     return "DELETE FROM `reset` WHERE id=$id";
-}
 
-//
-// SQL запрос: поиск восстановления пароля по коду
-//
+    //
+    // Удалить запись из восстановления паролей
+    //
+}
 
 function SqlRequestFindRestoreByCode($code)
 {
     return "SELECT * FROM `reset` WHERE url like '$code'";
-}
 
-//
-// Обновление пароля
-//
+    //
+    // SQL запрос: поиск восстановления пароля по коду
+    //
+}
 
 function SqlRequestUpdatePassword($email, $password, $salt)
 {
     $newpass = password_hash($salt . $password . $salt, PASSWORD_DEFAULT);
     return "UPDATE `users` SET `passhash` = '$newpass', `saltpass` = '$salt' WHERE email like '$email'";
-}
 
-//
-// Sql запрос: записываем в логин по коду запись
-//
+    //
+    // Обновление пароля
+    //
+}
 
 function SqlRequestSetLoginByCode($email, $code)
 {
     return "INSERT INTO `loginbycode`(`email`, `code`, `timecreate`) VALUES ('$email', $code, " . time() . ")";
-}
 
-//
-// Случайный код
-//
+    //
+    // Sql запрос: записываем в логин по коду запись
+    //
+}
 
 function RandomCode($len)
 {
@@ -245,31 +242,35 @@ function RandomCode($len)
     }
 
     return $random_code;
-}
 
-//
-// Sql запрос: поиск записи входа по коду
-//
+    //
+    // Случайный код
+    //
+}
 
 function SqlRequestFindLoginByCode($email)
 {
     return "SELECT * FROM `loginbycode` WHERE email like '$email'";
-}
 
-//
-// Sql запрос: удаление записи входа по коду
-//
+    //
+    // Sql запрос: поиск записи входа по коду
+    //
+}
 
 function SqlRequestDeleteLoginByCode($id)
 {
     return "DELETE FROM `loginbycode` WHERE id=$id";
-}
 
-//
-// Sql запрос: поиск вход по коду
-//
+    //
+    // Sql запрос: удаление записи входа по коду
+    //
+}
 
 function SqlRequestFindCode($email, $code)
 {
     return "SELECT * FROM `loginbycode` WHERE code=$code AND email like '$email'";
+
+    //
+    // Sql запрос: поиск вход по коду
+    //
 }

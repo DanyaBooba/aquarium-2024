@@ -1,5 +1,3 @@
-<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
-
 <?php
 include_once "app/php/head.php";
 
@@ -19,6 +17,8 @@ if (count($find) > 0) {
 
 <link rel="stylesheet" href="/app/css/pages/main.css">
 
+<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
+<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Начальная страница | Аквариум</title>
 
 <body class="container">

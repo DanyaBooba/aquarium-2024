@@ -37,10 +37,10 @@ function Email($email, $subject = "", $text)
     $subject .= " | Соцсеть Аквариум";
     $headers = "From: info@creagoo.ru\r\nContent-type: text/html";
 
-    echo "Email: $email<br>";
-    echo "Subject: $subject<br>";
-    echo "Text: $text<br>";
-    echo "Headers: $headers<br>";
+    // echo "Email: $email<br>";
+    // echo "Subject: $subject<br>";
+    // echo "Text: $text<br>";
+    // echo "Headers: $headers<br>";
 
-    // mail($email, $subject, $message, $headers);
+    mail($email, $subject, $text, $headers);
 }

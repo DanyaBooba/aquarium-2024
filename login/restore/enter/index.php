@@ -1,5 +1,3 @@
-<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
-
 <?php
 include_once "../../../api/auth-errors.php";
 include_once "../../../app/php/head.php";
@@ -46,6 +44,8 @@ $email = $find[0]["email"];
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
+
+<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Восстановить пароль | Аквариум</title>
 
 <body>

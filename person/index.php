@@ -1,8 +1,6 @@
-<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
-
 <?php
+session_start();
 include_once "../api/auth-errors.php";
-include_once "../app/php/head.php";
 
 include_once "../api/rb-mysql.php";
 include_once "../api/basic-methods.php";
@@ -18,6 +16,9 @@ if (count($find) <= 0) {
 }
 ?>
 
+<?php include_once "../app/php/head.php"; ?>
+
+<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Личный кабинет | Аквариум</title>
 
 <body class="container">

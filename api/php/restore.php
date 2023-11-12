@@ -64,4 +64,4 @@ if (count($findrestore) <= 0) {
 
 EmailRestorePassword($email_restore, $url);
 
-// header("Location: /login/restore/?a=1");
+header("Location: /login/restore/?a=1");

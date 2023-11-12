@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -72,5 +74,3 @@
     </noscript>
     <!-- /Yandex.Metrika counter -->
 </head>
-
-<?php session_start(); ?>
