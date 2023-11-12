@@ -1,12 +1,29 @@
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 
 <?php
+include_once "../../../api/auth-errors.php";
+include_once "../../../app/php/head.php";
 
 include_once "../../../api/rb-mysql.php";
 include_once "../../../api/basic-methods.php";
 include_once "../../../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
+
+##
+## Find User
+##
+
+$find = R::getAll(SqlRequestFind($_SESSION["login"]));
+
+if (count($find) > 0) {
+    header("Location: /person/");
+    die();
+}
+
+##
+## Code
+##
 
 $code = $_GET["c"];
 
@@ -23,14 +40,7 @@ if (abs(time() - $find[0]["timecreate"]) > 1800) {
 }
 
 $email = $find[0]["email"];
-
 ?>
-
-
-
-<?php include_once "../../../api/auth-errors.php"; ?>
-
-<?php include_once "../../../app/php/head.php"; ?>
 
 <?php $error = UpdatePasswordError($_GET["e"]) ?>
 

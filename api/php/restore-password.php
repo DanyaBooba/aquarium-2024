@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include_once "../basic-methods.php";
 include_once "../rb-mysql.php";
 include_once "../token.php";
@@ -18,17 +20,17 @@ $code = $_POST["code"];
 $password = $user["password"];
 
 if ($user["password"] != $user["confirm_password"]) {
-    header("Location: /login/restore/password/?e=passw_confirm&c=" . $code);
+    header("Location: /login/restore/enter/?e=passw_confirm&c=" . $code);
     return;
 }
 
 if (strlen($password) <= 3) {
-    header("Location: /login/restore/password/?e=passw_null&c=" . $code);
+    header("Location: /login/restore/enter/?e=passw_null&c=" . $code);
     return;
 }
 
 if (CheckSimplePassword($password)) {
-    header("Location: /login/restore/password/?e=passw_simple&c=" . $code);
+    header("Location: /login/restore/enter/?e=passw_simple&c=" . $code);
     return;
 }
 

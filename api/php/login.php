@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include_once "../basic-methods.php";
 include_once "../rb-mysql.php";
 include_once "../token.php";
@@ -43,5 +45,7 @@ if (password_verify($find[0]["saltpass"] . $user["password"] . $find[0]["saltpas
 ##
 ## Logined
 ##
+
+$_SESSION["login"] = $user["email"];
 
 header("Location: /person/");

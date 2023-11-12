@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include_once "../basic-methods.php";
 include_once "../rb-mysql.php";
 include_once "../token.php";
@@ -37,9 +39,6 @@ if (CheckSimplePassword($password)) {
     header("Location: /registration/?e=passw_simple&g=" . $user["email"]);
     return;
 }
-
-// $hash = password_hash($password, PASSWORD_DEFAULT);
-// password_verify($password, $hash);
 
 ##
 ## Confirm

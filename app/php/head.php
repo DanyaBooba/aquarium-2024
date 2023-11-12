@@ -72,3 +72,5 @@
     </noscript>
     <!-- /Yandex.Metrika counter -->
 </head>
+
+<?php session_start(); ?>

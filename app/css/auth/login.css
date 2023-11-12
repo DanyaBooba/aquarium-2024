@@ -4,7 +4,7 @@
         align-items: center;
         padding-top: 40px;
         padding-bottom: 40px;
-        background: repeating-linear-gradient(45deg, #606dbc, #606dbc 40px, #465298 40px, #465298 80px);
+        background: repeating-linear-gradient(-45deg, #606dbc, #606dbc 43px, #465298 40px, #465298 84.5px)
     }
 }
 

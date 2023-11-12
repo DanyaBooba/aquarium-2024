@@ -2,6 +2,21 @@
 
 <?php include_once "app/php/head.php"; ?>
 
+<?php
+include_once "api/rb-mysql.php";
+include_once "api/basic-methods.php";
+include_once "api/token.php";
+
+R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
+
+$find = R::getAll(SqlRequestFind($_SESSION["login"]));
+
+if (count($find) > 0) {
+    header("Location: /person/");
+    die();
+}
+?>
+
 <link rel="stylesheet" href="/app/css/pages/main.css">
 
 <title>Начальная страница | Аквариум</title>
