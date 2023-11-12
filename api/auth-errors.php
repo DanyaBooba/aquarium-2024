@@ -53,3 +53,14 @@ function UpdatePasswordError($data)
 
     return null;
 }
+
+function LoginByCodeError($data)
+{
+    if ($data == "email_null") return "Указана неверная почта.";
+
+    if ($data == "code_null") return "Неверный код.";
+
+    if ($data == "error") return "Данные не подходят.";
+
+    return null;
+}

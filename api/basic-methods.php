@@ -264,3 +264,12 @@ function SqlRequestDeleteLoginByCode($id)
 {
     return "DELETE FROM `loginbycode` WHERE id=$id";
 }
+
+//
+// Sql запрос: поиск вход по коду
+//
+
+function SqlRequestFindCode($email, $code)
+{
+    return "SELECT * FROM `loginbycode` WHERE code=$code AND email like '$email'";
+}

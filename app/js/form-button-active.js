@@ -3,6 +3,9 @@ function CheckFormData() {
 	let active = true;
 	for (let i = 0; i < inputs.length; i++) {
 		let value = inputs[i].value;
+
+		if (inputs[i].classList.contains("d-none") == true) continue;
+
 		if (value.length <= 3) {
 			active = false;
 			break;

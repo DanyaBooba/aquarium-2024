@@ -35,8 +35,6 @@ if (count($findsave) > 0) {
         R::getAll($deletesql);
 
         $findsave = [];
-    } else {
-        $code = $findsave[0]["code"];
     }
 }
 
@@ -44,6 +42,14 @@ if (count($findsave) <= 0) {
     $savesql = SqlRequestSetLoginByCode($email, $code);
 
     $save = R::getAll($savesql);
+} else {
+    $code = $findsave[0]["code"];
 }
 
-var_dump($code);
+##
+## Mail
+##
+
+EmailLoginByCode($email, $code);
+
+// header("Location: /login/code/enter/");

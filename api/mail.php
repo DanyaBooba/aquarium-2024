@@ -22,6 +22,16 @@ function EmailConfirmEmail($email, $url)
     Email($email, "Подтверждение аккаунта", $text);
 }
 
+function EmailLoginByCode($email, $code)
+{
+    $text = "Код для входа в Аквариум: <b>$code</b>.<br><br>
+    Не давайте код никому, даже если его требуют от имени Аквариум!<br><br>
+    Этот код используется для входа в Ваш аккаунт в Аквариум.<br><br>
+    Если Вы не запрашивали код для входа, проигнорируйте это сообщение.";
+
+    Email($email, "Вход по коду", $text);
+}
+
 function Email($email, $subject = "", $text)
 {
     $subject .= " | Соцсеть Аквариум";
