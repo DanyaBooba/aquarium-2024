@@ -63,7 +63,7 @@ $bg = "BG" . $user["capid"] . ".jpg";
                         <?php endif ?>
                     </div>
                     <div class="person-profile-content-buttons">
-                        <button onClick="ButtonLeftBar(4)" class="btn btn-secondary">
+                        <button onClick="ButtonLeftBar(6)" class="btn btn-secondary">
                             Редактировать профиль
                         </button>
                     </div>

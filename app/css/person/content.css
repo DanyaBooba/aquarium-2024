@@ -8,6 +8,13 @@
     border: 0 !important;
 }
 
+.person-content ul,
+.person-content ul li,
+.person-content ul a {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
 /* Profile */
 
 .person-profile {
@@ -66,7 +73,7 @@
     margin-top: 100px;
     max-width: 100%;
     height: auto;
-    border: 10px solid var(--bg-light);
+    border: 5px solid var(--bg-light);
 }
 
 /* Profile Adaptive */
@@ -241,4 +248,21 @@ ul.person-content-notifications li:first-child h2 {
 
 ul.person-content-notifications li:last-child h2 {
     margin-bottom: 0 !important;
+}
+
+/* List */
+
+.person-content .list-group {
+    --bs-list-group-border-color: var(--text-color-3);
+    --bs-list-group-action-hover-bg: var(--bg-light);
+    --bs-list-group-action-active-bg: var(--bg-light-active);
+}
+
+.person-content .list-group a {
+    transition: .3s;
+}
+
+.person-content .list-group a:hover,
+.person-content .list-group a:focus {
+    color: var(--text-color);
 }

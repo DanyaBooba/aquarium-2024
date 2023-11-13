@@ -46,7 +46,7 @@ ul.person-leftbar li button.active {
 
 ul.person-leftbar li button.active:hover,
 ul.person-leftbar li button.active:focus {
-    background: var(--bg-light-hover);
+    background: var(--bg-light-active-hover);
 }
 
 @media(max-width: 991px) {
