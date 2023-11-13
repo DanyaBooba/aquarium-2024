@@ -20,4 +20,8 @@
     .header__logo svg {
         width: 150px;
     }
+
+    .header {
+        margin-bottom: 20px;
+    }
 }

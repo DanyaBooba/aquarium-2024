@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-3 see-at-pc">
     <ul class="person-leftbar see-at-pc">
         <li>
             <button onClick="ButtonLeftBar(0)" class="w-100">

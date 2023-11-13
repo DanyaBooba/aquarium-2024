@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "../api/auth-errors.php";
 
 include_once "../api/rb-mysql.php";

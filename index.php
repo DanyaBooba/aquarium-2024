@@ -1,6 +1,5 @@
 <?php
-include_once "app/php/head.php";
-
+session_start();
 include_once "api/rb-mysql.php";
 include_once "api/basic-methods.php";
 include_once "api/token.php";
@@ -14,6 +13,8 @@ if (count($find) > 0) {
     die();
 }
 ?>
+
+<?php include_once "app/php/head.php"; ?>
 
 <link rel="stylesheet" href="/app/css/pages/main.css">
 

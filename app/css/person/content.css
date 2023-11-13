@@ -29,7 +29,7 @@
 }
 
 .person-profile-content-name-1 {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     font-size: 30px;
     font-family: HalvarBreit;
 }
@@ -56,6 +56,10 @@
     height: auto;
     border: 10px solid var(--bg-light);
 }
+
+/* Profile Adaptive */
+
+/* ... */
 
 /* Add post */
 
