@@ -16,6 +16,7 @@ if (count($user) <= 0) {
 }
 $user = $user[0];
 $logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".jpg";
+$bg = "BG" . $user["capid"] . ".jpg";
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -40,24 +41,26 @@ $logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".jpg";
                     </span>
                 </div>
             <?php endif ?>
-            <div class="person-profile-bg" style="background-image: url('/app/img/users/bg/BG2.jpg');">
+            <div class="person-profile-bg" style="background-image: url('/app/img/users/bg/<?php echo $bg ?>');">
                 <img src="/app/img/users/icons/<?php echo $logo ?>">
             </div>
             <div class="person-profile">
                 <div class="person-profile-content">
                     <div class="person-profile-content-name">
-                        <?php if ($user["emailverify"] == 1) : ?>
+                        <?php if ($user["emailverify"] == 1 && $user["firstName"] != "empty" && $user["lastName"] != "empty") : ?>
                             <p class="person-profile-content-name-1">
-                                Даниил Дыбка
+                                <?php echo $user["firstName"] . " " . $user["lastName"] ?>
                             </p>
                         <?php else : ?>
                             <p class="person-profile-content-name-1">
                                 @<?php echo $user["nickname"] ?>
                             </p>
                         <?php endif ?>
-                        <p>
-                            Описание профиля
-                        </p>
+                        <?php if ($user["descr"] > 0) : ?>
+                            <p>
+                                <?php echo $user["descr"] ?>
+                            </p>
+                        <?php endif ?>
                     </div>
                     <div class="person-profile-content-buttons">
                         <button onClick="ButtonLeftBar(4)" class="btn btn-secondary">

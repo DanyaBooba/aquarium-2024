@@ -6,7 +6,7 @@
     --bg-color-auth: #2e2a4d;
     --text-default: #fff;
     --text-invert: #000;
-    --bg-input: #231d40;
+    --bg-input: #1f193a;
     --bg-input-border: #3d346b;
 
     /* Main Background color */
@@ -53,4 +53,10 @@
     --bg-warning-border: #795e58;
     --bg-light-2-border: #71587a;
     --bg-light-3-border: #516b73;
+
+    /* Person */
+
+    --person-button: #40376d;
+    --person-button-border: #5a508b;
+    --person-button-focus: 118, 109, 177;
 }

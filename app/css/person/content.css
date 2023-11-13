@@ -38,6 +38,17 @@
     padding: 20px;
 }
 
+.person-profile-content-buttons .btn-secondary {
+    background: var(--person-button);
+    border: 1px solid var(--person-button);
+    --bs-btn-focus-shadow-rgb: var(--person-button-focus) !important;
+}
+
+.person-profile-content-buttons .btn-secondary:hover,
+.person-profile-content-buttons .btn-secondary:focus {
+    border: 1px solid var(--person-button-border);
+}
+
 .person-profile-bg
 {
     border-radius: 12px 12px 0 0;
