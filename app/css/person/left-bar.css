@@ -31,11 +31,21 @@ ul.person-leftbar li button {
     align-items: center;
     border-radius: 12px;
 
+    width: 100%;
     transition: .3s background;
 }
 
 ul.person-leftbar li button:hover,
 ul.person-leftbar li button:focus {
+    background: var(--bg-light-hover);
+}
+
+ul.person-leftbar li button.active {
+    background: var(--bg-light-active);
+}
+
+ul.person-leftbar li button.active:hover,
+ul.person-leftbar li button.active:focus {
     background: var(--bg-light-hover);
 }
 

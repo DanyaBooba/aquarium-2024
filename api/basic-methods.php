@@ -307,3 +307,12 @@ function SqlRequestFindByNickname($nickname)
     // Sql запрос: поиск по никнейму
     //
 }
+
+function SqlRequestUpdateData($email, $nickname, $firstName, $lastName)
+{
+    return "UPDATE `users` SET `nickname` = '$nickname', `firstName` = '$firstName', `lastName` = '$lastName' WHERE email like '$email'";
+
+    //
+    // Sql запрос: поиск по никнейму
+    //
+}

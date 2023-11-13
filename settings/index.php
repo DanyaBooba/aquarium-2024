@@ -8,15 +8,18 @@ include_once "../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$find = R::getAll(SqlRequestFind($_SESSION["login"]));
+$user = R::getAll(SqlRequestFind($_SESSION["login"]));
 
-if (count($find) <= 0) {
+if (count($user) <= 0) {
     header("Location: /");
     die();
 }
+$user = $user[0];
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
+
+<?php $error = SettingsError($_GET["e"]) ?>
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Настройки аккаунта | Аквариум</title>
@@ -32,31 +35,38 @@ if (count($find) <= 0) {
                 <div class="person-setting row row-cols-1 g-2">
                     <div class="col-md-8">
                         <div class="person-setting-bg person-setting-content">
-                            <div class="alert alert-background d-flex align-items-center" role="alert">
-                                <svg height="32" width="32" class="me-3 svg-normal see-at-full-pc">
-                                    <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
-                                </svg>
-                                <span>
-                                    Ваш аккаунт не подтвержден, введите <span class="dashed">имя</span>, <span class="dashed">фамилию</span>,
-                                    <span class="dashed">никнейм</span> и <a href="/api/php/person/send-verify-email.php" class="link">подтвердите почту</a>.
-                                </span>
-                            </div>
+                            <?php if ($user["emailverify"] == 0) : ?>
+                                <div class="alert alert-background d-flex align-items-center" role="alert">
+                                    <svg height="32" width="32" class="me-3 svg-normal col-md-1 see-at-full-pc">
+                                        <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
+                                    </svg>
+                                    <span>
+                                        Ваш аккаунт не подтвержден, введите <span class="dashed">имя</span>, <span class="dashed">фамилию</span>,
+                                        <span class="dashed">никнейм</span> и <span class="dashed">подтвердите почту</span>.
+                                    </span>
+                                </div>
+                            <?php endif ?>
                             <h2 id="data">Личные данные</h2>
                             <form class="needs-validation" action="/api/php/person/edit-name.php" method="post" novalidate>
+                                <?php if (empty($error) == false) : ?>
+                                    <div class="alert alert-danger" role="alert">
+                                        <?php echo $error ?>
+                                    </div>
+                                <?php endif; ?>
                                 <div>
-                                    <input class="form-control" type="text" name="name1" placeholder="Имя" aria-label="Имя" required>
+                                    <input class="form-control" type="text" value="<?php echo $user["firstName"] ?>" name="name1" placeholder="Имя" aria-label="Имя" required>
                                     <div class="invalid-feedback">
                                         Пожалуйста, введите имя.
                                     </div>
                                 </div>
                                 <div>
-                                    <input class="form-control" type="text" name="name2" placeholder="Фамилия" aria-label="Фамилия" required>
+                                    <input class="form-control" type="text" name="name2" value="<?php echo $user["lastName"] ?>" placeholder="Фамилия" aria-label="Фамилия" required>
                                     <div class="invalid-feedback">
                                         Пожалуйста, введите фамилию.
                                     </div>
                                 </div>
                                 <div>
-                                    <input class="form-control" type="text" name="nickname" placeholder="Никнейм" aria-label="Никнейм" required>
+                                    <input class="form-control" type="text" name="nickname" value="<?php echo $user["nickname"] ?>" placeholder="Никнейм" aria-label="Никнейм" required>
                                     <div class="invalid-feedback">
                                         Пожалуйста, введите уникальный никнейм.
                                     </div>
@@ -121,6 +131,7 @@ if (count($find) <= 0) {
         </div>
     </main>
 
+    <script src="/app/js/form-edit-url.js"></script>
     <script src="/app/js/confirm-form.js"></script>
 
     <?php include_once "../app/php/footer.php"; ?>

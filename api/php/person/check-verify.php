@@ -3,5 +3,5 @@
 session_start();
 
 ##
-## Send verify email
+## Check verify
 ##

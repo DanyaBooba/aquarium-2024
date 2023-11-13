@@ -64,3 +64,12 @@ function LoginByCodeError($data)
 
     return null;
 }
+
+function SettingsError($data)
+{
+    if ($data == "nickname_set") return "Данный никнейм уже занят.";
+
+    if ($data == "error_data") return "Ошибка в данных.";
+
+    return null;
+}

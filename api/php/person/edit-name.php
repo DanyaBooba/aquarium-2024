@@ -17,7 +17,7 @@ $user = [
 ];
 
 if (strlen($user["firstName"]) < 2 || strlen($user["lastName"]) < 2 || strlen($user["nickname"]) < 2) {
-    echo "LEN!";
+    header("Location: /settings/?e=error_data");
     return;
 }
 
@@ -36,6 +36,17 @@ if (count($find) <= 0) {
     return;
 }
 
-$nicknamesql = SqlRequestFindByNickname($user["nickname"]);
+$nicknamefindsql = SqlRequestFindByNickname($user["nickname"]);
 
-var_dump($nicknamesql);
+$nicknamefind = R::getAll($nicknamefindsql);
+
+if (count($nicknamefind) > 0 && $find[0]["email"] != $nicknamefind[0]["email"]) {
+    header("Location: /settings/?e=nickname_set");
+    return;
+}
+
+$updatedatasql = SqlRequestUpdateData($find[0]["email"], $user["nickname"], $user["firstName"], $user["lastName"]);
+
+R::getAll($updatedatasql);
+
+header("Location: /settings/");
