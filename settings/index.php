@@ -42,7 +42,7 @@ if (count($find) <= 0) {
                                 </span>
                             </div>
                             <h2 id="data">Личные данные</h2>
-                            <form class="needs-validation col-md-6" action="?" method="post" novalidate>
+                            <form class="needs-validation col-md-6" action="/api/php/person/edit-name.php" method="post" novalidate>
                                 <div>
                                     <input class="form-control" type="text" name="name1" placeholder="Имя" aria-label="Имя" required>
                                     <div class="invalid-feedback">
@@ -120,6 +120,8 @@ if (count($find) <= 0) {
             </div>
         </div>
     </main>
+
+    <script src="/app/js/confirm-form.js"></script>
 
     <?php include_once "../app/php/footer.php"; ?>
 </body>
