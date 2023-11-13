@@ -44,7 +44,6 @@ $email = $find[0]["email"];
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
-
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Восстановить пароль | Аквариум</title>
 

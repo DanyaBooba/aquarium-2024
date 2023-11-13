@@ -13,6 +13,11 @@
     }
 }
 
+html,
+body {
+    height: 100%;
+}
+
 .form-signin {
     max-width: 500px;
     padding: 15px;
@@ -114,17 +119,24 @@
     margin-top: 10px;
 }
 
-.auth-login .auth-login--restore
-{
-    margin-top: 30px;
-}
-
 .auth-login .auth-login--restore a {
     font-size: 14px !important;
 }
 
-.auth-login .auth-login--restore div {
+.auth-login ul.auth-login--restore {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.auth-login .auth-login--restore li {
     margin-bottom: 4px;
+    padding: 0;
+}
+
+.auth-login .auth-login--restore li:last-child {
+    margin: 0;
 }
 
 .auth-login .form-more

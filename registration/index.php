@@ -22,7 +22,6 @@ if (count($find) > 0) {
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
-
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Регистрация | Аквариум</title>
 
@@ -94,11 +93,13 @@ if (count($find) > 0) {
                     Зарегистрироваться
                 </button>
             </form>
-            <div class="auth-login--restore">
-                <a href="/login/" class="link">
-                    Уже зарегистрированы?
-                </a>
-            </div>
+            <ul class="auth-login--restore">
+                <li>
+                    <a href="/login/" class="link">
+                        Уже зарегистрированы?
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="auth-login-bottom">
             <ul>

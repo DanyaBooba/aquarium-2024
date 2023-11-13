@@ -61,13 +61,13 @@ if (count($find) > 0) {
                         Восстановить
                     </button>
                 </form>
-                <div class="auth-login--restore d-flex flex-column">
-                    <div>
+                <ul class="auth-login--restore d-flex flex-column">
+                    <li>
                         <a href="/login/" class="link">
                             Войти в аккаунт
                         </a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             <?php else : ?>
                 <p class="text-center mb-3">
                     На указанную почту было выслано письмо для восстановления

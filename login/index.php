@@ -66,23 +66,23 @@ if (count($find) > 0) {
                     Войти
                 </button>
             </form>
-            <div class="auth-login--restore d-flex flex-column">
-                <div>
+            <ul class="auth-login--restore d-flex flex-column">
+                <li>
                     <a href="restore" class="link">
                         Забыли пароль?
                     </a>
-                </div>
-                <div>
+                </li>
+                <li>
                     <a href="code" class="link">
                         Войти по коду
                     </a>
-                </div>
-                <div>
+                </li>
+                <li>
                     <a href="/registration/" class="link">
                         Регистрация
                     </a>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
         <div class="auth-login-bottom">
             <ul>
