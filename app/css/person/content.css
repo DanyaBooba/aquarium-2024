@@ -153,6 +153,12 @@
 
 /* Settings */
 
+@media(max-width: 767px) {
+    .person-setting {
+        flex-direction: column-reverse;
+    }
+}
+
 .person-setting-bg {
     background: var(--bg-light);
     border-radius: 12px;

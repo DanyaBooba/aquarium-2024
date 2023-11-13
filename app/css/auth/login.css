@@ -6,11 +6,11 @@
         padding-bottom: 40px;
         background: repeating-linear-gradient(-45deg, #606dbc, #606dbc 43px, #465298 40px, #465298 84.5px)
     }
-}
 
-html,
-body {
-    height: 100%;
+    .auth-login {
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        padding: 30px;
+    }
 }
 
 .form-signin {
@@ -30,11 +30,8 @@ body {
     padding: 20px;
 }
 
-@media(min-width: 768px) {
-    .auth-login {
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
-        padding: 30px;
-    }
+.auth-login button[type="submit"] {
+    border-radius: 8px;
 }
 
 .auth-login-bottom ul {
@@ -54,7 +51,37 @@ body {
 
 .auth-login-bottom ul li a {
     font-size: 14px;
-    color: white !important;
+}
+
+@media(max-width: 767px) {
+    .auth-login-bottom ul li {
+        text-align: start;
+        color: var(--text-color) !important;
+    }
+
+    .auth-login-bottom ul li a.link-white {
+        color: var(--text-color) !important;
+    }
+
+    .auth-login-bottom ul li a.link-white:hover,
+    .auth-login-bottom ul li a.link-white:focus {
+        border-bottom: 1px solid var(--text-color) !important;
+    }
+
+    .auth-login {
+        background: var(--bg-color) !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .auth-login-bottom {
+        border-top: 1px solid var(--text-color-3);
+        margin-top: 30px;
+    }
+
+    .auth-login-bottom ul {
+        padding-top: 10px;
+    }
 }
 
 .auth-login--logo

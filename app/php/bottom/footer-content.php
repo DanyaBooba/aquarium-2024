@@ -1,4 +1,4 @@
-<footer>
+<footer class="see-at-pc">
     <div class="container footer">
         <div class="footer__left">
             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -28,3 +28,7 @@
         </div>
     </div>
 </footer>
+
+<div class="see-at-mobile footer__mobile">
+
+</div>

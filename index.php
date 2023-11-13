@@ -19,14 +19,12 @@ if (count($find) > 0) {
 <link rel="stylesheet" href="/app/css/pages/main.css">
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
-<!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Начальная страница | Аквариум</title>
 
 <body class="container">
     <div class="see-at-pc">
         <?php include_once "app/php/header.php"; ?>
     </div>
-    <!-- include ('tpl/index.html'); -->
     <main>
         <div class="row align-items-center" style="margin-bottom: 20px">
             <div class="col-md-6 see-at-pc d-flex justify-content-end px-0">
@@ -41,7 +39,7 @@ if (count($find) > 0) {
             </div>
             <div class="page-login">
                 <div class="page-login--content">
-                    <svg class="svg-normal" viewBox="0 0 1403 270" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="svg-normal page-login-logo" viewBox="0 0 1403 270" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1356.22 62.9C1387.42 62.9 1402.42 87.8 1402.42 121.1V215H1377.82V126.8C1377.82 98 1371.52 83.9 1347.22 83.9C1317.52 83.9 1299.82 110.3 1299.82 149.3V215H1275.22V126.8C1275.22 98 1268.92 83.9 1244.62 83.9C1214.92 83.9 1197.22 110.3 1197.22 149.3V215H1172.62V65.9H1197.22V91.4L1193.32 108.2H1200.22C1206.22 81.2 1221.82 62.9 1253.62 62.9C1280.62 62.9 1295.02 81.5 1298.32 108.2H1302.82C1308.82 81.2 1324.42 62.9 1356.22 62.9Z" />
                         <path d="M1055.07 197C1086.57 197 1108.77 172.1 1108.77 132.2V65.9H1133.07V215H1108.77V189.2L1112.67 172.1H1105.77C1099.77 199.1 1080.87 218 1048.47 218C1014.57 218 992.67 198.5 992.67 157.1V65.9H1017.27V153.8C1017.27 185 1029.27 197 1055.07 197Z" />
                         <path d="M907.341 42.2C895.041 42.2 885.741 33.2 885.741 21.2C885.741 9.8 895.041 0.5 907.341 0.5C919.341 0.5 928.941 9.8 928.941 21.2C928.941 33.2 919.341 42.2 907.341 42.2ZM857.541 215V194H899.541V84.2L868.641 86.9V65.9L903.141 62.9C917.241 61.7 922.641 69.5 922.641 80.9V194H964.641V215H857.541Z" />
@@ -108,7 +106,9 @@ if (count($find) > 0) {
 
     <script src="/app/js/confirm-form.js"></script>
 
-    <?php include_once "app/php/footer.php"; ?>
+    <?php include_once "app/php/bottom/javascript.php"; ?>
+
+    <?php include_once "app/php/bottom/footer-content.php"; ?>
 </body>
 
 </html>

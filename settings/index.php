@@ -29,7 +29,7 @@ if (count($find) <= 0) {
         <div class="col-md-9 person-content">
             <h1>Настройки</h1>
             <div class="container px-0">
-                <div class="row row-cols-1 g-2">
+                <div class="person-setting row row-cols-1 g-2">
                     <div class="col-md-8">
                         <div class="person-setting-bg person-setting-content">
                             <div class="alert alert-background d-flex align-items-center" role="alert">
@@ -111,7 +111,7 @@ if (count($find) <= 0) {
                             </ul>
                         </div>
                         <div class="person-setting-bg person-setting-bar">
-                            <a href="/api/php/person/person-exit.php" class="link">
+                            <a href="/api/php/person/person-exit.php" class="link-danger">
                                 Выйти из аккаунта
                             </a>
                         </div>
