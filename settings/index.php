@@ -33,7 +33,7 @@ if (count($find) <= 0) {
                     <div class="col-md-8">
                         <div class="person-setting-bg person-setting-content">
                             <div class="alert alert-background d-flex align-items-center" role="alert">
-                                <svg height="32" width="32" class="me-3 svg-normal">
+                                <svg height="32" width="32" class="me-3 svg-normal see-at-full-pc">
                                     <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
                                 </svg>
                                 <span>
@@ -42,7 +42,7 @@ if (count($find) <= 0) {
                                 </span>
                             </div>
                             <h2 id="data">Личные данные</h2>
-                            <form class="needs-validation col-md-6" action="/api/php/person/edit-name.php" method="post" novalidate>
+                            <form class="needs-validation" action="/api/php/person/edit-name.php" method="post" novalidate>
                                 <div>
                                     <input class="form-control" type="text" name="name1" placeholder="Имя" aria-label="Имя" required>
                                     <div class="invalid-feedback">
@@ -74,7 +74,7 @@ if (count($find) <= 0) {
                                 <div>
                                     ...
                                 </div>
-                                <button class="btn btn-primary col-md-6 mt-2" type="submit">
+                                <button class="btn btn-primary mt-2" type="submit">
                                     Сохранить изменения
                                 </button>
                             </form>
@@ -84,7 +84,7 @@ if (count($find) <= 0) {
                                 <div>
                                     ...
                                 </div>
-                                <button class="btn btn-primary col-md-6 mt-2" type="submit">
+                                <button class="btn btn-primary mt-2" type="submit">
                                     Сохранить изменения
                                 </button>
                             </form>

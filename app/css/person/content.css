@@ -5,6 +5,7 @@
 
 .person-content .alert {
     border-radius: 8px;
+    border: 0 !important;
 }
 
 /* Profile */
@@ -197,6 +198,12 @@
 
 .person-setting-content form {
     margin-bottom: 10px;
+}
+
+@media(min-width: 992px) {
+    .person-setting-bg form {
+        width: 50%;
+    }
 }
 
 .person-setting-bg form input {

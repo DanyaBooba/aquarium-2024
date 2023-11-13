@@ -9,3 +9,9 @@
         display: none !important;
     }
 }
+
+@media(max-width: 991px) {
+    .see-at-full-pc {
+        display: none !important;
+    }
+}
