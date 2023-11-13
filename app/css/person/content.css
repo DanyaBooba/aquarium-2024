@@ -111,6 +111,12 @@
     }
 }
 
+@media(min-width: 992px) {
+    .person-profile {
+        min-height: 125px;
+    }
+}
+
 /* Add post */
 
 .person-form {
@@ -159,6 +165,49 @@
     margin-right: 15px;
 }
 
+.person-search-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.person-search-pagination button {
+    display: flex;
+    align-items: center;
+
+    background: var(--bg-color) !important;
+    color: var(--button-primary);
+    fill: var(--button-primary);
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border-radius: 8px;
+    border: 1px solid var(--bg-color);
+}
+
+.person-search-pagination button:hover,
+.person-search-pagination button:focus {
+    border: 1px solid var(--text-color-4);
+    color: var(--button-primary);
+}
+
+.person-search-pagination button:disabled {
+    border: 0;
+    color: var(--text-default) !important;
+}
+
+.person-search-pagination button:disabled svg {
+    fill: var(--text-default);
+}
+
+.person-search-pagination button svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--button-primary);
+}
+
 /* Settings */
 
 @media(max-width: 767px) {
@@ -175,11 +224,13 @@
 }
 
 .person-setting-bg ul {
+    background: var(--bg-light);
     margin: 0;
     padding: 0;
 }
 
 .person-setting-bg ul li {
+    background: var(--bg-light);
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -191,6 +242,7 @@
 }
 
 .person-setting-bg ul li a {
+    background: var(--bg-light);
     color: var(--text-color);
     text-decoration: none;
 }

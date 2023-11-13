@@ -20,7 +20,7 @@
     --text-color-1: #000;
     --text-color-2: #aaa;
     --text-color-3: #47426b;
-    --text-color-4: #999;
+    --text-color-4: #6c6c6c;
     --text-color-5: #999;
     --text-color-6: #2f294e;
     --text-color-7: #4b4373;
@@ -55,6 +55,7 @@
     --bg-warning-border: #795e58;
     --bg-light-2-border: #71587a;
     --bg-light-3-border: #516b73;
+    --button-primary: #5698fc;
 
     /* Person */
 

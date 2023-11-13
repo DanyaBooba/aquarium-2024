@@ -47,7 +47,7 @@ $bg = "BG" . $user["capid"] . ".jpg";
             <div class="person-profile">
                 <div class="person-profile-content">
                     <div class="person-profile-content-name">
-                        <?php if ($user["emailverify"] == 1 && $user["firstName"] != "empty" && $user["lastName"] != "empty") : ?>
+                        <?php if ($user["emailverify"] == 1 && $user["firstName"] != "" && $user["lastName"] != "") : ?>
                             <p class="person-profile-content-name-1">
                                 <?php echo $user["firstName"] . " " . $user["lastName"] ?>
                             </p>

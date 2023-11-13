@@ -177,6 +177,15 @@ function SqlRequestFind($email)
     //
 }
 
+function SqlRequestFindId($id)
+{
+    return "SELECT * FROM `users` WHERE id=" . $id;
+
+    //
+    // SQL запрос: проверка на существование пользователя
+    //
+}
+
 function SqlResetPassword($email, $url)
 {
     return "INSERT INTO `reset`(`email`, `timecreate`, `url`) VALUES ('$email', " . time() . ", '$url')";
@@ -314,5 +323,14 @@ function SqlRequestUpdateData($email, $nickname, $firstName, $lastName)
 
     //
     // Sql запрос: поиск по никнейму
+    //
+}
+
+function SqlRequestSelectAll()
+{
+    return "SELECT * FROM `users` WHERE emailverify=1 AND fullacc=1";
+
+    //
+    // Sql запрос: все пользователи
     //
 }

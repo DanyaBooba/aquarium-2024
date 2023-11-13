@@ -1,7 +1,7 @@
 <div class="col-md-3 see-at-pc">
     <ul class="person-leftbar see-at-pc" id="person-leftbar">
         <li>
-            <button onClick="ButtonLeftBar(0)" id="person-leftbar-feed">
+            <button onClick="ButtonLeftBar(0)" id="person-leftbar-feed" disabled>
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#house"></use>
                 </svg>
@@ -33,7 +33,7 @@
             </button>
         </li>
         <li>
-            <button onClick="ButtonLeftBar(4)" id="person-leftbar-mail">
+            <button onClick="ButtonLeftBar(4)" id="person-leftbar-mail" disabled>
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#envelope"></use>
                 </svg>
@@ -41,7 +41,7 @@
             </button>
         </li>
         <li>
-            <button onClick="ButtonLeftBar(5)" id="person-leftbar-achivments">
+            <button onClick="ButtonLeftBar(5)" id="person-leftbar-achivments" disabled>
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#trophy"></use>
                 </svg>
