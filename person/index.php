@@ -53,7 +53,7 @@ $bg = "BG" . $user["capid"] . ".jpg";
                             </p>
                         <?php else : ?>
                             <p class="person-profile-content-name-1">
-                                @<?php echo $user["nickname"] ?>
+                                <?php echo $user["nickname"] ?>
                             </p>
                         <?php endif ?>
                         <?php if ($user["descr"] > 0) : ?>

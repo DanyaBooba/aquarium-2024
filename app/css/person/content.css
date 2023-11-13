@@ -59,8 +59,8 @@
 }
 
 .person-profile-bg img {
-    width: 170px;
-    height: 170px;
+    width: 170px !important;
+    height: 170px !important;
     border-radius: 100%;
     margin-top: 100px;
     max-width: 100%;
@@ -70,7 +70,38 @@
 
 /* Profile Adaptive */
 
-/* ... */
+@media(max-width: 991px) {
+    .person-profile-bg {
+        display: flex;
+        justify-content: center;
+    }
+
+    .person-profile .person-profile-content {
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .person-profile .person-profile-content .person-profile-content-name {
+        padding: 20px;
+        margin: 0;
+        text-align: center;
+        padding-bottom: 0;
+    }
+
+    .person-profile .person-profile-content .person-profile-content-name p {
+        margin-bottom: 0;
+    }
+
+    .person-profile .person-profile-content .person-profile-content-buttons {
+        padding-bottom: 0;
+        width: 100%;
+    }
+
+    .person-profile .person-profile-content .person-profile-content-buttons button {
+        width: 100%;
+    }
+}
 
 /* Add post */
 
