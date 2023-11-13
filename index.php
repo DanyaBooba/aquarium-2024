@@ -52,13 +52,13 @@ if (count($find) > 0) {
                     <h3 class="h4">Войти</h3>
                     <form class="needs-validation" action="/api/php/login.php" method="post" novalidate>
                         <div class="input-group-sm">
-                            <input class="form-control" type="email" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
+                            <input class="form-control" type="email" autocomplete="email" id="email" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
                             <div class="invalid-feedback">
                                 Пожалуйста, введите почту.
                             </div>
                         </div>
                         <div class="input-group-sm">
-                            <input class="form-control" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
+                            <input class="form-control" type="password" autocomplete="current-password" id="current-password" name="password" placeholder="Пароль" aria-label="Пароль" required>
                             <div class="invalid-feedback">
                                 Пожалуйста, введите пароль.
                             </div>

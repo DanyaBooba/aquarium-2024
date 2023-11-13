@@ -38,7 +38,7 @@
                 <?php endif; ?>
                 <form class="needs-validation" action="/api/php/loginbycode.php" method="post" novalidate>
                     <div class="input-group-sm">
-                        <input class="form-control" onInput="CheckFormData()" type="email" name="email" placeholder="Почта" aria-label="Почта" required>
+                        <input class="form-control" onInput="CheckFormData()" autocomplete="email" id="email" type="email" name="email" placeholder="Почта" aria-label="Почта" required>
                         <div class="invalid-feedback">
                             Пожалуйста, введите почту.
                         </div>

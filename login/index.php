@@ -51,13 +51,13 @@ if (count($find) > 0) {
             <?php endif; ?>
             <form class="needs-validation" action="/api/php/login.php" method="post" novalidate>
                 <div class="input-group-sm">
-                    <input class="form-control" type="email" onInput="CheckFormData()" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
+                    <input class="form-control" autocomplete="email" id="email" type="email" onInput="CheckFormData()" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите почту.
                     </div>
                 </div>
                 <div class="input-group-sm">
-                    <input class="form-control" type="password" onInput="CheckFormData()" name="password" placeholder="Пароль" aria-label="Пароль" required>
+                    <input class="form-control" type="password" autocomplete="current-password" id="password" onInput="CheckFormData()" name="password" placeholder="Пароль" aria-label="Пароль" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите пароль.
                     </div>

@@ -6,7 +6,6 @@
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
-
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Войти по коду | Аквариум</title>
 
@@ -35,13 +34,13 @@
             <?php endif; ?>
             <form class="needs-validation" action="/api/php/loginbycode-form.php" method="post" novalidate>
                 <div class="input-group-sm">
-                    <input class="form-control" type="email" onInput="CheckFormData()" name="email" value="<?php echo $_GET["g"] ?>" placeholder="Почта" aria-label="Почта" required>
+                    <input class="form-control" type="email" autocomplete="email" id="email" onInput="CheckFormData()" name="email" value="<?php echo $_GET["g"] ?>" placeholder="Почта" aria-label="Почта" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите указанную почту.
                     </div>
                 </div>
                 <div class="input-group-sm">
-                    <input class="form-control" type="number" onInput="CheckFormData()" name="code" placeholder="6-значный код" aria-label="6-значный код" required>
+                    <input class="form-control" type="number" autocomplete="one-time-code" id="one-time-code" onInput="CheckFormData()" name="code" placeholder="6-значный код" aria-label="6-значный код" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите код из почты.
                     </div>
