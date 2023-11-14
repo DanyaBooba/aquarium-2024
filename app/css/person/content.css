@@ -69,7 +69,7 @@
 }
 
 .person-profile-bg img {
-    width: 170px !important;
+    width: 170px;
     height: 170px !important;
     border-radius: 100%;
     margin-top: 100px;
@@ -122,6 +122,17 @@
 @media(min-width: 992px) {
     .person-profile {
         min-height: 125px;
+    }
+}
+
+@media(max-width: 371px) {
+    .person-profile-bg img {
+        width: 130px;
+        height: 130px !important;
+    }
+
+    .person-profile .person-profile-content {
+        padding-top: 30px;
     }
 }
 

@@ -26,7 +26,7 @@
     max-width: 100%;
 }
 
-@media(max-width: 991px) {
+@media(max-width: 991px) and (min-width: 370px) {
     .header__logo svg {
         width: 150px;
     }
@@ -34,4 +34,22 @@
     .header {
         margin-bottom: 20px;
     }
+}
+
+@media(max-width: 371px) {
+    .header__logo svg {
+        width: 100px;
+    }
+
+    .header-app .header-app-icons svg {
+        width: 22px !important;
+        height: 22px !important;
+    }
+}
+
+/* App */
+
+.header-app .header-app-icons svg {
+    width: 26px;
+    height: 26px;
 }

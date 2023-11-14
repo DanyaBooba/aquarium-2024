@@ -1,13 +1,13 @@
 <header>
     <div class="container header-app">
-        <div class="col-md-3 see-at-mobile me-auto">
+        <div class="col-md-3 header-app-icons see-at-mobile me-auto">
             <a href="/mail/" class="link-empty me-3">
-                <svg class="svg-normal" width="26" height="26">
+                <svg class="svg-normal">
                     <use xlink:href="/app/img/icons/bootstrap.svg#envelope"></use>
                 </svg>
             </a>
             <a href="/achivments/" class="link-empty">
-                <svg class="svg-normal" width="26" height="26">
+                <svg class="svg-normal">
                     <use xlink:href="/app/img/icons/bootstrap.svg#trophy"></use>
                 </svg>
             </a>
@@ -26,14 +26,14 @@
                 </svg>
             </a>
         </div>
-        <div class="col-md-3 see-at-mobile ms-auto">
+        <div class="col-md-3 header-app-icons see-at-mobile ms-auto">
             <a href="/notifications/" class="link-empty">
-                <svg class="svg-normal" width="26" height="26">
+                <svg class="svg-normal">
                     <use xlink:href="/app/img/icons/bootstrap.svg#bell"></use>
                 </svg>
             </a>
             <a href="/settings/" class="ms-3 link-empty">
-                <svg class="svg-normal" width="26" height="26">
+                <svg class="svg-normal">
                     <use xlink:href="/app/img/icons/bootstrap.svg#gear-wide-connected"></use>
                 </svg>
             </a>

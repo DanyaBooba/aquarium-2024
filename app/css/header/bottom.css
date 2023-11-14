@@ -3,6 +3,7 @@
 .fixed-bottom {
     background: var(--bg-color-rgba-3);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-top: 1px solid var(--text-color-3);
     height: 55px;
 }
@@ -12,7 +13,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding-top: 5px;
+    padding-top: 7px;
 }
 
 /* Link */
