@@ -5,7 +5,9 @@ function PersonActiveLeftbar() {
 
 	let pathurl = window.location.pathname.split("/")[1];
 
-	document.getElementById("person-leftbar-" + pathurl).classList.add("active");
+	let person = document.getElementById("person-leftbar-" + pathurl);
+
+	if (person !== null) person.classList.add("active");
 }
 
 PersonActiveLeftbar();

@@ -25,7 +25,7 @@ $bg = "BG" . $user["capid"] . ".jpg";
 <title>Личный кабинет | Аквариум</title>
 
 <body class="container">
-    <?php include_once "../app/php/header.php"; ?>
+    <?php include_once "../app/php/person/header.php"; ?>
 
     <main class="row row-cols-1 g-4">
         <?php include_once "../app/php/person/left-bar.php"; ?>

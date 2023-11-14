@@ -44,6 +44,8 @@
 
 .person-profile-content-buttons {
     padding: 20px;
+    display: flex;
+    height: 80px;
 }
 
 .person-profile-content-buttons .btn-secondary {
@@ -82,6 +84,11 @@
     .person-profile-bg {
         display: flex;
         justify-content: center;
+        height: 200px;
+    }
+
+    .person-profile-bg img {
+        margin-top: 50px;
     }
 
     .person-profile .person-profile-content {
@@ -104,6 +111,7 @@
     .person-profile .person-profile-content .person-profile-content-buttons {
         padding-bottom: 0;
         width: 100%;
+        height: 60px;
     }
 
     .person-profile .person-profile-content .person-profile-content-buttons button {

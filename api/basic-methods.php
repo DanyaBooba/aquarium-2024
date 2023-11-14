@@ -334,3 +334,12 @@ function SqlRequestSelectAll()
     // Sql запрос: все пользователи
     //
 }
+
+function SqlRequestUpdateISubs($json, $email)
+{
+    return "UPDATE `users` SET `isubs` = '$json' WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновляем isubs
+    //
+}

@@ -26,3 +26,10 @@ a.link-white:focus {
 {
     border-bottom: 1px dashed var(--text-color-4);
 }
+
+a.link-empty
+{
+    text-decoration: none !important;
+    border: 0;
+    color: var(--text-color) !important;
+}

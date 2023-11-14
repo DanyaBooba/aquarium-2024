@@ -18,6 +18,7 @@ if (count($find) <= 0) {
     header("Location: /");
     die();
 }
+$find = $find[0];
 
 ##
 ## User
@@ -31,6 +32,13 @@ if (count($user) <= 0) {
     $user = $user[0];
     $logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".jpg";
     $bg = "BG" . $user["capid"] . ".jpg";
+
+    $buttonsubs = $find["id"] == $user["id"] ? "disabled" : "";
+    $isubs = in_array(intval($user["id"]), json_decode($find["isubs"]));
+    $subs = $isubs ? "Подписан" : "Подписаться";
+    $subslogo = $isubs ? "check" : "plus";
+
+    $atmesubs = true;
 }
 ?>
 
@@ -40,7 +48,7 @@ if (count($user) <= 0) {
 <title>Личный кабинет | Аквариум</title>
 
 <body class="container">
-    <?php include_once "../app/php/header.php"; ?>
+    <?php include_once "../app/php/person/header.php"; ?>
 
     <main class="row row-cols-1 g-4">
         <?php include_once "../app/php/person/left-bar.php"; ?>
@@ -76,16 +84,28 @@ if (count($user) <= 0) {
                                 </p>
                             <?php endif ?>
                         </div>
-                        <!-- <div class="person-profile-content-buttons">
-                        <button onClick="ButtonLeftBar(6)" class="btn btn-secondary">
-                            Редактировать профиль
-                        </button>
-                    </div> -->
+                        <div class="person-profile-content-buttons">
+                            <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?>>
+                                <svg class="me-1" fill="white" width="26" height="26">
+                                    <use xlink:href="/app/img/icons/bootstrap.svg#<?php echo $subslogo ?>"></use>
+                                </svg>
+                                <?php echo $subs ?>
+                            </button>
+                            <?php if ($isubs && $atmesubs) : ?>
+                                <button onClick="MailTo()" class="btn btn-secondary ms-2" style="width: 52px;">
+                                    <svg fill="white" width="26" height="26">
+                                        <use xlink:href="/app/img/icons/bootstrap.svg#envelope"></use>
+                                    </svg>
+                                </button>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
                 <div class="text-center">
                     У пользователя нет записей.
                 </div>
+                <div class="d-none" id="person-id"><?php echo $user["id"] ?></div>
+                <script src="/app/js/person-user.js"></script>
             <?php endif ?>
         </div>
     </main>

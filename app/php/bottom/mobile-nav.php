@@ -8,7 +8,7 @@
                 Лента
             </span>
         </a>
-        <a href="/search/" aria-label="Поиск" class="fixed-bottom__link">
+        <a href="/search/" aria-label="Поиск" class="ms-2 fixed-bottom__link">
             <svg class="fixed-bottom__svg-2">
                 <use xlink:href="/app/img/icons/bootstrap.svg#search"></use>
             </svg>
