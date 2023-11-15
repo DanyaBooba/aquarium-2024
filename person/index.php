@@ -60,7 +60,7 @@ $countsubatme = count(array_unique(json_decode($user["atmesubs"])));
                                 <?php echo $user["nickname"] ?>
                             </p>
                         <?php endif ?>
-                        <?php if ($user["descr"] > 0) : ?>
+                        <?php if (mb_strlen($user["descr"]) > 0) : ?>
                             <p class="person-profile-content-name-2">
                                 <?php echo $user["descr"] ?>
                             </p>

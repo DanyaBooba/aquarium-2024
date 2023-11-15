@@ -39,6 +39,9 @@ if (count($user) <= 0) {
     $subslogo = $isubs ? "check" : "plus";
 
     $atmesubs = in_array(intval($find["id"]), json_decode($user["isubs"]));
+
+    $countsubatme = count(array_unique(json_decode($user["atmesubs"])));
+    $countsubme = count(array_unique(json_decode($user["isubs"])));
 }
 ?>
 
@@ -69,7 +72,7 @@ if (count($user) <= 0) {
                 <div class="person-profile">
                     <div class="person-profile-content">
                         <div class="person-profile-content-name">
-                            <?php if ($user["emailverify"] == 1 && $user["firstName"] != "" && $user["lastName"] != "") : ?>
+                            <?php if ($user["emailverify"] == 1 && $user["displaynick"] == 0) : ?>
                                 <p class="person-profile-content-name-1">
                                     <?php echo $user["firstName"] . " " . $user["lastName"] ?>
                                 </p>
@@ -78,11 +81,19 @@ if (count($user) <= 0) {
                                     <?php echo $user["nickname"] ?>
                                 </p>
                             <?php endif ?>
-                            <?php if ($user["descr"] > 0) : ?>
-                                <p>
+                            <?php if (mb_strlen($user["descr"]) > 0) : ?>
+                                <p class="person-profile-content-name-2">
                                     <?php echo $user["descr"] ?>
                                 </p>
                             <?php endif ?>
+                            <div class="d-flex align-items-center mt-auto">
+                                <div>
+                                    <b><?php echo $countsubatme ?></b> Подписчики
+                                </div>
+                                <div class="ps-2">
+                                    <b><?php echo $countsubme ?></b> Подписан
+                                </div>
+                            </div>
                         </div>
                         <div class="person-profile-content-buttons">
                             <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?>>
@@ -101,7 +112,7 @@ if (count($user) <= 0) {
                         </div>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="person-posts-empty">
                     У пользователя нет записей.
                 </div>
                 <div class="d-none" id="person-id"><?php echo $user["id"] ?></div>
