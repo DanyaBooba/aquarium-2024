@@ -252,7 +252,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                             <svg class="svg-normal me-2" width="16" height="16">
                                 <use xlink:href="/app/img/icons/bootstrap.svg#question-circle"></use>
                             </svg>
-                            <a href="/about/verify-account/" class="link">
+                            <a href="/about/#verify-account" class="link">
                                 Подтверждение аккаунта
                             </a>
                         </div>
