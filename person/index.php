@@ -14,9 +14,13 @@ if (count($user) <= 0) {
     header("Location: /");
     die();
 }
+
 $user = $user[0];
 $logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".jpg";
 $bg = "BG" . $user["capid"] . ".jpg";
+
+$countsubme = count(array_unique(json_decode($user["isubs"])));
+$countsubatme = count(array_unique(json_decode($user["atmesubs"])));
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -63,10 +67,10 @@ $bg = "BG" . $user["capid"] . ".jpg";
                         <?php endif ?>
                         <div class="d-flex align-items-center mt-auto">
                             <div>
-                                <b>0</b> Подписчики
+                                <b><?php echo $countsubatme ?></b> Подписчики
                             </div>
                             <div class="ps-2">
-                                <b>0</b> Подписан
+                                <b><?php echo $countsubme ?></b> Подписан
                             </div>
                         </div>
                     </div>
@@ -78,7 +82,7 @@ $bg = "BG" . $user["capid"] . ".jpg";
                 </div>
             </div>
             <div class="person-form">
-                <form action="?" method="post">
+                <form action="/api/php/person/add-post.php" method="post">
                     <div class="input-group">
                         <input type="text" name="post" class="form-control" aria-label="Что у вас нового" placeholder="Что у вас нового...">
                     </div>

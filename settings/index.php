@@ -131,11 +131,6 @@ $sexwoman = $sexman == "checked" ? "" : "checked";
                                     <label class="form-check-label" for="radiosex2" style="margin-bottom: 4px">
                                         Женский
                                     </label>
-                                    <?php if ($usenickname == false) : ?>
-                                        <p class="form-more">
-                                            Заполните поля: имя и фамилию.
-                                        </p>
-                                    <?php endif; ?>
                                 </div>
                                 <textarea class="form-control" name="disc" aria-label="Описание профиля" placeholder="Описание профиля" maxlength="254"><?php echo $disc ?></textarea>
                                 <button class="btn btn-primary w-100" type="submit">
@@ -146,7 +141,14 @@ $sexwoman = $sexman == "checked" ? "" : "checked";
                             <h2 id="icon">Фотография</h2>
                             <form class="needs-validation" action="?" method="post" novalidate>
                                 <div>
-                                    ...
+                                    <div class="footer__right theme-toggle">
+                                        <input onClick="CheckValueThemeColor()" type="radio" class="btn-check" name="color-theme" id="radio1" value="light" autocomplete="off">
+                                        <label class="btn btn-secondary" for="radio1">Светлая</label>
+                                        <input onClick="CheckValueThemeColor()" type="radio" class="btn-check" name="color-theme" id="radio2" value="auto" autocomplete="off" checked>
+                                        <label class="btn btn-secondary" for="radio2">Авто</label>
+                                        <input onClick="CheckValueThemeColor()" type="radio" class="btn-check" name="color-theme" id="radio3" value="dark" autocomplete="off">
+                                        <label class="btn btn-secondary" for="radio3">Тёмная</label>
+                                    </div>
                                 </div>
                                 <button class="btn btn-primary mt-2" type="submit">
                                     Сохранить изменения
