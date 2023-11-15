@@ -12,7 +12,8 @@ include_once "../../token.php";
 
 $user = [
     "display" => $_POST["display_nickname"],
-    "disc" => ClearDisc($_POST["disc"])
+    "disc" => ClearDisc($_POST["disc"]),
+    "sex" => $_POST["sex"],
 ];
 
 if (mb_strlen($user["disc"]) > 254) {
@@ -42,5 +43,9 @@ R::getAll($descsql);
 $displaysql = SqlRequestUpdateDisplaynick($find[0]["email"], $user["display"]);
 
 R::getAll($displaysql);
+
+$sexsql = SqlRequestUpdateMale($find[0]["email"], $user["sex"]);
+
+R::getAll($sexsql);
 
 header("Location: /settings/");

@@ -34,6 +34,10 @@
     .header {
         margin-bottom: 20px;
     }
+
+    .header-app {
+        margin-bottom: 30px;
+    }
 }
 
 @media(max-width: 371px) {
@@ -44,6 +48,10 @@
     .header-app .header-app-icons svg {
         width: 22px !important;
         height: 22px !important;
+    }
+
+    .header-app {
+        margin-bottom: 30px;
     }
 }
 

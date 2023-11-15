@@ -1,6 +1,20 @@
-<?php include_once "../../../api/auth-errors.php"; ?>
+<?php
+include_once "../../../app/php/head.php";
+include_once "../../../api/auth-errors.php";
 
-<?php include_once "../../../app/php/head.php"; ?>
+include_once "../../../api/rb-mysql.php";
+include_once "../../../api/basic-methods.php";
+include_once "../../../api/token.php";
+
+R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
+
+$find = R::getAll(SqlRequestFind($_SESSION["login"]));
+
+if (count($find) > 0) {
+    header("Location: /person/");
+    die();
+}
+?>
 
 <?php $error = LoginByCodeError($_GET["e"]) ?>
 

@@ -28,11 +28,17 @@ if (count($find) <= 0) {
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content person-content-notifications-main">
             <h1>Уведомления</h1>
-            <h2>Общие</h2>
             <ul class="list-group list-group-flush person-content-notifications">
                 <li class="list-group-item">
-                    <h3>Спасибо за регистрацию</h3>
-                    <div>
+                    <div class="person-profile-content-buttons align-items-center mb-1">
+                        <h3 class="me-auto">Спасибо за регистрацию</h3>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            <svg fill="white" width="16" height="16">
+                                <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collapse person-content-notifications-block" id="collapse1">
                         <p>
                             Мы благодарим Вас за то, что Вы выражаете поддержку соцсети Аквариум в столь трудную минуту.
                             Разработка соцсети занимает большое количество времени, и разработчики стараются выкладываться
@@ -47,8 +53,15 @@ if (count($find) <= 0) {
                     </div>
                 </li>
                 <li class="list-group-item">
-                    <h3>Подарки для Вас</h3>
-                    <div>
+                    <div class="person-profile-content-buttons align-items-center mb-1">
+                        <h3 class="me-auto">Подарки для Вас</h3>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            <svg fill="white" width="16" height="16">
+                                <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collapse person-content-notifications-block" id="collapse2">
                         <p>
                             Специально для Вас были подготовлены следующие подарки: достижение "С первых минут" и
                             набор стикеров телеграм "Аквариум". Спасибо, что Вы с нами!
@@ -61,8 +74,15 @@ if (count($find) <= 0) {
                     </div>
                 </li>
                 <li class="list-group-item">
-                    <h3>Бета-тест</h3>
-                    <div>
+                    <div class="person-profile-content-buttons align-items-center mb-1">
+                        <h3 class="me-auto">Бета-тест</h3>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            <svg fill="white" width="16" height="16">
+                                <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collapse person-content-notifications-block" id="collapse3">
                         <p>
                             Соцсеть Аквариум на данный момент находится на стадии разработки, и нам очень нужна поддержка от пользователей
                             в вопросе качества разрабатываемой платформы.
@@ -71,17 +91,6 @@ if (count($find) <= 0) {
                             В том случае, если Вы обнаружили ошибку, пожалуйста, сообщите о ней в наш баг-репорт:
                             <a href="mailto:daniil@dybka.ru" class="link">daniil@dybka.ru</a>.
                             Мы обязательно учтем пожелания пользователей в вопросах качества платформы.
-                        </p>
-                    </div>
-                </li>
-            </ul>
-            <h2>Авторизация</h2>
-            <ul class="list-group list-group-flush person-content-notifications">
-                <li class="list-group-item">
-                    <h3 class="h5">15.04.2023</h3>
-                    <div>
-                        <p>
-                            Авторизация ...
                         </p>
                     </div>
                 </li>

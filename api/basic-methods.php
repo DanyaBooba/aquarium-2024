@@ -424,3 +424,12 @@ function SqlRequestUpdateDisplaynick($email, $nick)
     // Sql запрос: обновляем displaynick
     //
 }
+
+function SqlRequestUpdateMale($email, $male)
+{
+    return "UPDATE `users` SET `ismale` = $male WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновляем пол
+    //
+}

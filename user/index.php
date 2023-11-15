@@ -24,7 +24,7 @@ $find = $find[0];
 ## User
 ##
 
-$user = R::getAll(SqlRequestFindId($_GET["id"]));
+$user = R::getAll(SqlRequestFindId(empty($_GET["id"]) == false ? $_GET["id"] : 0));
 
 if (count($user) <= 0) {
     $user = false;

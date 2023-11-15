@@ -328,6 +328,10 @@
     margin-top: 30px;
 }
 
+.person-content-notifications-block {
+    padding: 10px;
+}
+
 ul.person-content-notifications li {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -335,10 +339,7 @@ ul.person-content-notifications li {
 
 ul.person-content-notifications li h3 {
     margin-top: 1rem;
-}
-
-ul.person-content-notifications li div {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 ul.person-content-notifications li:first-child h3 {

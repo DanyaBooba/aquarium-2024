@@ -22,6 +22,10 @@ $usedisabled = $usenickname == false ? "disabled" : "";
 $formnick = $user["displaynick"] == 1 ? "checked" : "";
 $formname = $formnick == "checked" ? "" : "checked";
 $disc = $user["descr"];
+
+$sex = $user["ismale"];
+$sexman = $sex == 1 ? "checked" : "";
+$sexwoman = $sexman == "checked" ? "" : "checked";
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -106,6 +110,26 @@ $disc = $user["descr"];
                                     <input class="form-check-input" type="radio" value="0" name="display_nickname" id="radioinfo2" <?php echo $usedisabled ?> <?php echo $formname ?>>
                                     <label class="form-check-label" for="radioinfo2" style="margin-bottom: 4px">
                                         Имя и фамилию
+                                    </label>
+                                    <?php if ($usenickname == false) : ?>
+                                        <p class="form-more">
+                                            Заполните поля: имя и фамилию.
+                                        </p>
+                                    <?php endif; ?>
+                                </div>
+                                <p style="margin-bottom: 4px">
+                                    Пол:
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="1" name="sex" id="radiosex1" <?php echo $sexman ?>>
+                                    <label class="form-check-label" for="radiosex1">
+                                        Мужской
+                                    </label>
+                                </div>
+                                <div class="form-check" style="margin-bottom: 8px">
+                                    <input class="form-check-input" type="radio" value="0" name="sex" id="radiosex2" <?php echo $sexwoman ?>>
+                                    <label class="form-check-label" for="radiosex2" style="margin-bottom: 4px">
+                                        Женский
                                     </label>
                                     <?php if ($usenickname == false) : ?>
                                         <p class="form-more">
