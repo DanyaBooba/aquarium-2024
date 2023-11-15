@@ -322,6 +322,27 @@
     border-radius: 8px;
 }
 
+/* Settings image */
+
+form.person-settings-form-image {
+    width: 100%;
+}
+
+form.person-settings-form-image .row {
+    margin-bottom: 8px;
+}
+
+form.person-settings-form-image .row .col img {
+    border-radius: 50%;
+    width: 75px;
+    height: auto;
+    max-width: 100%;
+}
+
+form.person-settings-form-image .row .col input:checked + label img {
+    border: 1px solid #000;
+}
+
 /* Notifications */
 
 .person-content-notifications-main h2 {

@@ -139,18 +139,34 @@ $sexwoman = $sexman == "checked" ? "" : "checked";
                             </form>
                             <hr>
                             <h2 id="icon">Фотография</h2>
-                            <form class="needs-validation" action="?" method="post" novalidate>
-                                <div>
-                                    <div class="footer__right theme-toggle">
-                                        <input onClick="CheckValueThemeColor()" type="radio" class="btn-check" name="color-theme" id="radio1" value="light" autocomplete="off">
-                                        <label class="btn btn-secondary" for="radio1">Светлая</label>
-                                        <input onClick="CheckValueThemeColor()" type="radio" class="btn-check" name="color-theme" id="radio2" value="auto" autocomplete="off" checked>
-                                        <label class="btn btn-secondary" for="radio2">Авто</label>
-                                        <input onClick="CheckValueThemeColor()" type="radio" class="btn-check" name="color-theme" id="radio3" value="dark" autocomplete="off">
-                                        <label class="btn btn-secondary" for="radio3">Тёмная</label>
+                            <form class="needs-validation person-settings-form-image" action="?" method="post" novalidate>
+                                <div class="row row-cols-1 row-cols-lg-4 g-2">
+                                    <div class="col">
+                                        <input class="form-check-input" type="radio" name="icon" id="icon1" value="1">
+                                        <label class="list-group-item" for="icon1">
+                                            <img src="/app/img/users/icons/MAN1.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input" type="radio" name="icon" id="icon2" value="2">
+                                        <label class="list-group-item" for="icon2">
+                                            <img src="/app/img/users/icons/MAN2.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input" type="radio" name="icon" id="icon3" value="3">
+                                        <label class="list-group-item" for="icon3">
+                                            <img src="/app/img/users/icons/MAN3.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input" type="radio" name="icon" id="icon4" value="4">
+                                        <label class="list-group-item" for="icon4">
+                                            <img src="/app/img/users/icons/MAN4.jpg">
+                                        </label>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary mt-2" type="submit">
+                                <button class="btn btn-primary col-md-6 mt-2" type="submit">
                                     Сохранить изменения
                                 </button>
                             </form>
