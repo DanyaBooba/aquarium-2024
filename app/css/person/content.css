@@ -324,6 +324,11 @@
 
 /* Settings image */
 
+form.person-settings-form-image.form-image-bg .row .col img {
+    width: 300px;
+    border-radius: 8px;
+}
+
 form.person-settings-form-image {
     width: 100%;
 }
@@ -334,13 +339,33 @@ form.person-settings-form-image .row {
 
 form.person-settings-form-image .row .col img {
     border-radius: 50%;
-    width: 75px;
+    width: 100px;
     height: auto;
     max-width: 100%;
 }
 
-form.person-settings-form-image .row .col input:checked + label img {
-    border: 1px solid #000;
+@media(max-width: 371px) {
+    form.person-settings-form-image .row .col img {
+        width: 70px;
+    }
+}
+
+form.person-settings-form-image .row .col input+label img {
+    border: 10px solid var(--bg-light);
+}
+
+form.person-settings-form-image .row .col input:checked+label img {
+    border: 5px solid var(--button-primary);
+}
+
+form.person-settings-form-image .row .col input:focus+label img {
+    border: 10px solid var(--button-primary-hover);
+}
+
+form.person-settings-form-image .row .col input+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Notifications */

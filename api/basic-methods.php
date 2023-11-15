@@ -433,3 +433,21 @@ function SqlRequestUpdateMale($email, $male)
     // Sql запрос: обновляем пол
     //
 }
+
+function SqlRequestUpdateIcon($email, $icon)
+{
+    return "UPDATE `users` SET `logoid` = $icon WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновляем логотип
+    //
+}
+
+function SqlRequestUpdateBg($email, $bg)
+{
+    return "UPDATE `users` SET `capid` = $bg WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновляем фон
+    //
+}
