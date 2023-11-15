@@ -27,7 +27,7 @@ $look = ceil(count(R::getAll(SqlRequestSelectAll())) / 100);
 $page = (empty(intval($_GET["p"])) || $_GET["p"] < 0 || $_GET["p"] > $look) ? 1 : intval($_GET["p"]);
 
 $offset = ($page - 1) * 100;
-$users = R::getAll("SELECT * FROM `users` WHERE (emailverify=1 AND fullacc=1) LIMIT $offset, 100");
+$users = R::getAll("SELECT * FROM `users` WHERE emailverify=1 LIMIT $offset, 100");
 
 $btnnext = $page == $look ? "disabled" : "";
 $btnprev = $page == 1 ? "disabled" : "";
@@ -57,7 +57,7 @@ $btnprev = $page == 1 ? "disabled" : "";
                     <?php foreach ($users as $user) : ?>
                         <a href="/user/?id=<?php echo $user["id"] ?>" class="list-group-item list-group-item-action">
                             <img src="/app/img/users/icons/MAN1.jpg" alt="Даниил Дыбка">
-                            <?php if (strlen($user["firstName"]) < 1 || strlen($user["lastName"]) < 1) : ?>
+                            <?php if ($user["displaynick"] == 1) : ?>
                                 <?php echo $user["nickname"] ?>
                             <?php else : ?>
                                 <?php echo $user["firstName"] . " " . $user["lastName"] ?>

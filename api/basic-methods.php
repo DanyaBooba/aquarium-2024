@@ -44,6 +44,15 @@ function ClearName($str)
     //
 }
 
+function ClearDisc($str)
+{
+    return trim(strip_tags($str));
+
+    //
+    // Убираем спецсимволы из описания
+    //
+}
+
 function CheckDataUser($user)
 {
     if (strlen($user["email"]) > 3 && strlen($user["password"]) > 3) return "ok";
@@ -328,7 +337,7 @@ function SqlRequestUpdateData($email, $nickname, $firstName, $lastName)
 
 function SqlRequestSelectAll()
 {
-    return "SELECT * FROM `users` WHERE emailverify=1 AND fullacc=1";
+    return "SELECT * FROM `users` WHERE emailverify=1";
 
     //
     // Sql запрос: все пользователи
@@ -341,5 +350,77 @@ function SqlRequestUpdateISubs($json, $email)
 
     //
     // Sql запрос: обновляем isubs
+    //
+}
+
+function SqlRequestUpdateAtMeSubs($json, $email)
+{
+    return "UPDATE `users` SET `atmesubs` = '$json' WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновляем atmesubs
+    //
+}
+
+function SqlRequestFindVerify($email)
+{
+    return "SELECT * FROM `emailverify` WHERE email like '$email'";
+
+    //
+    // Sql запрос: ищем emailverify
+    //
+}
+
+function SqlRequestInsertVerify($email, $url)
+{
+    return "INSERT INTO `emailverify`(`email`, `timecreate`, `url`) VALUES ('$email', " . time() . ", '$url')";
+
+    //
+    // Sql запрос: записываем в emailverify email и url
+    //
+}
+
+function SqlRequestDeleteVerify($id)
+{
+    return "DELETE FROM `emailverify` WHERE id=$id";
+
+    //
+    // Sql запрос: удаляем запись из emailverify по id
+    //
+}
+
+function SqlRequestVerifyFindByUrl($url)
+{
+    return "SELECT * FROM `emailverify` WHERE url like '$url'";
+
+    //
+    // Sql запрос: поиск по url
+    //
+}
+
+function SqlRequestUpdateVerifyEmail($email)
+{
+    return "UPDATE `users` SET `emailverify` = 1 WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновляем emailverify
+    //
+}
+
+function SqlRequestUpdateDesc($email, $desc)
+{
+    return "UPDATE `users` SET `descr` = '$desc' WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновляем описание
+    //
+}
+
+function SqlRequestUpdateDisplaynick($email, $nick)
+{
+    return "UPDATE `users` SET `displaynick` = $nick WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновляем displaynick
     //
 }

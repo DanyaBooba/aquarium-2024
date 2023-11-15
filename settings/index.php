@@ -15,11 +15,19 @@ if (count($user) <= 0) {
     die();
 }
 $user = $user[0];
+
+$usenickname = $user["firstName"] != "" && $user["lastName"] != "";
+$usedisabled = $usenickname == false ? "disabled" : "";
+
+$formnick = $user["displaynick"] == 1 ? "checked" : "";
+$formname = $formnick == "checked" ? "" : "checked";
+$disc = $user["descr"];
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
 
-<?php $error = SettingsError($_GET["e"]) ?>
+<?php $error_data = SettingsErrorData($_GET["e"]) ?>
+<?php $error_info = SettingsErrorInfo($_GET["e"]) ?>
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Настройки аккаунта | Аквариум</title>
@@ -41,16 +49,15 @@ $user = $user[0];
                                         <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
                                     </svg>
                                     <span>
-                                        Ваш аккаунт не подтвержден, введите <span class="dashed">имя</span>, <span class="dashed">фамилию</span>,
-                                        <span class="dashed">никнейм</span> и <span class="dashed">подтвердите почту</span>.
+                                        Для подтверждения аккаунта перейдите по ссылке в письме.
                                     </span>
                                 </div>
                             <?php endif ?>
                             <h2 id="data">Личные данные</h2>
                             <form class="needs-validation" action="/api/php/person/edit-name.php" method="post" novalidate>
-                                <?php if (empty($error) == false) : ?>
+                                <?php if (empty($error_data) == false) : ?>
                                     <div class="alert alert-danger" role="alert">
-                                        <?php echo $error ?>
+                                        <?php echo $error_data ?>
                                     </div>
                                 <?php endif; ?>
                                 <div>
@@ -74,6 +81,39 @@ $user = $user[0];
                                         Уникальное короткое имя.
                                     </p>
                                 </div>
+                                <button class="btn btn-primary w-100" type="submit">
+                                    Сохранить изменения
+                                </button>
+                            </form>
+                            <hr>
+                            <h2 id="info">Сведения</h2>
+                            <form class="needs-validation" action="/api/php/person/edit-info.php" method="post" novalidate>
+                                <?php if (empty($error_info) == false) : ?>
+                                    <div class="alert alert-danger" role="alert">
+                                        <?php echo $error_info ?>
+                                    </div>
+                                <?php endif; ?>
+                                <p style="margin-bottom: 4px">
+                                    На месте имени отображать:
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="1" name="display_nickname" id="radioinfo1" <?php echo $formnick ?>>
+                                    <label class="form-check-label" for="radioinfo1">
+                                        Никнейм
+                                    </label>
+                                </div>
+                                <div class="form-check" style="margin-bottom: 8px">
+                                    <input class="form-check-input" type="radio" value="0" name="display_nickname" id="radioinfo2" <?php echo $usedisabled ?> <?php echo $formname ?>>
+                                    <label class="form-check-label" for="radioinfo2" style="margin-bottom: 4px">
+                                        Имя и фамилию
+                                    </label>
+                                    <?php if ($usenickname == false) : ?>
+                                        <p class="form-more">
+                                            Заполните поля: имя и фамилию.
+                                        </p>
+                                    <?php endif; ?>
+                                </div>
+                                <textarea class="form-control" name="disc" aria-label="Описание профиля" placeholder="Описание профиля" maxlength="254"><?php echo $disc ?></textarea>
                                 <button class="btn btn-primary w-100" type="submit">
                                     Сохранить изменения
                                 </button>
@@ -109,6 +149,11 @@ $user = $user[0];
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="#info">
+                                        Сведения
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="#icon">
                                         Фотография
                                     </a>
@@ -119,6 +164,14 @@ $user = $user[0];
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="person-setting-bg person-setting-bar d-flex align-items-center">
+                            <svg class="svg-normal me-2" width="16" height="16">
+                                <use xlink:href="/app/img/icons/bootstrap.svg#question-circle"></use>
+                            </svg>
+                            <a href="/about/verify-account/" class="link">
+                                Подтверждение аккаунта
+                            </a>
                         </div>
                         <div class="person-setting-bg person-setting-bar">
                             <a href="/api/php/person/person-exit.php" class="link-danger">

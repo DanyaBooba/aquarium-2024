@@ -13,11 +13,13 @@ function EmailRestorePassword($email, $url)
 
 function EmailConfirmEmail($email, $url)
 {
-    $text = "Ссылка для подтверждения почты в Аквариум:<br><br>
+    $text = "Спасибо за регистрацию в социальную сеть Аквариум.<br><br>
+    Для того, чтобы Ваш аккаунт видели другие пользователи и Вы могли с ними взаимодействовать, подтвердите Вашу почту.<br><br>
+    Ссылка для подтверждения почты в Аквариум:<br><br>
     <a href='$url'>$url</a><br><br>
     Не давайте ссылку никому, даже если её требуют от имени Аквариума!<br><br>
     Эта ссылка используется для подтверждения почты Вашего аккаунта в Аквариум.<br><br>
-    Если Вы не запрашивали ссылку для восстановления доступа, проигнорируйте это сообщение.";
+    Если Вы не запрашивали ссылку для подтверждения аккаунта, проигнорируйте это сообщение.";
 
     Email($email, "Подтверждение аккаунта", $text);
 }
@@ -36,11 +38,6 @@ function Email($email, $subject = "", $text)
 {
     $subject .= " | Соцсеть Аквариум";
     $headers = "From: info@creagoo.ru\r\nContent-type: text/html";
-
-    // echo "Email: $email<br>";
-    // echo "Subject: $subject<br>";
-    // echo "Text: $text<br>";
-    // echo "Headers: $headers<br>";
 
     mail($email, $subject, $text, $headers);
 }

@@ -65,11 +65,22 @@ function LoginByCodeError($data)
     return null;
 }
 
-function SettingsError($data)
+function SettingsErrorData($data)
 {
     if ($data == "nickname_set") return "Данный никнейм уже занят.";
 
     if ($data == "error_data") return "Ошибка в данных.";
+
+    if ($data == "error_len") return "Недостаточная длина.";
+
+    return null;
+}
+
+function SettingsErrorInfo($data)
+{
+    if ($data == "desc_error") return "Ошибка в описании.";
+
+    if ($data == "error_data_info") return "Ошибка в данных.";
 
     return null;
 }

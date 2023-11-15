@@ -36,8 +36,8 @@ $bg = "BG" . $user["capid"] . ".jpg";
                         <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
                     </svg>
                     <span>
-                        Для подтверждения аккаунта <a href="/settings/" class="link">введите ваши данные</a>
-                        и пройдите по ссылке, отправленную на вашу почту.
+                        Для подтверждения аккаунта перейдите по ссылке в письме.
+                        <a href="/api/php/person/send-verify.php" class="link">Прислать письмо ещё раз?</a>
                     </span>
                 </div>
             <?php endif ?>
@@ -47,7 +47,7 @@ $bg = "BG" . $user["capid"] . ".jpg";
             <div class="person-profile">
                 <div class="person-profile-content">
                     <div class="person-profile-content-name">
-                        <?php if ($user["emailverify"] == 1 && $user["firstName"] != "" && $user["lastName"] != "") : ?>
+                        <?php if ($user["emailverify"] == 1 && $user["displaynick"] == 0) : ?>
                             <p class="person-profile-content-name-1">
                                 <?php echo $user["firstName"] . " " . $user["lastName"] ?>
                             </p>
@@ -57,10 +57,18 @@ $bg = "BG" . $user["capid"] . ".jpg";
                             </p>
                         <?php endif ?>
                         <?php if ($user["descr"] > 0) : ?>
-                            <p>
+                            <p class="person-profile-content-name-2">
                                 <?php echo $user["descr"] ?>
                             </p>
                         <?php endif ?>
+                        <div class="d-flex align-items-center mt-auto">
+                            <div>
+                                <b>0</b> Подписчики
+                            </div>
+                            <div class="ps-2">
+                                <b>0</b> Подписан
+                            </div>
+                        </div>
                     </div>
                     <div class="person-profile-content-buttons">
                         <button onClick="ButtonLeftBar(6)" class="btn btn-secondary">
@@ -105,7 +113,7 @@ $bg = "BG" . $user["capid"] . ".jpg";
                     </div>
                 </div>
             <?php else : ?>
-                <div class="text-center">
+                <div class="person-posts-empty">
                     У пользователя нет записей.
                 </div>
             <?php endif ?>

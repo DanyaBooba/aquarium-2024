@@ -29,7 +29,7 @@ ul.person-leftbar li button {
 
     display: flex;
     align-items: center;
-    border-radius: 12px;
+    border-radius: 8px;
 
     width: 100%;
     transition: .3s background;

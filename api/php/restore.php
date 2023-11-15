@@ -62,6 +62,6 @@ if (count($findrestore) <= 0) {
 ## Mail
 ##
 
-EmailRestorePassword($email_restore, $url);
+EmailRestorePassword($email_restore, "https://social.creagoo.ru/login/restore/enter/?c=" . $url);
 
 header("Location: /login/restore/?a=1");

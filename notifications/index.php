@@ -26,11 +26,12 @@ if (count($find) <= 0) {
 
     <main class="row row-cols-1 g-4">
         <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content">
+        <div class="col-md-9 person-content person-content-notifications-main">
             <h1>Уведомления</h1>
+            <h2>Общие</h2>
             <ul class="list-group list-group-flush person-content-notifications">
                 <li class="list-group-item">
-                    <h2>Спасибо за регистрацию</h2>
+                    <h3>Спасибо за регистрацию</h3>
                     <div>
                         <p>
                             Мы благодарим Вас за то, что Вы выражаете поддержку соцсети Аквариум в столь трудную минуту.
@@ -46,7 +47,7 @@ if (count($find) <= 0) {
                     </div>
                 </li>
                 <li class="list-group-item">
-                    <h2>Подарки для Вас</h2>
+                    <h3>Подарки для Вас</h3>
                     <div>
                         <p>
                             Специально для Вас были подготовлены следующие подарки: достижение "С первых минут" и
@@ -60,7 +61,7 @@ if (count($find) <= 0) {
                     </div>
                 </li>
                 <li class="list-group-item">
-                    <h2>Бета-тест</h2>
+                    <h3>Бета-тест</h3>
                     <div>
                         <p>
                             Соцсеть Аквариум на данный момент находится на стадии разработки, и нам очень нужна поддержка от пользователей
@@ -70,6 +71,17 @@ if (count($find) <= 0) {
                             В том случае, если Вы обнаружили ошибку, пожалуйста, сообщите о ней в наш баг-репорт:
                             <a href="mailto:daniil@dybka.ru" class="link">daniil@dybka.ru</a>.
                             Мы обязательно учтем пожелания пользователей в вопросах качества платформы.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <h2>Авторизация</h2>
+            <ul class="list-group list-group-flush person-content-notifications">
+                <li class="list-group-item">
+                    <h3 class="h5">15.04.2023</h3>
+                    <div>
+                        <p>
+                            Авторизация ...
                         </p>
                     </div>
                 </li>

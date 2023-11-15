@@ -16,8 +16,8 @@ $user = [
     "nickname" => ClearNickname($_POST["nickname"])
 ];
 
-if (strlen($user["firstName"]) < 2 || strlen($user["lastName"]) < 2 || strlen($user["nickname"]) < 2) {
-    header("Location: /settings/?e=error_data");
+if (mb_strlen($user["firstName"]) < 2 || mb_strlen($user["lastName"]) < 2 || mb_strlen($user["nickname"]) < 2) {
+    header("Location: /settings/?e=error_len");
     return;
 }
 

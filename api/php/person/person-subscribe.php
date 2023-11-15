@@ -24,6 +24,10 @@ if (count($find) <= 0) {
     return;
 }
 
+##
+## Find user
+##
+
 $findusersql = SqlRequestFindId($id);
 
 $finduser = R::getAll($findusersql);
@@ -38,21 +42,33 @@ if ($finduser[0]["id"] == $find[0]["id"]) {
     return;
 }
 
+##
+## Add sub to me
+##
+
 $subs = array_unique(json_decode($find[0]['isubs']));
+$subs2 = array_unique(json_decode($finduser[0]['atmesubs']));
 
 if (in_array(intval($id), $subs)) {
-    echo "DEL<br>";
     unset($subs[array_search(intval($id), $subs)]);
+    unset($subs2[array_search(intval($find[0]['id']), $subs2)]);
 } else {
-    echo "ADD<br>";
     array_push($subs, intval($id));
+    array_push($subs2, intval($find[0]['id']));
 }
 
 $json = json_encode($subs);
-
-var_dump($json);
+$json2 = json_encode($subs2);
 
 $setsql = SqlRequestUpdateISubs($json, $find[0]["email"]);
+
+R::getAll($setsql);
+
+##
+## Add sub to him
+##
+
+$setsql = SqlRequestUpdateAtMeSubs($json2, $finduser[0]["email"]);
 
 R::getAll($setsql);
 

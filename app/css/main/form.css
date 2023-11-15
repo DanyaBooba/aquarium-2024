@@ -16,13 +16,15 @@ form .form-more {
 form input[type="password"],
 form input[type="email"],
 form input[type="text"],
-form input[type="number"] {
+form input[type="number"],
+form textarea {
     background: var(--bg-input) !important;
     color: var(--text-color) !important;
-    border: 1px solid var(--bg-input-border);
+    border: 1px solid var(--bg-input-border) !important;
 }
 
-form input.form-check-input
+form input.form-check-input,
+form textarea
 {
     background: var(--bg-input);
     border: 1px solid var(--bg-input-border);

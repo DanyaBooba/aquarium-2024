@@ -38,7 +38,7 @@ if (count($user) <= 0) {
     $subs = $isubs ? "Подписан" : "Подписаться";
     $subslogo = $isubs ? "check" : "plus";
 
-    $atmesubs = true;
+    $atmesubs = in_array(intval($find["id"]), json_decode($user["isubs"]));
 }
 ?>
 
