@@ -30,11 +30,11 @@ if (count($find) <= 0) {
             <h1>Уведомления</h1>
             <ul class="list-group list-group-flush person-content-notifications">
                 <li class="list-group-item">
-                    <div class="person-profile-content-buttons align-items-center mb-1">
+                    <div class="person-profile-content-buttons person-content-notifications-button">
                         <h3 class="me-auto">Спасибо за регистрацию</h3>
-                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                            <svg fill="white" width="16" height="16">
-                                <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>
+                        <button class="btn btn-secondary" type="button" onClick="RotateButton(1)" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            <svg fill="white" width="16" height="16" id="svgcollapse1" class="notifications-svg-rotate-bottom">
+                                <use xlink:href=" /app/img/icons/bootstrap.svg#chevron-down"></use>
                             </svg>
                         </button>
                     </div>
@@ -53,10 +53,10 @@ if (count($find) <= 0) {
                     </div>
                 </li>
                 <li class="list-group-item">
-                    <div class="person-profile-content-buttons align-items-center mb-1">
+                    <div class="person-profile-content-buttons person-content-notifications-button">
                         <h3 class="me-auto">Подарки для Вас</h3>
-                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            <svg fill="white" width="16" height="16">
+                        <button class="btn btn-secondary" type="button" onClick="RotateButton(2)" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            <svg fill="white" width="16" height="16" id="svgcollapse2" class="notifications-svg-rotate-bottom">
                                 <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>
                             </svg>
                         </button>
@@ -74,10 +74,10 @@ if (count($find) <= 0) {
                     </div>
                 </li>
                 <li class="list-group-item">
-                    <div class="person-profile-content-buttons align-items-center mb-1">
+                    <div class="person-profile-content-buttons person-content-notifications-button">
                         <h3 class="me-auto">Бета-тест</h3>
-                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            <svg fill="white" width="16" height="16">
+                        <button class="btn btn-secondary" type="button" onClick="RotateButton(3)" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            <svg fill="white" width="16" height="16" id="svgcollapse3" class="notifications-svg-rotate-bottom">
                                 <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>
                             </svg>
                         </button>
@@ -97,6 +97,8 @@ if (count($find) <= 0) {
             </ul>
         </div>
     </main>
+
+    <script src="/app/js/person-notifications.js"></script>
 
     <?php include_once "../app/php/footer.php"; ?>
 </body>

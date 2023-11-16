@@ -5,6 +5,7 @@ session_start();
 include_once "../basic-methods.php";
 include_once "../rb-mysql.php";
 include_once "../token.php";
+include_once "../mail.php";
 
 $user = [
     "email" => $_POST["email"],
@@ -53,5 +54,7 @@ R::getAll($deletesql);
 ##
 
 $_SESSION["login"] = $user["email"];
+
+EmailAfterLogin($user["email"]);
 
 header("Location: /person/");

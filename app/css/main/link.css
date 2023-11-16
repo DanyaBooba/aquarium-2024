@@ -1,13 +1,13 @@
 a.link {
     color: var(--text-default);
-    text-decoration: none;
-    border-bottom: 1px solid var(--text-color-4);
-    transition: .3s border-bottom;
+    text-decoration-color: var(--text-color-4);
+    text-decoration-thickness: 1.25px;
+    transition: .3s text-decoration;
 }
 
 a.link:hover,
 a.link:focus {
-    border-bottom: 1px solid var(--text-default);
+    text-decoration-color: var(--text-default);
 }
 
 a.link-white {

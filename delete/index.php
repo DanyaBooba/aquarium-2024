@@ -76,7 +76,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                 </div>
                             <?php endif ?>
                             <h2 id="password">Пароль</h2>
-                            <form class="needs-validation" action="/api/php/person/edit-pass.php" method="post" novalidate>
+                            <form class="needs-validation" action="/api/php/person/edit-main.php" method="post" novalidate>
                                 <?php if (empty($error_main) == false) : ?>
                                     <div class="alert alert-danger" role="alert">
                                         <?php echo $error_main ?>
@@ -85,30 +85,28 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                 <div>
                                     <input class="form-control" type="password" name="current_password" placeholder="Текущий пароль" aria-label="Текущий пароль" required>
                                     <div class="invalid-feedback">
-                                        Пожалуйста, введите текущий пароль.
+                                        Пожалуйста, введите имя.
                                     </div>
                                 </div>
                                 <div>
                                     <input class="form-control" type="password" name="new_password" placeholder="Новый пароль" aria-label="Новый пароль" required>
                                     <div class="invalid-feedback">
-                                        Пожалуйста, введите новый пароль.
+                                        Пожалуйста, введите имя.
                                     </div>
                                 </div>
                                 <div>
                                     <input class="form-control" type="password" name="confirm_password" placeholder="Подтвердите пароль" aria-label="Подтвердите пароль" required>
                                     <div class="invalid-feedback">
-                                        Пожалуйста, подтвердите введенный пароль.
+                                        Пожалуйста, введите фамилию.
                                     </div>
                                 </div>
                                 <button class="btn btn-primary w-100" type="submit">
                                     Сохранить изменения
                                 </button>
                             </form>
-                            <div class="form-delete-account">
-                                <button class="btn btn-danger w-100" onClick="DeleteAccount()">
-                                    Удалить аккаунт
-                                </button>
-                            </div>
+                            <button class="btn btn-danger col-md-6" onClick="DeleteAccount()">
+                                Удалить аккаунт
+                            </button>
                             <hr>
                             <h2 id="data">Личные данные</h2>
                             <form class="needs-validation" action="/api/php/person/edit-name.php" method="post" novalidate>
@@ -186,25 +184,6 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                     </label>
                                 </div>
                                 <textarea class="form-control" name="disc" aria-label="Описание профиля" placeholder="Описание профиля" maxlength="254"><?php echo $disc ?></textarea>
-                                <button class="btn btn-primary w-100" type="submit">
-                                    Сохранить изменения
-                                </button>
-                            </form>
-                            <hr>
-                            <h2 id="notifications">Уведомления</h2>
-                            <form class="needs-validation" action="/api/php/person/edit-notifications.php" method="post" novalidate>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="1" name="display_nickname" id="radioinfo1" <?php echo $formnick ?>>
-                                    <label class="form-check-label" for="radioinfo1">
-                                        Никнейм
-                                    </label>
-                                </div>
-                                <div class="form-check" style="margin-bottom: 8px">
-                                    <input class="form-check-input" type="radio" value="0" name="display_nickname" id="radioinfo2" <?php echo $usedisabled ?> <?php echo $formname ?>>
-                                    <label class="form-check-label" for="radioinfo2" style="margin-bottom: 4px">
-                                        Имя и фамилию
-                                    </label>
-                                </div>
                                 <button class="btn btn-primary w-100" type="submit">
                                     Сохранить изменения
                                 </button>

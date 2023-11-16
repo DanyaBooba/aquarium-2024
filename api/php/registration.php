@@ -5,6 +5,7 @@ session_start();
 include_once "../basic-methods.php";
 include_once "../rb-mysql.php";
 include_once "../token.php";
+include_once "../mail.php";
 
 $user = [
     "email" => $_POST["email"],
@@ -80,5 +81,17 @@ R::getAll($sql);
 ##
 
 $_SESSION["login"] = $user["email"];
+
+##
+## Confirm email
+##
+
+$url = RandomString(80);
+
+$setsql = SqlRequestInsertVerify($user["email"], $url);
+
+R::getAll($setsql);
+
+EmailConfirmEmail($user["email"], "https://social.creagoo.ru/api/php/person/check-verify.php?c=" . $url);
 
 header("Location: /person/");

@@ -13,3 +13,7 @@ function ButtonLeftBar(i) {
 
 	if (i == 6) window.open("/settings/", "_self");
 }
+
+function DeleteAccount() {
+	window.open("/delete/", "_self");
+}

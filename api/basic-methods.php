@@ -108,10 +108,6 @@ function SqlRequestCreate($user, $randomstr, $maxid)
             "value" => $user["email"],
         ],
         [
-            "name" => "emailverify",
-            "value" => 0,
-        ],
-        [
             "name" => "passhash",
             "value" => password_hash($salt . $user["password"] . $salt, PASSWORD_DEFAULT),
         ],
@@ -124,36 +120,12 @@ function SqlRequestCreate($user, $randomstr, $maxid)
             "value" => "user" . $maxid . time(),
         ],
         [
-            "name" => "firstName",
-            "value" => "empty",
-        ],
-        [
-            "name" => "lastName",
-            "value" => "empty",
-        ],
-        [
             "name" => "datereg",
             "value" => time(),
         ],
         [
-            "name" => "countlogin",
-            "value" => 1,
-        ],
-        [
             "name" => "uniquehash",
             "value" => $randomstr . $maxid,
-        ],
-        [
-            "name" => "usertype",
-            "value" => "usr",
-        ],
-        [
-            "name" => "isubs",
-            "value" => "[]",
-        ],
-        [
-            "name" => "atmesubs",
-            "value" => "[]",
         ],
     ];
 
