@@ -5,7 +5,7 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-top: 1px solid var(--text-color-3);
-    height: 55px;
+    height: 60px;
 }
 
 .fixed-bottom__nav
@@ -13,7 +13,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding-top: 7px;
+    padding-top: 8px;
 }
 
 /* Link */

@@ -56,25 +56,25 @@ $countsubatme = count(array_unique(json_decode($user["atmesubs"])));
                                 <?php echo $user["firstName"] . " " . $user["lastName"] ?>
                             </p>
                         <?php else : ?>
-                            <p class="person-profile-content-name-1">
+                            <p class="person-profile-content-name-1 content-name-width" title="<?php echo $user["nickname"] ?>">
                                 <?php echo $user["nickname"] ?>
                             </p>
                         <?php endif ?>
                         <?php if (mb_strlen($user["descr"]) > 0) : ?>
-                            <p class="person-profile-content-name-2">
+                            <p class="person-profile-content-name-2 content-name-width" title="<?php echo $user["descr"] ?>">
                                 <?php echo $user["descr"] ?>
                             </p>
                         <?php endif ?>
-                        <div class="d-flex align-items-center mt-auto">
-                            <div>
+                        <div class="person-profile-subs">
+                            <div title="Кто подписан">
                                 <b><?php echo $countsubatme ?></b> Подписчики
                             </div>
-                            <div class="ps-2">
+                            <div class="ps-2" title="На кого подписан">
                                 <b><?php echo $countsubme ?></b> Подписан
                             </div>
                         </div>
                     </div>
-                    <div class="person-profile-content-buttons">
+                    <div class="person-profile-content-buttons person-profile-content-buttons-width">
                         <button onClick="ButtonLeftBar(6)" class="btn btn-secondary">
                             Редактировать профиль
                         </button>
