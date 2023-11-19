@@ -191,9 +191,9 @@
 
 .person-form {
     margin-bottom: 30px;
-    border-radius: 12px;
+    border-radius: 8px;
     background: var(--bg-light);
-    padding: 10px;
+    padding: 6px;
 }
 
 .person-form form input {

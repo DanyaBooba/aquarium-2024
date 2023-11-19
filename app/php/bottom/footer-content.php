@@ -8,11 +8,11 @@
             <p>© Аквариум, 2020-2023</p>
         </div>
         <div class="footer__center">
-            <a href="/about/" class="link mx-3">
-                О Аквариуме
-            </a>
             <a href="/about/faq/" class="link mx-3">
-                Вопросы
+                FAQ
+            </a>
+            <a href="/about/" class="link mx-3">
+                API
             </a>
             <a href="/about/user/" class="link mx-3">
                 Пользователю

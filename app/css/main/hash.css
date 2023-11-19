@@ -1,0 +1,19 @@
+a.hash {
+    text-decoration: none;
+    fill: var(--bg-color);
+    transition: .3s fill;
+}
+
+a.hash:hover,
+a.hash:focus {
+    fill: var(--button-primary) !important;
+}
+
+.hash svg {
+    width: 25px;
+    height: 25px;
+}
+
+.hash-head:hover .hash {
+    fill: var(--button-primary-hover);
+}

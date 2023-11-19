@@ -26,7 +26,7 @@ if (count($find) > 0) {
         <?php include_once "app/php/header.php"; ?>
     </div>
     <main>
-        <div class="row align-items-center" style="margin-bottom: 20px">
+        <div class="row align-items-center" style="margin-bottom: 50px">
             <div class="col-md-6 see-at-pc d-flex justify-content-end px-0">
                 <div class="p-3 d-flex">
                     <a href="#download" aria-label="Скачать для Android" style="margin-right: -30px">
@@ -92,6 +92,64 @@ if (count($find) > 0) {
                                 политику конфиденциальности
                             </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container px-0" style="margin-bottom: 50px">
+            <div class="row row-cols-1 row-cols-lg-3 g-4">
+                <div class="col text-center">
+                    <div class="p-4">
+                        <h3 class="display-1">🐠</h3>
+                        <h3 class="mb-1">Соцсеть</h3>
+                        <p class="mb-0 fs-6">
+                            Социальная сеть для всех.<br>Поиск друзей и общения.
+                        </p>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="p-4">
+                        <h3 class="display-1">👭</h3>
+                        <h3 class="mb-1">Друзья</h3>
+                        <p class="mb-0 fs-6">
+                            Найдите себе людей по вкусу, подпишитесь на человека, следите за его новостями.
+                        </p>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="p-4">
+                        <h3 class="display-1">💫</h3>
+                        <h3 class="mb-1">Лента</h3>
+                        <p class="mb-0 fs-6">
+                            Ваша лента с новостями,<br> с записями друзей.
+                        </p>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="p-4">
+                        <h3 class="display-1">🤖</h3>
+                        <h3 class="mb-1">Безопасность</h3>
+                        <p class="mb-0 fs-6">
+                            Шифрование пароля, защищенные запросы и полная конфиденциальность данных.
+                        </p>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="p-4">
+                        <h3 class="display-1">❤️</h3>
+                        <h3 class="mb-1">Эмоции</h3>
+                        <p class="mb-0 fs-6">
+                            Сохраняйте Ваши приятные воспоминания, и делитесь ими с друзьями.
+                        </p>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="p-4">
+                        <h3 class="display-1">🌠</h3>
+                        <h3 class="mb-1">Фотографии</h3>
+                        <p>
+                            Публикуйте фотографии, делитесь ими с друзьями и добавляйте записи к ним.
+                        </p>
                     </div>
                 </div>
             </div>

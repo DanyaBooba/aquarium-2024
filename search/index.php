@@ -23,7 +23,16 @@ if (count($find) <= 0) {
 ## Server
 ##
 
-$look = ceil(count(R::getAll(SqlRequestSelectAll())) / 100);
+$search = ClearSearch($_GET["s"]);
+$seak = SqlRequestSelectAll();
+
+if (mb_strlen($search) > 0) {
+    $seak = SqlRequestSearch($search);
+    var_dump($seak);
+    die();
+}
+
+$look = ceil(count(R::getAll($seak)) / 100);
 $page = (empty(intval($_GET["p"])) || $_GET["p"] < 0 || $_GET["p"] > $look) ? 1 : intval($_GET["p"]);
 
 $offset = ($page - 1) * 100;
@@ -45,13 +54,13 @@ $btnprev = $page == 1 ? "disabled" : "";
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content">
             <h1>Поиск</h1>
-            <!-- <div class="person-form">
-                <form action="?" method="post">
+            <div class="person-form">
+                <form action="?" method="get">
                     <div class="input-group">
-                        <input type="text" name="search" class="form-control" aria-label="Например, имя пользователя @dybka" placeholder="Например, имя пользователя @dybka">
+                        <input type="text" name="s" value="<?php echo $search ?>" class="form-control" aria-label="Например, имя пользователя @dybka" placeholder="Например, имя пользователя @dybka">
                     </div>
                 </form>
-            </div> -->
+            </div>
             <div class="person-search-list list-group">
                 <ul class="list-group list-group-flush">
                     <?php foreach ($users as $user) : ?>
