@@ -175,13 +175,13 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                     Пол:
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="1" name="sex" id="radiosex1" <?php echo $sexman ?>>
+                                    <input class="form-check-input" type="radio" onInput="ChangeDataSexMan()" value="1" name="sex" id="radiosex1" <?php echo $sexman ?>>
                                     <label class="form-check-label" for="radiosex1">
                                         Мужской
                                     </label>
                                 </div>
                                 <div class="form-check" style="margin-bottom: 8px">
-                                    <input class="form-check-input" type="radio" value="0" name="sex" id="radiosex2" <?php echo $sexwoman ?>>
+                                    <input class="form-check-input" type="radio" value="0" onInput="ChangeDataSexWoman()" name="sex" id="radiosex2" <?php echo $sexwoman ?>>
                                     <label class="form-check-label" for="radiosex2" style="margin-bottom: 4px">
                                         Женский
                                     </label>
@@ -217,27 +217,28 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon1" value="1" <?php echo $formicon[1] ?>>
                                         <label class="list-group-item" for="icon1">
-                                            <img src="/app/img/users/icons/<?php echo $formmale ?>1.jpg">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>1.jpg" id="imgicon1">
                                         </label>
                                     </div>
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon2" value="2" <?php echo $formicon[2] ?>>
                                         <label class="list-group-item" for="icon2">
-                                            <img src="/app/img/users/icons/<?php echo $formmale ?>2.jpg">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>2.jpg" id="imgicon2">
                                         </label>
                                     </div>
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon3" value="3" <?php echo $formicon[3] ?>>
                                         <label class="list-group-item" for="icon3">
-                                            <img src="/app/img/users/icons/<?php echo $formmale ?>3.jpg">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>3.jpg" id="imgicon3">
                                         </label>
                                     </div>
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon4" value="4" <?php echo $formicon[4] ?>>
                                         <label class="list-group-item" for="icon4">
-                                            <img src="/app/img/users/icons/<?php echo $formmale ?>4.jpg">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>4.jpg" id="imgicon4">
                                         </label>
                                     </div>
+                                    <input type="text" class="d-none" name="ismale" id="ismale" value="<?php echo $sex ?>">
                                 </div>
                                 <button class="btn btn-primary col-md-6 mt-2" type="submit">
                                     Сохранить изменения
@@ -296,11 +297,11 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                         Сведения
                                     </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#notifications" class="link">
                                         Уведомления
                                     </a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="#icon" class="link">
                                         Фотография
@@ -342,7 +343,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
 
     <script src="/app/js/button.js"></script>
     <script src="/app/js/form-edit-url.js"></script>
-    <script src="/app/js/confirm-form.js"></script>
+    <script src="/app/js/person-settingschange.js"></script>
 
     <?php include_once "../app/php/footer.php"; ?>
 </body>

@@ -430,7 +430,7 @@ form.person-settings-form-image .row .col input:checked+label img {
 }
 
 form.person-settings-form-image .row .col input:focus+label img {
-    outline: 5px solid var(--button-primary-hover);
+    outline: 5px solid var(--button-primary);
 }
 
 form.person-settings-form-image .row .col input+label {

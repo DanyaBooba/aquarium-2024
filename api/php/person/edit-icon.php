@@ -11,6 +11,7 @@ include_once "../../token.php";
 ##
 
 $icon = intval($_POST["icon"]);
+$sex = intval($_POST["ismale"]);
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
@@ -31,5 +32,9 @@ if (mb_strlen(strval($icon)) <= 0) {
 $updateiconsql = SqlRequestUpdateIcon($find[0]["email"], $icon);
 
 R::getAll($updateiconsql);
+
+$updatesexsql = SqlRequestUpdateMale($find[0]["email"], $sex);
+
+R::getAll($updatesexsql);
 
 header("Location: /settings/#icon");
