@@ -425,16 +425,12 @@ form.person-settings-form-image .row .col img {
     }
 }
 
-form.person-settings-form-image .row .col input+label img {
-    border: 10px solid var(--bg-light);
-}
-
 form.person-settings-form-image .row .col input:checked+label img {
-    border: 5px solid var(--button-primary);
+    outline: 3px solid var(--button-primary);
 }
 
 form.person-settings-form-image .row .col input:focus+label img {
-    border: 10px solid var(--button-primary-hover);
+    outline: 5px solid var(--button-primary-hover);
 }
 
 form.person-settings-form-image .row .col input+label {
