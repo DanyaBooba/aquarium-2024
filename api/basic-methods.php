@@ -437,7 +437,7 @@ function SqlRequestUpdateBg($email, $bg)
     //
 }
 
-function SqlRequestSearch($text)
+function SqlRequestSearch($text) // !
 {
     $more = "MORE";
     if ($text[0] == "@") {
@@ -448,5 +448,32 @@ function SqlRequestSearch($text)
 
     //
     // Sql запрос: ищем по базе данных
+    //
+}
+
+function SqlRequestNewPass($email, $pass, $salt)
+{
+    return "UPDATE `users` SET `passhash` = '$pass', `saltpass` = '$salt' WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновление пароля
+    //
+}
+
+function SqlRequestDeleteAccount($email)
+{
+    return "DELETE FROM `users` WHERE email like '$email'";
+
+    //
+    // Sql запрос: удаление аккаунта
+    //
+}
+
+function SqlRequestSaveDeleteAccount($email, $timecreate)
+{
+    return "INSERT INTO `deleted`(`email`, `timedelete`, `timecreate`) VALUES ('$email', $timecreate, " . time() . ")";
+
+    //
+    // Sql запрос: удаленный аккаунт
     //
 }

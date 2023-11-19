@@ -50,6 +50,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
 
 <?php $error_data = SettingsErrorData($_GET["e"]) ?>
 <?php $error_info = SettingsErrorInfo($_GET["e"]) ?>
+<?php $error_pass = SettingsErrorPass($_GET["e"]) ?>
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Настройки аккаунта | Аквариум</title>
@@ -57,7 +58,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
 <body class="container">
     <?php include_once "../app/php/person/header.php"; ?>
 
-    <main class="row row-cols-1 g-4">
+    <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content">
             <h1>Настройки</h1>
@@ -77,9 +78,9 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                             <?php endif ?>
                             <h2 id="password">Пароль</h2>
                             <form class="needs-validation" action="/api/php/person/edit-pass.php" method="post" novalidate>
-                                <?php if (empty($error_main) == false) : ?>
+                                <?php if (empty($error_pass) == false) : ?>
                                     <div class="alert alert-danger" role="alert">
-                                        <?php echo $error_main ?>
+                                        <?php echo $error_pass ?>
                                     </div>
                                 <?php endif; ?>
                                 <div>
@@ -281,22 +282,32 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                         <div class="person-setting-bg person-setting-bar">
                             <ul>
                                 <li>
-                                    <a href="#data">
+                                    <a href="#password" class="link">
+                                        Пароль
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#data" class="link">
                                         Личные данные
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#info">
+                                    <a href="#info" class="link">
                                         Сведения
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#icon">
+                                    <a href="#notifications" class="link">
+                                        Уведомления
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#icon" class="link">
                                         Фотография
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#cap">
+                                    <a href="#cap" class="link">
                                         Обложка
                                     </a>
                                 </li>
@@ -306,8 +317,16 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                             <svg class="svg-normal me-2" width="16" height="16">
                                 <use xlink:href="/app/img/icons/bootstrap.svg#question-circle"></use>
                             </svg>
-                            <a href="/about/#verify-account" class="link">
+                            <a href="/about/faq/#подтверждение-аккаунта" class="link">
                                 Подтверждение аккаунта
+                            </a>
+                        </div>
+                        <div class="person-setting-bg person-setting-bar d-flex align-items-center">
+                            <svg class="svg-normal me-2" width="16" height="16">
+                                <use xlink:href="/app/img/icons/bootstrap.svg#eye"></use>
+                            </svg>
+                            <a href="/user/?id=<?php echo $user["id"] ?>" class="link">
+                                Профиль со стороны
                             </a>
                         </div>
                         <div class="person-setting-bg person-setting-bar">

@@ -3,10 +3,12 @@
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Политика конфиденциальности | Аквариум</title>
 
+<link rel="stylesheet" href="/app/css/pages/about.css" />
+
 <body class="container">
     <?php include_once "../../../app/php/header.php"; ?>
 
-    <main>
+    <main id="main">
         <h1>Политика в отношении обработки персональных данных</h1>
         <h2>1. Общие положения</h2>
         <p>
@@ -505,6 +507,10 @@
             https://social.creagoo.ru/about/user/privacypolicy.
         </p>
     </main>
+
+    <script src="/app/js/about-addlinkhead.js"></script>
+
+    <script src="/app/js/about-addupbutton.js"></script>
 
     <?php include_once "../../../app/php/bottom/footer-content.php"; ?>
 

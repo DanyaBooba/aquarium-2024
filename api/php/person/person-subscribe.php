@@ -50,12 +50,21 @@ $subs = array_unique(json_decode($find[0]['isubs']));
 $subs2 = array_unique(json_decode($finduser[0]['atmesubs']));
 
 if (in_array(intval($id), $subs)) {
-    unset($subs[array_search(intval($id), $subs)]);
-    unset($subs2[array_search(intval($find[0]['id']), $subs2)]);
+    array_splice($subs, array_search(intval($id), $subs), 1);
+    array_splice($subs2, array_search(intval($find[0]['id']), $subs2), 1);
+
+    sort($subs);
+    sort($subs2);
 } else {
     array_push($subs, intval($id));
     array_push($subs2, intval($find[0]['id']));
+
+    sort($subs);
+    sort($subs2);
 }
+
+if ($subs == null) $subs = [];
+if ($subs2 == null) $subs2 = [];
 
 $json = json_encode($subs);
 $json2 = json_encode($subs2);

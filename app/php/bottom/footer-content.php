@@ -11,9 +11,9 @@
             <a href="/about/faq/" class="link mx-3">
                 FAQ
             </a>
-            <a href="/about/" class="link mx-3">
+            <!-- <a href="/about/" class="link mx-3">
                 API
-            </a>
+            </a> -->
             <a href="/about/user/" class="link mx-3">
                 Пользователю
             </a>

@@ -3,10 +3,12 @@
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Условия использования | Аквариум</title>
 
+<link rel="stylesheet" href="/app/css/pages/about.css" />
+
 <body class="container">
     <?php include_once "../../../app/php/header.php"; ?>
 
-    <main>
+    <main id="main">
         <h1>Условия использования</h1>
         <p>
             Настоящий документ «Пользовательское соглашение» представляет собой предложение
@@ -82,6 +84,10 @@
             самостоятельно выбирая способ их хранения.
         </p>
     </main>
+
+    <script src="/app/js/about-addlinkhead.js"></script>
+
+    <script src="/app/js/about-addupbutton.js"></script>
 
     <?php include_once "../../../app/php/bottom/footer-content.php"; ?>
 

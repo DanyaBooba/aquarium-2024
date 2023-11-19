@@ -40,14 +40,33 @@ function EmailAfterLogin($email)
     $date = date("d/m/Y H:i:s");
     $heads = getallheaders()["User-Agent"];
 
-    $text = "Зафиксирован вход в Ваш аккаунт соцсети Аквариум.<br><br>
-    $date UTC.<br><br>
-    $heads.<br><br>
+    $text = "$date UTC зафиксирован вход в Ваш аккаунт соцсети Аквариум.<br><br>
     Если это были не Вы, смените пароль аккаунта:
-    <a href='https://social.creagoo.ru/settings/#password'>https://social.creagoo.ru/settings</a>";
+    <a href='https://social.creagoo.ru/settings/#password'>https://social.creagoo.ru/settings</a>
+    Сведения: $heads.<br><br>
+    ";
 
     Email($email, "Вход в аккаунт", $text);
 }
+
+function EmailUpdatePassword($email)
+{
+    date_default_timezone_set('UTC');
+    $date = date("d/m/Y H:i:s");
+    $heads = getallheaders()["User-Agent"];
+
+    $text = "$date UTC изменен пароль Вашего аккаунта соцсети Аквариум.<br><br>
+    Если это были не Вы, смените пароль аккаунта:
+    <a href='https://social.creagoo.ru/settings/#password'>https://social.creagoo.ru/settings</a>
+    Сведения: $heads.<br><br>
+    ";
+
+    Email($email, "Изменение пароля", $text);
+}
+
+//
+// Basic
+//
 
 function Email($email, $subject = "", $text)
 {

@@ -84,3 +84,25 @@ function SettingsErrorInfo($data)
 
     return null;
 }
+
+function SettingsErrorPass($data)
+{
+    if ($data == "passw_wrong") return "Ошибка в пароле.";
+
+    if ($data == "passw_another") return "Пароль не подтвержден.";
+
+    if ($data == "passw_null") return "Пароль не подходит.";
+
+    if ($data == "passw_simple") return "Пароль слишком простой.";
+
+    if ($data == "passw_notnew") return "Пароль не новый.";
+
+    return null;
+}
+
+function DeleteAccountError($data)
+{
+    if ($data == "") return "";
+
+    return null;
+}

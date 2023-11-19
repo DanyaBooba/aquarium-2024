@@ -1,6 +1,6 @@
 <?php
+session_start();
 include_once "../../../api/auth-errors.php";
-include_once "../../../app/php/head.php"; // !
 
 include_once "../../../api/rb-mysql.php";
 include_once "../../../api/basic-methods.php";
@@ -41,6 +41,8 @@ $email = $find[0]["email"];
 ?>
 
 <?php $error = UpdatePasswordError($_GET["e"]) ?>
+
+<?php include_once "../../../app/php/head.php"; ?>
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 

@@ -3,10 +3,12 @@
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Политика обработки файлов cookie | Аквариум</title>
 
+<link rel="stylesheet" href="/app/css/pages/about.css" />
+
 <body class="container">
     <?php include_once "../../../app/php/header.php"; ?>
 
-    <main>
+    <main id="main">
         <h1>Политика обработки файлов cookie</h1>
         <p>
             Посещая сайт «Аквариум» в сети «Интернет», вы соглашаетесь с настоящей политикой, в том числе с тем, что «Аквариум»
@@ -62,6 +64,10 @@
             воспользоваться инструкцией, предоставляемой разработчиком браузера или производителем устройства.
         </p>
     </main>
+
+    <script src="/app/js/about-addlinkhead.js"></script>
+
+    <script src="/app/js/about-addupbutton.js"></script>
 
     <?php include_once "../../../app/php/bottom/footer-content.php"; ?>
 

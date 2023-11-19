@@ -53,7 +53,7 @@ if (count($user) <= 0) {
 <body class="container">
     <?php include_once "../app/php/person/header.php"; ?>
 
-    <main class="row row-cols-1 g-4">
+    <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content">
             <?php if ($user == false) : ?>
