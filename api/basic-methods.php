@@ -140,6 +140,18 @@ function SqlRequestCreate($user, $randomstr, $maxid)
             "name" => "uniquehash",
             "value" => $randomstr . $maxid,
         ],
+        [
+            "name" => "achivs",
+            "value" => "[]"
+        ],
+        [
+            "name" => "isubs",
+            "value" => "[]"
+        ],
+        [
+            "name" => "atmesubs",
+            "value" => "[]"
+        ],
     ];
 
     $sqlvalue = "";
@@ -437,14 +449,30 @@ function SqlRequestUpdateBg($email, $bg)
     //
 }
 
-function SqlRequestSearch($text) // !
+function SqlRequestSearch($text)
 {
-    $more = "MORE";
+    $more = "(NICKNAME like '%$text%' OR firstName like '%$text%' OR lastName like '%$text%' or descr like '%$text%')";
     if ($text[0] == "@") {
-        $more = "@";
+        $text = substr($text, 1);
+        $more = "nickname like '%$text%'";
     }
 
     return "SELECT * FROM `users` WHERE (emailverify=1) AND $more";
+
+    //
+    // Sql запрос: ищем по базе данных
+    //
+}
+
+function SqlRequestSearchOffset($text, $offset)
+{
+    $more = "(NICKNAME like '%$text%' OR firstName like '%$text%' OR lastName like '%$text%' or descr like '%$text%')";
+    if ($text[0] == "@") {
+        $text = substr($text, 1);
+        $more = "nickname like '%$text%'";
+    }
+
+    return "SELECT * FROM `users` WHERE (emailverify=1) AND $more LIMIT $offset, 100";
 
     //
     // Sql запрос: ищем по базе данных
@@ -475,5 +503,14 @@ function SqlRequestSaveDeleteAccount($email, $timecreate)
 
     //
     // Sql запрос: удаленный аккаунт
+    //
+}
+
+function SqlRequestFindNotifications($email)
+{
+    return "SELECT * FROM `notifications` WHERE foremail like '$email'";
+
+    //
+    // Sql запрос: поиск уведомлений
     //
 }

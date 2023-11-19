@@ -41,7 +41,7 @@
             </button>
         </li>
         <li>
-            <button onClick="ButtonLeftBar(5)" id="person-leftbar-achivments" disabled>
+            <button onClick="ButtonLeftBar(5)" id="person-leftbar-achivments">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#trophy"></use>
                 </svg>

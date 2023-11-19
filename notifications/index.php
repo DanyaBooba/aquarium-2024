@@ -14,6 +14,8 @@ if (count($find) <= 0) {
     header("Location: /");
     die();
 }
+
+$nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -28,6 +30,29 @@ if (count($find) <= 0) {
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content person-content-notifications-main">
             <h1>Уведомления</h1>
+            <?php if (count($nots) > 0) : ?>
+                <h2>Недавние</h2>
+                <?php for ($i = 0; $i < count($nots); $i++) : ?>
+                    <ul class="list-group list-group-flush person-content-notifications">
+                        <li class="list-group-item">
+                            <div class="person-profile-content-buttons person-content-notifications-button">
+                                <h3 class="me-auto"><?php echo $nots[$i]["name"] ?></h3>
+                                <button class="btn btn-secondary" type="button" onClick="RotateButton('info<?php echo $i ?>')" data-bs-toggle="collapse" data-bs-target="#collapseinfo<?php echo $i ?>" aria-expanded="false" aria-controls="collapseinfo<?php echo $i ?>">
+                                    <svg fill="white" width="16" height="16" id="svgcollapseinfo<?php echo $i ?>" class="notifications-svg-rotate-bottom">
+                                        <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="collapse person-content-notifications-block" id="collapseinfo<?php echo $i ?>">
+                                <p>
+                                    <?php echo $nots[$i]["descr"] ?>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                <?php endfor; ?>
+            <?php endif; ?>
+            <h2>Системные</h2>
             <ul class="list-group list-group-flush person-content-notifications">
                 <li class="list-group-item">
                     <div class="person-profile-content-buttons person-content-notifications-button">
@@ -63,8 +88,8 @@ if (count($find) <= 0) {
                     </div>
                     <div class="collapse person-content-notifications-block" id="collapse2">
                         <p>
-                            Специально для Вас были подготовлены следующие подарки: достижение "С первых минут" и
-                            набор стикеров телеграм "Аквариум". Спасибо, что Вы с нами!
+                            Специально для Вас были подготовлены следующие подарки: достижение «С первых минут» и
+                            набор стикеров телеграм «Аквариум». Спасибо, что Вы с нами!
                         </p>
                         <p>
                             <a href="#" class="link">
