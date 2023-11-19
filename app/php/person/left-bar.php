@@ -1,19 +1,11 @@
 <div class="col-md-3 see-at-pc">
     <ul class="person-leftbar see-at-pc" id="person-leftbar">
         <li>
-            <button onClick="ButtonLeftBar(0)" id="person-leftbar-feed" disabled>
+            <button onClick="ButtonLeftBar(0)" id="person-leftbar-feed">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#house"></use>
                 </svg>
                 Лента
-            </button>
-        </li>
-        <li>
-            <button onClick="ButtonLeftBar(1)" id="person-leftbar-search">
-                <svg height="28" width="28" class="svg-normal me-3">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#search"></use>
-                </svg>
-                Поиск
             </button>
         </li>
         <li>
@@ -22,6 +14,14 @@
                     <use xlink:href="/app/img/icons/bootstrap.svg#person"></use>
                 </svg>
                 Профиль
+            </button>
+        </li>
+        <li>
+            <button onClick="ButtonLeftBar(1)" id="person-leftbar-search">
+                <svg height="28" width="28" class="svg-normal me-3">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#search"></use>
+                </svg>
+                Поиск
             </button>
         </li>
         <li>

@@ -27,7 +27,7 @@ if (count($find) <= 0) {
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content">
-            <p>Лента...</p>
+            <p>Лента</p>
         </div>
     </main>
 
