@@ -43,20 +43,29 @@
 }
 
 .person-profile-content-name-2 {
-    margin-bottom: 5px !important;
+    margin-bottom: 8px !important;
 }
 
-.content-name-width {
-    max-width: 300px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-align: center;
+@media(min-width: 992px) {
+    .content-name-width {
+        max-width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+    }
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
     .content-name-width {
         max-width: 230px;
+    }
+}
+
+@media(max-width: 992px) {
+    .content-name-width {
+        max-width: 300px;
+        word-wrap: break-word;
     }
 }
 
@@ -107,6 +116,8 @@
     display: flex;
     align-items: center;
     margin-top: auto;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
 }
 
 .person-profile-content-buttons-width {

@@ -42,6 +42,8 @@ if (count($user) <= 0) {
 
     $countsubatme = count(array_unique(json_decode($user["atmesubs"])));
     $countsubme = count(array_unique(json_decode($user["isubs"])));
+
+    $countachivs = count(array_unique(json_decode($user["achivs"])));
 }
 ?>
 
@@ -73,25 +75,28 @@ if (count($user) <= 0) {
                     <div class="person-profile-content">
                         <div class="person-profile-content-name">
                             <?php if ($user["emailverify"] == 1 && $user["displaynick"] == 0) : ?>
-                                <p class="person-profile-content-name-1">
+                                <p class="person-profile-content-name-1" title="<?php echo $user["firstName"] . " " . $user["lastName"] ?>">
                                     <?php echo $user["firstName"] . " " . $user["lastName"] ?>
                                 </p>
                             <?php else : ?>
-                                <p class="person-profile-content-name-1">
+                                <p class="person-profile-content-name-1" title="<?php echo $user["nickname"] ?>">
                                     <?php echo $user["nickname"] ?>
                                 </p>
                             <?php endif ?>
                             <?php if (mb_strlen($user["descr"]) > 0) : ?>
-                                <p class="person-profile-content-name-2">
+                                <p class="person-profile-content-name-2" title="<?php echo $user["descr"] ?>">
                                     <?php echo $user["descr"] ?>
                                 </p>
                             <?php endif ?>
                             <div class="d-flex align-items-center mt-auto">
-                                <div>
+                                <div title="Кто подписан">
                                     <b><?php echo $countsubatme ?></b> Подписчики
                                 </div>
-                                <div class="ps-2">
+                                <div class="ps-2" title="На кого подписан">
                                     <b><?php echo $countsubme ?></b> Подписан
+                                </div>
+                                <div class="ps-2" title="Достижения">
+                                    <b><?php echo $countachivs ?></b> Достижений
                                 </div>
                             </div>
                         </div>

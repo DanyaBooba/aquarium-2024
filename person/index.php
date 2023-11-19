@@ -21,6 +21,8 @@ $bg = "BG" . $user["capid"] . ".jpg";
 
 $countsubme = count(array_unique(json_decode($user["isubs"])));
 $countsubatme = count(array_unique(json_decode($user["atmesubs"])));
+
+$countachivs = count(array_unique(json_decode($user["achivs"])));
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -52,7 +54,7 @@ $countsubatme = count(array_unique(json_decode($user["atmesubs"])));
                 <div class="person-profile-content">
                     <div class="person-profile-content-name">
                         <?php if ($user["emailverify"] == 1 && $user["displaynick"] == 0) : ?>
-                            <p class="person-profile-content-name-1">
+                            <p class="person-profile-content-name-1 content-name-width" title="<?php echo $user["firstName"] . " " . $user["lastName"] ?>">
                                 <?php echo $user["firstName"] . " " . $user["lastName"] ?>
                             </p>
                         <?php else : ?>
@@ -71,6 +73,9 @@ $countsubatme = count(array_unique(json_decode($user["atmesubs"])));
                             </div>
                             <div class="ps-2" title="На кого подписан">
                                 <b><?php echo $countsubme ?></b> Подписан
+                            </div>
+                            <div class="ps-2" title="Достижения">
+                                <b><?php echo $countachivs ?></b> Достижений
                             </div>
                         </div>
                     </div>
