@@ -33,7 +33,7 @@ if (count($find) > 0) {
                         <img src="/app/img/content/mainpage/android.png" class="img-fluid" width="240">
                     </a>
                     <a href="#download" aria-label="Скачать для iOS">
-                        <img src="/app/img/content/mainpage/iphone.png" class="img-fluid" width="260">
+                        <img src="/app/img/content/mainpage/iphone.png" class="img-fluid" width="250">
                     </a>
                 </div>
             </div>
