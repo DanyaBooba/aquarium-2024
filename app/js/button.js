@@ -7,7 +7,7 @@ function ButtonLeftBar(i) {
 
 	if (i == 3) window.open("/notifications/", "_self");
 
-	if (i == 4) window.open("/mail/", "_self");
+	if (i == 4) window.open("/messages/", "_self");
 
 	if (i == 5) window.open("/achivments/", "_self");
 

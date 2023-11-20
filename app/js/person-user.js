@@ -5,5 +5,5 @@ function Subscribe() {
 
 function MailTo() {
 	let id = document.getElementById("person-id").textContent;
-	window.open("/mail/", "_self");
+	window.open("/messages/", "_self");
 }

@@ -1,7 +1,7 @@
 <header>
     <div class="container header-app">
         <div class="col-md-3 header-app-icons see-at-mobile me-auto">
-            <a href="/mail/" class="link-empty me-3">
+            <a href="/messages/" class="link-empty me-3">
                 <svg class="svg-normal">
                     <use xlink:href="/app/img/icons/bootstrap.svg#envelope"></use>
                 </svg>

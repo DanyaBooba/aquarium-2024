@@ -68,7 +68,7 @@ GitHub: https://github.com/DanyaBooba/
 - /person/
 - /notifications/
 - /search/
-- /mail/
+- /messages/
 - /achivments/
 - /settings/
 - /feed/

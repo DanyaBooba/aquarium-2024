@@ -42,7 +42,7 @@ function EmailAfterLogin($email)
 
     $text = "$date UTC зафиксирован вход в Ваш аккаунт соцсети Аквариум.<br><br>
     Если это были не Вы, смените пароль аккаунта:
-    <a href='https://social.creagoo.ru/settings/#password'>https://social.creagoo.ru/settings</a>
+    <a href='https://social.creagoo.ru/settings/#password'>https://social.creagoo.ru/settings</a><br><br>
     Сведения: $heads.<br><br>
     ";
 
@@ -57,7 +57,7 @@ function EmailUpdatePassword($email)
 
     $text = "$date UTC изменен пароль Вашего аккаунта соцсети Аквариум.<br><br>
     Если это были не Вы, смените пароль аккаунта:
-    <a href='https://social.creagoo.ru/settings/#password'>https://social.creagoo.ru/settings</a>
+    <a href='https://social.creagoo.ru/settings/#password'>https://social.creagoo.ru/settings</a><br><br>
     Сведения: $heads.<br><br>
     ";
 

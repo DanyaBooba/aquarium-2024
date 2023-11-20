@@ -33,11 +33,11 @@
             </button>
         </li>
         <li>
-            <button onClick="ButtonLeftBar(4)" id="person-leftbar-mail" disabled>
+            <button onClick="ButtonLeftBar(4)" id="person-leftbar-messages">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.svg#envelope"></use>
                 </svg>
-                Почта
+                Сообщения
             </button>
         </li>
         <li>
