@@ -79,14 +79,14 @@ $countachivs = count(array_unique(json_decode($user["achivs"])));
                                 <span>
                                     <a href="#">
                                         <svg>
-                                            <use xlink:href="/app/img/icons/bootstrap.svg#search"></use>
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#search"></use>
                                         </svg>
                                     </a>
                                 </span>
                                 <span>
                                     <a href="#">
                                         <svg>
-                                            <use xlink:href="/app/img/icons/bootstrap.svg#three-dots"></use>
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#three-dots"></use>
                                         </svg>
                                     </a>
                                 </span>
@@ -165,7 +165,7 @@ $countachivs = count(array_unique(json_decode($user["achivs"])));
                                 <input type="text" placeholder="Сообщение" name="message" class="form-control" aria-label="Сообщение">
                                 <button type="submit" class="btn btn-primary">
                                     <svg>
-                                        <use xlink:href="/app/img/icons/bootstrap.svg#send"></use>
+                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#send"></use>
                                     </svg>
                                 </button>
                             </form>

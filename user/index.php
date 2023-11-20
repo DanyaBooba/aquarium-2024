@@ -103,14 +103,14 @@ if (count($user) <= 0) {
                         <div class="person-profile-content-buttons">
                             <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?>>
                                 <svg class="me-1" fill="white" width="26" height="26">
-                                    <use xlink:href="/app/img/icons/bootstrap.svg#<?php echo $subslogo ?>"></use>
+                                    <use xlink:href="/app/img/icons/bootstrap.min.svg#<?php echo $subslogo ?>"></use>
                                 </svg>
                                 <?php echo $subs ?>
                             </button>
                             <?php if ($isubs && $atmesubs) : ?>
                                 <button onClick="MailTo()" class="btn btn-secondary ms-2" style="width: 52px;">
                                     <svg fill="white" width="26" height="26">
-                                        <use xlink:href="/app/img/icons/bootstrap.svg#envelope"></use>
+                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#envelope"></use>
                                     </svg>
                                 </button>
                             <?php endif; ?>

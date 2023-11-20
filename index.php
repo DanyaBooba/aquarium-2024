@@ -69,10 +69,10 @@ if (count($find) > 0) {
                     </form>
                     <div class="page-login--new-page">
                         <a href="/login/" class="link">
-                            Открыть в отдельном окне
+                            Открыть отдельно
                         </a>
                         <svg class="svg-normal mb-0 ms-2" width="14" height="14">
-                            <use xlink:href="/app/img/icons/bootstrap.svg#box-arrow-up-right"></use>
+                            <use xlink:href="/app/img/icons/bootstrap.min.svg#box-arrow-up-right"></use>
                         </svg>
                     </div>
                 </div>

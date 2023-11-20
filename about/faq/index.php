@@ -298,6 +298,14 @@
         </ul>
     </main>
 
+    <div class="about-up about-up-dontsee" id="about-up">
+        <a href="#" aria-label="Перейти наверх">
+            <svg>
+                <use xlink:href="/app/img/icons/bootstrap.svg#chevron-up"></use>
+            </svg>
+        </a>
+    </div>
+
     <script src="/app/js/about-addlinkhead.js"></script>
 
     <script src="/app/js/about-addupbutton.js"></script>

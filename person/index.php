@@ -39,7 +39,7 @@ $countachivs = count(array_unique(json_decode($user["achivs"])));
             <?php if ($user["emailverify"] == 0) : ?>
                 <div class="alert alert-warning d-flex align-items-center">
                     <svg height="32" width="32" class="me-3 svg-normal see-at-pc">
-                        <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
+                        <use xlink:href="/app/img/icons/bootstrap.min.svg#cone-striped"></use>
                     </svg>
                     <span>
                         Для подтверждения аккаунта перейдите по ссылке в письме.

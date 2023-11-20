@@ -29,6 +29,18 @@
     </div>
 </footer>
 
-<div class="see-at-mobile footer__mobile">
-
+<div class="see-at-mobile">
+    <div class="container footer border-0">
+        <div class="footer__center">
+            <a href="/about/faq/" class="link mx-3">
+                FAQ
+            </a>
+            <!-- <a href="/about/" class="link mx-3">
+                API
+            </a> -->
+            <a href="/about/user/" class="link mx-3">
+                Пользователю
+            </a>
+        </div>
+    </div>
 </div>

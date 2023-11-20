@@ -39,7 +39,7 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
                                 <h3 class="me-auto"><?php echo $nots[$i]["name"] ?></h3>
                                 <button class="btn btn-secondary" type="button" onClick="RotateButton('info<?php echo $i ?>')" data-bs-toggle="collapse" data-bs-target="#collapseinfo<?php echo $i ?>" aria-expanded="false" aria-controls="collapseinfo<?php echo $i ?>">
                                     <svg fill="white" width="16" height="16" id="svgcollapseinfo<?php echo $i ?>" class="notifications-svg-rotate-bottom">
-                                        <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>
+                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-down"></use>
                                     </svg>
                                 </button>
                             </div>
@@ -59,7 +59,7 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
                         <h3 class="me-auto">Спасибо за регистрацию</h3>
                         <button class="btn btn-secondary" type="button" onClick="RotateButton(1)" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                             <svg fill="white" width="16" height="16" id="svgcollapse1" class="notifications-svg-rotate-bottom">
-                                <use xlink:href=" /app/img/icons/bootstrap.svg#chevron-down"></use>
+                                <use xlink:href=" /app/img/icons/bootstrap.min.svg#chevron-down"></use>
                             </svg>
                         </button>
                     </div>
@@ -82,7 +82,7 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
                         <h3 class="me-auto">Подарки для Вас</h3>
                         <button class="btn btn-secondary" type="button" onClick="RotateButton(2)" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                             <svg fill="white" width="16" height="16" id="svgcollapse2" class="notifications-svg-rotate-bottom">
-                                <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>
+                                <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-down"></use>
                             </svg>
                         </button>
                     </div>
@@ -103,7 +103,7 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
                         <h3 class="me-auto">Бета-тест</h3>
                         <button class="btn btn-secondary" type="button" onClick="RotateButton(3)" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                             <svg fill="white" width="16" height="16" id="svgcollapse3" class="notifications-svg-rotate-bottom">
-                                <use xlink:href="/app/img/icons/bootstrap.svg#chevron-down"></use>
+                                <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-down"></use>
                             </svg>
                         </button>
                     </div>

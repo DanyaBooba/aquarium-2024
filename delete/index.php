@@ -32,7 +32,7 @@ $user = $user[0];
         <div class="col-md-9 person-content">
             <div class="d-flex align-items-center mb-1">
                 <svg class="svg-normal me-1" width="14" height="14">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#chevron-left"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-left"></use>
                 </svg>
                 <a href="/settings/" class="link">
                     Назад
@@ -45,7 +45,7 @@ $user = $user[0];
                         <div class="person-setting-bg person-setting-content">
                             <div class="alert alert-background d-flex align-items-center" role="alert">
                                 <svg height="32" width="32" class="me-3 svg-normal col-md-1 see-at-full-pc">
-                                    <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
+                                    <use xlink:href="/app/img/icons/bootstrap.min.svg#cone-striped"></use>
                                 </svg>
                                 <span>
                                     Удаление аккаунта происходит безвозмездно, после его невозможно

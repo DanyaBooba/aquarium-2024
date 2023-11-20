@@ -84,14 +84,14 @@ $btnprev = $page == 1 ? "disabled" : "";
             <div class="person-search-pagination">
                 <button class="btn btn-outline-primary" onClick="SearchPrev()" <?php echo $btnprev ?>>
                     <svg class="me-1">
-                        <use xlink:href="/app/img/icons/bootstrap.svg#chevron-left"></use>
+                        <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-left"></use>
                     </svg>
                     Предыдущая
                 </button>
                 <button class="btn btn-outline-primary" onClick="SearchNext()" <?php echo $btnnext ?>>
                     Следующая
                     <svg class="ms-1">
-                        <use xlink:href="/app/img/icons/bootstrap.svg#chevron-right"></use>
+                        <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-right"></use>
                     </svg>
                 </button>
             </div>

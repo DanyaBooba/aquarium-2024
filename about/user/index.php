@@ -31,7 +31,9 @@
         </ul>
     </main>
 
-    <?php include_once "../../app/php/footer.php"; ?>
+    <?php include_once "../../app/php/bottom/footer-content.php"; ?>
+
+    <?php include_once "../../app/php/bottom/javascript.php"; ?>
 </body>
 
 </html>

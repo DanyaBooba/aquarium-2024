@@ -69,7 +69,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                             <?php if ($user["emailverify"] == 0) : ?>
                                 <div class="alert alert-background d-flex align-items-center" role="alert">
                                     <svg height="32" width="32" class="me-3 svg-normal col-md-1 see-at-full-pc">
-                                        <use xlink:href="/app/img/icons/bootstrap.svg#cone-striped"></use>
+                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#cone-striped"></use>
                                     </svg>
                                     <span>
                                         Для подтверждения аккаунта перейдите по ссылке в письме.
@@ -316,7 +316,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                         </div>
                         <div class="person-setting-bg person-setting-bar d-flex align-items-center">
                             <svg class="svg-normal me-2" width="16" height="16">
-                                <use xlink:href="/app/img/icons/bootstrap.svg#question-circle"></use>
+                                <use xlink:href="/app/img/icons/bootstrap.min.svg#question-circle"></use>
                             </svg>
                             <a href="/about/faq/#подтверждение-аккаунта" class="link">
                                 Подтверждение аккаунта
@@ -324,7 +324,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                         </div>
                         <div class="person-setting-bg person-setting-bar d-flex align-items-center">
                             <svg class="svg-normal me-2" width="16" height="16">
-                                <use xlink:href="/app/img/icons/bootstrap.svg#eye"></use>
+                                <use xlink:href="/app/img/icons/bootstrap.min.svg#eye"></use>
                             </svg>
                             <a href="/user/?id=<?php echo $user["id"] ?>" class="link">
                                 Профиль со стороны

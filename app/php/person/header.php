@@ -3,12 +3,12 @@
         <div class="col-md-3 header-app-icons see-at-mobile me-auto">
             <a href="/messages/" class="link-empty me-3">
                 <svg class="svg-normal">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#envelope"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#envelope"></use>
                 </svg>
             </a>
             <a href="/achivments/" class="link-empty">
                 <svg class="svg-normal">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#trophy"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#trophy"></use>
                 </svg>
             </a>
         </div>
@@ -29,12 +29,12 @@
         <div class="col-md-3 header-app-icons see-at-mobile ms-auto">
             <a href="/notifications/" class="link-empty">
                 <svg class="svg-normal">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#bell"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#bell"></use>
                 </svg>
             </a>
             <a href="/settings/" class="ms-3 link-empty">
                 <svg class="svg-normal">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#gear-wide-connected"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#gear-wide-connected"></use>
                 </svg>
             </a>
         </div>
