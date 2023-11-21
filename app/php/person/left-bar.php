@@ -1,7 +1,7 @@
 <div class="col-md-3 see-at-pc">
     <ul class="person-leftbar see-at-pc" id="person-leftbar">
         <li>
-            <button onClick="ButtonLeftBar(0)" id="person-leftbar-feed">
+            <button onClick="ButtonLeftBar('feed')" id="person-leftbar-feed">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.min.svg#house"></use>
                 </svg>
@@ -9,7 +9,7 @@
             </button>
         </li>
         <li>
-            <button onClick="ButtonLeftBar(2)" id="person-leftbar-person">
+            <button onClick="ButtonLeftBar('person')" id="person-leftbar-person">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.min.svg#person"></use>
                 </svg>
@@ -17,7 +17,7 @@
             </button>
         </li>
         <li>
-            <button onClick="ButtonLeftBar(1)" id="person-leftbar-search">
+            <button onClick="ButtonLeftBar('search')" id="person-leftbar-search">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.min.svg#search"></use>
                 </svg>
@@ -25,7 +25,7 @@
             </button>
         </li>
         <li>
-            <button onClick="ButtonLeftBar(3)" id="person-leftbar-notifications">
+            <button onClick="ButtonLeftBar('notifications')" id="person-leftbar-notifications">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.min.svg#bell"></use>
                 </svg>
@@ -33,7 +33,7 @@
             </button>
         </li>
         <li>
-            <button onClick="ButtonLeftBar(4)" id="person-leftbar-messages">
+            <button onClick="ButtonLeftBar('messages')" id="person-leftbar-messages">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.min.svg#envelope"></use>
                 </svg>
@@ -41,7 +41,7 @@
             </button>
         </li>
         <li>
-            <button onClick="ButtonLeftBar(5)" id="person-leftbar-achivments">
+            <button onClick="ButtonLeftBar('achivments')" id="person-leftbar-achivments">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.min.svg#trophy"></use>
                 </svg>
@@ -49,7 +49,7 @@
             </button>
         </li>
         <li>
-            <button onClick="ButtonLeftBar(6)" id="person-leftbar-settings">
+            <button onClick="ButtonLeftBar('settings')" id="person-leftbar-settings">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.min.svg#gear-wide-connected"></use>
                 </svg>

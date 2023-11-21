@@ -145,3 +145,19 @@ body {
     font-size: 14px;
     margin-bottom: 10px;
 }
+
+.auth-registration-social .row {
+    margin-bottom: 0.25rem;
+}
+
+.auth-registration-social .row .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.auth-registration-social .row .col img {
+    border-radius: 50%;
+}

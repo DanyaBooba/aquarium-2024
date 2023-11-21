@@ -1,17 +1,19 @@
 function ButtonLeftBar(i) {
-	if (i == 0) window.open("/feed/", "_self");
+	if (i == "feed") window.open("/feed/", "_self");
 
-	if (i == 1) window.open("/search/", "_self");
+	if (i == "search") window.open("/search/", "_self");
 
-	if (i == 2) window.open("/person/", "_self");
+	if (i == "person") window.open("/person/", "_self");
 
-	if (i == 3) window.open("/notifications/", "_self");
+	if (i == "notifications") window.open("/notifications/", "_self");
 
-	if (i == 4) window.open("/messages/", "_self");
+	if (i == "messages") window.open("/messages/", "_self");
 
-	if (i == 5) window.open("/achivments/", "_self");
+	if (i == "achivments") window.open("/achivments/", "_self");
 
-	if (i == 6) window.open("/settings/", "_self");
+	if (i == "settings") window.open("/settings/", "_self");
+
+	if (i == "add-post") window.open("/add/", "_self");
 }
 
 function DeleteAccount() {

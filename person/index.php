@@ -79,19 +79,15 @@ $countachivs = count(array_unique(json_decode($user["achivs"])));
                             </div>
                         </div>
                     </div>
-                    <div class="person-profile-content-buttons person-profile-content-buttons-width">
-                        <button onClick="ButtonLeftBar(6)" class="btn btn-secondary">
+                    <div class="person-profile-content-buttons person-profile-content-buttons-width flex-column h-100">
+                        <button onClick="ButtonLeftBar('add-post')" class="btn btn-primary mb-2">
+                            Добавить пост
+                        </button>
+                        <button onClick="ButtonLeftBar('settings')" class="btn btn-secondary">
                             Редактировать профиль
                         </button>
                     </div>
                 </div>
-            </div>
-            <div class="person-form">
-                <form action="/api/php/person/add-post.php" method="post">
-                    <div class="input-group">
-                        <input type="text" name="post" class="form-control" aria-label="Что у вас нового" placeholder="Что у вас нового...">
-                    </div>
-                </form>
             </div>
             <?php if (true == false) : ?>
                 <div class="row row-cols-1 g-4 person-posts">

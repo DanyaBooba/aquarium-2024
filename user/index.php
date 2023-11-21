@@ -75,16 +75,16 @@ if (count($user) <= 0) {
                     <div class="person-profile-content">
                         <div class="person-profile-content-name">
                             <?php if ($user["emailverify"] == 1 && $user["displaynick"] == 0) : ?>
-                                <p class="person-profile-content-name-1" title="<?php echo $user["firstName"] . " " . $user["lastName"] ?>">
+                                <p class="person-profile-content-name-1 content-name-width" title="<?php echo $user["firstName"] . " " . $user["lastName"] ?>">
                                     <?php echo $user["firstName"] . " " . $user["lastName"] ?>
                                 </p>
                             <?php else : ?>
-                                <p class="person-profile-content-name-1" title="<?php echo $user["nickname"] ?>">
+                                <p class="person-profile-content-name-1 content-name-width" title="<?php echo $user["nickname"] ?>">
                                     <?php echo $user["nickname"] ?>
                                 </p>
                             <?php endif ?>
                             <?php if (mb_strlen($user["descr"]) > 0) : ?>
-                                <p class="person-profile-content-name-2" title="<?php echo $user["descr"] ?>">
+                                <p class="person-profile-content-name-2 content-name-width" title="<?php echo $user["descr"] ?>">
                                     <?php echo $user["descr"] ?>
                                 </p>
                             <?php endif ?>
@@ -100,7 +100,7 @@ if (count($user) <= 0) {
                                 </div>
                             </div>
                         </div>
-                        <div class="person-profile-content-buttons">
+                        <div class="person-profile-content-buttons person-profile-content-buttons-width">
                             <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?>>
                                 <svg class="me-1" fill="white" width="26" height="26">
                                     <use xlink:href="/app/img/icons/bootstrap.min.svg#<?php echo $subslogo ?>"></use>
