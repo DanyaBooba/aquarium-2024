@@ -1,5 +1,4 @@
 <?php
-include_once "../app/php/head.php";
 include_once "../api/auth-errors.php";
 
 include_once "../api/rb-mysql.php";
@@ -15,14 +14,21 @@ if (count($find) > 0) {
     die();
 }
 
-$params = array(
+$yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
     'client_id' => TokenYandex()["client_id"],
     'redirect_uri' => 'https://social.creagoo.ru/api/php/authyandex-gettoken.php',
     'response_type' => 'code'
-);
+]));
 
-$yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query($params));
+$googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query([
+    'client_id'     => TokenGoogle()["client_id"],
+    'redirect_uri'  => TokenGoogle()["redirect_uri"],
+    'response_type' => 'code',
+    'scope'         => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
+]));
 ?>
+
+<?php include_once "../app/php/head.php"; ?>
 
 <?php $error = RegistrationError($_GET["e"]) ?>
 
@@ -59,7 +65,7 @@ $yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query($
                         </a>
                     </div>
                     <div class="col">
-                        <a href="#google" aria-label="Регистрация через Google">
+                        <a href="<?php echo $googleurl ?>" aria-label="Регистрация через Google">
                             <img src="/app/img/content/social-logos/google.jpg" width="42" alt="Логотип Google">
                         </a>
                     </div>
