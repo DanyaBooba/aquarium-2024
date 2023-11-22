@@ -146,6 +146,10 @@ body {
     margin-bottom: 10px;
 }
 
+.auth-registration-social {
+    margin-top: 25px;
+}
+
 .auth-registration-social .row {
     margin-bottom: 0.25rem;
 }

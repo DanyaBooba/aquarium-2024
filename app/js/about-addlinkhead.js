@@ -11,6 +11,7 @@ function LinkClearText(text) {
 
 function AddLinkToHead() {
 	var content = document.getElementById("main").children;
+	let list = document.getElementById("main-headers");
 
 	if (content === null) return;
 
@@ -36,6 +37,17 @@ function AddLinkToHead() {
 				"'>" +
 				svg +
 				"</a>";
+
+			if (list !== null) {
+				let liLast = document.createElement("li");
+				liLast.innerHTML =
+					"<a href='#" +
+					content[i].id +
+					"' class='link'>" +
+					content[i].textContent +
+					"</a>";
+				list.append(liLast);
+			}
 		}
 	}
 }

@@ -57,30 +57,6 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                 </a>
             </div>
             <h1 class="h4">Регистрация</h1>
-            <div class="container auth-registration-social">
-                <div class="row row-cols-2 row-cols-lg-4 g-2">
-                    <div class="col">
-                        <a href="<?php echo $yandexurl ?>" aria-label="Регистрация через Яндекс">
-                            <img src="/app/img/content/social-logos/yandex.jpg" width="48" alt="Логотип Яндекса">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="<?php echo $googleurl ?>" aria-label="Регистрация через Google">
-                            <img src="/app/img/content/social-logos/google.jpg" width="42" alt="Логотип Google">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="#vk" aria-label="Регистрация через Вконтакте">
-                            <img src="/app/img/content/social-logos/vk.jpg" width="42" alt="Логотип Вконтакте">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="#github" aria-label="Регистрация через GitHub">
-                            <img src="/app/img/content/social-logos/github.jpg" width="40" alt="Логотип GitHub">
-                        </a>
-                    </div>
-                </div>
-            </div>
             <?php if (empty($error) == false) : ?>
                 <div class="alert alert-danger" role="alert">
                     <?php echo $error ?>
@@ -131,6 +107,30 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                     Зарегистрироваться
                 </button>
             </form>
+            <div class="container auth-registration-social">
+                <div class="row row-cols-2 row-cols-lg-4 g-2">
+                    <div class="col">
+                        <a href="<?php echo $yandexurl ?>" aria-label="Регистрация через Яндекс">
+                            <img src="/app/img/content/social-logos/yandex.jpg" width="48" alt="Логотип Яндекса">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="<?php echo $googleurl ?>" aria-label="Регистрация через Google">
+                            <img src="/app/img/content/social-logos/google.jpg" width="42" alt="Логотип Google">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#vk" aria-label="Регистрация через Вконтакте">
+                            <img src="/app/img/content/social-logos/vk.jpg" width="42" alt="Логотип Вконтакте">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#github" aria-label="Регистрация через GitHub">
+                            <img src="/app/img/content/social-logos/github.jpg" width="40" alt="Логотип GitHub">
+                        </a>
+                    </div>
+                </div>
+            </div>
             <ul class="auth-login--restore">
                 <li>
                     <a href="/login/" class="link">

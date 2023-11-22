@@ -11,11 +11,11 @@
             <a href="/about/faq/" class="link mx-3">
                 FAQ
             </a>
-            <!-- <a href="/about/" class="link mx-3">
-                API
-            </a> -->
             <a href="/about/user/" class="link mx-3">
                 Пользователю
+            </a>
+            <a href="/about/api/" class="link mx-3">
+                API
             </a>
         </div>
         <div class="footer__right theme-toggle">
@@ -35,11 +35,11 @@
             <a href="/about/faq/" class="link mx-3">
                 FAQ
             </a>
-            <!-- <a href="/about/" class="link mx-3">
-                API
-            </a> -->
             <a href="/about/user/" class="link mx-3">
                 Пользователю
+            </a>
+            <a href="/about/api/" class="link mx-3">
+                API
             </a>
         </div>
     </div>
