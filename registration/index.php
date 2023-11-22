@@ -14,6 +14,14 @@ if (count($find) > 0) {
     header("Location: /person/");
     die();
 }
+
+$params = array(
+    'client_id' => TokenYandex()["client_id"],
+    'redirect_uri' => 'https://social.creagoo.ru/api/php/authyandex-gettoken.php',
+    'response_type' => 'code'
+);
+
+$yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query($params));
 ?>
 
 <?php $error = RegistrationError($_GET["e"]) ?>
@@ -46,7 +54,7 @@ if (count($find) > 0) {
             <div class="container auth-registration-social">
                 <div class="row row-cols-2 row-cols-lg-4 g-2">
                     <div class="col">
-                        <a href="#yandex" aria-label="Регистрация через Яндекс">
+                        <a href="<?php echo $yandexurl ?>" aria-label="Регистрация через Яндекс">
                             <img src="/app/img/content/social-logos/yandex.jpg" width="48" alt="Логотип Яндекса">
                         </a>
                     </div>
@@ -142,6 +150,26 @@ if (count($find) > 0) {
             </ul>
         </div>
     </main>
+
+    <!-- <script>
+        window.YaAuthSuggest.init(
+                oauthQueryParams,
+                tokenPageOrigin, {
+                    view: "button",
+                    parentId: "buttonContainerId",
+                    buttonSize: 'm',
+                    buttonView: 'icon',
+                    buttonTheme: 'light',
+                    buttonBorderRadius: "18",
+                    buttonIcon: 'ya',
+                }
+            )
+            .then(({
+                handler
+            }) => handler())
+            .then(data => console.log('Сообщение с токеном', data))
+            .catch(error => console.log('Обработка ошибки', error))
+    </script> -->
 
     <script src="/app/js/form-edit-url.js"></script>
     <script src="/app/js/form-button-active.js"></script>

@@ -9,3 +9,11 @@ function Token()
         "password" => "password"
     ];
 }
+
+function TokenYandex()
+{
+    return [
+        "client_id" => "client_id",
+        "client_secret" => "client_id",
+    ];
+}
