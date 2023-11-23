@@ -1,6 +1,22 @@
 <?php
 
+session_start();
+
+include_once "../basic-methods.php";
+include_once "../rb-mysql.php";
 include_once "../token.php";
+include_once "../mail.php";
+
+R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
+
+$sessaccsql = SqlRequestFind($_SESSION["login"]);
+
+$sessacc = R::getAll($sessaccsql);
+
+if (count($sessacc) > 0) {
+    header("Location: /person/");
+    return;
+}
 
 if (!empty($_GET['code'])) {
 
@@ -36,9 +52,75 @@ if (!empty($_GET['code'])) {
         $info = json_decode($info, true);
 
         ##
-        ## Registration with emailverify=1
+        ## Registration
         ##
 
-        var_dump($info);
+        // var_dump($info);
+
+        $check = SqlRequestFind($info["default_email"]);
+
+        $checkrow = R::getAll($check);
+
+        if (count($checkrow) > 0) {
+            $_SESSION["login"] = $info["default_email"];
+
+            header("Location: /person/");
+            return;
+        }
+
+        ##
+        ## Reg user
+        ##
+
+        $maxid = R::getAll("SELECT MAX(`id`) FROM `users` LIMIT 1")[0]["MAX(`id`)"];
+        $maxid += 1;
+
+        $password = RandomString(20);
+
+        $user = [
+            "id" => $maxid,
+            "email" => $info["default_email"],
+            "password" => $password,
+            "nickname" => ClearNickname($info["login"]),
+            "firstName" => ClearName($info["first_name"]),
+            "lastName" => ClearName($info["last_name"]),
+        ];
+
+        $tryfindnicknamesql = SqlRequestFindByNickname($user["nickname"]);
+
+        $tryfindnickname = R::getAll($tryfindnicknamesql);
+
+        if (count($tryfindnickname) > 0) {
+            $user["nickname"] = "user" . $maxid . time();
+        }
+
+        $sql = SqlRequestCreateYandex($user);
+
+        R::getAll($sql);
+
+        // var_dump($sql);
+
+        ##
+        ## Send mail
+        ##
+
+        EmailRegYandex($info["default_email"], $password);
+
+        $_SESSION["login"] = $info["default_email"];
+
+        header("Location: /person/");
+
+        return;
     }
+
+    header("Location: /registration/");
+
+    return;
 }
+
+header("Location: /registration");
+
+return;
+
+# ["sex"]=> NULL
+# ["default_avatar_id"]=> string(35) "68143/Fn4eKYUcBOhIZG2n5j5wCLABylI-1" ["is_avatar_empty"]=> bool(false)

@@ -62,4 +62,10 @@ R::getAll($deletesql);
 
 $_SESSION["login"] = "";
 
+##
+## Mail
+##
+
+EmailDeleteAccount($user["email"]);
+
 header("Location: /");

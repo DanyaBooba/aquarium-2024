@@ -31,7 +31,7 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
         <div class="col-md-9 person-content person-content-notifications-main">
             <h1>Уведомления</h1>
             <?php if (count($nots) > 0) : ?>
-                <h2>Недавние</h2>
+                <h2>Оповещения</h2>
                 <?php for ($i = 0; $i < count($nots); $i++) : ?>
                     <ul class="list-group list-group-flush person-content-notifications">
                         <li class="list-group-item">

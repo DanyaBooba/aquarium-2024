@@ -514,3 +514,143 @@ function SqlRequestFindNotifications($email)
     // Sql запрос: поиск уведомлений
     //
 }
+
+function SqlRequestCreateYandex($user)
+{
+    $salt = RandomString(16);
+
+    $login = [
+        [
+            "name" => "email",
+            "value" => $user["email"],
+        ],
+        [
+            "name" => "passhash",
+            "value" => password_hash($salt . $user["password"] . $salt, PASSWORD_DEFAULT),
+        ],
+        [
+            "name" => "saltpass",
+            "value" => $salt,
+        ],
+        [
+            "name" => "nickname",
+            "value" => $user["nickname"]
+        ],
+        [
+            "name" => "datereg",
+            "value" => time(),
+        ],
+        [
+            "name" => "uniquehash",
+            "value" => "ya_" . RandomString(80) . $user["id"],
+        ],
+        [
+            "name" => "emailverify",
+            "value" => 1,
+        ],
+        [
+            "name" => "firstName",
+            "value" => $user["firstName"],
+        ],
+        [
+            "name" => "lastName",
+            "value" => $user["lastName"],
+        ],
+        [
+            "name" => "achivs",
+            "value" => "[]"
+        ],
+        [
+            "name" => "isubs",
+            "value" => "[]"
+        ],
+        [
+            "name" => "atmesubs",
+            "value" => "[]"
+        ],
+    ];
+
+    $sqlvalue = "";
+    $sqlname = "";
+    for ($i = 0; $i < count($login); $i++) {
+        $sqlname .= "`" . $login[$i]["name"] . "`";
+        $sqlvalue .= "'" . $login[$i]["value"] . "'";
+
+        if (count($login) - 1 > $i) {
+            $sqlname .= ", ";
+            $sqlvalue .= ", ";
+        }
+    }
+
+    return "INSERT INTO `users`($sqlname) VALUES ($sqlvalue)";
+
+    //
+    // SQL запрос: создание пользователя
+    //
+}
+
+function SqlRequestCreateGoogle($user)
+{
+    $salt = RandomString(16);
+
+    $login = [
+        [
+            "name" => "email",
+            "value" => $user["email"],
+        ],
+        [
+            "name" => "passhash",
+            "value" => password_hash($salt . $user["password"] . $salt, PASSWORD_DEFAULT),
+        ],
+        [
+            "name" => "saltpass",
+            "value" => $salt,
+        ],
+        [
+            "name" => "nickname",
+            "value" => $user["nickname"]
+        ],
+        [
+            "name" => "datereg",
+            "value" => time(),
+        ],
+        [
+            "name" => "uniquehash",
+            "value" => "go_" . RandomString(80) . $user["id"],
+        ],
+        [
+            "name" => "emailverify",
+            "value" => $user["emailverify"],
+        ],
+        [
+            "name" => "achivs",
+            "value" => "[]"
+        ],
+        [
+            "name" => "isubs",
+            "value" => "[]"
+        ],
+        [
+            "name" => "atmesubs",
+            "value" => "[]"
+        ],
+    ];
+
+    $sqlvalue = "";
+    $sqlname = "";
+    for ($i = 0; $i < count($login); $i++) {
+        $sqlname .= "`" . $login[$i]["name"] . "`";
+        $sqlvalue .= "'" . $login[$i]["value"] . "'";
+
+        if (count($login) - 1 > $i) {
+            $sqlname .= ", ";
+            $sqlvalue .= ", ";
+        }
+    }
+
+    return "INSERT INTO `users`($sqlname) VALUES ($sqlvalue)";
+
+    //
+    // SQL запрос: создание пользователя
+    //
+}

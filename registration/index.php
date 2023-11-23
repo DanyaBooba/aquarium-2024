@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include_once "../api/auth-errors.php";
 
 include_once "../api/rb-mysql.php";
@@ -111,7 +113,7 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                 <div class="row row-cols-2 row-cols-lg-4 g-2">
                     <div class="col">
                         <a href="<?php echo $yandexurl ?>" aria-label="Регистрация через Яндекс">
-                            <img src="/app/img/content/social-logos/yandex.jpg" width="48" alt="Логотип Яндекса">
+                            <img src="/app/img/content/social-logos/yandex.jpg" width="44" alt="Логотип Яндекса">
                         </a>
                     </div>
                     <div class="col">

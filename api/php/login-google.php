@@ -1,6 +1,22 @@
 <?php
 
-require "../token.php";
+session_start();
+
+include_once "../basic-methods.php";
+include_once "../rb-mysql.php";
+include_once "../token.php";
+include_once "../mail.php";
+
+R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
+
+$sessaccsql = SqlRequestFind($_SESSION["login"]);
+
+$sessacc = R::getAll($sessaccsql);
+
+if (count($sessacc) > 0) {
+    header("Location: /person/");
+    return;
+}
 
 if (!empty($_GET['code'])) {
 
@@ -38,6 +54,68 @@ if (!empty($_GET['code'])) {
         ## Reg
         ##
 
-        var_dump($info);
+        // var_dump($info);
+
+        $check = SqlRequestFind($info["email"]);
+
+        $checkrow = R::getAll($check);
+
+        if (count($checkrow) > 0) {
+            $_SESSION["login"] = $info["email"];
+
+            header("Location: /person/");
+            return;
+        }
+
+        ##
+        ## Reg user
+        ##
+
+        $maxid = R::getAll("SELECT MAX(`id`) FROM `users` LIMIT 1")[0]["MAX(`id`)"];
+        $maxid += 1;
+
+        $password = RandomString(20);
+
+        $user = [
+            "id" => $maxid,
+            "email" => $info["email"],
+            "password" => $password,
+            "nickname" => ClearNickname($info["name"]),
+            "emailverify" => $info["verified_email"] ? 1 : 0
+        ];
+
+        $tryfindnicknamesql = SqlRequestFindByNickname($user["nickname"]);
+
+        $tryfindnickname = R::getAll($tryfindnicknamesql);
+
+        if (count($tryfindnickname) > 0) {
+            $user["nickname"] = "user" . $maxid . time();
+        }
+
+        $sql = SqlRequestCreateGoogle($user);
+
+        R::getAll($sql);
+
+        ##
+        ## Send mail
+        ##
+
+        EmailRegGoogle($info["email"], $password);
+
+        $_SESSION["login"] = $info["email"];
+
+        header("Location: /person/");
+
+        return;
     }
+
+    header("Location: /registration/");
+
+    return;
 }
+
+header("Location: /registration/");
+
+return;
+
+// ["picture"]=> string(93) "https://lh3.googleusercontent.com/a/ACg8ocIPPT2SIGa4pyi5zq9vbsDYaFSkoY2QmqgQDgWkRS-xYEo=s96-c"

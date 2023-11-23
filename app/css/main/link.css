@@ -12,19 +12,14 @@ a.link:focus {
 
 a.link-white {
     color: #fff;
-    text-decoration: none;
-    border-bottom: 1px solid #999;
-    transition: .3s border-bottom;
+    text-decoration-color: var(--text-color-4);
+    text-decoration-thickness: 1.25px;
+    transition: .3s text-decoration;
 }
 
 a.link-white:hover,
 a.link-white:focus {
-    border-bottom: 1px solid #fff;
-}
-
-.dashed
-{
-    border-bottom: 1px dashed var(--text-color-4);
+    text-decoration-color: #fff;
 }
 
 a.link-empty
