@@ -106,3 +106,10 @@ function DeleteAccountError($data)
 
     return null;
 }
+
+function AddPostError($data)
+{
+    if ($data == "") return "";
+
+    return null;
+}

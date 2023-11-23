@@ -34,17 +34,17 @@ $find = $find[0];
 ##
 
 if ($user["string"] != "Удаляю аккаунт с почтой " . $_SESSION["login"]) {
-    echo "STRING";
+    echo "STRING"; // !
     return;
 }
 
 if ($user["email"] != $_SESSION["login"]) {
-    echo "EMAIL";
+    echo "EMAIL"; // !
     return;
 }
 
 if (password_verify($find["saltpass"] . $user["password"] . $find["saltpass"], $find["passhash"]) != 1) {
-    echo "PASS";
+    echo "PASS"; // !
     return;
 }
 

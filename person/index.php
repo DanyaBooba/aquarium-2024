@@ -23,6 +23,8 @@ $countsubme = count(array_unique(json_decode($user["isubs"])));
 $countsubatme = count(array_unique(json_decode($user["atmesubs"])));
 
 $countachivs = count(array_unique(json_decode($user["achivs"])));
+
+$posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -89,33 +91,15 @@ $countachivs = count(array_unique(json_decode($user["achivs"])));
                     </div>
                 </div>
             </div>
-            <?php if (true == false) : ?>
-                <div class="row row-cols-1 g-4 person-posts">
-                    <div class="col-md-4">
-                        <a href="#">
-                            <img src="/app/img/users/icons/MAN1.jpg" class="person-posts-img" alt="Изображение записи">
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <img src="/app/img/users/icons/MAN1.jpg" class="person-posts-img" alt="Изображение записи">
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <img src="/app/img/users/icons/MAN1.jpg" class="person-posts-img" alt="Изображение записи">
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <img src="/app/img/users/icons/MAN1.jpg" class="person-posts-img" alt="Изображение записи">
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#">
-                            <img src="/app/img/users/icons/MAN1.jpg" class="person-posts-img" alt="Изображение записи">
-                        </a>
-                    </div>
+            <?php if (count($posts) > 0) : ?>
+                <div class="row row-cols-1 g-2 person-posts">
+                    <?php foreach ($posts as $post) : ?>
+                        <div class="col-md-4">
+                            <a href="/post/?a=<?php echo $post["iduser"] ?>&p=<?php echo $post["idpostuser"] ?>">
+                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpostuser"]) % 6) ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"] ?>">
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             <?php else : ?>
                 <div class="person-posts-empty">

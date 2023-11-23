@@ -102,7 +102,7 @@ function CheckSimplePassword($password)
 
     if ($p == "abc" || $p == "password" || $p == "pass") return 1;
 
-    if ($p == "0000" || $password == "qwerty123") return 1;
+    if ($p == "0000" || $p == "qwerty123" || $p == "1111") return 1;
 
     return 0;
 
@@ -113,7 +113,7 @@ function CheckSimplePassword($password)
 
 function SqlRequestCreate($user, $randomstr, $maxid)
 {
-    $salt = RandomString(16);
+    $salt = RandomString(80);
 
     $login = [
         [
@@ -653,4 +653,68 @@ function SqlRequestCreateGoogle($user)
     //
     // SQL запрос: создание пользователя
     //
+}
+
+function SqlRequestSelectAllAdmin()
+{
+    return "SELECT * FROM `users`";
+
+    //
+    // Sql запрос: все пользователи для админки
+    //
+}
+
+function SqlRequestDeleteAccountID($id)
+{
+    return "DELETE FROM `users` WHERE id=$id";
+
+    //
+    // Sql запрос: удаление аккаунта
+    //
+}
+
+function SqlRequestUpdateBlockUser($id)
+{
+    return "UPDATE `users` SET `isblock`=1 WHERE id=$id";
+
+    //
+    // Sql запрос: блокировка у users
+    //
+}
+
+function SqlRequestInsertBlockUser($id, $totime)
+{
+    return "INSERT INTO `block`(`iduser`, `timecreate`, `totime`) VALUES ($id, " . time() . ", $totime)";
+
+    //
+    // Sql запрос: блокировка запись
+    //
+}
+
+function SqlRequestBlockFind($id)
+{
+    return "SELECT * FROM `block` WHERE iduser=$id";
+}
+
+function SqlRequestUpdateUnBlockUser($id)
+{
+    return "UPDATE `users` SET `isblock`=0 WHERE id=$id";
+
+    //
+    // Sql запрос: разблокировка у users
+    //
+}
+
+function SqlRequestInsertUnBlockUser($id, $totime)
+{
+    return "DELETE FROM `block` WHERE iduser=$id";
+
+    //
+    // Sql запрос: разблокировка запись
+    //
+}
+
+function SqlRequestFindPostsEmail($email)
+{
+    return "SELECT * FROM `posts` WHERE useremail like '$email'";
 }

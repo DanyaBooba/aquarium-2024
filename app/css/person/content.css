@@ -223,10 +223,14 @@
     text-align: center;
 }
 
-.person-posts-img {
+.person-posts .person-posts-img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 8px;
+}
+
+.person-posts a {
+    display: block;
 }
 
 /* Search */
@@ -715,4 +719,17 @@ ul.person-content-achivs li img {
 .person-messages-content .message-empty {
     margin-top: auto;
     text-align: center;
+}
+
+/* Post */
+
+a.person-post-back {
+    display: flex;
+    align-items: center;
+}
+
+a.person-post-back svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
 }

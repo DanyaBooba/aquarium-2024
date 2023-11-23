@@ -110,7 +110,7 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                 </button>
             </form>
             <div class="container auth-registration-social">
-                <div class="row row-cols-2 row-cols-lg-4 g-2">
+                <div class="row row-cols-2 row-cols-lg-2 g-2">
                     <div class="col">
                         <a href="<?php echo $yandexurl ?>" aria-label="Регистрация через Яндекс">
                             <img src="/app/img/content/social-logos/yandex.jpg" width="44" alt="Логотип Яндекса">
@@ -121,7 +121,7 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                             <img src="/app/img/content/social-logos/google.jpg" width="42" alt="Логотип Google">
                         </a>
                     </div>
-                    <div class="col">
+                    <!-- <div class="col">
                         <a href="#vk" aria-label="Регистрация через Вконтакте">
                             <img src="/app/img/content/social-logos/vk.jpg" width="42" alt="Логотип Вконтакте">
                         </a>
@@ -130,7 +130,7 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                         <a href="#github" aria-label="Регистрация через GitHub">
                             <img src="/app/img/content/social-logos/github.jpg" width="40" alt="Логотип GitHub">
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <ul class="auth-login--restore">
@@ -158,26 +158,6 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
             </ul>
         </div>
     </main>
-
-    <!-- <script>
-        window.YaAuthSuggest.init(
-                oauthQueryParams,
-                tokenPageOrigin, {
-                    view: "button",
-                    parentId: "buttonContainerId",
-                    buttonSize: 'm',
-                    buttonView: 'icon',
-                    buttonTheme: 'light',
-                    buttonBorderRadius: "18",
-                    buttonIcon: 'ya',
-                }
-            )
-            .then(({
-                handler
-            }) => handler())
-            .then(data => console.log('Сообщение с токеном', data))
-            .catch(error => console.log('Обработка ошибки', error))
-    </script> -->
 
     <script src="/app/js/form-edit-url.js"></script>
     <script src="/app/js/form-button-active.js"></script>

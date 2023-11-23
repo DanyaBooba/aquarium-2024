@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: /app/
+Disallow: /api/
+Disallow: /admin/
 Sitemap: https://social.creagoo.ru/sitemap.xml
 Clean-param: utm
