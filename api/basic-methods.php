@@ -717,4 +717,13 @@ function SqlRequestInsertUnBlockUser($id, $totime)
 function SqlRequestFindPostsEmail($email)
 {
     return "SELECT * FROM `posts` WHERE useremail like '$email'";
+
+    //
+    // Sql запрос: ищем пост по почте
+    //
+}
+
+function SqlRequestFindCurrentPost($iduser, $idpost)
+{
+    return "SELECT * FROM `posts` WHERE iduser=$iduser AND idpost=$idpost";
 }

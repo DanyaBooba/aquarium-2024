@@ -95,8 +95,8 @@ $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
                 <div class="row row-cols-1 g-2 person-posts">
                     <?php foreach ($posts as $post) : ?>
                         <div class="col-md-4">
-                            <a href="/post/?a=<?php echo $post["iduser"] ?>&p=<?php echo $post["idpostuser"] ?>">
-                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpostuser"]) % 6) ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"] ?>">
+                            <a href="/post/?a=<?php echo $post["iduser"] ?>&p=<?php echo $post["idpost"] ?>">
+                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"] ?>">
                             </a>
                         </div>
                     <?php endforeach; ?>

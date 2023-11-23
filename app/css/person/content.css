@@ -726,10 +726,46 @@ ul.person-content-achivs li img {
 a.person-post-back {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 a.person-post-back svg {
     width: 16px;
     height: 16px;
     margin-right: 5px;
+}
+
+
+.person-post-content .person-post-content-img img {
+    border: 1px solid var(--text-color-4);
+    height: auto;
+    max-width: 100%;
+}
+
+.person-post-content div {
+    margin: 0;
+    padding: 0;
+}
+
+.person-post-content .person-post-content-post {
+    border: 1px solid var(--text-color-4);
+    border-left: 1px solid var(--text-color-4);
+    padding: 20px;
+}
+
+.person-post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px !important;
+}
+
+.person-post-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.person-post-header span {
+    margin-left: 10px;
+    font-family: NeueMachina;
 }
