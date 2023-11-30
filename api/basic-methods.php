@@ -726,4 +726,17 @@ function SqlRequestFindPostsEmail($email)
 function SqlRequestFindCurrentPost($iduser, $idpost)
 {
     return "SELECT * FROM `posts` WHERE iduser=$iduser AND idpost=$idpost";
+
+    //
+    // Sql запрос: выбор поста
+    //
+}
+
+function SqlRequestFindAchivs($id)
+{
+    return "SELECT * FROM `achivs` WHERE number=$id";
+
+    //
+    // Sql запрос: выбор поста
+    //
 }

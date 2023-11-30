@@ -35,15 +35,38 @@ if (count($user) <= 0) {
 
     $buttonsubs = $find["id"] == $user["id"] ? "disabled" : "";
     $isubs = in_array(intval($user["id"]), json_decode($find["isubs"]));
+    $atmesubs = in_array(intval($find["id"]), json_decode($user["isubs"]));
     $subs = $isubs ? "Подписан" : "Подписаться";
     $subslogo = $isubs ? "check" : "plus";
 
-    $atmesubs = in_array(intval($find["id"]), json_decode($user["isubs"]));
+    # At me sub
 
-    $countsubatme = count(array_unique(json_decode($user["atmesubs"])));
-    $countsubme = count(array_unique(json_decode($user["isubs"])));
+    $subatme = array_unique(json_decode($user["atmesubs"]));
+    $countsubatme = count($subatme);
 
-    $countachivs = count(array_unique(json_decode($user["achivs"])));
+    $userssubatme = [];
+    for ($i = 0; $i < $countsubatme; $i++) {
+        array_push($userssubatme, R::getAll(SqlRequestFindId(intval($subatme[$i])))[0]);
+    }
+
+    $isdisabledsubatme = $countsubatme > 0 ? "" : "disabled";
+
+    # Sub me
+
+    $subme = array_unique(json_decode($user["isubs"]));
+    $countsubme = count($subme);
+
+    $userssubme = [];
+    for ($i = 0; $i < $countsubme; $i++) {
+        array_push($userssubme, R::getAll(SqlRequestFindId(intval($subme[$i])))[0]);
+    }
+
+    $isdisabledsubme = $countsubme > 0 ? "" : "disabled";
+
+    # Achivs
+
+    $achivs = array_unique(json_decode($user["achivs"]));
+    $countachivs = count($achivs);
 }
 ?>
 
@@ -88,16 +111,18 @@ if (count($user) <= 0) {
                                     <?php echo $user["descr"] ?>
                                 </p>
                             <?php endif ?>
-                            <div class="d-flex align-items-center mt-auto">
-                                <div title="Кто подписан">
+                            <div class="person-profile-subs">
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFriends" title="Кто подписан" <?php echo $isdisabledsubatme ?>>
                                     <b><?php echo $countsubatme ?></b> Подписчики
-                                </div>
-                                <div class="ps-2" title="На кого подписан">
+                                </button>
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalSubs" title="На кого подписан" <?php echo $isdisabledsubme ?>>
                                     <b><?php echo $countsubme ?></b> Подписан
-                                </div>
-                                <div class="ps-2" title="Достижения">
-                                    <b><?php echo $countachivs ?></b> Достижений
-                                </div>
+                                </button>
+                                <?php if ($countachivs > 0) : ?>
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalAchivs" title="Достижения">
+                                        <b><?php echo $countachivs ?></b> Достижений
+                                    </button>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="person-profile-content-buttons person-profile-content-buttons-width">
@@ -117,7 +142,7 @@ if (count($user) <= 0) {
                         </div>
                     </div>
                 </div>
-                <div class="person-posts-empty">
+                <div class="text-center" style="margin-bottom: 100px">
                     У пользователя нет записей.
                 </div>
                 <div class="d-none" id="person-id"><?php echo $user["id"] ?></div>
@@ -125,6 +150,95 @@ if (count($user) <= 0) {
             <?php endif ?>
         </div>
     </main>
+
+    <?php if ($countsubatme > 0) : ?>
+        <div class="modal fade" id="modalFriends" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title fs-5" id="modalLabel">Подписчики</h3>
+                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                            <svg class="svg-normal" width="20" height="20">
+                                <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body person-search-list">
+                        <ul class="list-group list-group-flush">
+                            <?php foreach ($userssubatme as $user) : ?>
+                                <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
+                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.jpg" alt="<?php echo $user["nickname"] ?>">
+                                    <?php if ($user["displaynick"] == 1) : ?>
+                                        <?php echo $user["nickname"] ?>
+                                    <?php else : ?>
+                                        <?php echo $user["firstName"] . " " . $user["lastName"] ?>
+                                    <?php endif ?>
+                                </a>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($countsubme > 0) : ?>
+        <div class="modal fade" id="modalSubs" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title fs-5" id="modalLabel">Подписан</h3>
+                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                            <svg class="svg-normal" width="20" height="20">
+                                <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body person-search-list">
+                        <ul class="list-group list-group-flush">
+                            <?php foreach ($userssubme as $user) : ?>
+                                <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
+                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.jpg" alt="<?php echo $user["nickname"] ?>">
+                                    <?php if ($user["displaynick"] == 1) : ?>
+                                        <?php echo $user["nickname"] ?>
+                                    <?php else : ?>
+                                        <?php echo $user["firstName"] . " " . $user["lastName"] ?>
+                                    <?php endif ?>
+                                </a>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($countachivs > 0) : ?>
+        <div class="modal fade" id="modalAchivs" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title fs-5" id="modalLabel">Достижения</h3>
+                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                            <svg class="svg-normal" width="20" height="20">
+                                <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body person-search-list">
+                        <ul class="list-group list-group-flush">
+                            <?php foreach ($achivsblock as $achiv) : ?>
+                                <li class="list-group-item">
+                                    <img src="/app/img/achivs/<?php echo $achiv["nameimg"] ?>.jpg" alt="<?php echo $achiv["name"] ?>">
+                                    «<?php echo $achiv["name"] ?>»
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
 
     <?php include_once "../app/php/footer.php"; ?>
 </body>

@@ -31,7 +31,7 @@
 .person-profile-content-name {
     display: flex;
     flex-direction: column;
-    padding-left: 220px;
+    padding-left: 200px;
     padding-top: 10px;
     margin-right: auto;
 }
@@ -40,10 +40,12 @@
     margin-bottom: 0px;
     font-size: 30px;
     font-family: NeueMachina;
+    padding-left: 12px;
 }
 
 .person-profile-content-name-2 {
     margin-bottom: 8px !important;
+    padding-left: 12px;
 }
 
 @media(min-width: 992px) {
@@ -66,6 +68,14 @@
     .content-name-width {
         max-width: 300px;
         word-wrap: break-word;
+    }
+
+    .person-profile-content-name-1 {
+        padding: 0px;
+    }
+
+    .person-profile-content-name-2 {
+        padding: 0px;
     }
 }
 
@@ -100,6 +110,8 @@
     padding: 50px 25px;
     height: 250px;
     margin-bottom: -10px;
+
+    background-size: cover;
 }
 
 .person-profile-bg img {
@@ -109,7 +121,6 @@
     margin-top: 100px;
     max-width: 100%;
     height: auto;
-    border: 5px solid var(--bg-light);
 }
 
 .person-profile-subs {
@@ -118,6 +129,21 @@
     margin-top: auto;
     margin-bottom: 5px;
     flex-wrap: wrap;
+}
+
+.person-profile-subs button {
+    color: var(--text-color);
+    background: var(--bg-light);
+}
+
+.person-profile-subs button:hover,
+.person-profile-subs button:focus,
+.person-profile-subs button:active {
+    background: var(--bg-light);
+}
+
+.person-profile-subs button:disabled {
+    border: 0 !important;
 }
 
 .person-profile-content-buttons-width {
@@ -218,8 +244,7 @@
     margin-bottom: 30px;
 }
 
-.person-posts-empty {
-    margin-bottom: 100px;
+.person-posts-center {
     text-align: center;
 }
 
@@ -301,6 +326,30 @@
     width: 14px;
     height: 14px;
     fill: var(--button-primary);
+}
+
+.person-search-list ul li::after {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    padding: 0;
+}
+
+.person-search-list ul li img {
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.person-search-list ul li {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: NeueMachina;
+}
+
+.person-search-list ul li img {
+    border-radius: 50%;
+    margin-right: 15px;
 }
 
 /* Settings */

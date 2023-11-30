@@ -41,6 +41,9 @@ $formbg = [
     $user["capid"] == 2 ? "checked" : "",
     $user["capid"] == 3 ? "checked" : "",
     $user["capid"] == 4 ? "checked" : "",
+    $user["capid"] == 5 ? "checked" : "",
+    $user["capid"] == 6 ? "checked" : "",
+    $user["capid"] == 7 ? "checked" : "",
 ];
 
 $formmale = $sex == 1 ? "MAN" : "WOMAN";
@@ -270,6 +273,24 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                         <input class="form-check-input visually-hidden" type="radio" name="bg" id="bg4" value="4" <?php echo $formbg[4] ?>>
                                         <label class="list-group-item" for="bg4">
                                             <img src="/app/img/users/bg/BG4.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="bg" id="bg5" value="5" <?php echo $formbg[5] ?>>
+                                        <label class="list-group-item" for="bg5">
+                                            <img src="/app/img/users/bg/BG5.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="bg" id="bg6" value="6" <?php echo $formbg[6] ?>>
+                                        <label class="list-group-item" for="bg6">
+                                            <img src="/app/img/users/bg/BG6.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="bg" id="bg7" value="7" <?php echo $formbg[7] ?>>
+                                        <label class="list-group-item" for="bg7">
+                                            <img src="/app/img/users/bg/BG7.jpg">
                                         </label>
                                     </div>
                                 </div>
