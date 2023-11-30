@@ -121,6 +121,7 @@
     margin-top: 100px;
     max-width: 100%;
     height: auto;
+    background-color: var(--bg-light);
 }
 
 .person-profile-subs {

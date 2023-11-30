@@ -16,7 +16,7 @@ if (count($user) <= 0) {
 }
 
 $user = $user[0];
-$logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".jpg";
+$logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".png";
 $bg = "BG" . $user["capid"] . ".jpg";
 
 # Sub me

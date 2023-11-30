@@ -33,6 +33,9 @@ $formicon = [
     $user["logoid"] == 2 ? "checked" : "",
     $user["logoid"] == 3 ? "checked" : "",
     $user["logoid"] == 4 ? "checked" : "",
+    $user["logoid"] == 5 ? "checked" : "",
+    $user["logoid"] == 6 ? "checked" : "",
+    $user["logoid"] == 7 ? "checked" : "",
 ];
 
 $formbg = [
@@ -232,25 +235,43 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon1" value="1" <?php echo $formicon[1] ?>>
                                         <label class="list-group-item" for="icon1">
-                                            <img src="/app/img/users/icons/<?php echo $formmale ?>1.jpg" id="imgicon1">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>1.png" id="imgicon1">
                                         </label>
                                     </div>
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon2" value="2" <?php echo $formicon[2] ?>>
                                         <label class="list-group-item" for="icon2">
-                                            <img src="/app/img/users/icons/<?php echo $formmale ?>2.jpg" id="imgicon2">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>2.png" id="imgicon2">
                                         </label>
                                     </div>
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon3" value="3" <?php echo $formicon[3] ?>>
                                         <label class="list-group-item" for="icon3">
-                                            <img src="/app/img/users/icons/<?php echo $formmale ?>3.jpg" id="imgicon3">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>3.png" id="imgicon3">
                                         </label>
                                     </div>
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon4" value="4" <?php echo $formicon[4] ?>>
                                         <label class="list-group-item" for="icon4">
-                                            <img src="/app/img/users/icons/<?php echo $formmale ?>4.jpg" id="imgicon4">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>4.png" id="imgicon4">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon5" value="5" <?php echo $formicon[5] ?>>
+                                        <label class="list-group-item" for="icon5">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>5.png" id="imgicon5">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon6" value="6" <?php echo $formicon[6] ?>>
+                                        <label class="list-group-item" for="icon6">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>6.png" id="imgicon6">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon7" value="7" <?php echo $formicon[7] ?>>
+                                        <label class="list-group-item" for="icon7">
+                                            <img src="/app/img/users/icons/<?php echo $formmale ?>7.png" id="imgicon7">
                                         </label>
                                     </div>
                                     <input type="text" class="d-none" name="ismale" id="ismale" value="<?php echo $sex ?>">
