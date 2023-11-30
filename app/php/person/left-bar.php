@@ -32,14 +32,14 @@
                 Уведомления
             </button>
         </li>
-        <li>
+        <!-- <li>
             <button onClick="ButtonLeftBar('messages')" id="person-leftbar-messages">
                 <svg height="28" width="28" class="svg-normal me-3">
                     <use xlink:href="/app/img/icons/bootstrap.min.svg#envelope"></use>
                 </svg>
                 Сообщения
             </button>
-        </li>
+        </li> -->
         <li>
             <button onClick="ButtonLeftBar('achivments')" id="person-leftbar-achivments">
                 <svg height="28" width="28" class="svg-normal me-3">

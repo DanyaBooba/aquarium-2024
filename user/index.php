@@ -30,7 +30,7 @@ if (count($user) <= 0) {
     $user = false;
 } else {
     $user = $user[0];
-    $logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".jpg";
+    $logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".png";
     $bg = "BG" . $user["capid"] . ".jpg";
 
     $buttonsubs = $find["id"] == $user["id"] ? "disabled" : "";
@@ -67,6 +67,11 @@ if (count($user) <= 0) {
 
     $achivs = array_unique(json_decode($user["achivs"]));
     $countachivs = count($achivs);
+
+    $achivsblock = [];
+    for ($i = 0; $i < $countachivs; $i++) {
+        array_push($achivsblock, R::getAll(SqlRequestFindAchivs(intval($achivs[$i])))[0]);
+    }
 }
 ?>
 

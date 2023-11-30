@@ -22,7 +22,6 @@ if (count($find) > 0) {
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
-
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Авторизация | Аквариум</title>
 

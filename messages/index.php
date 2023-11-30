@@ -1,4 +1,9 @@
 <?php
+
+
+header("Location: /");
+
+
 session_start();
 include_once "../api/auth-errors.php";
 
@@ -16,8 +21,8 @@ if (count($user) <= 0) {
 }
 
 $user = $user[0];
-$logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".jpg";
-$bg = "BG" . $user["capid"] . ".jpg";
+$logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".png";
+$bg = "BG" . $user["capid"] . ".png";
 
 $countsubme = count(array_unique(json_decode($user["isubs"])));
 $countsubatme = count(array_unique(json_decode($user["atmesubs"])));

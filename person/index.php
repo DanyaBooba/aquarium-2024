@@ -123,7 +123,10 @@ $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] :
                     </div>
                 </div>
             </div>
-            <?php if (count($posts) > 0) : ?>
+            <div class="text-center" style="margin-bottom: 100px;">
+                У пользователя нет записей.
+            </div>
+            <!-- <?php if (count($posts) > 0) : ?>
                 <div class="row row-cols-1 g-2 person-posts">
                     <?php foreach ($posts as $post) : ?>
                         <div class="col-md-4">
@@ -140,7 +143,7 @@ $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] :
                 <div class="text-center" style="margin-bottom: 100px;">
                     У пользователя нет записей.
                 </div>
-            <?php endif ?>
+            <?php endif ?> -->
         </div>
     </main>
 

@@ -27,7 +27,7 @@ if (count($post) <= 0) {
     $post = $post[0];
     $author = R::getAll(SqlRequestFindId($postinfo["author"]))[0];
     $urlback = ($author["email"] == $_SESSION["login"]) ? "/person" : "/user/?id=" . $author["id"];
-    $logo = ($author["ismale"] == 1 ? "MAN" : "WOMAN") . $author["logoid"] . ".jpg";
+    $logo = ($author["ismale"] == 1 ? "MAN" : "WOMAN") . $author["logoid"] . ".png";
 }
 ?>
 
