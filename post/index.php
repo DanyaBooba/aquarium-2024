@@ -26,7 +26,6 @@ if (count($post) <= 0) {
 } else {
     $post = $post[0];
     $author = R::getAll(SqlRequestFindId($postinfo["author"]))[0];
-    $urlback = ($author["email"] == $_SESSION["login"]) ? "/person" : "/user/?id=" . $author["id"];
     $logo = ($author["ismale"] == 1 ? "MAN" : "WOMAN") . $author["logoid"] . ".png";
 }
 ?>
@@ -42,12 +41,6 @@ if (count($post) <= 0) {
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content person-post">
-            <a href="<?php echo $urlback ?>" class="person-post-back link col-md-1">
-                <svg>
-                    <use xlink:href="/app/img/icons/bootstrap.svg#chevron-left"></use>
-                </svg>
-                <span>Назад</span>
-            </a>
             <?php if ($post == false) : ?>
                 <h1>Запись не найдена</h1>
                 <p>На главную страницу через 3 сек.</p>
@@ -58,19 +51,33 @@ if (count($post) <= 0) {
                 </script>
             <?php else : ?>
                 <div class="row row-cols-1 g-2 person-post-content">
-                    <div class="col-md-6 person-post-content-img">
-                        <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg" alt="">
+                    <div class="col-md-6 person-post-content-img" style="background-image: url('/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg')">
                     </div>
                     <div class="col-md-5 person-post-content-post">
                         <div class="person-post-header">
-                            <img src="/app/img/users/icons/<?php echo $logo ?>" alt="">
                             <span>
                                 Даниил Дыбка
                             </span>
                         </div>
-                        <p>
-                            Здесь указано содержимое записи.
-                        </p>
+                        <div class="person-post-content">
+                            <div class="person-post-header">
+                                <img src="/app/img/users/icons/<?php echo $logo ?>" alt="Даниил Дыбка">
+                                <span class="d-flex flex-column">
+                                    <span>
+                                        Даниил Дыбка
+                                    </span>
+                                    <span>
+                                        Содержимое записи с моих слов...
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="person-post-bottom">
+                            like
+                            comment
+                            request
+                            add to special
+                        </div>
                     </div>
                 </div>
             <?php endif; ?>

@@ -90,7 +90,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                         <use xlink:href="/app/img/icons/bootstrap.min.svg#cone-striped"></use>
                                     </svg>
                                     <span>
-                                        Для подтверждения аккаунта перейдите по ссылке в письме.
+                                        Для подтверждения аккаунта, перейдите по ссылке в письме.
                                     </span>
                                 </div>
                             <?php endif ?>
@@ -438,14 +438,16 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                 Подтверждение аккаунта
                             </a>
                         </div>
-                        <div class="person-setting-bg person-setting-bar d-flex align-items-center">
-                            <svg class="svg-normal me-2" width="16" height="16">
-                                <use xlink:href="/app/img/icons/bootstrap.min.svg#eye"></use>
-                            </svg>
-                            <a href="/user/?id=<?php echo $user["id"] ?>" class="link">
-                                Профиль со стороны
-                            </a>
-                        </div>
+                        <?php if ($user["emailverify"] == 1) : ?>
+                            <div class="person-setting-bg person-setting-bar d-flex align-items-center">
+                                <svg class="svg-normal me-2" width="16" height="16">
+                                    <use xlink:href="/app/img/icons/bootstrap.min.svg#eye"></use>
+                                </svg>
+                                <a href="/user/?id=<?php echo $user["id"] ?>" class="link">
+                                    Профиль со стороны
+                                </a>
+                            </div>
+                        <?php endif; ?>
                         <div class="person-setting-bg person-setting-bar">
                             <a href="/api/php/person/person-exit.php" class="link-danger">
                                 Выйти из аккаунта

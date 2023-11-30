@@ -786,10 +786,11 @@ a.person-post-back svg {
 }
 
 
-.person-post-content .person-post-content-img img {
-    border: 1px solid var(--text-color-4);
+.person-post-content .person-post-content-img {
     height: auto;
     max-width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .person-post-content div {
@@ -799,7 +800,7 @@ a.person-post-back svg {
 
 .person-post-content .person-post-content-post {
     border: 1px solid var(--text-color-4);
-    border-left: 1px solid var(--text-color-4);
+    /* border-left: 1px solid var(--text-color-4); */
     padding: 20px;
 }
 

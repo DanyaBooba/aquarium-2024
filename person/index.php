@@ -74,8 +74,8 @@ $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] :
                         <use xlink:href="/app/img/icons/bootstrap.min.svg#cone-striped"></use>
                     </svg>
                     <span>
-                        Для подтверждения аккаунта перейдите по ссылке в письме.
-                        <a href="/api/php/person/send-verify.php" class="link">Прислать письмо ещё раз?</a>
+                        Аккаунт не подтвержден, Вас не видят другие пользователи.
+                        <a href="/api/php/person/send-verify.php" class="link">Отправить письмо для подтверждения?</a>
                     </span>
                 </div>
             <?php endif ?>
@@ -114,19 +114,18 @@ $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] :
                         </div>
                     </div>
                     <div class="person-profile-content-buttons person-profile-content-buttons-width flex-column h-100">
-                        <button onClick="ButtonLeftBar('add-post')" class="btn btn-primary mb-2">
-                            Добавить пост
-                        </button>
+                        <?php if ($user["emailverify"] == 1) : ?>
+                            <button onClick="ButtonLeftBar('add-post')" class="btn btn-primary mb-2">
+                                Добавить пост
+                            </button>
+                        <?php endif; ?>
                         <button onClick="ButtonLeftBar('settings')" class="btn btn-secondary">
                             Редактировать профиль
                         </button>
                     </div>
                 </div>
             </div>
-            <div class="text-center" style="margin-bottom: 100px;">
-                У пользователя нет записей.
-            </div>
-            <!-- <?php if (count($posts) > 0) : ?>
+            <?php if (count($posts) > 0) : ?>
                 <div class="row row-cols-1 g-2 person-posts">
                     <?php foreach ($posts as $post) : ?>
                         <div class="col-md-4">
@@ -143,7 +142,7 @@ $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] :
                 <div class="text-center" style="margin-bottom: 100px;">
                     У пользователя нет записей.
                 </div>
-            <?php endif ?> -->
+            <?php endif ?>
         </div>
     </main>
 

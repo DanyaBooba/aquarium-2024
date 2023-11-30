@@ -67,6 +67,30 @@ if (count($find) > 0) {
                             Войти
                         </button>
                     </form>
+                    <div class="container auth-registration-social">
+                        <div class="row row-cols-2 row-cols-lg-2 g-2">
+                            <div class="col">
+                                <a href="<?php echo $yandexurl ?>" aria-label="Регистрация через Яндекс">
+                                    <img src="/app/img/content/social-logos/yandex.jpg" width="44" alt="Логотип Яндекса">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="<?php echo $googleurl ?>" aria-label="Регистрация через Google">
+                                    <img src="/app/img/content/social-logos/google.jpg" width="42" alt="Логотип Google">
+                                </a>
+                            </div>
+                            <!-- <div class="col">
+                        <a href="#vk" aria-label="Регистрация через Вконтакте">
+                            <img src="/app/img/content/social-logos/vk.jpg" width="42" alt="Логотип Вконтакте">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#github" aria-label="Регистрация через GitHub">
+                            <img src="/app/img/content/social-logos/github.jpg" width="40" alt="Логотип GitHub">
+                        </a>
+                    </div> -->
+                        </div>
+                    </div>
                     <div class="page-login--new-page">
                         <a href="/login/" class="link">
                             Открыть отдельно

@@ -28,6 +28,8 @@ $user = R::getAll(SqlRequestFindId(empty($_GET["id"]) == false ? $_GET["id"] : 0
 
 if (count($user) <= 0) {
     $user = false;
+} else if ($user[0]["emailverify"] == 0) {
+    $user = false;
 } else {
     $user = $user[0];
     $logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".png";
@@ -72,6 +74,9 @@ if (count($user) <= 0) {
     for ($i = 0; $i < $countachivs; $i++) {
         array_push($achivsblock, R::getAll(SqlRequestFindAchivs(intval($achivs[$i])))[0]);
     }
+
+    $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
+    $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] : "";
 }
 ?>
 
@@ -80,7 +85,7 @@ if (count($user) <= 0) {
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Личный кабинет | Аквариум</title>
 
-<body class="container">
+<body class="container <?php echo $background ?>">
     <?php include_once "../app/php/person/header.php"; ?>
 
     <main class="row row-cols-1 g-2">
@@ -96,6 +101,17 @@ if (count($user) <= 0) {
                     }, 3000);
                 </script>
             <?php else : ?>
+                <?php if ($find["emailverify"] == 0) : ?>
+                    <div class="alert alert-warning d-flex align-items-center">
+                        <svg height="32" width="32" class="me-3 svg-normal see-at-pc">
+                            <use xlink:href="/app/img/icons/bootstrap.min.svg#cone-striped"></use>
+                        </svg>
+                        <span>
+                            Аккаунт не подтвержден, Вас не видят другие пользователи.
+                            <a href="/api/php/person/send-verify.php" class="link">Отправить письмо для подтверждения?</a>
+                        </span>
+                    </div>
+                <?php endif; ?>
                 <div class="person-profile-bg" style="background-image: url('/app/img/users/bg/<?php echo $bg ?>');">
                     <img src="/app/img/users/icons/<?php echo $logo ?>">
                 </div>
@@ -131,18 +147,20 @@ if (count($user) <= 0) {
                             </div>
                         </div>
                         <div class="person-profile-content-buttons person-profile-content-buttons-width">
-                            <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?>>
-                                <svg class="me-1" fill="white" width="26" height="26">
-                                    <use xlink:href="/app/img/icons/bootstrap.min.svg#<?php echo $subslogo ?>"></use>
-                                </svg>
-                                <?php echo $subs ?>
-                            </button>
-                            <?php if ($isubs && $atmesubs) : ?>
-                                <button onClick="MailTo()" class="btn btn-secondary ms-2" style="width: 52px;">
-                                    <svg fill="white" width="26" height="26">
-                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#envelope"></use>
+                            <?php if ($find["emailverify"] == 1) : ?>
+                                <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?>>
+                                    <svg class="me-1" fill="white" width="26" height="26">
+                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#<?php echo $subslogo ?>"></use>
                                     </svg>
+                                    <?php echo $subs ?>
                                 </button>
+                                <?php if ($isubs && $atmesubs) : ?>
+                                    <button onClick="MailTo()" class="btn btn-secondary ms-2" style="width: 52px;">
+                                        <svg fill="white" width="26" height="26">
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#envelope"></use>
+                                        </svg>
+                                    </button>
+                                <?php endif; ?>
                             <?php endif; ?>
                         </div>
                     </div>
