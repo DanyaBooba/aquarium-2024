@@ -1,3 +1,5 @@
+// Change sex
+
 function ChangeDataSex() {
 	let man = document.getElementById("radiosex1").hasAttribute("checked");
 	let woman = document.getElementById("radiosex2").hasAttribute("checked");
@@ -45,4 +47,71 @@ function ChangeDataSexChange(changeif, changeto) {
 	}
 }
 
+// Change theme bg
+
+let themeinput = document.querySelectorAll(".theme-toggle input[type='radio']");
+
+for (let i = 0; i < themeinput.length; i++) {
+	themeinput[i].onclick = () => {
+		CheckValueThemeColor();
+		ChangeBackgroundTheme();
+	};
+}
+
+let savetheme = [];
+
+for (let i = 1; i <= 8; i++) {
+	let theme = document.querySelector("label[for='theme" + i + "'] img");
+
+	if (!theme) continue;
+
+	savetheme[i] = theme.src;
+}
+
+function ChangeBackgroundTheme() {
+	if (localStorage.getItem("color-theme") == "light") {
+		ChangeBackgroundThemeLight();
+	} else if (localStorage.getItem("color-theme") == "dark") {
+		ChangeBackgroundThemeDark();
+	} else {
+		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+			ChangeBackgroundThemeDark();
+		}
+
+		if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+			ChangeBackgroundThemeLight();
+		}
+
+		window
+			.matchMedia("(prefers-color-scheme: dark)")
+			.addEventListener("change", (event) => {
+				event.matches
+					? ChangeBackgroundThemeDark()
+					: ChangeBackgroundThemeLight();
+			});
+	}
+}
+
+function ChangeBackgroundThemeDark() {
+	for (let i = 1; i <= 8; i++) {
+		let theme = document.querySelector("label[for='theme" + i + "'] img");
+
+		if (!theme) continue;
+
+		let src = savetheme[i].split(".");
+		theme.src = src[0] + "@dark." + src[1];
+	}
+}
+
+function ChangeBackgroundThemeLight() {
+	for (let i = 1; i <= 8; i++) {
+		let theme = document.querySelector("label[for='theme" + i + "'] img");
+
+		if (!theme) continue;
+
+		theme.src = savetheme[i];
+	}
+}
+
 ChangeDataSex();
+ChangeBackgroundTheme();

@@ -1,0 +1,27 @@
+.background-1 {
+    background-image: var(--background-image-1);
+}
+
+.background-2 {
+    background-image: var(--background-image-2);
+}
+
+.background-3 {
+    background-image: var(--background-image-3);
+}
+
+.background-4 {
+    background-image: var(--background-image-4);
+}
+
+.background-5 {
+    background-image: var(--background-image-5);
+}
+
+.background-6 {
+    background-image: var(--background-image-6);
+}
+
+.background-7 {
+    background-image: var(--background-image-7);
+}

@@ -35,6 +35,7 @@
     --bg-light-2: #5f4966;
     --bg-light-3: #495f66;
     --bg-warning: #664e49;
+    --bg-message-me: #91ffce;
 
     /* Danger */
 
@@ -64,4 +65,14 @@
     --person-button: #40376d;
     --person-button-border: #5a508b;
     --person-button-focus: 118, 109, 177;
+
+    /* Background images */
+
+    --background-image-1: url('/app/img/users/theme/theme_1@dark.jpg');
+    --background-image-2: url('/app/img/users/theme/theme_2@dark.jpg');
+    --background-image-3: url('/app/img/users/theme/theme_3@dark.jpg');
+    --background-image-4: url('/app/img/users/theme/theme_4@dark.jpg');
+    --background-image-5: url('/app/img/users/theme/theme_5@dark.jpg');
+    --background-image-6: url('/app/img/users/theme/theme_6@dark.jpg');
+    --background-image-7: url('/app/img/users/theme/theme_7@dark.jpg');
 }

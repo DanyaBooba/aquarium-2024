@@ -42,6 +42,7 @@ ul.person-leftbar li button:focus {
 
 ul.person-leftbar li button.active {
     background: var(--bg-light-active);
+    outline: 1px solid var(--bg-light-active-hover);
 }
 
 ul.person-leftbar li button.active:hover,

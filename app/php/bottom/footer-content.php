@@ -11,6 +11,9 @@
             <a href="/about/faq/" class="link mx-3">
                 FAQ
             </a>
+            <a href="/about/development/" class="link mx-3">
+                Разработка
+            </a>
             <a href="/about/user/" class="link mx-3">
                 Пользователю
             </a>
@@ -34,6 +37,9 @@
         <div class="footer__center">
             <a href="/about/faq/" class="link mx-3">
                 FAQ
+            </a>
+            <a href="/about/development/" class="link mx-3">
+                Разработка
             </a>
             <a href="/about/user/" class="link mx-3">
                 Пользователю

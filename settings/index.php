@@ -46,6 +46,18 @@ $formbg = [
     $user["capid"] == 7 ? "checked" : "",
 ];
 
+$formtheme = [
+    null,
+    $user["themeid"] == 1 ? "checked" : "",
+    $user["themeid"] == 2 ? "checked" : "",
+    $user["themeid"] == 3 ? "checked" : "",
+    $user["themeid"] == 4 ? "checked" : "",
+    $user["themeid"] == 5 ? "checked" : "",
+    $user["themeid"] == 6 ? "checked" : "",
+    $user["themeid"] == 7 ? "checked" : "",
+    $user["themeid"] == 0 ? "checked" : "",
+];
+
 $formmale = $sex == 1 ? "MAN" : "WOMAN";
 ?>
 
@@ -298,6 +310,63 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                     Сохранить изменения
                                 </button>
                             </form>
+                            <hr>
+                            <h2 id="theme">Тема</h2>
+                            <form class="needs-validation person-settings-form-image form-image-bg" action="/api/php/person/edit-theme.php" method="post" novalidate>
+                                <div class="row row-cols-1 row-cols-lg-2 g-2">
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="theme" id="theme1" value="1" <?php echo $formtheme[1] ?>>
+                                        <label class="list-group-item" for="theme1">
+                                            <img src="/app/img/users/theme/theme_1.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="theme" id="theme2" value="2" <?php echo $formtheme[2] ?>>
+                                        <label class="list-group-item" for="theme2">
+                                            <img src="/app/img/users/theme/theme_2.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="theme" id="theme3" value="3" <?php echo $formtheme[3] ?>>
+                                        <label class="list-group-item" for="theme3">
+                                            <img src="/app/img/users/theme/theme_3.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="theme" id="theme4" value="4" <?php echo $formtheme[4] ?>>
+                                        <label class="list-group-item" for="theme4">
+                                            <img src="/app/img/users/theme/theme_4.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="theme" id="theme5" value="5" <?php echo $formtheme[5] ?>>
+                                        <label class="list-group-item" for="theme5">
+                                            <img src="/app/img/users/theme/theme_5.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="theme" id="theme6" value="6" <?php echo $formtheme[6] ?>>
+                                        <label class="list-group-item" for="theme6">
+                                            <img src="/app/img/users/theme/theme_6.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="theme" id="theme7" value="7" <?php echo $formtheme[7] ?>>
+                                        <label class="list-group-item" for="theme7">
+                                            <img src="/app/img/users/theme/theme_7.jpg">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-check-input visually-hidden" type="radio" name="theme" id="theme8" value="0" <?php echo $formtheme[8] ?>>
+                                        <label class="list-group-item" for="theme8">
+                                            <img src="/app/img/users/theme/theme_empty.jpg">
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary col-md-6 mt-2" type="submit">
+                                    Сохранить изменения
+                                </button>
+                            </form>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -333,6 +402,11 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                         Обложка
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="#theme" class="link">
+                                        Тема
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="person-setting-bg person-setting-bar d-flex align-items-center">
@@ -362,11 +436,12 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
         </div>
     </main>
 
+    <?php include_once "../app/php/footer.php"; ?>
+
     <script src="/app/js/button.js"></script>
     <script src="/app/js/form-edit-url.js"></script>
     <script src="/app/js/person-settingschange.js"></script>
 
-    <?php include_once "../app/php/footer.php"; ?>
 </body>
 
 </html>

@@ -449,6 +449,15 @@ function SqlRequestUpdateBg($email, $bg)
     //
 }
 
+function SqlRequestUpdateTheme($email, $theme)
+{
+    return "UPDATE `users` SET `themeid` = $theme WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновляем фон
+    //
+}
+
 function SqlRequestSearch($text)
 {
     $more = "(NICKNAME like '%$text%' OR firstName like '%$text%' OR lastName like '%$text%' or descr like '%$text%')";

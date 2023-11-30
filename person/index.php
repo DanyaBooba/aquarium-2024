@@ -54,6 +54,7 @@ for ($i = 0; $i < $countachivs; $i++) {
 }
 
 $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
+$background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] : "";
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -61,7 +62,7 @@ $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Личный кабинет | Аквариум</title>
 
-<body class="container">
+<body class="container <?php echo $background ?>">
     <?php include_once "../app/php/person/header.php"; ?>
 
     <main class="row row-cols-1 g-2">
@@ -146,7 +147,7 @@ $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
     <?php if ($countsubatme > 0) : ?>
         <div class="modal fade" id="modalFriends" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content person-content">
                     <div class="modal-header">
                         <h3 class="modal-title fs-5" id="modalLabel">Подписчики</h3>
                         <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
@@ -177,7 +178,7 @@ $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
     <?php if ($countsubme > 0) : ?>
         <div class="modal fade" id="modalSubs" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content person-content">
                     <div class="modal-header">
                         <h3 class="modal-title fs-5" id="modalLabel">Подписан</h3>
                         <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
@@ -208,7 +209,7 @@ $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
     <?php if ($countachivs > 0) : ?>
         <div class="modal fade" id="modalAchivs" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content person-content">
                     <div class="modal-header">
                         <h3 class="modal-title fs-5" id="modalLabel">Достижения</h3>
                         <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">

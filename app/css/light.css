@@ -2,7 +2,7 @@
 
     /* Default */
 
-    --bg-color: #fff; /* #fdfdf8 */
+    --bg-color: #fdfdf8; /* #fdfdf8 */
     --bg-color-auth: #fff;
     --text-default: #000;
     --text-invert: #fff;
@@ -65,4 +65,14 @@
     --person-button: #9fa7ae;
     --person-button-border: #ababab;
     --person-button-focus: 130, 138, 145;
+
+    /* Background images */
+
+    --background-image-1: url('/app/img/users/theme/theme_1.jpg');
+    --background-image-2: url('/app/img/users/theme/theme_2.jpg');
+    --background-image-3: url('/app/img/users/theme/theme_3.jpg');
+    --background-image-4: url('/app/img/users/theme/theme_4.jpg');
+    --background-image-5: url('/app/img/users/theme/theme_5.jpg');
+    --background-image-6: url('/app/img/users/theme/theme_6.jpg');
+    --background-image-7: url('/app/img/users/theme/theme_7.jpg');
 }

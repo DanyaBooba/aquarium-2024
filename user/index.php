@@ -154,7 +154,7 @@ if (count($user) <= 0) {
     <?php if ($countsubatme > 0) : ?>
         <div class="modal fade" id="modalFriends" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content person-content">
                     <div class="modal-header">
                         <h3 class="modal-title fs-5" id="modalLabel">Подписчики</h3>
                         <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
@@ -185,7 +185,7 @@ if (count($user) <= 0) {
     <?php if ($countsubme > 0) : ?>
         <div class="modal fade" id="modalSubs" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content person-content">
                     <div class="modal-header">
                         <h3 class="modal-title fs-5" id="modalLabel">Подписан</h3>
                         <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
@@ -216,7 +216,7 @@ if (count($user) <= 0) {
     <?php if ($countachivs > 0) : ?>
         <div class="modal fade" id="modalAchivs" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content person-content">
                     <div class="modal-header">
                         <h3 class="modal-title fs-5" id="modalLabel">Достижения</h3>
                         <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
