@@ -41,8 +41,8 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
                     <ul class="list-group list-group-flush person-content-notifications">
                         <li class="list-group-item">
                             <div class="person-profile-content-buttons person-content-notifications-button">
-                                <h3 class="me-auto"><?php echo $nots[$i]["name"] ?></h3>
-                                <button class="btn btn-secondary" type="button" onClick="RotateButton('info<?php echo $i ?>')" data-bs-toggle="collapse" data-bs-target="#collapseinfo<?php echo $i ?>" aria-expanded="false" aria-controls="collapseinfo<?php echo $i ?>">
+                                <h5 class="me-auto"><?php echo $nots[$i]["name"] ?></h5>
+                                <button class="btn btn-secondary col-md-1" type="button" onClick="RotateButton('info<?php echo $i ?>')" data-bs-toggle="collapse" data-bs-target="#collapseinfo<?php echo $i ?>" aria-expanded="false" aria-controls="collapseinfo<?php echo $i ?>">
                                     <svg fill="white" width="16" height="16" id="svgcollapseinfo<?php echo $i ?>" class="notifications-svg-rotate-bottom">
                                         <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-down"></use>
                                     </svg>
@@ -61,8 +61,8 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
             <ul class="list-group list-group-flush person-content-notifications">
                 <li class="list-group-item">
                     <div class="person-profile-content-buttons person-content-notifications-button">
-                        <h3 class="me-auto">Спасибо за регистрацию</h3>
-                        <button class="btn btn-secondary" type="button" onClick="RotateButton(1)" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        <h5 class="me-auto">Спасибо за регистрацию</h5>
+                        <button class="btn btn-secondary col-md-1" type="button" onClick="RotateButton(1)" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                             <svg fill="white" width="16" height="16" id="svgcollapse1" class="notifications-svg-rotate-bottom">
                                 <use xlink:href=" /app/img/icons/bootstrap.min.svg#chevron-down"></use>
                             </svg>
@@ -84,8 +84,8 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
                 </li>
                 <li class="list-group-item">
                     <div class="person-profile-content-buttons person-content-notifications-button">
-                        <h3 class="me-auto">Подарки для Вас</h3>
-                        <button class="btn btn-secondary" type="button" onClick="RotateButton(2)" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        <h5 class="me-auto">Подарки для Вас</h5>
+                        <button class="btn btn-secondary col-md-1" type="button" onClick="RotateButton(2)" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                             <svg fill="white" width="16" height="16" id="svgcollapse2" class="notifications-svg-rotate-bottom">
                                 <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-down"></use>
                             </svg>
@@ -97,7 +97,7 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
                             набор стикеров телеграм «Аквариум». Спасибо, что Вы с нами!
                         </p>
                         <p>
-                            <a href="#" class="link">
+                            <a class="link-empty">
                                 Получить стикеры
                             </a>
                         </p>
@@ -105,8 +105,8 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
                 </li>
                 <li class="list-group-item">
                     <div class="person-profile-content-buttons person-content-notifications-button">
-                        <h3 class="me-auto">Бета-тест</h3>
-                        <button class="btn btn-secondary" type="button" onClick="RotateButton(3)" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        <h5 class="me-auto">Бета-тест</h5>
+                        <button class="btn btn-secondary col-md-1" type="button" onClick="RotateButton(3)" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                             <svg fill="white" width="16" height="16" id="svgcollapse3" class="notifications-svg-rotate-bottom">
                                 <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-down"></use>
                             </svg>

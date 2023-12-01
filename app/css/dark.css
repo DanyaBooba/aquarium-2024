@@ -75,4 +75,8 @@
     --background-image-5: url('/app/img/users/theme/theme_5@dark.jpg');
     --background-image-6: url('/app/img/users/theme/theme_6@dark.jpg');
     --background-image-7: url('/app/img/users/theme/theme_7@dark.jpg');
+
+    /* Left bar */
+
+    --left-bar-icon: #fff;
 }

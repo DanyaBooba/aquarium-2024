@@ -83,6 +83,12 @@ if (count($user) <= 0) {
 
     $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
     $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] : "";
+
+    $form = [
+        "achivs" => FormOfWord($countachivs, "Достижение", "Достижения", "Достижений"),
+        "subs" => FormOfWord($countsubme, "Подписка", "Подписки", "Подписок"),
+        "atmesubs" => FormOfWord($countsubatme, "Подписчик", "Подписчика", "Подписчиков"),
+    ];
 }
 ?>
 
@@ -140,14 +146,14 @@ if (count($user) <= 0) {
                             <?php endif ?>
                             <div class="person-profile-subs">
                                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFriends" title="Кто подписан" <?php echo $isdisabledsubatme ?>>
-                                    <b><?php echo $countsubatme ?></b> Подписчики
+                                    <b><?php echo $countsubatme ?></b> <?php echo $form["atmesubs"] ?>
                                 </button>
                                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalSubs" title="На кого подписан" <?php echo $isdisabledsubme ?>>
-                                    <b><?php echo $countsubme ?></b> Подписан
+                                    <b><?php echo $countsubme ?></b> <?php echo $form["subs"] ?>
                                 </button>
                                 <?php if ($countachivs > 0) : ?>
                                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalAchivs" title="Достижения">
-                                        <b><?php echo $countachivs ?></b> Достижений
+                                        <b><?php echo $countachivs ?></b> <?php echo $form["achivs"] ?>
                                     </button>
                                 <?php endif; ?>
                             </div>
@@ -196,7 +202,7 @@ if (count($user) <= 0) {
                         <ul class="list-group list-group-flush">
                             <?php foreach ($userssubatme as $user) : ?>
                                 <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
-                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.jpg" alt="<?php echo $user["nickname"] ?>">
+                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
                                     <?php if ($user["displaynick"] == 1) : ?>
                                         <?php echo $user["nickname"] ?>
                                     <?php else : ?>
@@ -227,7 +233,7 @@ if (count($user) <= 0) {
                         <ul class="list-group list-group-flush">
                             <?php foreach ($userssubme as $user) : ?>
                                 <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
-                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.jpg" alt="<?php echo $user["nickname"] ?>">
+                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
                                     <?php if ($user["displaynick"] == 1) : ?>
                                         <?php echo $user["nickname"] ?>
                                     <?php else : ?>

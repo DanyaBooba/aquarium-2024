@@ -50,6 +50,19 @@ ul.person-leftbar li button.active:focus {
     background: var(--bg-light-active-hover);
 }
 
+ul.person-leftbar li button svg {
+    fill: var(--left-bar-icon);
+    margin-right: 1rem;
+
+    transform: scale(0.9);
+    transition: .3s;
+}
+
+ul.person-leftbar li button:hover svg,
+ul.person-leftbar li button:focus svg {
+    transform: scale(1);
+}
+
 @media(max-width: 991px) {
     ul.person-leftbar li button svg {
         display: none !important;

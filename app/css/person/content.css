@@ -64,6 +64,12 @@
     }
 }
 
+@media(max-width: 993px) and (min-width: 768px) {
+    .person-setting-bar {
+        padding-left: 16px !important;
+    }
+}
+
 @media(max-width: 992px) {
     .content-name-width {
         max-width: 300px;
@@ -76,6 +82,10 @@
 
     .person-profile-content-name-2 {
         padding: 0px;
+    }
+
+    .person-setting-bar svg {
+        display: none;
     }
 }
 
@@ -380,6 +390,7 @@
     border-radius: 8px;
     padding: 16px 24px;
     margin-bottom: 8px;
+    border: 1px solid var(--bg-light-active);
 }
 
 .person-setting-bg ul {
@@ -403,16 +414,6 @@
 .person-setting-bg ul li:last-child {
     margin-bottom: 0 !important;
 }
-
-/* .person-setting-bg ul li a {
-    background: var(--bg-light);
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.person-setting-bg ul li a:hover {
-    border-bottom: 1px solid var(--text-color-2);
-} */
 
 .person-setting-content h2 {
     margin-top: 10px;
@@ -450,6 +451,8 @@
 .person-setting-bg form button.btn-danger {
     border-radius: 8px;
 }
+
+
 
 /* Settings image */
 
@@ -508,16 +511,16 @@ ul.person-content-notifications li {
     padding-right: 0 !important;
 }
 
-ul.person-content-notifications li h3 {
-    margin-top: 1rem;
+ul.person-content-notifications li h5 {
+    margin-top: 0rem;
     margin-bottom: 0;
 }
 
-ul.person-content-notifications li:first-child h3 {
+ul.person-content-notifications li:first-child h5 {
     margin-top: 0 !important;
 }
 
-ul.person-content-notifications li:last-child h3 {
+ul.person-content-notifications li:last-child h5 {
     margin-bottom: 0 !important;
 }
 
@@ -530,8 +533,8 @@ ul.person-content-notifications li:last-child h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
 }
 
@@ -586,11 +589,19 @@ ul.person-content-achivs li img {
     width: 100px;
     border-radius: 50%;
     margin-right: 20px;
+
+    border: 5px solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
 }
 
 @media(max-width: 371px) {
+    ul.person-content-achivs li {
+        flex-direction: column;
+        text-align: center;
+    }
+
     ul.person-content-achivs li img {
-        width: 50px;
+        margin-bottom: 10px;
     }
 
     ul.person-content-achivs li span p.person-content-achivs-name {

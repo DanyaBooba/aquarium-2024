@@ -24,5 +24,13 @@
                 Профиль
             </span>
         </a>
+        <a href="/settings/" aria-label="Настройки" class="fixed-bottom__link">
+            <svg class="fixed-bottom__svg-4">
+                <use xlink:href="/app/img/icons/bootstrap.min.svg#gear-wide-connected"></use>
+            </svg>
+            <span>
+                Настройки
+            </span>
+        </a>
     </div>
 </div>

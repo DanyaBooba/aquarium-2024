@@ -32,7 +32,7 @@
 }
 
 .fixed-bottom__link svg {
-    fill: var(--text-default);
+    fill: var(--left-bar-icon);
 }
 
 /* SVG Size */
@@ -47,10 +47,17 @@
     width: 23px;
     height: 23px;
     margin-left: 7px;
+    margin-bottom: 2px;
 }
 
 .fixed-bottom__svg-3 {
     width: 26px;
     height: 26px;
     margin-left: 16px;
+}
+
+.fixed-bottom__svg-4 {
+    width: 26px;
+    height: 26px;
+    margin-left: 21px;
 }
