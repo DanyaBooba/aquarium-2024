@@ -749,3 +749,19 @@ function SqlRequestFindAchivs($id)
     // Sql запрос: выбор поста
     //
 }
+
+function FormOfWord($num, $form1, $form2, $form3)
+{
+    $num = abs($num) % 100;
+    $num_x = $num % 10;
+
+    if ($num > 10 && $num < 20)   return $form3;
+    if ($num_x > 1 && $num_x < 5) return $form2;
+    if ($num_x == 1)              return $form1;
+
+    return $form3;
+
+    //
+    // Форма слова
+    //
+}

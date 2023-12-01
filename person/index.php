@@ -60,6 +60,12 @@ for ($i = 0; $i < $countachivs; $i++) {
 
 $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
 $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] : "";
+
+$form = [
+    "achivs" => FormOfWord($countachivs, "Достижение", "Достижения", "Достижений"),
+    "subs" => FormOfWord($countsubme, "Подписка", "Подписки", "Подписок"),
+    "atmesubs" => FormOfWord($countsubatme, "Подписчик", "Подписчика", "Подписчиков"),
+];
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -106,14 +112,14 @@ $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] :
                         <?php endif ?>
                         <div class="person-profile-subs">
                             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFriends" title="Кто подписан" <?php echo $isdisabledsubatme ?>>
-                                <b><?php echo $countsubatme ?></b> Подписчики
+                                <b><?php echo $countsubatme ?></b> <?php echo $form["atmesubs"] ?>
                             </button>
                             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalSubs" title="На кого подписан" <?php echo $isdisabledsubme ?>>
-                                <b><?php echo $countsubme ?></b> Подписан
+                                <b><?php echo $countsubme ?></b> <?php echo $form["subs"] ?>
                             </button>
                             <?php if ($countachivs > 0) : ?>
                                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalAchivs" title="Достижения">
-                                    <b><?php echo $countachivs ?></b> Достижений
+                                    <b><?php echo $countachivs ?></b> <?php echo $form["achivs"] ?>
                                 </button>
                             <?php endif; ?>
                         </div>
