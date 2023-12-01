@@ -61,7 +61,7 @@ if ($password == $user["current"]) {
     return;
 }
 
-$salt = RandomString(80);
+$salt = RandomString(20);
 
 $newpasssql = SqlRequestNewPass($login, password_hash($salt . $password . $salt, PASSWORD_DEFAULT), $salt);
 

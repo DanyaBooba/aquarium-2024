@@ -21,12 +21,11 @@ if (count($find) > 0) {
 }
 ?>
 
-<?php $active = empty($_GET["a"]) == false ?>
+<?php $active = @empty($_GET["a"]) == false ?>
 
-<?php $error = RestoreError($_GET["e"]) ?>
+<?php $error = @RestoreError($_GET["e"]) ?>
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
-
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Войти по коду | Аквариум</title>

@@ -30,7 +30,7 @@ $find = $find[0];
 ## User
 ##
 
-$user = R::getAll(SqlRequestFindId(empty($_GET["id"]) == false ? $_GET["id"] : 0));
+$user = @R::getAll(SqlRequestFindId(empty($_GET["id"]) == false ? $_GET["id"] : 0));
 
 if (count($user) <= 0) {
     $user = false;
@@ -182,98 +182,99 @@ if (count($user) <= 0) {
                 </div>
                 <div class="d-none" id="person-id"><?php echo $user["id"] ?></div>
                 <script src="/app/js/person-user.js"></script>
+
+                <?php if ($countsubatme > 0) : ?>
+                    <div class="modal fade" id="modalFriends" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content person-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title fs-5" id="modalLabel">Подписчики</h3>
+                                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                        <svg class="svg-normal" width="20" height="20">
+                                            <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="modal-body person-search-list">
+                                    <ul class="list-group list-group-flush">
+                                        <?php foreach ($userssubatme as $user) : ?>
+                                            <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
+                                                <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
+                                                <?php if ($user["displaynick"] == 1) : ?>
+                                                    <?php echo $user["nickname"] ?>
+                                                <?php else : ?>
+                                                    <?php echo $user["firstName"] . " " . $user["lastName"] ?>
+                                                <?php endif ?>
+                                            </a>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <?php if ($countsubme > 0) : ?>
+                    <div class="modal fade" id="modalSubs" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content person-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title fs-5" id="modalLabel">Подписан</h3>
+                                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                        <svg class="svg-normal" width="20" height="20">
+                                            <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="modal-body person-search-list">
+                                    <ul class="list-group list-group-flush">
+                                        <?php foreach ($userssubme as $user) : ?>
+                                            <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
+                                                <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
+                                                <?php if ($user["displaynick"] == 1) : ?>
+                                                    <?php echo $user["nickname"] ?>
+                                                <?php else : ?>
+                                                    <?php echo $user["firstName"] . " " . $user["lastName"] ?>
+                                                <?php endif ?>
+                                            </a>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <?php if ($countachivs > 0) : ?>
+                    <div class="modal fade" id="modalAchivs" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content person-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title fs-5" id="modalLabel">Достижения</h3>
+                                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                        <svg class="svg-normal" width="20" height="20">
+                                            <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="modal-body person-search-list">
+                                    <ul class="list-group list-group-flush">
+                                        <?php foreach ($achivsblock as $achiv) : ?>
+                                            <li class="list-group-item">
+                                                <img src="/app/img/achivs/<?php echo $achiv["nameimg"] ?>.jpg" alt="<?php echo $achiv["name"] ?>">
+                                                «<?php echo $achiv["name"] ?>»
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
             <?php endif ?>
         </div>
     </main>
-
-    <?php if ($countsubatme > 0) : ?>
-        <div class="modal fade" id="modalFriends" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content person-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title fs-5" id="modalLabel">Подписчики</h3>
-                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
-                            <svg class="svg-normal" width="20" height="20">
-                                <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="modal-body person-search-list">
-                        <ul class="list-group list-group-flush">
-                            <?php foreach ($userssubatme as $user) : ?>
-                                <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
-                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
-                                    <?php if ($user["displaynick"] == 1) : ?>
-                                        <?php echo $user["nickname"] ?>
-                                    <?php else : ?>
-                                        <?php echo $user["firstName"] . " " . $user["lastName"] ?>
-                                    <?php endif ?>
-                                </a>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($countsubme > 0) : ?>
-        <div class="modal fade" id="modalSubs" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content person-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title fs-5" id="modalLabel">Подписан</h3>
-                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
-                            <svg class="svg-normal" width="20" height="20">
-                                <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="modal-body person-search-list">
-                        <ul class="list-group list-group-flush">
-                            <?php foreach ($userssubme as $user) : ?>
-                                <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
-                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
-                                    <?php if ($user["displaynick"] == 1) : ?>
-                                        <?php echo $user["nickname"] ?>
-                                    <?php else : ?>
-                                        <?php echo $user["firstName"] . " " . $user["lastName"] ?>
-                                    <?php endif ?>
-                                </a>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($countachivs > 0) : ?>
-        <div class="modal fade" id="modalAchivs" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content person-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title fs-5" id="modalLabel">Достижения</h3>
-                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
-                            <svg class="svg-normal" width="20" height="20">
-                                <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="modal-body person-search-list">
-                        <ul class="list-group list-group-flush">
-                            <?php foreach ($achivsblock as $achiv) : ?>
-                                <li class="list-group-item">
-                                    <img src="/app/img/achivs/<?php echo $achiv["nameimg"] ?>.jpg" alt="<?php echo $achiv["name"] ?>">
-                                    «<?php echo $achiv["name"] ?>»
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php endif; ?>
 
     <?php include_once "../app/php/footer.php"; ?>
 </body>

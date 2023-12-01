@@ -28,7 +28,7 @@ if (count($find) > 0) {
 ## Code
 ##
 
-$code = $_GET["c"];
+$code = @$_GET["c"];
 
 $find = R::getAll(SqlRequestFindRestoreByCode($code));
 
@@ -45,7 +45,7 @@ if (abs(time() - $find[0]["timecreate"]) > 1800) {
 $email = $find[0]["email"];
 ?>
 
-<?php $error = UpdatePasswordError($_GET["e"]) ?>
+<?php $error = @UpdatePasswordError($_GET["e"]) ?>
 
 <?php include_once "../../../app/php/head.php"; ?>
 

@@ -38,9 +38,9 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
 
 <?php include_once "../app/php/head.php"; ?>
 
-<?php $error = RegistrationError($_GET["e"]) ?>
+<?php $error = @RegistrationError($_GET["e"]) ?>
 
-<?php $g = $_GET["g"] ?>
+<?php $g = @$_GET["g"] ?>
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 

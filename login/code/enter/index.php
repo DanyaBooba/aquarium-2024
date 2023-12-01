@@ -21,7 +21,7 @@ if (count($find) > 0) {
 }
 ?>
 
-<?php $error = LoginByCodeError($_GET["e"]) ?>
+<?php $error = @LoginByCodeError($_GET["e"]) ?>
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
@@ -53,7 +53,7 @@ if (count($find) > 0) {
             <?php endif; ?>
             <form class="needs-validation" action="/api/php/loginbycode-form.php" method="post" novalidate>
                 <div class="input-group-sm">
-                    <input class="form-control" type="email" autocomplete="email" id="email" onInput="CheckFormData()" name="email" value="<?php echo $_GET["g"] ?>" placeholder="Почта" aria-label="Почта" required>
+                    <input class="form-control" type="email" autocomplete="email" id="email" onInput="CheckFormData()" name="email" value="<?php echo @$_GET["g"] ?>" placeholder="Почта" aria-label="Почта" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите указанную почту.
                     </div>
