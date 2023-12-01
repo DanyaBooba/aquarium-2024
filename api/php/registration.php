@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+if (!isset($_SESSION)) session_start();
 
 include_once "../basic-methods.php";
 include_once "../rb-mysql.php";
@@ -92,6 +92,6 @@ $setsql = SqlRequestInsertVerify($user["email"], $url);
 
 R::getAll($setsql);
 
-EmailConfirmEmail($user["email"], "https://social.creagoo.ru/api/php/person/check-verify.php?c=" . $url);
+EmailConfirmEmail($user["email"], "https://aquarium.org.ru/api/php/person/check-verify.php?c=" . $url);
 
 header("Location: /person/");

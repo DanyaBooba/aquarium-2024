@@ -58,20 +58,17 @@ form textarea
 }
 
 .auth-registration-social .row .col a img {
-    filter: grayscale(80%);
     transform: scale(0.9);
     opacity: 0.7;
     transition: .3s;
 }
 
 .auth-registration-social .row .col a:hover img {
-    filter: grayscale(0%);
     transform: scale(1);
     opacity: 1;
 }
 
 .auth-registration-social .row .col a:focus img {
-    filter: grayscale(0%);
     transform: scale(1);
     opacity: 1;
     outline: 1px solid var(--button-primary);

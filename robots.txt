@@ -2,5 +2,5 @@ User-agent: *
 Disallow: /app/
 Disallow: /api/
 Disallow: /admin/
-Sitemap: https://social.creagoo.ru/sitemap.xml
+Sitemap: https://aquarium.org.ru/sitemap.xml
 Clean-param: utm

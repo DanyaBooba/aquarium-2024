@@ -4,7 +4,7 @@
 header("Location: /");
 
 
-session_start();
+if (!isset($_SESSION)) session_start();
 include_once "../api/auth-errors.php";
 
 include_once "../api/rb-mysql.php";
@@ -13,7 +13,7 @@ include_once "../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$user = R::getAll(SqlRequestFind($_SESSION["login"]));
+$user = @R::getAll(SqlRequestFind($_SESSION["login"]));
 
 if (count($user) <= 0) {
     header("Location: /");

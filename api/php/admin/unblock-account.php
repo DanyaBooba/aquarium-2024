@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+if (!isset($_SESSION)) session_start();
 
 include_once "../../basic-methods.php";
 include_once "../../rb-mysql.php";

@@ -1,5 +1,5 @@
 <?php
-session_start();
+if (!isset($_SESSION)) session_start();
 include_once "../api/auth-errors.php";
 
 include_once "../api/rb-mysql.php";
@@ -12,7 +12,7 @@ R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Tok
 ## Me
 ##
 
-$find = R::getAll(SqlRequestFind($_SESSION["login"]));
+$find = @R::getAll(SqlRequestFind($_SESSION["login"]));
 
 if (count($find) <= 0) {
     header("Location: /");
@@ -28,7 +28,7 @@ if ($find[0]["isblock"] == 1) {
 ## Server
 ##
 
-$search = ClearSearch($_GET["s"]);
+$search = @ClearSearch($_GET["s"]);
 $seak = SqlRequestSelectAll();
 
 if (mb_strlen($search) > 0) {
@@ -36,7 +36,7 @@ if (mb_strlen($search) > 0) {
 }
 
 $look = ceil(count(R::getAll($seak)) / 100);
-$page = (empty(intval($_GET["p"])) || $_GET["p"] < 0 || $_GET["p"] > $look) ? 1 : intval($_GET["p"]);
+$page = @(empty(intval($_GET["p"])) || $_GET["p"] < 0 || $_GET["p"] > $look) ? 1 : intval($_GET["p"]);
 
 $offset = ($page - 1) * 100;
 if (mb_strlen($search) > 0) {
@@ -45,7 +45,7 @@ if (mb_strlen($search) > 0) {
     $users = R::getAll("SELECT * FROM `users` WHERE emailverify=1 LIMIT $offset, 100");
 }
 
-$btnnext = $page == $look ? "disabled" : "";
+$btnnext = $page >= $look ? "disabled" : "";
 $btnprev = $page == 1 ? "disabled" : "";
 ?>
 

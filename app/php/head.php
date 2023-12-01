@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php if (!isset($_SESSION)) session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -14,15 +14,15 @@
     <meta property="og:title" content="Aquarium" />
     <meta property="og:site_name" content="Aquarium" />
     <meta property="og:description" content="Aquarium" />
-    <meta property="og:url" content="https://social.creagoo.ru/" />
-    <meta property="og:image" content="https://social.creagoo.ru/app/img/logo/cap.png" />
+    <meta property="og:url" content="https://aquarium.org.ru/" />
+    <meta property="og:image" content="https://aquarium.org.ru/app/img/logo/cap.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="600" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Aquarium" />
     <meta name="twitter:description" content="Aquarium" />
-    <meta name="twitter:site" content="https://social.creagoo.ru/" />
-    <meta name="twitter:image" content="https://social.creagoo.ru/app/img/logo/favicon.ico" />
+    <meta name="twitter:site" content="https://aquarium.org.ru/" />
+    <meta name="twitter:image" content="https://aquarium.org.ru/app/img/logo/favicon.ico" />
     <meta name="Author" content="Даниил Дыбка" />
     <link rel="manifest" href="/manifest.json" />
 

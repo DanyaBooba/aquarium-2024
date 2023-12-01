@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+if (!isset($_SESSION)) session_start();
 
 include_once "../../basic-methods.php";
 include_once "../../rb-mysql.php";
@@ -50,6 +50,6 @@ if (count($findverify) <= 0) {
     R::getAll($setsql);
 }
 
-EmailConfirmEmail($find[0]["email"], "https://social.creagoo.ru/api/php/person/check-verify.php?c=" . $url);
+EmailConfirmEmail($find[0]["email"], "https://aquarium.org.ru/api/php/person/check-verify.php?c=" . $url);
 
 header("Location: /person/");

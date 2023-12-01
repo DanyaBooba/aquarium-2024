@@ -1,5 +1,5 @@
 <?php
-session_start();
+if (!isset($_SESSION)) session_start();
 include_once "../api/auth-errors.php";
 
 include_once "../api/rb-mysql.php";
@@ -8,7 +8,7 @@ include_once "../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$user = R::getAll(SqlRequestFind($_SESSION["login"]));
+$user = @R::getAll(SqlRequestFind($_SESSION["login"]));
 
 if (count($user) <= 0) {
     header("Location: /");
@@ -72,9 +72,9 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
 
 <?php include_once "../app/php/head.php"; ?>
 
-<?php $error_data = SettingsErrorData($_GET["e"]) ?>
-<?php $error_info = SettingsErrorInfo($_GET["e"]) ?>
-<?php $error_pass = SettingsErrorPass($_GET["e"]) ?>
+<?php $error_data = @SettingsErrorData($_GET["e"]) ?>
+<?php $error_info = @SettingsErrorInfo($_GET["e"]) ?>
+<?php $error_pass = @SettingsErrorPass($_GET["e"]) ?>
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Настройки аккаунта | Аквариум</title>

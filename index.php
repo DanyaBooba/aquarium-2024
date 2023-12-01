@@ -1,26 +1,26 @@
 <?php
-session_start();
+if (!isset($_SESSION)) session_start();
 include_once "api/rb-mysql.php";
 include_once "api/basic-methods.php";
 include_once "api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$find = R::getAll(SqlRequestFind($_SESSION["login"]));
+$find = @R::getAll(SqlRequestFind($_SESSION["login"]));
 
 if (count($find) > 0) {
-    header("Location: /person/");
-    die();
-}
+    if ($find[0]["isblock"] == 1) {
+        header("Location: /block/");
+        die();
+    }
 
-if ($find[0]["isblock"] == 1) {
-    header("Location: /block/");
+    header("Location: /person/");
     die();
 }
 
 $yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
     'client_id' => TokenYandex()["client_id"],
-    'redirect_uri' => 'https://social.creagoo.ru/api/php/authyandex-gettoken.php',
+    'redirect_uri' => 'https://aquarium.org.ru/api/php/authyandex-gettoken.php',
     'response_type' => 'code'
 ]));
 
@@ -70,7 +70,7 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                     <h3 class="h4">Войти</h3>
                     <form class="needs-validation" action="/api/php/login.php" method="post" novalidate>
                         <div class="input-group-sm">
-                            <input class="form-control" type="email" autocomplete="email" id="email" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
+                            <input class="form-control" type="email" autocomplete="email" id="email" name="email" placeholder="Почта" aria-label="Почта" required>
                             <div class="invalid-feedback">
                                 Пожалуйста, введите почту.
                             </div>
@@ -94,7 +94,7 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                             </div>
                             <div class="col">
                                 <a href="<?php echo $googleurl ?>" aria-label="Регистрация через Google">
-                                    <img src="/app/img/content/social-logos/google.jpg" width="42" alt="Логотип Google">
+                                    <img src="/app/img/content/social-logos/google.png" width="42" alt="Логотип Google">
                                 </a>
                             </div>
                             <!-- <div class="col">

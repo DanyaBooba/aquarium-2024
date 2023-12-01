@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+if (!isset($_SESSION)) session_start();
 
 include_once "../basic-methods.php";
 include_once "../rb-mysql.php";
@@ -62,6 +62,6 @@ if (count($findrestore) <= 0) {
 ## Mail
 ##
 
-EmailRestorePassword($email_restore, "https://social.creagoo.ru/login/restore/enter/?c=" . $url);
+EmailRestorePassword($email_restore, "https://aquarium.org.ru/login/restore/enter/?c=" . $url);
 
 header("Location: /login/restore/?a=1");

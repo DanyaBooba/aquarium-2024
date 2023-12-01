@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+if (!isset($_SESSION)) session_start();
 
 $user = [
     "current" => $_POST["current_password"],

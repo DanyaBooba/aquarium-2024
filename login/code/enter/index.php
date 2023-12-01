@@ -8,7 +8,7 @@ include_once "../../../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$find = R::getAll(SqlRequestFind($_SESSION["login"]));
+$find = @R::getAll(SqlRequestFind($_SESSION["login"]));
 
 if (count($find) > 0) {
     if ($find[0]["isblock"] == 1) {

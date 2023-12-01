@@ -42,12 +42,12 @@
         <h3 class="h5">1. Зарегистрировать ваше приложение.</h3>
         <p>
             Вам необходимо зарегистрировать свое приложение. Для этого перейдите по ссылке:
-            <b><a href="//api.social.creagoo.ru/new-user/" class="link">api.social.creagoo.ru/new-user/</a></b>.
+            <b><a href="//api.aquarium.org.ru/new-user/" class="link">api.aquarium.org.ru/new-user/</a></b>.
             Укажите Ваши контактные данные, пройдите первую регистрацию.
         </p>
         <h3 class="h5">2. Настройка приложения для интеграции.</h3>
         <p>
-            В личном кабинете: <a href="//api.social.creagoo.ru/person/" class="link">api.social.creagoo.ru/person/</a>
+            В личном кабинете: <a href="//api.aquarium.org.ru/person/" class="link">api.aquarium.org.ru/person/</a>
             необходимо настроить Ваше приложение.
         </p>
         <p>

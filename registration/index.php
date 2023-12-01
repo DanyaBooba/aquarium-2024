@@ -1,5 +1,5 @@
 <?php
-session_start();
+if (!isset($_SESSION)) session_start();
 
 include_once "../api/auth-errors.php";
 
@@ -9,7 +9,7 @@ include_once "../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$find = R::getAll(SqlRequestFind($_SESSION["login"]));
+$find = @R::getAll(SqlRequestFind($_SESSION["login"]));
 
 if (count($find) > 0) {
 
@@ -24,7 +24,7 @@ if (count($find) > 0) {
 
 $yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
     'client_id' => TokenYandex()["client_id"],
-    'redirect_uri' => 'https://social.creagoo.ru/api/php/authyandex-gettoken.php',
+    'redirect_uri' => 'https://aquarium.org.ru/api/php/authyandex-gettoken.php',
     'response_type' => 'code'
 ]));
 
@@ -124,7 +124,7 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                     </div>
                     <div class="col">
                         <a href="<?php echo $googleurl ?>" aria-label="Регистрация через Google">
-                            <img src="/app/img/content/social-logos/google.jpg" width="42" alt="Логотип Google">
+                            <img src="/app/img/content/social-logos/google.png" width="42" alt="Логотип Google">
                         </a>
                     </div>
                     <!-- <div class="col">
