@@ -98,8 +98,8 @@ function ChangeBackgroundThemeDark() {
 
 		if (!theme) continue;
 
-		let src = savetheme[i].split(".");
-		theme.src = src[0] + "@dark." + src[1];
+		let src = savetheme[i].split(".jpg");
+		theme.src = src[0] + "@dark.jpg";
 	}
 }
 

@@ -714,7 +714,7 @@ function SqlRequestUpdateUnBlockUser($id)
     //
 }
 
-function SqlRequestInsertUnBlockUser($id, $totime)
+function SqlRequestInsertUnBlockUser($id)
 {
     return "DELETE FROM `block` WHERE iduser=$id";
 

@@ -14,6 +14,12 @@ if (count($user) <= 0) {
     header("Location: /");
     die();
 }
+
+if ($user[0]["isblock"] == 1) {
+    header("Location: /block/");
+    die();
+}
+
 $user = $user[0];
 
 $usenickname = $user["firstName"] != "" && $user["lastName"] != "";
@@ -209,7 +215,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                     Сохранить изменения
                                 </button>
                             </form>
-                            <!-- <hr>
+                            <hr>
                             <h2 id="notifications">Уведомления</h2>
                             <form class="needs-validation" action="/api/php/person/edit-notifications.php" method="post" novalidate>
                                 <div class="form-check">
@@ -227,7 +233,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                 <button class="btn btn-primary w-100" type="submit">
                                     Сохранить изменения
                                 </button>
-                            </form> -->
+                            </form>
                             <hr>
                             <h2 id="icon">Фотография</h2>
                             <form class="needs-validation person-settings-form-image" action="/api/php/person/edit-icon.php" method="post" novalidate>
@@ -408,11 +414,11 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                                         Сведения
                                     </a>
                                 </li>
-                                <!-- <li>
+                                <li>
                                     <a href="#notifications" class="link">
                                         Уведомления
                                     </a>
-                                </li> -->
+                                </li>
                                 <li>
                                     <a href="#icon" class="link">
                                         Фотография

@@ -20,6 +20,11 @@ if (count($user) <= 0) {
     die();
 }
 
+if ($user[0]["isblock"] == 1) {
+    header("Location: /block/");
+    die();
+}
+
 $user = $user[0];
 $logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".png";
 $bg = "BG" . $user["capid"] . ".png";

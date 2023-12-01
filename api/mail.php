@@ -36,7 +36,7 @@ function EmailLoginByCode($email, $code)
 
 function EmailAfterLogin($email)
 {
-    date_default_timezone_set('UTC');
+    date_default_timezone_set('Europe/Moscow');
     $date = date("d/m/Y H:i:s");
     $heads = getallheaders()["User-Agent"];
 
@@ -51,7 +51,7 @@ function EmailAfterLogin($email)
 
 function EmailUpdatePassword($email)
 {
-    date_default_timezone_set('UTC');
+    date_default_timezone_set('Europe/Moscow');
     $date = date("d/m/Y H:i:s");
     $heads = getallheaders()["User-Agent"];
 
@@ -90,7 +90,7 @@ function EmailRegGoogle($email, $password)
 
 function EmailDeleteAccount($email)
 {
-    $text = "Аккаунт с данной почтой был удален из социальной сети Аквариум.<br><br>
+    $text = "Ваш аккаунт был удален из социальной сети Аквариум.<br><br>
     Нам очень жаль прощаться с Вами.<br><br>
     Если Вы захотите вернуться, Вы сможете зарегистрировать ещё один аккаунт с этой почтой.<br><br>";
 

@@ -14,6 +14,12 @@ if (count($user) <= 0) {
     header("Location: /");
     die();
 }
+
+if ($user[0]["isblock"] == 1) {
+    header("Location: /block/");
+    die();
+}
+
 $user = $user[0];
 ?>
 

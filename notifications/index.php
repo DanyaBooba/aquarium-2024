@@ -15,6 +15,11 @@ if (count($find) <= 0) {
     die();
 }
 
+if ($find[0]["isblock"] == 1) {
+    header("Location: /block/");
+    die();
+}
+
 $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
 ?>
 

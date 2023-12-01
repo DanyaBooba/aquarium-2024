@@ -7,11 +7,19 @@ include_once "../api/basic-methods.php";
 include_once "../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
+
 $user = R::getAll(SqlRequestFind($_SESSION["login"]));
+
 if (count($user) <= 0) {
     header("Location: /");
     die();
 }
+
+if ($user[0]["isblock"] == 1) {
+    header("Location: /block/");
+    die();
+}
+
 $user = $user[0];
 
 $postinfo = [

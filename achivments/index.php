@@ -19,6 +19,11 @@ if (count($find) <= 0) {
     die();
 }
 
+if ($find[0]["isblock"] == 1) {
+    header("Location: /block/");
+    die();
+}
+
 $allachivs = R::getAll("SELECT * FROM `achivs`");
 
 ##

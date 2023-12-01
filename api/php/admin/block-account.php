@@ -28,7 +28,7 @@ if ($find[0]["usertype"] != "adm") {
     return;
 }
 
-if ($id == 0 || $id == 1) {
+if ($id == 0) {
     echo "Введите ID в запросе.<br><a href='/admin/'>Назад</a>";
     return;
 }

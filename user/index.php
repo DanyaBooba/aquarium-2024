@@ -18,6 +18,12 @@ if (count($find) <= 0) {
     header("Location: /");
     die();
 }
+
+if ($find[0]["isblock"] == 1) {
+    header("Location: /block/");
+    die();
+}
+
 $find = $find[0];
 
 ##

@@ -12,6 +12,24 @@ if (count($find) > 0) {
     header("Location: /person/");
     die();
 }
+
+if ($find[0]["isblock"] == 1) {
+    header("Location: /block/");
+    die();
+}
+
+$yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
+    'client_id' => TokenYandex()["client_id"],
+    'redirect_uri' => 'https://social.creagoo.ru/api/php/authyandex-gettoken.php',
+    'response_type' => 'code'
+]));
+
+$googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query([
+    'client_id'     => TokenGoogle()["client_id"],
+    'redirect_uri'  => TokenGoogle()["redirect_uri"],
+    'response_type' => 'code',
+    'scope'         => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
+]));
 ?>
 
 <?php include_once "app/php/head.php"; ?>
