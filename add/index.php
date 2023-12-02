@@ -25,7 +25,7 @@ $user = $user[0];
 
 <?php include_once "../app/php/head.php"; ?>
 
-<?php $error = AddPostError($_GET["e"]) ?>
+<?php $error = @AddPostError($_GET["e"]) ?>
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Добавить пост | Аквариум</title>

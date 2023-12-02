@@ -304,7 +304,7 @@
     <div class="about-up about-up-dontsee" id="about-up">
         <a href="#" aria-label="Перейти наверх">
             <svg>
-                <use xlink:href="/app/img/icons/bootstrap.svg#chevron-up"></use>
+                <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-up"></use>
             </svg>
         </a>
     </div>

@@ -1,4 +1,4 @@
-<header>
+<header class="sticky-top">
     <div class="container header">
         <a href="/" aria-label="Перейти на главный экран" class="header__logo">
             <svg class="svg-normal" viewBox="0 0 1403 270" xmlns="http://www.w3.org/2000/svg">

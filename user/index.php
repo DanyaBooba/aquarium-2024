@@ -191,7 +191,7 @@ if (count($user) <= 0) {
                                     <h3 class="modal-title fs-5" id="modalLabel">Подписчики</h3>
                                     <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
                                         <svg class="svg-normal" width="20" height="20">
-                                            <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#x-lg"></use>
                                         </svg>
                                     </button>
                                 </div>
@@ -222,7 +222,7 @@ if (count($user) <= 0) {
                                     <h3 class="modal-title fs-5" id="modalLabel">Подписан</h3>
                                     <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
                                         <svg class="svg-normal" width="20" height="20">
-                                            <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#x-lg"></use>
                                         </svg>
                                     </button>
                                 </div>
@@ -253,7 +253,7 @@ if (count($user) <= 0) {
                                     <h3 class="modal-title fs-5" id="modalLabel">Достижения</h3>
                                     <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
                                         <svg class="svg-normal" width="20" height="20">
-                                            <use xlink:href="/app/img/icons/bootstrap.svg#x-lg"></use>
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#x-lg"></use>
                                         </svg>
                                     </button>
                                 </div>

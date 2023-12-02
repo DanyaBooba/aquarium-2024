@@ -7,6 +7,9 @@
     margin-top: 20px;
     margin-bottom: 50px;
     padding: 0;
+
+    background: rgba(var(--bg-color-rgba-2), .8);
+    backdrop-filter: blur(20px);
 }
 
 .header-app {
@@ -19,6 +22,11 @@
 }
 
 /* SVG */
+
+.header .header__logo svg {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 .header__logo svg
 {

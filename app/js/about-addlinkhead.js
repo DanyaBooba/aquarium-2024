@@ -16,7 +16,7 @@ function AddLinkToHead() {
 	if (content === null) return;
 
 	var svg =
-		"<svg><use xlink:href='/app/img/icons/bootstrap.svg#link-45deg'></use></svg>";
+		"<svg><use xlink:href='/app/img/icons/bootstrap.min.svg#link-45deg'></use></svg>";
 
 	for (i = 0; i < content.length; i++) {
 		var tag = content[i].tagName;
