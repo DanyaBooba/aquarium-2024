@@ -10,12 +10,12 @@ include_once "../../token.php";
 ## Icon
 ##
 
-$icon = intval($_POST["icon"]);
-$sex = intval($_POST["ismale"]);
+$icon = intval(isset($_POST["icon"]) ? $_POST["icon"] : "");
+$sex = intval(isset($_POST["ismale"]) ? $_POST["ismale"] : "");
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$findsql = SqlRequestFind($_SESSION["login"]);
+$findsql = SqlRequestFind(isset($_SESSION["login"]) ? $_SESSION["login"] : "");
 
 $find = R::getAll($findsql);
 

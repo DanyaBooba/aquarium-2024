@@ -7,7 +7,7 @@ include_once "../rb-mysql.php";
 include_once "../token.php";
 include_once "../mail.php";
 
-$email = $_POST["email"];
+$email = isset($_POST["email"]) ? $_POST["email"] : "";
 
 ##
 ## Server

@@ -1,3 +1,3 @@
 <?php
 
-echo "Add post";
+header("Location: /person");

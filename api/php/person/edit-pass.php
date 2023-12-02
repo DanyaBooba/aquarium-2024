@@ -3,12 +3,12 @@
 if (!isset($_SESSION)) session_start();
 
 $user = [
-    "current" => $_POST["current_password"],
-    "new" => $_POST["new_password"],
-    "confirm" => $_POST["confirm_password"]
+    "current" => isset($_POST["current_password"]) ? $_POST["current_password"] : "",
+    "new" => isset($_POST["new_password"]) ? $_POST["new_password"] : "",
+    "confirm" => isset($_POST["confirm_password"]) ? $_POST["confirm_password"] : ""
 ];
 
-$login = $_SESSION["login"];
+$login = isset($_SESSION["login"]) ? $_SESSION["login"] : "";
 
 include_once "../../basic-methods.php";
 include_once "../../rb-mysql.php";

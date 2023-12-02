@@ -8,7 +8,7 @@ include_once "../../token.php";
 ## Check verify
 ##
 
-$url = $_GET["c"];
+$url = isset($_GET["c"]) ? $_GET["c"] : "";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 

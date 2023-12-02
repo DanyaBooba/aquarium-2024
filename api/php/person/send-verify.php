@@ -11,7 +11,7 @@ include_once "../../mail.php";
 ## User
 ##
 
-$login = $_SESSION["login"];
+$login = isset($_SESSION["login"]) ? $_SESSION["login"] : "";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 

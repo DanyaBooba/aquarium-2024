@@ -102,7 +102,11 @@ function SettingsErrorPass($data)
 
 function DeleteAccountError($data)
 {
-    if ($data == "") return "";
+    if ($data == "not_correct") return "Пожалуйста, подтвердите удаление.";
+
+    if ($data == "ano_email") return "Введите актуальную почту.";
+
+    if ($data == "ano_pass") return "Неверный пароль.";
 
     return null;
 }

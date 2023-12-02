@@ -10,8 +10,8 @@ include_once "../../token.php";
 ## Login
 ##
 
-$id = $_GET["id"];
-$login = $_SESSION["login"];
+$id = isset($_GET["id"]) ? $_GET["id"] : "";
+$login = isset($_SESSION["login"]) ? $_SESSION["login"] : "";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 

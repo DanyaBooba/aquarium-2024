@@ -8,10 +8,10 @@ include_once "../token.php";
 include_once "../mail.php";
 
 $user = [
-    "email" => $_POST["email"],
-    "password" => $_POST["password"],
-    "confirm_password" => $_POST["confirm_password"],
-    "confirm" => $_POST["confirm"]
+    "email" => isset($_POST["email"]) ? $_POST["email"] : "",
+    "password" => isset($_POST["password"]) ? $_POST["password"] : "",
+    "confirm_password" => isset($_POST["confirm_password"]) ? $_POST["confirm_password"] : "",
+    "confirm" => isset($_POST["confirm"]) ? $_POST["confirm"] : ""
 ];
 
 ##

@@ -11,7 +11,7 @@ include_once "../mail.php";
 ## Check data
 ##
 
-$email_restore = ClearStr($_POST["email_restore"]);
+$email_restore = ClearStr(isset($_POST["email_restore"]) ? $_POST["email_restore"] : "");
 
 $check = RestorePassword($email_restore);
 

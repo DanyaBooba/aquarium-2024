@@ -7,11 +7,11 @@ include_once "../rb-mysql.php";
 include_once "../token.php";
 
 $user = [
-    "password" => $_POST["password"],
-    "confirm_password" => $_POST["confirm_password"]
+    "password" => isset($_POST["password"]) ? $_POST["password"] : "",
+    "confirm_password" => isset($_POST["confirm_password"]) ? $_POST["confirm_password"] : ""
 ];
 
-$code = $_POST["code"];
+$code = isset($_POST["code"]) ? $_POST["code"] : "";
 
 ##
 ## Password

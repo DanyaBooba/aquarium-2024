@@ -9,7 +9,7 @@ include_once "../mail.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$sessaccsql = SqlRequestFind($_SESSION["login"]);
+$sessaccsql = SqlRequestFind(isset($_SESSION["login"]) ? $_SESSION["login"] : "");
 
 $sessacc = R::getAll($sessaccsql);
 

@@ -10,7 +10,7 @@ include_once "../../token.php";
 ## Bg
 ##
 
-$bg = intval($_POST["bg"]);
+$bg = intval(isset($_POST["bg"]) ? $_POST["bg"] : "");
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 

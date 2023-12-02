@@ -8,8 +8,8 @@ include_once "../token.php";
 include_once "../mail.php";
 
 $user = [
-    "email" => $_POST["email"],
-    "code" => $_POST["code"],
+    "email" => isset($_POST["email"]) ? $_POST["email"] : "",
+    "code" => isset($_POST["code"]) ? $_POST["code"] : "",
 ];
 
 ##

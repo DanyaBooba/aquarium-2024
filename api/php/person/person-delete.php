@@ -3,9 +3,9 @@
 if (!isset($_SESSION)) session_start();
 
 $user = [
-    "email" => $_POST["email"],
-    "password" => $_POST["password"],
-    "string" => $_POST["string"],
+    "email" => isset($_POST["email"]) ? $_POST["email"] : "",
+    "password" => isset($_POST["password"]) ? $_POST["password"] : "",
+    "string" => isset($_POST["string"]) ? $_POST["string"] : "",
 ];
 
 include_once "../../basic-methods.php";
@@ -19,7 +19,9 @@ include_once "../../mail.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$findsql = SqlRequestFind($_SESSION["login"]);
+$login = isset($_SESSION["login"]) ? $_SESSION["login"] : "";
+
+$findsql = SqlRequestFind($login);
 
 $find = R::getAll($findsql);
 
@@ -33,18 +35,18 @@ $find = $find[0];
 ## Check data
 ##
 
-if ($user["string"] != "Удаляю аккаунт с почтой " . $_SESSION["login"]) {
-    echo "STRING"; // !
+if ($user["string"] != "Удаляю аккаунт с почтой " . $login) {
+    header("Location: /delete/?e=not_correct");
     return;
 }
 
-if ($user["email"] != $_SESSION["login"]) {
-    echo "EMAIL"; // !
+if ($user["email"] != $login) {
+    header("Location: /delete/?e=ano_email");
     return;
 }
 
 if (password_verify($find["saltpass"] . $user["password"] . $find["saltpass"], $find["passhash"]) != 1) {
-    echo "PASS"; // !
+    header("Location: /delete/?e=ano_pass");
     return;
 }
 
@@ -52,11 +54,11 @@ if (password_verify($find["saltpass"] . $user["password"] . $find["saltpass"], $
 ## Delete account
 ##
 
-$savedeletesql = SqlRequestSaveDeleteAccount($_SESSION["login"], $find["datereg"]);
+$savedeletesql = SqlRequestSaveDeleteAccount($login, $find["datereg"]);
 
 R::getAll($savedeletesql);
 
-$deletesql = SqlRequestDeleteAccount($_SESSION["login"]);
+$deletesql = SqlRequestDeleteAccount($login);
 
 R::getAll($deletesql);
 

@@ -11,9 +11,9 @@ include_once "../../token.php";
 ##
 
 $user = [
-    "display" => $_POST["display_nickname"],
-    "disc" => ClearDisc($_POST["disc"]),
-    "sex" => $_POST["sex"],
+    "display" => isset($_POST["display_nickname"]) ? $_POST["display_nickname"] : "",
+    "disc" => ClearDisc(isset($_POST["disc"]) ? $_POST["disc"] : ""),
+    "sex" => isset($_POST["sex"]) ? $_POST["sex"] : "",
 ];
 
 if (mb_strlen($user["disc"]) > 254) {
@@ -27,7 +27,7 @@ if (mb_strlen($user["disc"]) > 254) {
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$findsql = SqlRequestFind($_SESSION["login"]);
+$findsql = SqlRequestFind(isset($_SESSION["login"]) ? $_SESSION["login"] : "");
 
 $find = R::getAll($findsql);
 

@@ -14,12 +14,12 @@ $id = intval($_GET["id"]);
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$findsql = SqlRequestFind($_SESSION["login"]);
+$findsql = SqlRequestFind(isset($_SESSION["login"]) ? $_SESSION["login"] : "");
 
 $find = R::getAll($findsql);
 
 if (count($find) <= 0) {
-    header("Location: /");
+    header("Location: /404/");
     return;
 }
 
@@ -59,14 +59,8 @@ $blockaccsql = SqlRequestUpdateBlockUser($id);
 
 R::getAll($blockaccsql);
 
-// var_dump($blockaccsql);
-
-// echo "<br>";
-
 $blocksql = SqlRequestInsertBlockUser($id, time() - 100);
 
 R::getAll($blocksql);
-
-// var_dump($blocksql);
 
 echo "Успешно заблокирован навсегда.<br><a href='/admin/'>Назад</a>";

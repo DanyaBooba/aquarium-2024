@@ -173,7 +173,7 @@ $form = [
                         <ul class="list-group list-group-flush">
                             <?php foreach ($userssubatme as $user) : ?>
                                 <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
-                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.jpg" alt="<?php echo $user["nickname"] ?>">
+                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
                                     <?php if ($user["displaynick"] == 1) : ?>
                                         <?php echo $user["nickname"] ?>
                                     <?php else : ?>
@@ -204,7 +204,7 @@ $form = [
                         <ul class="list-group list-group-flush">
                             <?php foreach ($userssubme as $user) : ?>
                                 <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
-                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.jpg" alt="<?php echo $user["nickname"] ?>">
+                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
                                     <?php if ($user["displaynick"] == 1) : ?>
                                         <?php echo $user["nickname"] ?>
                                     <?php else : ?>

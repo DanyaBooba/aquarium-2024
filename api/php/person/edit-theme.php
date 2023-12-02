@@ -10,11 +10,11 @@ include_once "../../token.php";
 ## Theme
 ##
 
-$theme = intval($_POST["theme"]);
+$theme = intval(isset($_POST["theme"]) ? $_POST["theme"] : "");
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-$findsql = SqlRequestFind($_SESSION["login"]);
+$findsql = SqlRequestFind(isset($_SESSION["login"]) ? $_SESSION["login"] : "");
 
 $find = R::getAll($findsql);
 
