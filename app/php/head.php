@@ -27,7 +27,7 @@
     <link rel="manifest" href="/manifest.json" />
 
     <link rel="icon" href="/app/img/logo/favicon.ico" type="image/x-icon" />
-    <!-- <meta name="theme-color" content="#000" /> -->
+    <meta name="view-transition" content="same-origin" />
 
     <script>
         if (matchMedia("(prefers-color-scheme: dark)").media === "not all") {

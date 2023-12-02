@@ -63,28 +63,52 @@ if (count($post) <= 0) {
                     </div>
                     <div class="col-md-5 person-post-content-post">
                         <div class="person-post-header">
-                            <span>
-                                Даниил Дыбка
-                            </span>
+                            <div class="person-post-header-content">
+                                <a href="/user/?id=1" class="link">
+                                    Даниил Дыбка
+                                </a>
+                            </div>
                         </div>
                         <div class="person-post-content">
-                            <div class="person-post-header">
-                                <img src="/app/img/users/icons/<?php echo $logo ?>" alt="Даниил Дыбка">
-                                <span class="d-flex flex-column">
-                                    <span>
-                                        Даниил Дыбка
+                            <div class="person-post-content-user">
+                                <a href="/user/?id=1">
+                                    <img src="/app/img/users/icons/<?php echo $logo ?>" alt="Даниил Дыбка">
+                                </a>
+                                <div class="post-content-user-content">
+                                    <span title="Даниил Дыбка" aria-label="Даниил Дыбка">
+                                        <a href="/user/?id=1" class="link">
+                                            Даниил Дыбка
+                                        </a>
                                     </span>
-                                    <span>
+                                    <p>
                                         Содержимое записи с моих слов...
-                                    </span>
-                                </span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="person-post-bottom">
-                            like
-                            comment
-                            request
-                            add to special
+                            <div class="person-post-bottom-content">
+                                <button class="btn">
+                                    <svg height="28" width="28">
+                                        <use xlink:href="/app/img/icons/bootstrap.svg#heart"></use>
+                                    </svg>
+                                </button>
+                                <!-- <button class="btn">
+                                <svg height="28" width="28" class="svg-normal">
+                                    <use xlink:href="/app/img/icons/bootstrap.svg#chat"></use>
+                                </svg>
+                            </button> -->
+                                <button class="btn">
+                                    <svg height="28" width="28">
+                                        <use xlink:href="/app/img/icons/bootstrap.svg#send"></use>
+                                    </svg>
+                                </button>
+                                <!-- <button class="btn">
+                                <svg height="28" width="28" class="svg-normal">
+                                    <use xlink:href="/app/img/icons/bootstrap.svg#bookmark"></use>
+                                </svg>
+                            </button> -->
+                            </div>
                         </div>
                     </div>
                 </div>

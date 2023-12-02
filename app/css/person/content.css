@@ -808,6 +808,10 @@ a.person-post-back svg {
     background-position: center;
 }
 
+.person-post-content {
+    padding: 20px !important;
+}
+
 .person-post-content div {
     margin: 0;
     padding: 0;
@@ -815,23 +819,73 @@ a.person-post-back svg {
 
 .person-post-content .person-post-content-post {
     border: 1px solid var(--text-color-4);
-    /* border-left: 1px solid var(--text-color-4); */
-    padding: 20px;
 }
 
 .person-post-header {
     display: flex;
     align-items: center;
-    margin-bottom: 10px !important;
+    border-bottom: 1px solid var(--text-color-4);
 }
 
-.person-post-header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.person-post-header-content {
+    padding: 10px 20px !important;
 }
 
 .person-post-header span {
     margin-left: 10px;
+    font-family: NeueMachina;
+}
+
+.person-post-bottom
+{
+    display: flex;
+    padding-top: 10px;
+    border-top: 1px solid var(--text-color-4);
+}
+
+.person-post-bottom button {
+    border: 0 !important;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    background: transparent;
+}
+
+.person-post-bottom button:active,
+.person-post-bottom button:focus,
+.person-post-bottom button:hover {
+    background: transparent;
+}
+
+.person-post-bottom button svg {
+    fill: #123123;
+}
+
+.person-post-bottom-content {
+    padding: 20px !important;
+}
+
+.person-post-content-user {
+    display: flex;
+}
+
+.person-post-content-user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.person-post-content-user .post-content-user-content
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.person-post-content-user .post-content-user-content p {
+    margin-bottom: 4px;
+}
+
+.person-post-content-user .post-content-user-content span {
     font-family: NeueMachina;
 }
