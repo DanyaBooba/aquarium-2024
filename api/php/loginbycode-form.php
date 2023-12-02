@@ -55,6 +55,8 @@ R::getAll($deletesql);
 
 $_SESSION["login"] = $user["email"];
 
-EmailAfterLogin($user["email"]);
+if ($finduser[0]["notifauth"] == 1) {
+    EmailAfterLogin($user["email"]);
+}
 
 header("Location: /person/");

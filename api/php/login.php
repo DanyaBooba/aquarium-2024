@@ -49,6 +49,8 @@ if (password_verify($find[0]["saltpass"] . $user["password"] . $find[0]["saltpas
 
 $_SESSION["login"] = $user["email"];
 
-EmailAfterLogin($user["email"]);
+if ($find[0]["notifauth"] == 1) {
+    EmailAfterLogin($user["email"]);
+}
 
 header("Location: /person/");

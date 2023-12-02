@@ -5,6 +5,7 @@ if (!isset($_SESSION)) session_start();
 include_once "../basic-methods.php";
 include_once "../rb-mysql.php";
 include_once "../token.php";
+include_once "../mail.php";
 
 $user = [
     "password" => isset($_POST["password"]) ? $_POST["password"] : "",
@@ -61,6 +62,14 @@ if (count($finduser) <= 0) {
 $updatepasssql = SqlRequestUpdatePassword($finduser[0]["email"], $password, RandomString(16));
 
 R::getAll($updatepasssql);
+
+##
+## Mail
+##
+
+if ($finduser[0]["notifpass"] == 1) {
+    EmailUpdatePassword($finduser[0]["email"]);
+}
 
 ##
 ## Clear reset

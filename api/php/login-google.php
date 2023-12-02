@@ -54,14 +54,16 @@ if (!empty($_GET['code'])) {
         ## Reg
         ##
 
-        // var_dump($info);
-
         $check = SqlRequestFind($info["email"]);
 
         $checkrow = R::getAll($check);
 
         if (count($checkrow) > 0) {
             $_SESSION["login"] = $info["email"];
+
+            if ($checkrow[0]["notifauth"] == 1) {
+                EmailAfterLogin($user["email"]);
+            }
 
             header("Location: /person/");
             return;

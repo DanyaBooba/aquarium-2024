@@ -23,7 +23,10 @@ form textarea {
     border: 1px solid var(--bg-input-border) !important;
 }
 
-form input.form-check-input,
+form input.form-check-input {
+    background-color: var(--bg-input);
+}
+
 form textarea
 {
     background: var(--bg-input);

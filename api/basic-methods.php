@@ -765,3 +765,14 @@ function FormOfWord($num, $form1, $form2, $form3)
     // Форма слова
     //
 }
+
+function SqlRequestUpdateNotifications($email, $notif)
+{
+    $auth = $notif["auth"];
+    $pass = $notif["password"];
+    return "UPDATE `users` SET `notifauth` = $auth, `notifpass` = $pass  WHERE email like '$email'";
+
+    //
+    // Sql запрос: обновляем уведомления
+    //
+}

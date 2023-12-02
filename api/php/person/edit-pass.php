@@ -67,6 +67,12 @@ $newpasssql = SqlRequestNewPass($login, password_hash($salt . $password . $salt,
 
 R::getAll($newpasssql);
 
-EmailUpdatePassword($login);
+##
+## Mail
+##
+
+if ($find[0]["notifpass"] == 1) {
+    EmailUpdatePassword($login);
+}
 
 header("Location: /settings/");

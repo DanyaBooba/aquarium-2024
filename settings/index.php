@@ -67,6 +67,12 @@ $formtheme = [
     $user["themeid"] == 0 ? "checked" : "",
 ];
 
+$formnotif = [
+    null,
+    $user["notifauth"] == 1 ? "checked" : "",
+    $user["notifpass"] == 1 ? "checked" : "",
+];
+
 $formmale = $sex == 1 ? "MAN" : "WOMAN";
 ?>
 
@@ -218,33 +224,20 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                             <hr>
                             <h2 id="notifications">Уведомления</h2>
                             <form class="needs-validation" action="/api/php/person/edit-notifications.php" method="post" novalidate>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="1" name="display_nickname" id="radioinfo1" <?php echo $formnick ?>>
-                                    <label class="form-check-label" for="radioinfo1">
-                                        Никнейм
-                                    </label>
-                                </div>
-                                <div class="form-check" style="margin-bottom: 8px">
-                                    <input class="form-check-input" type="radio" value="0" name="display_nickname" id="radioinfo2" <?php echo $usedisabled ?> <?php echo $formname ?>>
-                                    <label class="form-check-label" for="radioinfo2" style="margin-bottom: 4px">
-                                        Имя и фамилию
+                                <p style="margin-bottom: 4px">
+                                    Уведомлять о действиях:
+                                </p>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="notif1" name="notifauth" value="1" <?php echo $formnotif[1] ?>>
+                                    <label class="form-check-label" for="notif1">
+                                        Авторизация в аккаунт
                                     </label>
                                 </div>
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
-                                </div>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
-                                </div>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
-                                    <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
-                                </div>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
-                                    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+                                    <input class="form-check-input" type="checkbox" role="switch" id="notif2" name="notifpass" value="1" <?php echo $formnotif[2] ?>>
+                                    <label class="form-check-label" for="notif2">
+                                        Смена пароля
+                                    </label>
                                 </div>
                                 <button class="btn btn-primary w-100" type="submit">
                                     Сохранить изменения
