@@ -808,6 +808,18 @@ a.person-post-back svg {
     background-position: center;
 }
 
+@media(min-width: 768px) {
+    .person-post-content .person-post-content-img {
+        height: 470px;
+    }
+}
+
+@media(max-width: 767px) {
+    .person-post-content .person-post-content-img {
+        height: 300px;
+    }
+}
+
 .person-post-content {
     padding: 20px !important;
 }
@@ -858,7 +870,11 @@ a.person-post-back svg {
 }
 
 .person-post-bottom button svg {
-    fill: #123123;
+    fill: var(--post-icon);
+}
+
+.person-post-bottom button:hover svg {
+    fill: var(--post-icon-hover);
 }
 
 .person-post-bottom-content {

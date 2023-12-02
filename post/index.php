@@ -59,8 +59,7 @@ if (count($post) <= 0) {
                 </script>
             <?php else : ?>
                 <div class="row row-cols-1 g-2 person-post-content">
-                    <div class="col-md-6 person-post-content-img" style="background-image: url('/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg')">
-                    </div>
+                    <div class="col-md-6 person-post-content-img" style="background-image: url('/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg')"></div>
                     <div class="col-md-5 person-post-content-post">
                         <div class="person-post-header">
                             <div class="person-post-header-content">
@@ -93,21 +92,11 @@ if (count($post) <= 0) {
                                         <use xlink:href="/app/img/icons/bootstrap.svg#heart"></use>
                                     </svg>
                                 </button>
-                                <!-- <button class="btn">
-                                <svg height="28" width="28" class="svg-normal">
-                                    <use xlink:href="/app/img/icons/bootstrap.svg#chat"></use>
-                                </svg>
-                            </button> -->
                                 <button class="btn">
                                     <svg height="28" width="28">
                                         <use xlink:href="/app/img/icons/bootstrap.svg#send"></use>
                                     </svg>
                                 </button>
-                                <!-- <button class="btn">
-                                <svg height="28" width="28" class="svg-normal">
-                                    <use xlink:href="/app/img/icons/bootstrap.svg#bookmark"></use>
-                                </svg>
-                            </button> -->
                             </div>
                         </div>
                     </div>

@@ -79,4 +79,9 @@
     /* Left bar */
 
     --left-bar-icon: #34495e;
+
+    /* Post */
+
+    --post-icon: #7f7f7f;
+    --post-icon-hover: #000;
 }
