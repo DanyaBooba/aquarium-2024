@@ -64,7 +64,7 @@ $btnprev = $page == 1 ? "disabled" : "";
             <div class="person-form">
                 <form action="?" method="get">
                     <div class="input-group">
-                        <input type="text" name="s" value="<?php echo $search ?>" class="form-control" aria-label="Например, имя пользователя @dybka" placeholder="Например, имя пользователя @dybka">
+                        <input type="text" name="s" value="<?php echo $search ?>" class="form-control" aria-label="Например, имя пользователя @dybka" placeholder="Найти, например имя пользователя @dybka">
                     </div>
                 </form>
             </div>

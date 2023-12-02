@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+<body>
+    Data
+
+    /app/img/users/bg/BG1.jpg
+
+    <a data-fancybox href="/app/img/users/bg/BG1.jpg">
+        <img src="/app/img/users/bg/BG1.jpg" />
+    </a>
+
+    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG1.jpg">
+        <img src="/app/img/users/bg/BG1.jpg" width="200" height="150" alt="" />
+    </a>
+
+    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG1.jpg">
+        <img src="/app/img/users/bg/BG1.jpg" width="200" height="150" alt="" />
+    </a>
+
+    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG1.jpg">
+        <img src="/app/img/users/bg/BG1.jpg" width="200" height="150" alt="" />
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        Toolbar: {
+              display: {
+                  left: [
+                      "infobar",
+                  ],
+                  middle: [],
+                  right: [
+                      "iterateZoom",
+                      "download",
+                      "close",
+                  ],
+              }
+          },
+          Images: {
+              initialSize: "fit",
+          },
+      });
+    </script>
+</body>
+</html>

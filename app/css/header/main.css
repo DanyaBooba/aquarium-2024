@@ -10,6 +10,8 @@
 
     background: rgba(var(--bg-color-rgba-2), .8);
     backdrop-filter: blur(20px);
+
+    /* view-transition-name: main-header; */
 }
 
 .header-app {
@@ -19,6 +21,9 @@
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 0;
+
+    /* view-transition-name: main-header; */
+    /* width: fit-content; */
 }
 
 /* SVG */

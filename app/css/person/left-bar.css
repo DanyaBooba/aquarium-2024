@@ -4,6 +4,8 @@ ul.person-leftbar {
     list-style-type: none;
     padding: 0;
     margin: 0;
+
+    /* view-transition-name: main-leftbar; */
 }
 
 ul.person-leftbar li {

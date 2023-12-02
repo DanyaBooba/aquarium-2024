@@ -46,6 +46,8 @@
     <link rel="stylesheet" href="/app/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/app/css/index.css" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m, e, t, r, i, k, a) {

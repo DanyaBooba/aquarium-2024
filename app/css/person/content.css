@@ -806,17 +806,38 @@ a.person-post-back svg {
     max-width: 100%;
     background-size: cover;
     background-position: center;
+
+    display: flex;
 }
 
-@media(min-width: 768px) {
+.person-post-content .person-post-content-img button {
+    margin-left: auto !important;
+    margin-top: auto !important;
+
+    margin: 0;
+    padding: 10px;
+    background: transparent;
+    border: 0 !important;
+}
+
+@media(min-width: 993px) {
     .person-post-content .person-post-content-img {
         height: 470px;
     }
 }
 
-@media(max-width: 767px) {
+@media(max-width: 992px) {
     .person-post-content .person-post-content-img {
         height: 300px;
+    }
+
+    .person-post-content {
+        flex-direction: column;
+    }
+
+    .person-post-content-img,
+    .person-post-content-post {
+        width: 100%;
     }
 }
 
