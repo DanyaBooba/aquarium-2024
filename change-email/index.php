@@ -47,7 +47,7 @@ $user = $user[0];
             <h1>Смена почты</h1>
             <div class="container px-0">
                 <div class="person-setting row row-cols-1 g-2">
-                    <div class="col-md-8">
+                    <div class="person-rightbar-content">
                         <div class="person-setting-bg person-setting-content">
                             <div class="alert alert-background d-flex align-items-center" role="alert">
                                 <svg height="32" width="32" class="me-3 svg-normal col-md-1 see-at-full-pc">
@@ -96,7 +96,7 @@ $user = $user[0];
                             </form>
                         </div>
                     </div>
-                    <div class="col-md-4 see-at-pc"></div>
+                    <div class="person-rightbar-empty"></div>
                 </div>
             </div>
         </div>
