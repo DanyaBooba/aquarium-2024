@@ -1,9 +1,21 @@
 <header>
     <div class="container header-app">
-        <div class="col-md-3 header-app-icons see-at-mobile me-auto">
-            <a href="/achivments/" class="link-empty">
+        <div class="col-md-3 header-app-icons me-auto">
+            <a href="/achivments/" class="link-empty see-at-mobile">
                 <svg class="svg-normal">
                     <use xlink:href="/app/img/icons/bootstrap.min.svg#trophy"></use>
+                </svg>
+            </a>
+            <a href="//news.dybka.ru" target="_blank" class="link-empty see-at-pc">
+                <svg width="512" height="512" viewBox="0 0 512 512" class="svg-normal" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_7)">
+                        <mask id="mask0_1_7" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+                            <circle cx="256" cy="256" r="256" />
+                        </mask>
+                        <g mask="url(#mask0_1_7)">
+                            <path d="M1509 19L9 -99L-165 576H419.589M397.432 382.913C383.595 400.051 364.226 413.319 339.323 422.717C314.421 432.115 285.247 436.814 251.801 436.814C217.777 436.814 187.846 431.9 162.008 422.072C136.17 412.244 115.816 398.442 100.946 380.665C86.1672 363.245 77.6583 341.389 76.7754 318.581H155.176C156.95 330.02 162.293 340.608 170.446 348.84C178.805 357.44 190.049 364.111 204.181 368.853C220.046 373.798 236.605 376.162 253.223 375.855C280.304 375.855 301.65 371.991 317.258 364.264C332.867 356.537 340.696 345.695 340.745 331.739C340.93 326.72 339.783 321.742 337.419 317.308C335.055 312.875 331.559 309.143 327.285 306.493C318.323 300.571 301.705 296.271 277.43 293.593L208.594 285.872C164.279 281.032 132.145 270.644 112.19 254.711C92.2364 238.777 82.2901 216.565 82.3517 188.075C82.3517 165.63 88.9559 146.521 102.164 130.746C115.373 114.972 133.985 102.92 158.001 94.591C182.005 86.2616 210.268 82.0908 242.791 82.0785C274.377 82.0785 302.48 86.7039 327.1 95.9547C351.719 105.205 371.316 118.105 385.891 134.653C400.272 150.676 408.649 171.174 409.6 192.664H331.162C329.674 182.708 324.951 173.514 317.72 166.496C310.334 159.125 300.08 153.364 286.958 149.211C272.012 144.861 256.492 142.792 240.926 143.075C216.306 143.075 196.709 146.711 182.134 153.984C167.56 161.257 160.266 171.57 160.254 184.924C160.073 189.705 161.175 194.447 163.448 198.659C165.721 202.871 169.08 206.4 173.179 208.88C181.796 214.495 197.066 218.666 218.99 221.393L290.54 230.036C322.151 233.377 347.3 238.758 365.986 246.178C384.672 253.599 398.041 263.531 406.091 275.976C414.142 288.421 418.167 304.189 418.167 323.281C418.462 344.967 411.124 366.07 397.432 382.913Z" />
+                        </g>
+                    </g>
                 </svg>
             </a>
         </div>
@@ -21,10 +33,15 @@
                 </svg>
             </a>
         </div>
-        <div class="col-md-3 header-app-icons see-at-mobile ms-auto">
-            <a href="/notifications/" class="link-empty">
+        <div class="col-md-3 header-app-icons ms-auto">
+            <a href="/notifications/" class="link-empty see-at-mobile">
                 <svg class="svg-normal">
                     <use xlink:href="/app/img/icons/bootstrap.min.svg#bell"></use>
+                </svg>
+            </a>
+            <a href="//aquariumsocial.t.me" target="_blank" class="link-empty ms-auto see-at-pc">
+                <svg class="svg-normal">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#telegram"></use>
                 </svg>
             </a>
         </div>

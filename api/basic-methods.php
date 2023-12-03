@@ -517,7 +517,7 @@ function SqlRequestSaveDeleteAccount($email, $timecreate)
 
 function SqlRequestFindNotifications($email)
 {
-    return "SELECT * FROM `notifications` WHERE foremail like '$email'";
+    return "SELECT * FROM `notifications` WHERE foremail like '$email' ORDER BY id DESC";
 
     //
     // Sql запрос: поиск уведомлений

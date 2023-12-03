@@ -13,7 +13,7 @@ function ButtonLeftBar(i) {
 
 	if (i == "settings") window.open("/settings/", "_self");
 
-	if (i == "add-post") window.open("/add/", "_self");
+	if (i == "add") window.open("/add/", "_self");
 }
 
 function DeleteAccount() {

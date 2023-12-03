@@ -595,7 +595,6 @@ ul.person-content-achivs li img {
     margin-right: 20px;
 
     border: 5px solid #fff;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
 }
 
 @media(max-width: 371px) {

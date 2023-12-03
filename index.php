@@ -85,7 +85,7 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                             Войти
                         </button>
                     </form>
-                    <div class="container auth-registration-social">
+                    <!-- <div class="container auth-registration-social">
                         <div class="row row-cols-2 row-cols-lg-2 g-2">
                             <div class="col">
                                 <a href="<?php echo $yandexurl ?>" aria-label="Регистрация через Яндекс">
@@ -97,18 +97,8 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                                     <img src="/app/img/content/social-logos/google.png" width="42" alt="Логотип Google">
                                 </a>
                             </div>
-                            <!-- <div class="col">
-                        <a href="#vk" aria-label="Регистрация через Вконтакте">
-                            <img src="/app/img/content/social-logos/vk.jpg" width="42" alt="Логотип Вконтакте">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="#github" aria-label="Регистрация через GitHub">
-                            <img src="/app/img/content/social-logos/github.jpg" width="40" alt="Логотип GitHub">
-                        </a>
-                    </div> -->
                         </div>
-                    </div>
+                    </div> -->
                     <div class="page-login--new-page">
                         <a href="/login/" class="link">
                             Открыть отдельно

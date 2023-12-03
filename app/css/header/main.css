@@ -58,7 +58,8 @@
         width: 100px;
     }
 
-    .header-app .header-app-icons svg {
+    .header-app .header-app-icons svg,
+    .header .header-app-icons svg {
         width: 22px !important;
         height: 22px !important;
     }
@@ -71,6 +72,21 @@
 /* App */
 
 .header-app .header-app-icons svg {
+    width: 26px;
+    height: 26px;
+}
+
+.header-app .header-app-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .header-app-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .header-app-icons svg {
     width: 26px;
     height: 26px;
 }
