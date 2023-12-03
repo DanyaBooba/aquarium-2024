@@ -117,3 +117,10 @@ function AddPostError($data)
 
     return null;
 }
+
+function ChangeEmailError($data)
+{
+    if ($data == "") return "";
+
+    return null;
+}

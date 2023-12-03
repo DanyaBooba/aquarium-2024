@@ -19,3 +19,7 @@ function ButtonLeftBar(i) {
 function DeleteAccount() {
 	window.open("/delete/", "_self");
 }
+
+function ChangeEmail() {
+	window.open("/change-email/", "_self");
+}

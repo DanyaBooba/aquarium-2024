@@ -47,7 +47,7 @@ $user = $user[0];
             <h1>Добавить пост</h1>
             <div class="container px-0">
                 <div class="person-setting row row-cols-1 g-2">
-                    <div class="col-md-8">
+                    <div class="person-rightbar-content">
                         <div class="person-setting-bg person-setting-content">
                             <form class="needs-validation" action="/api/php/person/add-post.php" method="post" novalidate>
                                 <?php if (empty($error) == false) : ?>
@@ -67,7 +67,7 @@ $user = $user[0];
                             </form>
                         </div>
                     </div>
-                    <div class="col-md-4 see-at-pc"></div>
+                    <div class="person-rightbar-empty"></div>
                 </div>
             </div>
         </div>

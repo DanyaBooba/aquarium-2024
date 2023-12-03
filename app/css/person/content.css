@@ -212,6 +212,17 @@
     .person-profile .person-profile-content .person-profile-content-buttons button {
         width: 100%;
     }
+
+    .person-rightbar-content {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+    }
+
+    .person-rightbar-empty {
+        flex: 0 0 auto !important;
+        width: 0% !important;
+        display: none !important;
+    }
 }
 
 @media(min-width: 992px) {
@@ -491,13 +502,19 @@ form.person-settings-form-image .row .col input:checked+label img {
 }
 
 form.person-settings-form-image .row .col input:focus+label img {
-    outline: 5px solid var(--button-primary);
+    outline: 3px solid var(--button-primary);
 }
 
 form.person-settings-form-image .row .col input+label {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media(max-width: 991px) {
+    form.person-settings-form-image button[type="submit"] {
+        width: 100%;
+    }
 }
 
 /* Notifications */
@@ -579,6 +596,8 @@ ul.person-content-achivs li
 {
     display: flex;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 ul.person-content-achivs li span p {
@@ -605,6 +624,7 @@ ul.person-content-achivs li img {
 
     ul.person-content-achivs li img {
         margin-bottom: 10px;
+        margin-right: 0;
     }
 
     ul.person-content-achivs li span p.person-content-achivs-name {
@@ -924,4 +944,17 @@ a.person-post-back svg {
 
 .person-post-content-user .post-content-user-content span {
     font-family: NeueMachina;
+}
+
+/* Right bar */
+
+.person-rightbar-content
+{
+    flex: 0 0 auto;
+    width: 66.66666667%;
+}
+
+.person-rightbar-empty {
+    flex: 0 0 auto;
+    width: 33.33333333%;
 }
