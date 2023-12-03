@@ -112,6 +112,27 @@ if (count($post) <= 0) {
     </main>
 
     <?php include_once "../app/php/footer.php"; ?>
+    <script src="/app/js/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            Toolbar: {
+                display: {
+                    left: [
+                        "infobar",
+                    ],
+                    middle: [],
+                    right: [
+                        "iterateZoom",
+                        "download",
+                        "close",
+                    ],
+                }
+            },
+            Images: {
+                initialSize: "fit",
+            },
+        });
+    </script>
 </body>
 
 </html>

@@ -272,6 +272,28 @@ if (count($user) <= 0) {
                     </div>
                 <?php endif; ?>
 
+                <script src="/app/js/fancybox.umd.js"></script>
+                <script>
+                    Fancybox.bind('[data-fancybox="gallery"]', {
+                        Toolbar: {
+                            display: {
+                                left: [
+                                    "infobar",
+                                ],
+                                middle: [],
+                                right: [
+                                    "iterateZoom",
+                                    "download",
+                                    "close",
+                                ],
+                            }
+                        },
+                        Images: {
+                            initialSize: "fit",
+                        },
+                    });
+                </script>
+
             <?php endif ?>
         </div>
     </main>

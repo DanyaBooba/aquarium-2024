@@ -186,6 +186,23 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                 </div>
             </div>
         </div>
+        <div class="px-4 py-5 my-5 text-center">
+            <a href="//aquariumsocial.t.me" aria-label="Перейти в телеграм Аквариум">
+                <img src="/app/img/content/social-logos/telegram.jpg" class="d-block rounded-circle mx-auto mb-4" alt="Логотип Телеграма" width="80">
+            </a>
+            <h1 class="">Ведём Телеграм</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="mb-4">
+                    Подписывайтесь: рассказываем факты о Аквариуме,<br>
+                    проводим конкурсы. Дадим уникальное достижение.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="//aquariumsocial.t.me" aria-label="Открыть телеграм Аквариум" class="link">
+                        Открыть телеграм
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <script>
