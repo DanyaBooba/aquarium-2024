@@ -14,21 +14,14 @@ R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Tok
 
 $find = @R::getAll(SqlRequestFind($_SESSION["login"]));
 
-if (count($find) <= 0) {
-    header("Location: /");
-    die();
+if (count($find) > 0) {
+    if ($find[0]["isblock"] == 1) {
+        header("Location: /block/");
+        die();
+    }
+
+    $find = $find[0];
 }
-
-if ($find[0]["isblock"] == 1) {
-    header("Location: /block/");
-    die();
-}
-
-$find = $find[0];
-
-##
-## User
-##
 
 $user = @R::getAll(SqlRequestFindId(empty($_GET["id"]) == false ? $_GET["id"] : 0));
 
@@ -41,11 +34,14 @@ if (count($user) <= 0) {
     $logo = ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] . ".png";
     $bg = "BG" . $user["capid"] . ".jpg";
 
-    $buttonsubs = $find["id"] == $user["id"] ? "disabled" : "";
-    $isubs = in_array(intval($user["id"]), json_decode($find["isubs"]));
-    $atmesubs = in_array(intval($find["id"]), json_decode($user["isubs"]));
-    $subs = $isubs ? "Подписан" : "Подписаться";
-    $subslogo = $isubs ? "check" : "plus";
+    if (count($find) > 0) {
+        $buttonsubs = $find["id"] == $user["id"] ? "disabled" : "";
+        $isubs = in_array(intval($user["id"]), json_decode($find["isubs"]));
+        $atmesubs = in_array(intval($find["id"]), json_decode($user["isubs"]));
+
+        $subs = $isubs ? "Подписан" : "Подписаться";
+        $subslogo = $isubs ? "check" : "plus";
+    }
 
     # At me sub
 
@@ -89,13 +85,20 @@ if (count($user) <= 0) {
         "subs" => FormOfWord($countsubme, "Подписка", "Подписки", "Подписок"),
         "atmesubs" => FormOfWord($countsubatme, "Подписчик", "Подписчика", "Подписчиков"),
     ];
+
+    $randomimage = [
+        (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
+        (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
+        (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
+        (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
+    ];
 }
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
-<title>Личный кабинет | Аквариум</title>
+<title><?php echo ($user["emailverify"] == 1 && $user["displaynick"] == 0) ? $user["firstName"] . " " . $user["lastName"] : $user["nickname"] ?> | Аквариум</title>
 
 <body class="container <?php echo $background ?>">
     <?php include_once "../app/php/person/header.php"; ?>
@@ -113,14 +116,28 @@ if (count($user) <= 0) {
                     }, 3000);
                 </script>
             <?php else : ?>
-                <?php if ($find["emailverify"] == 0) : ?>
-                    <div class="alert alert-warning d-flex align-items-center">
-                        <svg height="32" width="32" class="me-3 svg-normal see-at-pc">
-                            <use xlink:href="/app/img/icons/bootstrap.min.svg#cone-striped"></use>
-                        </svg>
+                <?php if (count($find) > 0) : ?>
+                    <?php if ($find["emailverify"] == 0) : ?>
+                        <div class="alert alert-warning d-flex align-items-center">
+                            <svg height="32" width="32" class="me-3 svg-normal see-at-pc">
+                                <use xlink:href="/app/img/icons/bootstrap.min.svg#cone-striped"></use>
+                            </svg>
+                            <span>
+                                Аккаунт не подтвержден, Вас не видят другие пользователи.
+                                <a href="/api/php/person/send-verify.php" class="link">Отправить письмо для подтверждения?</a>
+                            </span>
+                        </div>
+                    <?php endif; ?>
+                <?php else : ?>
+                    <div class="alert alert-primary d-flex align-items-center">
+                        <a href="/login/" aria-label="Войти в аккаунт">
+                            <svg height="32" width="32" class="me-3 svg-normal see-at-pc">
+                                <use xlink:href="/app/img/icons/bootstrap.svg#box-arrow-in-right"></use>
+                            </svg>
+                        </a>
                         <span>
-                            Аккаунт не подтвержден, Вас не видят другие пользователи.
-                            <a href="/api/php/person/send-verify.php" class="link">Отправить письмо для подтверждения?</a>
+                            Войдите в аккаунт, чтобы взаимодействовать с пользователями
+                            <a href="/login/" class="link" aria-label="Войти в аккаунт">Войти?</a>
                         </span>
                     </div>
                 <?php endif; ?>
@@ -145,10 +162,24 @@ if (count($user) <= 0) {
                                 </p>
                             <?php endif ?>
                             <div class="person-profile-subs">
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFriends" title="Кто подписан" <?php echo $isdisabledsubatme ?>>
+                                <button type="button" class="btn person-profile-subs-sub" data-bs-toggle="modal" data-bs-target="#modalFriends" title="Кто подписан" <?php echo $isdisabledsubatme ?>>
+                                    <?php if ($countsubatme > 0) : ?>
+                                        <span>
+                                            <?php for ($i = 0; $i < min(2, $countsubatme); $i++) : ?>
+                                                <img src="/app/img/users/icons/<?php echo $randomimage[$i] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
+                                            <?php endfor; ?>
+                                        </span>
+                                    <?php endif; ?>
                                     <b><?php echo $countsubatme ?></b> <?php echo $form["atmesubs"] ?>
                                 </button>
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalSubs" title="На кого подписан" <?php echo $isdisabledsubme ?>>
+                                <button type="button" class="btn person-profile-subs-sub" data-bs-toggle="modal" data-bs-target="#modalSubs" title="На кого подписан" <?php echo $isdisabledsubme ?>>
+                                    <?php if ($countsubme > 0) : ?>
+                                        <span>
+                                            <?php for ($i = 0; $i < min(2, $countsubme); $i++) : ?>
+                                                <img src="/app/img/users/icons/<?php echo $randomimage[$i + 2] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
+                                            <?php endfor; ?>
+                                        </span>
+                                    <?php endif; ?>
                                     <b><?php echo $countsubme ?></b> <?php echo $form["subs"] ?>
                                 </button>
                                 <?php if ($countachivs > 0) : ?>
@@ -159,20 +190,29 @@ if (count($user) <= 0) {
                             </div>
                         </div>
                         <div class="person-profile-content-buttons person-profile-content-buttons-width">
-                            <?php if ($find["emailverify"] == 1) : ?>
-                                <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?>>
-                                    <svg class="me-1" fill="white" width="26" height="26">
-                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#<?php echo $subslogo ?>"></use>
-                                    </svg>
-                                    <?php echo $subs ?>
-                                </button>
-                                <?php if ($isubs && $atmesubs) : ?>
-                                    <button onClick="MailTo()" class="btn btn-secondary ms-2" style="width: 52px;">
-                                        <svg fill="white" width="26" height="26">
-                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#envelope"></use>
+                            <?php if (count($find) > 0) : ?>
+                                <?php if ($find["emailverify"] == 1) : ?>
+                                    <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?>>
+                                        <svg class="me-1" fill="white" width="26" height="26">
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#<?php echo $subslogo ?>"></use>
                                         </svg>
+                                        <?php echo $subs ?>
                                     </button>
+                                    <?php if ($isubs && $atmesubs) : ?>
+                                        <button onClick="MailTo()" class="btn btn-secondary ms-2" style="width: 52px;">
+                                            <svg fill="white" width="26" height="26">
+                                                <use xlink:href="/app/img/icons/bootstrap.min.svg#envelope"></use>
+                                            </svg>
+                                        </button>
+                                    <?php endif; ?>
                                 <?php endif; ?>
+                            <?php else : ?>
+                                <button onClick="LoginToAccount()" class="btn btn-secondary d-flex align-items-center justify-content-center">
+                                    <svg class="me-1" fill="white" width="26" height="26">
+                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#plus"></use>
+                                    </svg>
+                                    Подписаться
+                                </button>
                             <?php endif; ?>
                         </div>
                     </div>

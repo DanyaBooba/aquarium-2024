@@ -14,14 +14,11 @@ R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Tok
 
 $find = @R::getAll(SqlRequestFind($_SESSION["login"]));
 
-if (count($find) <= 0) {
-    header("Location: /");
-    die();
-}
-
-if ($find[0]["isblock"] == 1) {
-    header("Location: /block/");
-    die();
+if (count($find) > 0) {
+    if ($find[0]["isblock"] == 1) {
+        header("Location: /block/");
+        die();
+    }
 }
 
 ##

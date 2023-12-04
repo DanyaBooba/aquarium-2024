@@ -84,4 +84,8 @@
 
     --post-icon: #7f7f7f;
     --post-icon-hover: #000;
+
+    /* Alert */
+
+    --alert-primary: #cfe2ff;
 }

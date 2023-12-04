@@ -66,6 +66,13 @@ $form = [
     "subs" => FormOfWord($countsubme, "Подписка", "Подписки", "Подписок"),
     "atmesubs" => FormOfWord($countsubatme, "Подписчик", "Подписчика", "Подписчиков"),
 ];
+
+$randomimage = [
+    (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
+    (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
+    (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
+    (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
+];
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -111,10 +118,24 @@ $form = [
                             </p>
                         <?php endif ?>
                         <div class="person-profile-subs">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFriends" title="Кто подписан" <?php echo $isdisabledsubatme ?>>
+                            <button type="button" class="btn person-profile-subs-sub" data-bs-toggle="modal" data-bs-target="#modalFriends" title="Кто подписан" <?php echo $isdisabledsubatme ?>>
+                                <?php if ($countsubatme > 0) : ?>
+                                    <span>
+                                        <?php for ($i = 0; $i < min(2, $countsubatme); $i++) : ?>
+                                            <img src="/app/img/users/icons/<?php echo $randomimage[$i] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
+                                        <?php endfor; ?>
+                                    </span>
+                                <?php endif; ?>
                                 <b><?php echo $countsubatme ?></b> <?php echo $form["atmesubs"] ?>
                             </button>
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalSubs" title="На кого подписан" <?php echo $isdisabledsubme ?>>
+                            <button type="button" class="btn person-profile-subs-sub" data-bs-toggle="modal" data-bs-target="#modalSubs" title="На кого подписан" <?php echo $isdisabledsubme ?>>
+                                <?php if ($countsubme > 0) : ?>
+                                    <span>
+                                        <?php for ($i = 0; $i < min(2, $countsubme); $i++) : ?>
+                                            <img src="/app/img/users/icons/<?php echo $randomimage[$i + 2] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
+                                        <?php endfor; ?>
+                                    </span>
+                                <?php endif; ?>
                                 <b><?php echo $countsubme ?></b> <?php echo $form["subs"] ?>
                             </button>
                             <?php if ($countachivs > 0) : ?>
@@ -126,7 +147,7 @@ $form = [
                     </div>
                     <div class="person-profile-content-buttons person-profile-content-buttons-width flex-column h-100">
                         <?php if ($user["emailverify"] == 1) : ?>
-                            <button onClick="ButtonLeftBar('add-post')" class="btn btn-primary mb-2">
+                            <button onClick="ButtonLeftBar('add')" class="btn btn-primary mb-2">
                                 Добавить пост
                             </button>
                         <?php endif; ?>
@@ -234,8 +255,21 @@ $form = [
                     <div class="modal-body person-search-list">
                         <ul class="list-group list-group-flush">
                             <?php foreach ($achivsblock as $achiv) : ?>
-                                <li class="list-group-item">
-                                    <img src="/app/img/achivs/<?php echo $achiv["nameimg"] ?>.jpg" alt="<?php echo $achiv["name"] ?>">
+                                <?php
+                                $img = imageCreateFromJpeg("../app/img/achivs/" . $achiv["nameimg"] . ".jpg");
+
+                                $width = ImageSX($img);
+                                $height = ImageSY($img);
+
+                                $thumb = imagecreatetruecolor(1, 1);
+                                imagecopyresampled($thumb, $img, 0, 0, 0, 0, 1, 1, $width, $height);
+                                $color = '#' . dechex(imagecolorat($thumb, 0, 0));
+
+                                list($r, $g, $b) = sscanf($color, "#%02x%02x%02x");
+                                ?>
+
+                                <li class="list-group-item py-3">
+                                    <img src="/app/img/achivs/<?php echo $achiv["nameimg"] ?>.jpg" alt="<?php echo $achiv["name"] ?>" style="box-shadow: 0 .5rem 1rem rgba(<?php echo $r . ", " . $g . ", " . $b ?>, .3);">
                                     «<?php echo $achiv["name"] ?>»
                                 </li>
                             <?php endforeach; ?>

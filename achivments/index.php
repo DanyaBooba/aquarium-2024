@@ -36,7 +36,7 @@ $achivs = array_unique(json_decode($find[0]["achivs"]));
 <?php include_once "../app/php/head.php"; ?>
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
-<title>Поиск | Аквариум</title>
+<title>Достижения | Аквариум</title>
 
 <body class="container">
     <?php include_once "../app/php/person/header.php"; ?>

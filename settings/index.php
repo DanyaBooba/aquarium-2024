@@ -94,7 +94,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
             <h1>Настройки</h1>
             <div class="container px-0">
                 <div class="person-setting row row-cols-1 g-2">
-                    <div class="col-md-8">
+                    <div class="person-rightbar-content">
                         <div class="person-setting-bg person-setting-content">
                             <?php if ($user["emailverify"] == 0) : ?>
                                 <div class="alert alert-background d-flex align-items-center" role="alert">
@@ -410,7 +410,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                             </form>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="person-rightbar-bar">
                         <div class="person-setting-bg person-setting-bar">
                             <ul>
                                 <li>
@@ -451,7 +451,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                             </ul>
                         </div>
                         <div class="person-setting-bg person-setting-bar d-flex align-items-center">
-                            <svg class="svg-normal me-2" width="16" height="16">
+                            <svg class="svg-normal me-3" width="16" height="16">
                                 <use xlink:href="/app/img/icons/bootstrap.min.svg#question-circle"></use>
                             </svg>
                             <a href="/about/faq/#подтверждение-аккаунта" class="link">
@@ -460,7 +460,7 @@ $formmale = $sex == 1 ? "MAN" : "WOMAN";
                         </div>
                         <?php if ($user["emailverify"] == 1) : ?>
                             <div class="person-setting-bg person-setting-bar d-flex align-items-center">
-                                <svg class="svg-normal me-2" width="16" height="16">
+                                <svg class="svg-normal me-3" width="16" height="16">
                                     <use xlink:href="/app/img/icons/bootstrap.min.svg#eye"></use>
                                 </svg>
                                 <a href="/user/?id=<?php echo $user["id"] ?>" class="link">

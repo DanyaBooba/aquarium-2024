@@ -47,10 +47,10 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
         <div class="row align-items-center" style="margin-bottom: 50px">
             <div class="col-md-6 see-at-pc d-flex justify-content-end px-0">
                 <div class="p-3 d-flex">
-                    <a href="#download" aria-label="Скачать для Android" style="margin-right: -30px">
+                    <a href="/search/" aria-label="Скачать для Android" style="margin-right: -30px">
                         <img src="/app/img/content/mainpage/android.png" class="img-fluid" width="240">
                     </a>
-                    <a href="#download" aria-label="Скачать для iOS">
+                    <a href="/user/?id=1" aria-label="Скачать для iOS">
                         <img src="/app/img/content/mainpage/iphone.png" class="img-fluid" width="250">
                     </a>
                 </div>

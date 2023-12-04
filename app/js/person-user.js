@@ -7,3 +7,7 @@ function MailTo() {
 	let id = document.getElementById("person-id").textContent;
 	window.open("/messages/", "_self");
 }
+
+function LoginToAccount() {
+	window.open("/login/", "_self");
+}
