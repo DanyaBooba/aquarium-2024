@@ -110,7 +110,7 @@ if (count($post) <= 0) {
                     </div>
                 </div>
 
-                <!-- <div>
+                <div>
                     <a data-fancybox="gallery" data-src="/app/img/users/bg/BG1.jpg">
                         <img src="/app/img/users/bg/BG1.jpg" width="400" alt="" style="display: block;" />
                     </a>
@@ -121,14 +121,6 @@ if (count($post) <= 0) {
                         <img src="/app/img/users/bg/BG3.jpg" width="400" alt="" style="display: block;" />
                     </a>
                 </div>
-
-                <div>
-                    <p>
-                        <a href="data:text/html,<p>Some HTML</p>" data-fancybox data-type="iframe" data-width="600" data-height="400">
-                            Load data
-                        </a>
-                    </p>
-                </div> -->
 
                 <script src="/app/js/fancybox.umd.js"></script>
                 <script>

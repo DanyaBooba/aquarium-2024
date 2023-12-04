@@ -2,3 +2,16 @@
 {
     padding: 0 !important;
 }
+
+.f-button svg
+{
+    stroke: white !important;
+}
+
+.fancybox__infobar {
+    color: white !important;
+}
+
+.fancybox__infobar span {
+    color: white !important;
+}
