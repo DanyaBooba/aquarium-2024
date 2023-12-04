@@ -35,6 +35,13 @@ if (count($post) <= 0) {
     $post = $post[0];
     $author = R::getAll(SqlRequestFindId($postinfo["author"]))[0];
     $logo = ($author["ismale"] == 1 ? "MAN" : "WOMAN") . $author["logoid"] . ".png";
+
+    $postimage = [
+        null,
+        "/app/img/posts/posts-1.jpg",
+        "/app/img/posts/posts-2.jpg",
+        "/app/img/posts/posts-3.jpg",
+    ];
 }
 ?>
 
@@ -61,13 +68,29 @@ if (count($post) <= 0) {
                 <link rel="stylesheet" href="/app/css/fancybox.css" />
 
                 <div class="row row-cols-1 g-2 person-post-content">
-                    <a href="#" class="col-md-6 person-post-content-img" style="background-image: url('/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg')">
-                        <button class="btn">
-                            <svg height="28" width="28">
-                                <use xlink:href="/app/img/icons/bootstrap.svg#fullscreen"></use>
-                            </svg>
-                        </button>
-                    </a>
+                    <div class="col-md-6 person-post-content-img">
+                        <div id="carImage" class="carousel carousel-fade">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="<?php echo $postimage[1] ?>" class="d-block w-100" data-fancybox="gallery" data-src="<?php echo $postimage[1] ?>" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="<?php echo $postimage[2] ?>" class="d-block w-100" data-fancybox="gallery" data-src="<?php echo $postimage[2] ?>" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="<?php echo $postimage[3] ?>" class="d-block w-100" data-fancybox="gallery" data-src="<?php echo $postimage[3] ?>" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carImage" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carImage" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
                     <div class="col-md-5 person-post-content-post">
                         <div class="person-post-header">
                             <div class="person-post-header-content">
@@ -89,6 +112,8 @@ if (count($post) <= 0) {
                                     </span>
                                     <p>
                                         Содержимое записи с моих слов...
+                                        Вот такие интересные события, бывают,
+                                        попадаются здесь.
                                     </p>
                                 </div>
                             </div>
@@ -110,10 +135,7 @@ if (count($post) <= 0) {
                     </div>
                 </div>
 
-                <div>
-                    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG1.jpg">
-                        <img src="/app/img/users/bg/BG1.jpg" width="400" alt="" style="display: block;" />
-                    </a>
+                <div class="visually-hidden">
                     <a data-fancybox="gallery" data-src="/app/img/users/bg/BG2.jpg">
                         <img src="/app/img/users/bg/BG2.jpg" width="400" alt="" style="display: block;" />
                     </a>
