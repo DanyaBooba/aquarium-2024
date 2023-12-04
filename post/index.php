@@ -58,6 +58,8 @@ if (count($post) <= 0) {
                     }, 3000);
                 </script>
             <?php else : ?>
+                <link rel="stylesheet" href="/app/css/fancybox.css" />
+
                 <div class="row row-cols-1 g-2 person-post-content">
                     <div class="col-md-6 person-post-content-img" style="background-image: url('/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg')">
                         <button class="btn">
@@ -107,32 +109,55 @@ if (count($post) <= 0) {
                         </div>
                     </div>
                 </div>
+
+                <div>
+                    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG1.jpg">
+                        <img src="/app/img/users/bg/BG1.jpg" width="400" alt="" style="display: block;" />
+                    </a>
+                    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG2.jpg">
+                        <img src="/app/img/users/bg/BG2.jpg" width="400" alt="" style="display: block;" />
+                    </a>
+                    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG3.jpg">
+                        <img src="/app/img/users/bg/BG3.jpg" width="400" alt="" style="display: block;" />
+                    </a>
+                </div>
+
+                <div>
+                    <p>
+                        <a href="data:text/html,<p>Some HTML</p>" data-fancybox data-type="iframe" data-width="600" data-height="400">
+                            Load data
+                        </a>
+                    </p>
+                </div>
+
+                <script src="/app/js/fancybox.umd.js"></script>
+                <script>
+                    Fancybox.bind("[data-fancybox]", {});
+                    Fancybox.bind('[data-fancybox="gallery"]', {
+                        Toolbar: {
+                            display: {
+                                left: [
+                                    "infobar",
+                                ],
+                                middle: [],
+                                right: [
+                                    "iterateZoom",
+                                    "download",
+                                    "close",
+                                ],
+                            }
+                        },
+                        Images: {
+                            initialSize: "fit",
+                        },
+                    });
+                </script>
+
             <?php endif; ?>
         </div>
     </main>
 
     <?php include_once "../app/php/footer.php"; ?>
-    <script src="/app/js/fancybox.umd.js"></script>
-    <script>
-        Fancybox.bind('[data-fancybox="gallery"]', {
-            Toolbar: {
-                display: {
-                    left: [
-                        "infobar",
-                    ],
-                    middle: [],
-                    right: [
-                        "iterateZoom",
-                        "download",
-                        "close",
-                    ],
-                }
-            },
-            Images: {
-                initialSize: "fit",
-            },
-        });
-    </script>
 </body>
 
 </html>
