@@ -884,6 +884,10 @@ a.person-post-back svg {
         overflow: auto;
     }
 
+    .person-post-content-img .carousel {
+        width: 100%;
+    }
+
     .person-post-content-img .carousel .carousel-inner {
         height: 100%;
     }
@@ -896,19 +900,6 @@ a.person-post-back svg {
         height: 100%;
         object-fit: cover;
     }
-}
-
-.person-post-content-img .carousel .carousel-inner {
-    height: 100%;
-}
-
-.person-post-content-img .carousel .carousel-inner .carousel-item {
-    height: 100%;
-}
-
-.person-post-content-img .carousel .carousel-inner .carousel-item img {
-    /* height: 100%; */
-    object-fit: cover;
 }
 
 @media(max-width: 992px) {
@@ -926,7 +917,38 @@ a.person-post-back svg {
     .person-post-content-post {
         width: 100%;
     }
+
+    .person-post-content-img .carousel .carousel-inner {
+        height: 100%;
+    }
+
+    .person-post-content-img .carousel .carousel-inner .carousel-item {
+        height: 100%;
+    }
+
+    .person-post-content-img .carousel .carousel-inner .carousel-item img {
+        object-fit: cover;
+    }
 }
+
+/* @media(min-width: 1400px) {
+    .person-post-content-img .carousel {
+        width: 100%;
+    }
+
+    .person-post-content-img .carousel .carousel-inner {
+        width: 100%;
+    }
+
+    .person-post-content-img .carousel .carousel-inner .carousel-item {
+        width: 100%;
+    }
+
+    .person-post-content-img .carousel .carousel-inner .carousel-item img {
+        object-fit: cover;
+
+    }
+}*/
 
 .person-post-content-in {
     padding: 20px !important;
