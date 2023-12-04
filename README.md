@@ -8,9 +8,9 @@
 
 Автор: Даниил Дыбка, daniil@dybka.ru, [@ddybka](https://ddybka.t.me)
 
-GitHub: [https://github.com/DanyaBooba/](https://github.com/DanyaBooba/aquarium-2024/)
+GitHub: [https://github.com/DanyaBooba/aquarium-2024](https://github.com/DanyaBooba/aquarium-2024/)
 
-GitHub Issue: [https://github.com/DanyaBooba/issue/](https://github.com/DanyaBooba/aquarium-2024/issues)
+GitHub Issue: [https://github.com/DanyaBooba/issues](https://github.com/DanyaBooba/aquarium-2024/issues)
 
 ## Возможности и преимущества
 
