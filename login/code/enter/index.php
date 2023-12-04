@@ -1,5 +1,5 @@
 <?php
-include_once "../../../app/php/head.php";
+if (!isset($_SESSION)) session_start();
 include_once "../../../api/auth-errors.php";
 
 include_once "../../../api/rb-mysql.php";
@@ -20,6 +20,8 @@ if (count($find) > 0) {
     die();
 }
 ?>
+
+<?php include_once "../../../app/php/head.php"; ?>
 
 <?php $error = @LoginByCodeError($_GET["e"]) ?>
 

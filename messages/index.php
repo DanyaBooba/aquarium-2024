@@ -1,7 +1,7 @@
 <?php
 
 
-header("Location: /");
+// header("Location: /");
 
 
 if (!isset($_SESSION)) session_start();

@@ -1,5 +1,5 @@
 <?php
-include_once "../app/php/head.php";
+if (!isset($_SESSION)) session_start();
 include_once "../api/auth-errors.php";
 
 include_once "../api/rb-mysql.php";
@@ -33,6 +33,8 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
     'scope'         => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
 ]));
 ?>
+
+<?php include_once "../app/php/head.php"; ?>
 
 <?php $error = @LoginError($_GET["e"]) ?>
 

@@ -855,6 +855,11 @@ a.person-post-back svg {
     background-position: center;
 
     display: flex;
+    margin-top: 0 !important;
+}
+
+.person-post-content-img svg {
+    fill: white;
 }
 
 .person-post-content .person-post-content-img button {
@@ -871,6 +876,12 @@ a.person-post-back svg {
     .person-post-content .person-post-content-img {
         height: 470px;
     }
+
+    .person-post-content-in {
+        height: 353px;
+        position: relative;
+        overflow: auto;
+    }
 }
 
 @media(max-width: 992px) {
@@ -878,8 +889,10 @@ a.person-post-back svg {
         height: 300px;
     }
 
-    .person-post-content {
-        flex-direction: column;
+    .person-post-content-in {
+        max-height: 300px;
+        position: relative;
+        overflow: auto;
     }
 
     .person-post-content-img,
@@ -888,7 +901,7 @@ a.person-post-back svg {
     }
 }
 
-.person-post-content {
+.person-post-content-in {
     padding: 20px !important;
 }
 
@@ -951,6 +964,7 @@ a.person-post-back svg {
 
 .person-post-content-user {
     display: flex;
+    margin-bottom: 10px !important;
 }
 
 .person-post-content-user img {

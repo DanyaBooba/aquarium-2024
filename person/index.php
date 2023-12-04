@@ -73,6 +73,18 @@ $randomimage = [
     (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
     (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
 ];
+
+$postdataform = [
+    "style" => "
+    <style>
+    .d-flex {
+        display: flex;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    </style>"
+];
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -164,10 +176,13 @@ $randomimage = [
                         <?php $i++; ?>
                         <div class="col-md-4">
                             <?php
-                            $postdata = "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
+                            $postdata = $postdataform["style"];
+                            $postimage = "image";
+                            $postcontent = "content";
+                            $postdata .= "<div class='d-flex'><div class='col-md-6'>$postimage</div><div class='col-md-6'>$postcontent</div></div>";
                             ?>
-                            <a href="data:text/html,<?php echo $postdata ?>" dataurl="<?php echo "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"] ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="600" data-height="400">
-                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"] ?>">
+                            <a href="data:text/html,<?php echo $postdata ?>" dataurl="<?php echo "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"]; ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="1000" data-height="600">
+                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"]; ?>">
                             </a>
                         </div>
                     <?php endforeach; ?>

@@ -1,5 +1,9 @@
 <?php
 
+// ini_set('error_reporting', E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+
 if (!isset($_SESSION)) session_start();
 
 include_once "../basic-methods.php";
@@ -39,7 +43,7 @@ $findrestoresql = SqlRequestFindRestore($email_restore);
 
 $findrestore = R::getAll($findrestoresql);
 
-$url = RandomString(80) . $findrestore[0]["id"];
+$url = RandomString(80) . $find[0]["id"];
 
 if (count($findrestore) > 0) {
     if (abs(time() - $findrestore[0]["timecreate"]) > 1800) {
@@ -53,6 +57,7 @@ if (count($findrestore) > 0) {
 
 if (count($findrestore) <= 0) {
     $resetsql = SqlResetPassword($email_restore, $url);
+
     R::getAll($resetsql);
 } else {
     $url = $findrestore[0]["url"];

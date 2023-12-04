@@ -61,13 +61,13 @@ if (count($post) <= 0) {
                 <link rel="stylesheet" href="/app/css/fancybox.css" />
 
                 <div class="row row-cols-1 g-2 person-post-content">
-                    <div class="col-md-6 person-post-content-img" style="background-image: url('/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg')">
+                    <a href="#" class="col-md-6 person-post-content-img" style="background-image: url('/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg')">
                         <button class="btn">
                             <svg height="28" width="28">
                                 <use xlink:href="/app/img/icons/bootstrap.svg#fullscreen"></use>
                             </svg>
                         </button>
-                    </div>
+                    </a>
                     <div class="col-md-5 person-post-content-post">
                         <div class="person-post-header">
                             <div class="person-post-header-content">
@@ -76,7 +76,7 @@ if (count($post) <= 0) {
                                 </a>
                             </div>
                         </div>
-                        <div class="person-post-content">
+                        <div class="person-post-content-in">
                             <div class="person-post-content-user">
                                 <a href="/user/?id=1">
                                     <img src="/app/img/users/icons/<?php echo $logo ?>" alt="Даниил Дыбка">
@@ -110,7 +110,7 @@ if (count($post) <= 0) {
                     </div>
                 </div>
 
-                <div>
+                <!-- <div>
                     <a data-fancybox="gallery" data-src="/app/img/users/bg/BG1.jpg">
                         <img src="/app/img/users/bg/BG1.jpg" width="400" alt="" style="display: block;" />
                     </a>
@@ -128,7 +128,7 @@ if (count($post) <= 0) {
                             Load data
                         </a>
                     </p>
-                </div>
+                </div> -->
 
                 <script src="/app/js/fancybox.umd.js"></script>
                 <script>
