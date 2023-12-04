@@ -77,16 +77,18 @@
         word-wrap: break-word;
     }
 
+    .person-setting-bar svg {
+        display: none;
+    }
+}
+
+@media(max-width: 991px) {
     .person-profile-content-name-1 {
         padding: 0px;
     }
 
     .person-profile-content-name-2 {
         padding: 0px;
-    }
-
-    .person-setting-bar svg {
-        display: none;
     }
 }
 
@@ -316,6 +318,22 @@
 
 .person-posts a {
     display: block;
+}
+
+@media(max-width: 991px) {
+    .person-posts .person-posts-pc {
+        display: none;
+    }
+
+    .person-posts .col-md-4 {
+        width: 100%;
+    }
+}
+
+@media(min-width: 992px) {
+    .person-posts .person-posts-mobile {
+        display: none;
+    }
 }
 
 /* Search */
