@@ -159,9 +159,14 @@ $randomimage = [
             </div>
             <?php if (count($posts) > 0) : ?>
                 <div class="row row-cols-1 g-2 person-posts">
+                    <?php $i = 0; ?>
                     <?php foreach ($posts as $post) : ?>
+                        <?php $i++; ?>
                         <div class="col-md-4">
-                            <a href="/post/?a=<?php echo $post["iduser"] ?>&p=<?php echo $post["idpost"] ?>">
+                            <?php
+                            $postdata = "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
+                            ?>
+                            <a href="data:text/html,<?php echo $postdata ?>" dataurl="<?php echo "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"] ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="600" data-height="400">
                                 <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6) ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"] ?>">
                             </a>
                         </div>
@@ -282,8 +287,19 @@ $randomimage = [
 
     <?php include_once "../app/php/footer.php"; ?>
 
+    <script src="/app/js/person-openpost.js"></script>
     <script src="/app/js/fancybox.umd.js"></script>
     <script>
+        Fancybox.bind("[data-fancybox]", {
+            on: {
+                "*": (fancybox, eventName) => {
+                    if (eventName === "close") {
+                        ClosePost();
+                    }
+                },
+            },
+        });
+
         Fancybox.bind('[data-fancybox="gallery"]', {
             Toolbar: {
                 display: {
