@@ -4,7 +4,7 @@
 
 `HTML` `CSS` `JS` `PHP` `MySQL` `MD5`
 
-Сайт: aquarium.org.ru
+Сайт: [aquarium.org.ru](https://aquarium.org.ru)
 
 Автор: Даниил Дыбка, daniil@dybka.ru, [@ddybka](https://ddybka.t.me)
 
