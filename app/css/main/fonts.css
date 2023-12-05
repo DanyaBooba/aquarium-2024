@@ -1,17 +1,17 @@
 /* Load */
 
 @font-face {
-    font-family: Geologica-Light;
+    font-family: NotoSans;
     font-style: normal;
-    src: url("/app/fonts/Geologica/Geologica-Light.woff") format("woff"),
-        url("/app/fonts/Geologica/Geologica-Light.woff2") format("woff2");
+    src: url("/app/fonts/NotoSans/NotoSans-Regular.woff") format("woff"),
+        url("/app/fonts/NotoSans/NotoSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Geologica-Bold;
+    font-family: NotoSans-Bold;
     font-style: bold;
-    src: url("/app/fonts/Geologica/Geologica-Bold.woff") format("woff"),
-        url("/app/fonts/Geologica/Geologica-Bold.woff2") format("woff2");
+    src: url("/app/fonts/NotoSans/NotoSans-Bold.woff") format("woff"),
+        url("/app/fonts/NotoSans/NotoSans-Bold.woff2") format("woff2");
 }
 
 @font-face {
@@ -31,12 +31,12 @@ nav,
 main,
 header,
 footer {
-    font-family: Geologica-Light;
+    font-family: NotoSans;
 }
 
 b,
 .fw-bold {
-    font-family: Geologica-Bold;
+    font-family: NotoSans-Bold;
 }
 
 h1,
