@@ -1,10 +1,10 @@
 <?php
 if (!isset($_SESSION)) session_start();
-include_once "../api/auth-errors.php";
+include_once "../../api/auth-errors.php";
 
-include_once "../api/rb-mysql.php";
-include_once "../api/basic-methods.php";
-include_once "../api/token.php";
+include_once "../../api/rb-mysql.php";
+include_once "../../api/basic-methods.php";
+include_once "../../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
@@ -45,17 +45,16 @@ if (count($post) <= 0) {
 }
 ?>
 
-<?php include_once "../app/php/head.php"; ?>
+<?php include_once "../../app/php/head.php"; ?>
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
-<title>Пост | Аквариум</title>
+<title>Часть поста | Аквариум</title>
 
-<body class="container">
-    <?php include_once "../app/php/person/header.php"; ?>
+<body>
 
-    <main class="row row-cols-1 g-2">
-        <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content person-post">
+    <main class="">
+
+        <div class="person-content person-post">
             <?php if ($post == false) : ?>
                 <h1>Запись не найдена</h1>
                 <p>На главную страницу через 3 сек.</p>
@@ -91,7 +90,7 @@ if (count($post) <= 0) {
                             </button>
                         </div>
                     </div>
-                    <div class="col-md-5 person-post-content-post">
+                    <div class="col-md-6 person-post-content-post">
                         <div class="person-post-header">
                             <div class="person-post-header-content">
                                 <a href="/user/?id=1" class="link">
@@ -171,7 +170,7 @@ if (count($post) <= 0) {
         </div>
     </main>
 
-    <?php include_once "../app/php/footer.php"; ?>
+    <?php include_once "../../app/php/bottom/javascript.php"; ?>
 </body>
 
 </html>

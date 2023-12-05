@@ -179,7 +179,7 @@ $postdataform = [
                         $postinurl = "/post/in/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
                         ?>
                         <div class="col-md-4">
-                            <a href="<?php echo $postinurl ?>" class="person-posts-pc" dataurl="<?php echo $posturl ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="1000" data-height="600">
+                            <a href="<?php echo $postinurl ?>" class="person-posts-pc" dataurl="<?php echo $posturl ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="1000" data-height="470">
                                 <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"]; ?>">
                             </a>
                             <a href="<?php echo $posturl ?>" class="person-posts-mobile">
