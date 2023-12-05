@@ -334,7 +334,7 @@ function SqlRequestUpdateData($email, $nickname, $firstName, $lastName)
 
 function SqlRequestSelectAll()
 {
-    return "SELECT * FROM `users` WHERE emailverify=1";
+    return "SELECT * FROM `users` WHERE (emailverify=1) ORDER BY datereg DESC";
 
     //
     // Sql запрос: все пользователи
@@ -466,7 +466,7 @@ function SqlRequestSearch($text)
         $more = "nickname like '%$text%'";
     }
 
-    return "SELECT * FROM `users` WHERE (emailverify=1) AND $more";
+    return "SELECT * FROM `users` WHERE (emailverify=1) AND $more ORDER BY datereg DESC";
 
     //
     // Sql запрос: ищем по базе данных
@@ -481,11 +481,16 @@ function SqlRequestSearchOffset($text, $offset)
         $more = "nickname like '%$text%'";
     }
 
-    return "SELECT * FROM `users` WHERE (emailverify=1) AND $more LIMIT $offset, 100";
+    return "SELECT * FROM `users` WHERE (emailverify=1) AND $more ORDER BY datereg DESC LIMIT $offset, 100";
 
     //
     // Sql запрос: ищем по базе данных
     //
+}
+
+function SqlRequestSearchData($offset)
+{
+    return "SELECT * FROM `users` WHERE emailverify=1 ORDER BY datereg DESC LIMIT $offset, 100";
 }
 
 function SqlRequestNewPass($email, $pass, $salt)

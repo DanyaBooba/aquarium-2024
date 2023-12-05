@@ -173,18 +173,16 @@ $postdataform = [
                 <div class="row row-cols-1 g-2 person-posts">
                     <?php $i = 0; ?>
                     <?php foreach ($posts as $post) : ?>
-                        <?php $i++; ?>
+                        <?php
+                        $i++;
+                        $posturl = "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
+                        $postinurl = "/post/in/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
+                        ?>
                         <div class="col-md-4">
-                            <?php
-                            $postdata = $postdataform["style"];
-                            $postimage = "image";
-                            $postcontent = "content";
-                            $postdata .= "<div class='d-flex'><div class='col-md-6'>$postimage</div><div class='col-md-6'>$postcontent</div></div>";
-                            ?>
-                            <a href="data:text/html,<?php echo $postdata ?>" class="person-posts-pc" dataurl="<?php echo "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"]; ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="1000" data-height="600">
+                            <a href="<?php echo $postinurl ?>" class="person-posts-pc" dataurl="<?php echo $posturl ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="1000" data-height="600">
                                 <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"]; ?>">
                             </a>
-                            <a href="<?php echo "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"]; ?>" class="person-posts-mobile">
+                            <a href="<?php echo $posturl ?>" class="person-posts-mobile">
                                 <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"]; ?>">
                             </a>
                         </div>

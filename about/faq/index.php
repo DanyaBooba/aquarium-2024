@@ -286,6 +286,12 @@
             Не бойтесь обращаться в нашу тех. поддержку, ведь Вам обязательно ответят и помогут в Вашем вопросе.
         </p>
         <p>
+            GitHub Issue:
+            <a href="//github.com/DanyaBooba/aquarium-2024/issues" class="link">
+                aquarium-2024/issues
+            </a>
+        </p>
+        <p>
             Важность обращения в тех. поддержку:
         </p>
         <ul>

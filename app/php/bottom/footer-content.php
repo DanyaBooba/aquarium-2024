@@ -20,10 +20,10 @@
             <a href="/about/user/" class="link mx-3">
                 Пользователю
             </a>
-            <a href="/about/api/" class="link mx-3">
-                API
+            <a href="/about/oauth/" class="link mx-3">
+                OAuth
             </a>
-            <a href="/about/open-source/" class="link mx-3">
+            <a href="//github.com/DanyaBooba/aquarium-2024" class="link mx-3">
                 Исходный код
             </a>
         </div>
@@ -41,6 +41,9 @@
 <div class="see-at-mobile">
     <div class="container footer border-0">
         <div class="footer__center">
+            <a href="/about/" class="link mx-3">
+                О проекте
+            </a>
             <a href="/about/faq/" class="link mx-3">
                 FAQ
             </a>
@@ -50,8 +53,11 @@
             <a href="/about/user/" class="link mx-3">
                 Пользователю
             </a>
-            <a href="/about/api/" class="link mx-3">
-                API
+            <a href="/about/oauth/" class="link mx-3">
+                OAuth
+            </a>
+            <a href="//github.com/DanyaBooba/aquarium-2024" class="link mx-3">
+                Исходный код
             </a>
         </div>
     </div>

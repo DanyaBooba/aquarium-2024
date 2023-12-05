@@ -8,10 +8,6 @@ include_once "../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
-##
-## Me
-##
-
 $find = @R::getAll(SqlRequestFind($_SESSION["login"]));
 
 if (count($find) > 0) {
@@ -21,26 +17,14 @@ if (count($find) > 0) {
     }
 }
 
-##
-## Server
-##
-
 $search = @ClearSearch($_GET["s"]);
-$seak = SqlRequestSelectAll();
-
-if (mb_strlen($search) > 0) {
-    $seak = SqlRequestSearch($search);
-}
+$seak = (mb_strlen($search) > 0) ? SqlRequestSearch($search) : SqlRequestSelectAll();
 
 $look = ceil(count(R::getAll($seak)) / 100);
 $page = @(empty(intval($_GET["p"])) || $_GET["p"] < 0 || $_GET["p"] > $look) ? 1 : intval($_GET["p"]);
 
 $offset = ($page - 1) * 100;
-if (mb_strlen($search) > 0) {
-    $users = R::getAll(SqlRequestSearchOffset($search, $offset));
-} else {
-    $users = R::getAll("SELECT * FROM `users` WHERE emailverify=1 LIMIT $offset, 100");
-}
+$users = (mb_strlen($search) > 0) ? R::getAll(SqlRequestSearchOffset($search, $offset)) : R::getAll(SqlRequestSearchData($offset));
 
 $btnnext = $page >= $look ? "disabled" : "";
 $btnprev = $page == 1 ? "disabled" : "";
