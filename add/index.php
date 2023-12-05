@@ -36,14 +36,6 @@ $user = $user[0];
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-9 person-content">
-            <div class="d-flex align-items-center mb-1">
-                <svg class="svg-normal me-1" width="14" height="14">
-                    <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-left"></use>
-                </svg>
-                <a href="/person/" class="link">
-                    Назад
-                </a>
-            </div>
             <h1>Добавить пост</h1>
             <div class="container px-0">
                 <div class="person-setting row row-cols-1 g-2">

@@ -113,7 +113,7 @@ function DeleteAccountError($data)
 
 function AddPostError($data)
 {
-    if ($data == "") return "";
+    if ($data == "len_post") return "Слишком маленькая длина.";
 
     return null;
 }

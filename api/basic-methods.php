@@ -781,3 +781,23 @@ function SqlRequestUpdateNotifications($email, $notif)
     // Sql запрос: обновляем уведомления
     //
 }
+
+function SqlRequestAddPostBasic($user)
+{
+    $idpost = $user["idpost"];
+    $iduser = $user["iduser"];
+    $useremail = $user["useremail"];
+    $text = $user["text"];
+    $minipost = $user["minipost"];
+
+    return "INSERT INTO `posts`(`idpost`, `iduser`, `useremail`, `timecreate`, `text`, `minipost`) VALUES ($idpost, $iduser, '$useremail', " . time() . ", '$text', '$minipost')";
+
+    //
+    // Sql запрос: добавляем пост
+    //
+}
+
+function SqlRequestGetMaxidPostUser($iduser, $emailuser)
+{
+    return "SELECT MAX(`idpost`) FROM `posts` WHERE (iduser=$iduser AND useremail like '$emailuser') LIMIT 1";
+}

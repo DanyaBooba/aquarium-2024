@@ -60,7 +60,7 @@ $users = R::getAll(SqlRequestSelectAllAdmin());
                 </li>
             </ul>
             <h2>Пользователи</h2>
-            <ul>
+            <ol>
                 <?php foreach ($users as $u) : ?>
                     <li>
                         <?php echo $u["emailverify"] == 1 ? "<span class='text-success'>T</span>" : "<span class='text-danger'>F</span>" ?>
@@ -68,7 +68,7 @@ $users = R::getAll(SqlRequestSelectAllAdmin());
                         [<?php echo $u["nickname"] . ", " . $u["id"] ?>]
                     </li>
                 <?php endforeach; ?>
-            </ul>
+            </ol>
         </div>
     </main>
 
