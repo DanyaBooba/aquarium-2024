@@ -54,7 +54,7 @@ if (count($post) <= 0) {
 
 <body>
 
-    <main class="">
+    <main>
 
         <div class="person-content person-post">
             <?php if ($post == false) : ?>
