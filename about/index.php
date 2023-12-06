@@ -15,13 +15,35 @@ $allconfirmprocent = ($allconfirm / $all) * 100;
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>О проекте | Аквариум</title>
 
+<style>
+    .main-icon {
+        margin-bottom: 30px;
+        margin-top: 100px
+    }
+
+    .logo-text {
+        margin-bottom: 50px;
+    }
+
+    @media(max-width: 991px) {
+        .main-icon {
+            margin-bottom: 30px;
+            margin-top: 50px
+        }
+
+        .logo-text {
+            margin-bottom: 30px;
+        }
+    }
+</style>
+
 <link rel="stylesheet" href="/app/css/pages/about.css" />
 
 <body class="container">
     <!-- <?php include_once "../app/php/header.php"; ?> -->
     <main class="col-md-8 mx-auto" style="margin-bottom: 50px" id="main">
 
-        <svg class="svg-normal img-fluid" style="margin-bottom: 30px; margin-top: 100px" viewBox="0 0 1403 270" xmlns="http://www.w3.org/2000/svg">
+        <svg class="svg-normal img-fluid main-icon" viewBox="0 0 1403 270" xmlns="http://www.w3.org/2000/svg">
             <path d="M1356.22 62.9C1387.42 62.9 1402.42 87.8 1402.42 121.1V215H1377.82V126.8C1377.82 98 1371.52 83.9 1347.22 83.9C1317.52 83.9 1299.82 110.3 1299.82 149.3V215H1275.22V126.8C1275.22 98 1268.92 83.9 1244.62 83.9C1214.92 83.9 1197.22 110.3 1197.22 149.3V215H1172.62V65.9H1197.22V91.4L1193.32 108.2H1200.22C1206.22 81.2 1221.82 62.9 1253.62 62.9C1280.62 62.9 1295.02 81.5 1298.32 108.2H1302.82C1308.82 81.2 1324.42 62.9 1356.22 62.9Z" />
             <path d="M1055.07 197C1086.57 197 1108.77 172.1 1108.77 132.2V65.9H1133.07V215H1108.77V189.2L1112.67 172.1H1105.77C1099.77 199.1 1080.87 218 1048.47 218C1014.57 218 992.67 198.5 992.67 157.1V65.9H1017.27V153.8C1017.27 185 1029.27 197 1055.07 197Z" />
             <path d="M907.341 42.2C895.041 42.2 885.741 33.2 885.741 21.2C885.741 9.8 895.041 0.5 907.341 0.5C919.341 0.5 928.941 9.8 928.941 21.2C928.941 33.2 919.341 42.2 907.341 42.2ZM857.541 215V194H899.541V84.2L868.641 86.9V65.9L903.141 62.9C917.241 61.7 922.641 69.5 922.641 80.9V194H964.641V215H857.541Z" />
@@ -34,7 +56,7 @@ $allconfirmprocent = ($allconfirm / $all) * 100;
 
         <h1 class="visually-hidden">Социальная сеть Аквариум</h1>
 
-        <div class="text-center fs-3" style="margin-bottom: 30px">
+        <div class="text-center fs-3 logo-text">
             <p>
                 Социальная сеть с открытым исходным кодом.
             </p>
@@ -62,9 +84,6 @@ $allconfirmprocent = ($allconfirm / $all) * 100;
                     созданию продукта, о котором хочется говорить.
                 </p>
             </div>
-        </div>
-
-        <div class="row row-cols-1 row-cols-lg-2 g-2 fs-5" style="margin-bottom: 50px">
             <div class="col p-3">
                 <p class="display-2">
                     🥰
@@ -165,7 +184,7 @@ $allconfirmprocent = ($allconfirm / $all) * 100;
             </div>
         </div>
 
-        <div class="text-center fs-5" style="margin-bottom: 100px">
+        <!-- <div class="text-center fs-5" style="margin-bottom: 100px">
             <img src="/app/img/content/about/aqua8.jpg" class="img-fluid mb-3" alt="">
             <h3 class="display-4">OAuth для сайтов</h3>
             <p>
@@ -177,11 +196,11 @@ $allconfirmprocent = ($allconfirm / $all) * 100;
                     Читать подробнее
                 </a>
             </p>
-        </div>
+        </div> -->
 
         <h3 class="text-center h1 mb-3">Аквариум в цифрах</h3>
 
-        <div class="row row-cols-1 row-cols-lg-2 g-2 fs-5" style="margin-bottom: 50px">
+        <div class="row row-cols-1 row-cols-lg-2 g-2 fs-5" style="margin-bottom: 100px">
             <div class="col p-3">
                 <p>
                     На нашей платформе зарегистрировано <span class="text-success fs-4"><?php echo $all ?></span> человек,
@@ -217,6 +236,117 @@ $allconfirmprocent = ($allconfirm / $all) * 100;
                     только в бета-тестировании.
                 </p>
             </div>
+        </div>
+
+        <h3 class="text-center h1 mb-3">Мнение пользователей</h3>
+
+        <div style="margin-bottom: 30px">
+            <div class="see-at-mobile mb-2 fs-5 d-flex align-items-center justify-content-center">
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                8/10
+            </div>
+            <div class="d-flex align-items-center see-at-pc mb-2">
+                <span class="me-3 fs-5">
+                    8/10
+                </span>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg width="20" height="20" class="me-1 svg-normal-2">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                </svg>
+                <svg width="20" height="20" class="me-1 svg-normal-2">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                </svg>
+            </div>
+            <div class="p-4 mb-3" style="background-color: var(--bg-light); border-radius: 8px;">
+                <p class="fs-4 mb-0">
+                    «Аквариум — это прекрасная платформа
+                    для взаимодействия людей... Именно так мне
+                    презентовали друзья этот сайт. И знаете?
+                    Мне действительно нравится, хоть проект
+                    ещё нужно развивать...»
+                </p>
+            </div>
+            <p class="text-more mb-0">
+                Александр, 17 лет.
+            </p>
+        </div>
+
+        <div style="margin-bottom: 30px">
+            <div class="see-at-mobile mb-2 fs-5 d-flex align-items-center justify-content-center">
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                7/10
+            </div>
+            <div class="d-flex align-items-center see-at-pc mb-2">
+                <span class="me-3 fs-5">
+                    7/10
+                </span>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg width="20" height="20" class="me-1 svg-normal-2">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                </svg>
+                <svg width="20" height="20" class="me-1 svg-normal-2">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                </svg>
+                <svg width="20" height="20" class="me-1 svg-normal-2">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                </svg>
+            </div>
+            <div class="p-4 mb-3" style="background-color: var(--bg-light); border-radius: 8px;">
+                <p class="fs-4 mb-0">
+                    «Чуть немного тяжеловатый интерфейс, я уже привыкла к другим соцсетям.
+                    Ещё мне нравится название, как будто рыбки в аквариуме...»
+                </p>
+            </div>
+            <p class="text-more mb-0">
+                Анастасия, 18 лет.
+            </p>
         </div>
 
     </main>

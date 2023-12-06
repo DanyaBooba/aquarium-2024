@@ -6,3 +6,7 @@
 {
     fill: var(--text-invert) !important;
 }
+
+.svg-normal-2 {
+    fill: var(--text-color-4) !important;
+}
