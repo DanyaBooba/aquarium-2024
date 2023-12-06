@@ -34,7 +34,9 @@ if (count($post) <= 0) {
 } else {
     $post = $post[0];
     $author = R::getAll(SqlRequestFindId($postinfo["author"]))[0];
-    $logo = ($author["ismale"] == 1 ? "MAN" : "WOMAN") . $author["logoid"] . ".png";
+
+    $authorlogo = ($author["ismale"] == 1 ? "MAN" : "WOMAN") . $author["logoid"] . ".png";
+    $authorname = ($author["displaynick"] == 1) ? ($author["nickname"]) : ($author["firstName"] . " " . $author["lastName"]);
 
     $postimage = [
         null,
@@ -93,37 +95,35 @@ if (count($post) <= 0) {
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carImage" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
+                                <span class="visually-hidden">Предыдущее</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carImage" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
+                                <span class="visually-hidden">Следующее</span>
                             </button>
                         </div>
                     </div>
                     <div class="col-md-5 person-post-content-post">
                         <div class="person-post-header">
                             <div class="person-post-header-content">
-                                <a href="/user/?id=1" class="link">
-                                    Даниил Дыбка
+                                <a href="/user/?id=<?php echo $postinfo["author"] ?>" class="link">
+                                    <?php echo $authorname ?>
                                 </a>
                             </div>
                         </div>
                         <div class="person-post-content-in">
                             <div class="person-post-content-user">
                                 <a href="/user/?id=1">
-                                    <img src="/app/img/users/icons/<?php echo $logo ?>" alt="Даниил Дыбка">
+                                    <img src="/app/img/users/icons/<?php echo $authorlogo ?>" alt="<?php echo $authorname ?>">
                                 </a>
                                 <div class="post-content-user-content">
-                                    <span title="Даниил Дыбка" aria-label="Даниил Дыбка">
-                                        <a href="/user/?id=1" class="link">
-                                            Даниил Дыбка
+                                    <span title="<?php echo $authorname ?>" aria-label="<?php echo $authorname ?>">
+                                        <a href="/user/?id=<?php echo $postinfo["author"] ?>" class="link">
+                                            <?php echo $authorname ?>
                                         </a>
                                     </span>
                                     <p>
-                                        Содержимое записи с моих слов...
-                                        Вот такие интересные события, бывают,
-                                        попадаются здесь.
+                                        <?php echo $post["text"] ?>
                                     </p>
                                 </div>
                             </div>

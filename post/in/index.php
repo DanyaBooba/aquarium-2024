@@ -34,7 +34,9 @@ if (count($post) <= 0) {
 } else {
     $post = $post[0];
     $author = R::getAll(SqlRequestFindId($postinfo["author"]))[0];
+
     $logo = ($author["ismale"] == 1 ? "MAN" : "WOMAN") . $author["logoid"] . ".png";
+    $authorname = ($author["displaynick"] == 1) ? ($author["nickname"]) : ($author["firstName"] . " " . $author["lastName"]);
 
     $postimage = [
         null,
@@ -69,6 +71,11 @@ if (count($post) <= 0) {
                 <div class="row row-cols-1 person-post-content">
                     <div class="col-md-6 person-post-content-img">
                         <div id="carImage" class="carousel carousel-fade">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carImage" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carImage" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carImage" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="<?php echo $postimage[1] ?>" class="d-block w-100" data-fancybox="gallery" data-src="<?php echo $postimage[1] ?>" alt="...">
@@ -82,37 +89,35 @@ if (count($post) <= 0) {
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carImage" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
+                                <span class="visually-hidden">Предыдущее</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carImage" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
+                                <span class="visually-hidden">Следующее</span>
                             </button>
                         </div>
                     </div>
                     <div class="col-md-6 person-post-content-post">
                         <div class="person-post-header">
                             <div class="person-post-header-content">
-                                <a href="/user/?id=1" class="link">
-                                    Даниил Дыбка
+                                <a class="link-empty">
+                                    <?php echo $authorname ?>
                                 </a>
                             </div>
                         </div>
                         <div class="person-post-content-in">
                             <div class="person-post-content-user">
-                                <a href="/user/?id=1">
-                                    <img src="/app/img/users/icons/<?php echo $logo ?>" alt="Даниил Дыбка">
+                                <a class="link-empty">
+                                    <img src="/app/img/users/icons/<?php echo $logo ?>" alt="<?php echo $authorname ?>">
                                 </a>
                                 <div class="post-content-user-content">
-                                    <span title="Даниил Дыбка" aria-label="Даниил Дыбка">
-                                        <a href="/user/?id=1" class="link">
-                                            Даниил Дыбка
+                                    <span title="<?php echo $authorname ?>" aria-label="<?php echo $authorname ?>">
+                                        <a class="link-empty">
+                                            <?php echo $authorname ?>
                                         </a>
                                     </span>
                                     <p>
-                                        Содержимое записи с моих слов...
-                                        Вот такие интересные события, бывают,
-                                        попадаются здесь.
+                                        <?php echo $post["text"] ?>
                                     </p>
                                 </div>
                             </div>
@@ -132,15 +137,6 @@ if (count($post) <= 0) {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="visually-hidden">
-                    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG2.jpg">
-                        <img src="/app/img/users/bg/BG2.jpg" width="400" alt="" style="display: block;" />
-                    </a>
-                    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG3.jpg">
-                        <img src="/app/img/users/bg/BG3.jpg" width="400" alt="" style="display: block;" />
-                    </a>
                 </div>
 
                 <script src="/app/js/fancybox.umd.js"></script>

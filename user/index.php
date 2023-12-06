@@ -217,9 +217,35 @@ if (count($user) <= 0) {
                         </div>
                     </div>
                 </div>
-                <div class="text-center" style="margin-bottom: 100px">
-                    У пользователя нет записей.
-                </div>
+
+                <?php if (count($posts) > 0) : ?>
+                    <div class="row row-cols-1 g-2 person-posts">
+                        <?php $i = 0; ?>
+                        <?php foreach ($posts as $post) : ?>
+                            <?php
+                            $i++;
+                            $posturl = "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
+                            $postinurl = "/post/in/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
+                            ?>
+                            <div class="col-md-4">
+                                <a href="<?php echo $postinurl ?>" class="person-posts-pc" dataurl="<?php echo $posturl ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="1000" data-height="470">
+                                    <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"]; ?>">
+                                </a>
+                                <a href="<?php echo $posturl ?>" class="person-posts-mobile">
+                                    <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"]; ?>">
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="text-center">
+                        <?php echo count($posts) ?> записей.
+                    </div>
+                <?php else : ?>
+                    <div class="text-center" style="margin-bottom: 100px;">
+                        У пользователя нет записей.
+                    </div>
+                <?php endif ?>
+
                 <div class="d-none" id="person-id"><?php echo $user["id"] ?></div>
                 <script src="/app/js/person-user.js"></script>
 
@@ -314,6 +340,16 @@ if (count($user) <= 0) {
 
                 <script src="/app/js/fancybox.umd.js"></script>
                 <script>
+                    Fancybox.bind("[data-fancybox]", {
+                        on: {
+                            "*": (fancybox, eventName) => {
+                                if (eventName === "close") {
+                                    ClosePost();
+                                }
+                            },
+                        },
+                    });
+
                     Fancybox.bind('[data-fancybox="gallery"]', {
                         Toolbar: {
                             display: {

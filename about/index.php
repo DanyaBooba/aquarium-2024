@@ -1,3 +1,15 @@
+<?php
+include_once "../api/rb-mysql.php";
+include_once "../api/basic-methods.php";
+include_once "../api/token.php";
+
+R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
+
+$all = count(@R::getAll(SqlRequestSelectAllAdmin()));
+$allconfirm = count(@R::getAll(SqlRequestSelectAll()));
+$allconfirmprocent = ($allconfirm / $all) * 100;
+?>
+
 <?php include_once "../app/php/head.php"; ?>
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
@@ -63,21 +75,23 @@
                     частью этого комьюнити на ранних этапах разработки.
                 </p>
             </div>
-            <div class="col p-3">
-                <p class="display-2">
-                    <a href="//aquariumsocial.t.me">
-                        <img src="/app/img/content/social-logos/telegram.jpg" width="62" alt="">
-                    </a>
-                </p>
-                <p>
-                    Мы ведём телеграм канал, в котором рассказываем о проекте,
-                    делимся изменениями и проводим конкурсы с призами.
-                </p>
-                <p>
-                    <a href="//aquariumsocial.t.me" class="link">
-                        Читать
-                    </a>
-                </p>
+            <div class="col p-2" style="background-color: var(--bg-light); border-radius: 8px;">
+                <div class="p-4">
+                    <p>
+                        <a href="//aquariumsocial.t.me">
+                            <img src="/app/img/content/social-logos/telegram.jpg" width="62" class="rounded-circle" alt="Телеграм">
+                        </a>
+                    </p>
+                    <p>
+                        Мы ведём телеграм канал, в котором рассказываем о проекте,
+                        делимся изменениями и проводим конкурсы с призами.
+                    </p>
+                    <p class="mb-0">
+                        <a href="//aquariumsocial.t.me" class="link">
+                            Читать
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -163,6 +177,46 @@
                     Читать подробнее
                 </a>
             </p>
+        </div>
+
+        <h3 class="text-center h1 mb-3">Аквариум в цифрах</h3>
+
+        <div class="row row-cols-1 row-cols-lg-2 g-2 fs-5" style="margin-bottom: 50px">
+            <div class="col p-3">
+                <p>
+                    На нашей платформе зарегистрировано <span class="text-success fs-4"><?php echo $all ?></span> человек,
+                    из которых <span class="text-success fs-4"><?php echo $allconfirmprocent ?>%</span> имеют подтвержденные аккаунты.
+                </p>
+                <p class="text-more mb-0">
+                    Обновляется в режиме реального времени.
+                </p>
+            </div>
+            <div class="col p-3">
+                <p>
+                    За 23 дня мы провели <span class="text-success fs-4">20</span> изменений,
+                    из которых <span class="text-success fs-4">5</span> оказались масштабными,
+                    сильно повлиявшие на развитие платформы.
+                </p>
+                <p class="text-more mb-0">
+                    На основе данных из <a href="//aquariumsocial.t.me" class="link">Телеграм канала</a>.
+                </p>
+            </div>
+            <div class="col p-3">
+                <p>
+                    На страницы платформы с момента запуска
+                    пользователи заходили свыше <span class="text-success fs-4">1000</span> раз.
+                </p>
+                <p class="text-more mb-0">
+                    На основе данных из Яндекс Метрики.
+                </p>
+            </div>
+            <div class="col p-3">
+                <p>
+                    Почти каждый день происходит регистрация
+                    новых пользователей, хотя платформа находится
+                    только в бета-тестировании.
+                </p>
+            </div>
         </div>
 
     </main>

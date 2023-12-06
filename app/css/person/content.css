@@ -513,8 +513,6 @@
     border-radius: 8px;
 }
 
-
-
 /* Settings image */
 
 form.person-settings-form-image.form-image-bg .row .col img {
@@ -881,16 +879,6 @@ a.person-post-back svg {
     fill: white;
 }
 
-/* .person-post-content .person-post-content-img button {
-    margin-left: auto !important;
-    margin-top: auto !important;
-
-    margin: 0;
-    padding: 10px;
-    background: transparent;
-    border: 0 !important;
-} */
-
 @media(min-width: 993px) {
     .person-post-content .person-post-content-img {
         height: 470px;
@@ -949,25 +937,6 @@ a.person-post-back svg {
     }
 }
 
-/* @media(min-width: 1400px) {
-    .person-post-content-img .carousel {
-        width: 100%;
-    }
-
-    .person-post-content-img .carousel .carousel-inner {
-        width: 100%;
-    }
-
-    .person-post-content-img .carousel .carousel-inner .carousel-item {
-        width: 100%;
-    }
-
-    .person-post-content-img .carousel .carousel-inner .carousel-item img {
-        object-fit: cover;
-
-    }
-}*/
-
 .person-post-content-in {
     padding: 20px !important;
 }
@@ -1003,27 +972,27 @@ a.person-post-back svg {
     border-top: 1px solid var(--text-color-4);
 }
 
-/* .person-post-bottom button {
+.person-post-bottom button {
     border: 0 !important;
     padding: 0;
     margin: 0;
     margin-right: 10px;
     background: transparent;
-} */
+}
 
-/* .person-post-bottom button:active,
+.person-post-bottom button:active,
 .person-post-bottom button:focus,
 .person-post-bottom button:hover {
     background: transparent;
-} */
+}
 
-/* .person-post-bottom button svg {
+.person-post-bottom button svg {
     fill: var(--post-icon);
-} */
+}
 
-/* .person-post-bottom button:hover svg {
+.person-post-bottom button:hover svg {
     fill: var(--post-icon-hover);
-} */
+}
 
 .person-post-bottom-content {
     padding: 20px !important;
@@ -1083,5 +1052,3 @@ a.person-post-back svg {
 {
     background-color: var(--alert-primary);
 }
-
-/* Image */

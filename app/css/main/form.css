@@ -9,6 +9,12 @@ form .form-more {
     margin-bottom: 10px;
 }
 
+.text-more {
+    color: var(--text-color-2);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
 .form-control {
     padding: 8px 14px !important;
 }

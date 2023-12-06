@@ -73,18 +73,6 @@ $randomimage = [
     (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
     (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
 ];
-
-$postdataform = [
-    "style" => "
-    <style>
-    .d-flex {
-        display: flex;
-    }
-    .col-md-6 {
-        width: 50%;
-    }
-    </style>"
-];
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
