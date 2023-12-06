@@ -1,4 +1,5 @@
 <?php
+if (!isset($_SESSION)) session_start();
 include_once "../api/rb-mysql.php";
 include_once "../api/basic-methods.php";
 include_once "../api/token.php";
@@ -7,7 +8,8 @@ R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Tok
 
 $all = count(@R::getAll(SqlRequestSelectAllAdmin()));
 $allconfirm = count(@R::getAll(SqlRequestSelectAll()));
-$allconfirmprocent = ($allconfirm / $all) * 100;
+$allconfirmprocent = intval(($allconfirm / $all) * 100);
+$procenttext = FormOfWord($all, "человек", "человека", "человек");
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -189,7 +191,7 @@ $allconfirmprocent = ($allconfirm / $all) * 100;
         <div class="row row-cols-1 row-cols-lg-2 g-2 fs-5" style="margin-bottom: 100px">
             <div class="col p-3">
                 <p>
-                    На нашей платформе зарегистрировано <span class="text-success fs-4"><?php echo $all ?></span> человек,
+                    На нашей платформе зарегистрировано <span class="text-success fs-4"><?php echo $all ?></span> <?php echo $procenttext ?>,
                     из которых <span class="text-success fs-4"><?php echo $allconfirmprocent ?>%</span> имеют подтвержденные аккаунты.
                 </p>
                 <p class="text-more mb-0">
