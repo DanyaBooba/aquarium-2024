@@ -28,10 +28,16 @@
     <meta name="twitter:site" content="https://aquarium.org.ru/" />
     <meta name="twitter:image" content="https://aquarium.org.ru/app/img/logo/favicon.ico" />
     <meta name="Author" content="Даниил Дыбка" />
-    <link rel="manifest" href="/manifest.json" />
 
+    <link rel="manifest" href="/manifest.json" />
     <link rel="icon" href="/app/img/logo/favicon.ico" type="image/x-icon" />
+
     <meta name="view-transition" content="same-origin" />
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="phone=no">
 
     <script>
         if (matchMedia("(prefers-color-scheme: dark)").media === "not all") {
