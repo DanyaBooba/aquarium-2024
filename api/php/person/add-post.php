@@ -23,6 +23,11 @@ if (count($find) <= 0) {
     return;
 }
 
+if ($find[0]["canaddpost"] != 1) {
+    header("Location: /add/?e=cant_add");
+    return;
+}
+
 $maxidsql = SqlRequestGetMaxidPostUser($find[0]["id"], $find[0]["email"]);
 
 $maxid = intval(R::getAll($maxidsql)[0]["MAX(`idpost`)"]);

@@ -184,20 +184,6 @@ $allconfirmprocent = ($allconfirm / $all) * 100;
             </div>
         </div>
 
-        <!-- <div class="text-center fs-5" style="margin-bottom: 100px">
-            <img src="/app/img/content/about/aqua8.jpg" class="img-fluid mb-3" alt="">
-            <h3 class="display-4">OAuth для сайтов</h3>
-            <p>
-                Используйте регистрацию на сайте с
-                использованием Аквариума.
-            </p>
-            <p>
-                <a href="/about/api/" class="link">
-                    Читать подробнее
-                </a>
-            </p>
-        </div> -->
-
         <h3 class="text-center h1 mb-3">Аквариум в цифрах</h3>
 
         <div class="row row-cols-1 row-cols-lg-2 g-2 fs-5" style="margin-bottom: 100px">

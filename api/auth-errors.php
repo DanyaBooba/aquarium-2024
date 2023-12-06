@@ -115,6 +115,8 @@ function AddPostError($data)
 {
     if ($data == "len_post") return "Слишком маленькая длина.";
 
+    if ($data == "cant_add") return "Вы не можете публиковать статьи.";
+
     return null;
 }
 
