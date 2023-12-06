@@ -881,7 +881,7 @@ a.person-post-back svg {
     fill: white;
 }
 
-.person-post-content .person-post-content-img button {
+/* .person-post-content .person-post-content-img button {
     margin-left: auto !important;
     margin-top: auto !important;
 
@@ -889,7 +889,7 @@ a.person-post-back svg {
     padding: 10px;
     background: transparent;
     border: 0 !important;
-}
+} */
 
 @media(min-width: 993px) {
     .person-post-content .person-post-content-img {
@@ -1003,27 +1003,27 @@ a.person-post-back svg {
     border-top: 1px solid var(--text-color-4);
 }
 
-.person-post-bottom button {
+/* .person-post-bottom button {
     border: 0 !important;
     padding: 0;
     margin: 0;
     margin-right: 10px;
     background: transparent;
-}
+} */
 
-.person-post-bottom button:active,
+/* .person-post-bottom button:active,
 .person-post-bottom button:focus,
 .person-post-bottom button:hover {
     background: transparent;
-}
+} */
 
-.person-post-bottom button svg {
+/* .person-post-bottom button svg {
     fill: var(--post-icon);
-}
+} */
 
-.person-post-bottom button:hover svg {
+/* .person-post-bottom button:hover svg {
     fill: var(--post-icon-hover);
-}
+} */
 
 .person-post-bottom-content {
     padding: 20px !important;

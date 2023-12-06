@@ -66,19 +66,29 @@ if (count($post) <= 0) {
                 </script>
             <?php else : ?>
                 <link rel="stylesheet" href="/app/css/fancybox.css" />
-
                 <div class="row row-cols-1 person-post-content">
                     <div class="col-md-6 person-post-content-img">
                         <div id="carImage" class="carousel carousel-fade">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carImage" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carImage" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carImage" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="<?php echo $postimage[1] ?>" class="d-block w-100" data-fancybox="gallery" data-src="<?php echo $postimage[1] ?>" alt="...">
+                                    <a data-fancybox="gallery" data-src="<?php echo $postimage[1] ?>">
+                                        <img src="<?php echo $postimage[1] ?>" class="d-block w-100" alt="...">
+                                    </a>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="<?php echo $postimage[2] ?>" class="d-block w-100" data-fancybox="gallery" data-src="<?php echo $postimage[2] ?>" alt="...">
+                                    <a data-fancybox="gallery" data-src="<?php echo $postimage[2] ?>">
+                                        <img src="<?php echo $postimage[2] ?>" class="d-block w-100" alt="...">
+                                    </a>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="<?php echo $postimage[3] ?>" class="d-block w-100" data-fancybox="gallery" data-src="<?php echo $postimage[3] ?>" alt="...">
+                                    <a data-fancybox="gallery" data-src="<?php echo $postimage[3] ?>">
+                                        <img src="<?php echo $postimage[3] ?>" class="d-block w-100" alt="...">
+                                    </a>
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carImage" data-bs-slide="prev">
@@ -133,15 +143,6 @@ if (count($post) <= 0) {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="visually-hidden">
-                    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG2.jpg">
-                        <img src="/app/img/users/bg/BG2.jpg" width="400" alt="" style="display: block;" />
-                    </a>
-                    <a data-fancybox="gallery" data-src="/app/img/users/bg/BG3.jpg">
-                        <img src="/app/img/users/bg/BG3.jpg" width="400" alt="" style="display: block;" />
-                    </a>
                 </div>
 
                 <script src="/app/js/fancybox.umd.js"></script>
