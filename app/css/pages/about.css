@@ -52,7 +52,7 @@ main h3 {
 
     .about-up a {
         border: 1px solid var(--text-color-3);
-        padding: 9px 10px 16px 11px;
+        padding: 9px 10px 14px 11px;
         border-radius: 50%;
         background: var(--bg-color-rgba-3);
     }

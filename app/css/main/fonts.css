@@ -3,15 +3,15 @@
 @font-face {
     font-family: NotoSans;
     font-style: normal;
-    src: url("/app/fonts/NotoSans/NotoSans-Regular.ttf");
-        /* url("/app/fonts/NotoSans/NotoSans-Regular.woff2") format("woff2"); */
+    src: url("/app/fonts/NotoSans/NotoSans-Regular.woff") format("woff"),
+        url("/app/fonts/NotoSans/NotoSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: NotoSans-Bold;
     font-style: bold;
-    src: url("/app/fonts/NotoSans/NotoSans-Bold.ttf");
-        /* url("/app/fonts/NotoSans/NotoSans-Bold.woff2") format("woff2"); */
+    src: url("/app/fonts/NotoSans/NotoSans-SemiBold.woff") format("woff"),
+        url("/app/fonts/NotoSans/NotoSans-SemiBold.woff2") format("woff2");
 }
 
 @font-face {
