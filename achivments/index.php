@@ -43,7 +43,7 @@ $achivs = array_unique(json_decode($find[0]["achivs"]));
 
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content">
+        <div class="col-md-10 person-content">
             <h1>Достижения</h1>
             <?php if (count($achivs) > 0) : ?>
                 <ul class="list-group list-group-flush person-content-achivs">

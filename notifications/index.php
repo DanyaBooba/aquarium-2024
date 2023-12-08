@@ -33,7 +33,7 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
 
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content person-content-notifications-main">
+        <div class="col-md-10 person-content person-content-notifications-main">
             <h1>Уведомления</h1>
 
             <?php if (count($nots) > 0) : ?>

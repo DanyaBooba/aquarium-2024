@@ -45,7 +45,7 @@ $countachivs = count(array_unique(json_decode($user["achivs"])));
 
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content">
+        <div class="col-md-10 person-content">
             <h1>Сообщения</h1>
             <div class="row row-cols-1 person-messages g-2">
                 <div class="col-md-4">

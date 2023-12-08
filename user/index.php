@@ -38,9 +38,10 @@ if (count($user) <= 0) {
         $buttonsubs = $find["id"] == $user["id"] ? "disabled" : "";
         $isubs = in_array(intval($user["id"]), json_decode($find["isubs"]));
         $atmesubs = in_array(intval($find["id"]), json_decode($user["isubs"]));
+        $buttonsubsbg = $isubs ? "" : "style='background-color: var(--bg-light-main-2) !important;'";
 
         $subs = $isubs ? "Подписан" : "Подписаться";
-        $subslogo = $isubs ? "check" : "plus";
+        $subslogo = $isubs ? "check" : "plus-circle-dotted";
     }
 
     # At me sub
@@ -50,10 +51,31 @@ if (count($user) <= 0) {
 
     $userssubatme = [];
     for ($i = 0; $i < $countsubatme; $i++) {
-        array_push($userssubatme, R::getAll(SqlRequestFindId(intval($subatme[$i])))[0]);
+        $userfind = R::getAll(SqlRequestFindId(intval($subatme[$i])));
+        if (count($userfind) > 0) {
+            array_push($userssubatme, $userfind[0]);
+        }
     }
 
     $isdisabledsubatme = $countsubatme > 0 ? "" : "disabled";
+
+    $subatmecopy = $subatme;
+    $subatmeimage = [];
+    if ($countsubatme > 0) {
+        for ($i = 0; $i < min(2, $countsubatme); $i++) {
+            $index = random_int(0, count($subatmecopy) - 1);
+            $userid = $subatmecopy[$index];
+            $useridfind = R::getAll(SqlRequestFindId($subatmecopy[$index]));
+
+            if (count($useridfind) > 0) {
+                array_push($subatmeimage, ($useridfind[0]["ismale"] == 1 ? "MAN" : "WOMAN") . $useridfind[0]["logoid"]);
+            } else {
+                array_push($subatmeimage, (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5));
+            }
+
+            array_splice($subatmecopy, $index, 1);
+        }
+    }
 
     # Sub me
 
@@ -62,10 +84,31 @@ if (count($user) <= 0) {
 
     $userssubme = [];
     for ($i = 0; $i < $countsubme; $i++) {
-        array_push($userssubme, R::getAll(SqlRequestFindId(intval($subme[$i])))[0]);
+        $userfind = R::getAll(SqlRequestFindId(intval($subme[$i])));
+        if (count($userfind) > 0) {
+            array_push($userssubme, $userfind[0]);
+        }
     }
 
     $isdisabledsubme = $countsubme > 0 ? "" : "disabled";
+
+    $submecopy = $subme;
+    $submeimage = [];
+    if ($countsubme > 0) {
+        for ($i = 0; $i < min(2, $countsubme); $i++) {
+            $index = random_int(0, count($submecopy) - 1);
+            $userid = $submecopy[$index];
+            $useridfind = R::getAll(SqlRequestFindId($submecopy[$index]));
+
+            if (count($useridfind) > 0) {
+                array_push($submeimage, ($useridfind[0]["ismale"] == 1 ? "MAN" : "WOMAN") . $useridfind[0]["logoid"]);
+            } else {
+                array_push($submeimage, (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5));
+            }
+
+            array_splice($submecopy, $index, 1);
+        }
+    }
 
     # Achivs
 
@@ -88,13 +131,6 @@ if (count($user) <= 0) {
         "subs" => FormOfWord($countsubme, "Подписка", "Подписки", "Подписок"),
         "atmesubs" => FormOfWord($countsubatme, "Подписчик", "Подписчика", "Подписчиков"),
     ];
-
-    $randomimage = [
-        (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
-        (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
-        (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
-        (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
-    ];
 }
 ?>
 
@@ -110,7 +146,7 @@ if (count($user) <= 0) {
 
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content">
+        <div class="col-md-10 person-content">
             <?php if ($user == false) : ?>
                 <h1>Пользователь не найден</h1>
                 <p>Попробуйте изменить запрос.</p>
@@ -171,7 +207,7 @@ if (count($user) <= 0) {
                                     <?php if ($countsubatme > 0) : ?>
                                         <span>
                                             <?php for ($i = 0; $i < min(2, $countsubatme); $i++) : ?>
-                                                <img src="/app/img/users/icons/<?php echo $randomimage[$i] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
+                                                <img src="/app/img/users/icons/<?php echo $subatmeimage[$i] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
                                             <?php endfor; ?>
                                         </span>
                                     <?php endif; ?>
@@ -181,7 +217,7 @@ if (count($user) <= 0) {
                                     <?php if ($countsubme > 0) : ?>
                                         <span>
                                             <?php for ($i = 0; $i < min(2, $countsubme); $i++) : ?>
-                                                <img src="/app/img/users/icons/<?php echo $randomimage[$i + 2] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
+                                                <img src="/app/img/users/icons/<?php echo $submeimage[$i] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
                                             <?php endfor; ?>
                                         </span>
                                     <?php endif; ?>
@@ -197,24 +233,17 @@ if (count($user) <= 0) {
                         <div class="person-profile-content-buttons person-profile-content-buttons-width">
                             <?php if (count($find) > 0) : ?>
                                 <?php if ($find["emailverify"] == 1) : ?>
-                                    <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?>>
-                                        <svg class="me-1" fill="white" width="26" height="26">
-                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#<?php echo $subslogo ?>"></use>
+                                    <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?> <?php echo $buttonsubsbg ?>>
+                                        <svg class="me-2" width="26" height="26">
+                                            <use xlink:href="/app/img/icons/bootstrap.svg#<?php echo $subslogo ?>"></use>
                                         </svg>
                                         <?php echo $subs ?>
                                     </button>
-                                    <?php if ($isubs && $atmesubs) : ?>
-                                        <button onClick="MailTo()" class="btn btn-secondary ms-2" style="width: 52px;">
-                                            <svg fill="white" width="26" height="26">
-                                                <use xlink:href="/app/img/icons/bootstrap.min.svg#envelope"></use>
-                                            </svg>
-                                        </button>
-                                    <?php endif; ?>
                                 <?php endif; ?>
                             <?php else : ?>
                                 <button onClick="LoginToAccount()" class="btn btn-secondary d-flex align-items-center justify-content-center">
-                                    <svg class="me-1" fill="white" width="26" height="26">
-                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#plus"></use>
+                                    <svg class="me-2" fill="white" width="26" height="26">
+                                        <use xlink:href="/app/img/icons/bootstrap.svg#plus-circle-dotted"></use>
                                     </svg>
                                     Подписаться
                                 </button>

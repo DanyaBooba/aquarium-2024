@@ -31,10 +31,31 @@ $countsubme = count($subme);
 
 $userssubme = [];
 for ($i = 0; $i < $countsubme; $i++) {
-    array_push($userssubme, R::getAll(SqlRequestFindId(intval($subme[$i])))[0]);
+    $userfind = R::getAll(SqlRequestFindId(intval($subme[$i])));
+    if (count($userfind) > 0) {
+        array_push($userssubme, $userfind[0]);
+    }
 }
 
 $isdisabledsubme = $countsubme > 0 ? "" : "disabled";
+
+$submecopy = $subme;
+$submeimage = [];
+if ($countsubme > 0) {
+    for ($i = 0; $i < min(2, $countsubme); $i++) {
+        $index = random_int(0, count($submecopy) - 1);
+        $userid = $submecopy[$index];
+        $useridfind = R::getAll(SqlRequestFindId($submecopy[$index]));
+
+        if (count($useridfind) > 0) {
+            array_push($submeimage, ($useridfind[0]["ismale"] == 1 ? "MAN" : "WOMAN") . $useridfind[0]["logoid"]);
+        } else {
+            array_push($submeimage, (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5));
+        }
+
+        array_splice($submecopy, $index, 1);
+    }
+}
 
 # Sub at me
 
@@ -43,10 +64,31 @@ $countsubatme = count($subatme);
 
 $userssubatme = [];
 for ($i = 0; $i < $countsubatme; $i++) {
-    array_push($userssubatme, R::getAll(SqlRequestFindId(intval($subatme[$i])))[0]);
+    $userfind = R::getAll(SqlRequestFindId(intval($subatme[$i])));
+    if (count($userfind) > 0) {
+        array_push($userssubatme, $userfind[0]);
+    }
 }
 
 $isdisabledsubatme = $countsubatme > 0 ? "" : "disabled";
+
+$subatmecopy = $subatme;
+$subatmeimage = [];
+if ($countsubatme > 0) {
+    for ($i = 0; $i < min(2, $countsubatme); $i++) {
+        $index = random_int(0, count($subatmecopy) - 1);
+        $userid = $subatmecopy[$index];
+        $useridfind = R::getAll(SqlRequestFindId($subatmecopy[$index]));
+
+        if (count($useridfind) > 0) {
+            array_push($subatmeimage, ($useridfind[0]["ismale"] == 1 ? "MAN" : "WOMAN") . $useridfind[0]["logoid"]);
+        } else {
+            array_push($subatmeimage, (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5));
+        }
+
+        array_splice($subatmecopy, $index, 1);
+    }
+}
 
 # Achivs
 
@@ -70,12 +112,6 @@ $form = [
     "atmesubs" => FormOfWord($countsubatme, "Подписчик", "Подписчика", "Подписчиков"),
 ];
 
-$randomimage = [
-    (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
-    (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
-    (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
-    (random_int(0, 1) == 1 ? "MAN" : "WOMAN") . random_int(1, 5),
-];
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -90,7 +126,7 @@ $randomimage = [
 
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content">
+        <div class="col-md-10 person-content">
             <?php if ($user["emailverify"] == 0) : ?>
                 <div class="alert alert-warning d-flex align-items-center">
                     <svg height="32" width="32" class="me-3 svg-normal see-at-pc">
@@ -127,7 +163,7 @@ $randomimage = [
                                 <?php if ($countsubatme > 0) : ?>
                                     <span>
                                         <?php for ($i = 0; $i < min(2, $countsubatme); $i++) : ?>
-                                            <img src="/app/img/users/icons/<?php echo $randomimage[$i] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
+                                            <img src="/app/img/users/icons/<?php echo $subatmeimage[$i] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
                                         <?php endfor; ?>
                                     </span>
                                 <?php endif; ?>
@@ -137,7 +173,7 @@ $randomimage = [
                                 <?php if ($countsubme > 0) : ?>
                                     <span>
                                         <?php for ($i = 0; $i < min(2, $countsubme); $i++) : ?>
-                                            <img src="/app/img/users/icons/<?php echo $randomimage[$i + 2] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
+                                            <img src="/app/img/users/icons/<?php echo $submeimage[$i] ?>.png" width="20" class="rounded-circle" alt="Пользователь 1">
                                         <?php endfor; ?>
                                     </span>
                                 <?php endif; ?>
@@ -157,7 +193,7 @@ $randomimage = [
                             </button>
                         <?php endif; ?>
                         <button onClick="ButtonLeftBar('settings')" class="btn btn-secondary">
-                            Редактировать профиль
+                            Редактировать
                         </button>
                     </div>
                 </div>

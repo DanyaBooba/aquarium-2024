@@ -34,7 +34,7 @@ $users = R::getAll(SqlRequestSelectAllAdmin());
 
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content">
+        <div class="col-md-10 person-content">
             <h1>АДМИН ПАНЕЛЬ</h1>
             <h2>Действия</h2>
             <ul>

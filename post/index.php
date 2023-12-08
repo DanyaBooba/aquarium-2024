@@ -59,7 +59,7 @@ if (count($post) <= 0) {
 
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content person-post">
+        <div class="col-md-10 person-content person-post">
             <?php if ($post == false) : ?>
                 <h1>Запись не найдена</h1>
                 <p>На главную страницу через 3 сек.</p>

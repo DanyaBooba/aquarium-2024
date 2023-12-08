@@ -106,14 +106,26 @@
 }
 
 .person-profile-content-buttons .btn-secondary {
-    background: var(--person-button);
-    border: 1px solid var(--person-button);
-    --bs-btn-focus-shadow-rgb: var(--person-button-focus) !important;
+    background: var(--bg-light) !important;
+    border: 0 !important;
+    --bs-btn-focus-shadow-rgb: var(--bg-light) !important;
+    color: var(--text-color-2) !important;
+    transition: .15s;
 }
 
 .person-profile-content-buttons .btn-secondary:hover,
 .person-profile-content-buttons .btn-secondary:focus {
-    border: 1px solid var(--person-button-border);
+    border: 0 !important;
+    color: var(--text-color) !important;
+}
+
+.person-profile-content-buttons .btn-secondary svg {
+    fill: var(--text-color-2) !important;
+}
+
+.person-profile-content-buttons .btn-secondary:hover svg,
+.person-profile-content-buttons .btn-secondary:focus svg {
+    fill: var(--text-color) !important;
 }
 
 .person-profile-bg
@@ -171,13 +183,22 @@
 .person-profile-subs button {
     color: var(--text-color);
     background: var(--bg-light);
+    border: 0 !important;
     font-size: 15px;
+    transition: .15s;
 }
 
 .person-profile-subs button:hover,
 .person-profile-subs button:focus,
 .person-profile-subs button:active {
-    background: var(--bg-light);
+    background: var(--bg-light-main-2);
+}
+
+.person-profile-subs button:hover img,
+.person-profile-subs button:focus img,
+.person-profile-subs button:active img {
+    background: var(--bg-light-main-2);
+    border-color: var(--bg-light-main-2);
 }
 
 .person-profile-subs button:disabled {

@@ -21,6 +21,16 @@ ul.person-leftbar li a {
     display: flex;
 }
 
+@media(max-width: 1200px) {
+    ul.person-leftbar li span {
+        max-width: 68px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
+
 ul.person-leftbar li button {
     padding: 0;
     border: none;
@@ -33,6 +43,7 @@ ul.person-leftbar li button {
     display: flex;
     align-items: center;
     border-radius: 8px;
+    font-size: 14px;
 
     width: 100%;
     transition: .3s background;
@@ -45,7 +56,6 @@ ul.person-leftbar li button:focus {
 
 ul.person-leftbar li button.active {
     background: var(--bg-light-active);
-    /* outline: 1px solid var(--bg-light-active-hover); */
 }
 
 ul.person-leftbar li button.active:hover,
@@ -56,6 +66,8 @@ ul.person-leftbar li button.active:focus {
 ul.person-leftbar li button svg {
     fill: var(--left-bar-icon);
     margin-right: 1rem;
+    width: 24px;
+    height: 24px;
 
     transform: scale(0.9);
     transition: .3s;

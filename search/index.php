@@ -40,7 +40,7 @@ $btnprev = $page == 1 ? "disabled" : "";
 
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content">
+        <div class="col-md-10 person-content">
             <h1>Поиск</h1>
             <div class="person-form">
                 <form action="?" method="get">

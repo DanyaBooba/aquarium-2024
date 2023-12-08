@@ -93,7 +93,7 @@ $user = $user[0];
 
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
-        <div class="col-md-9 person-content">
+        <div class="col-md-10 person-content">
             <h1>Добавить пост</h1>
             <div class="container px-0">
                 <div class="person-setting row row-cols-1 g-2">
