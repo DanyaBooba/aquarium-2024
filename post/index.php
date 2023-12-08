@@ -149,17 +149,17 @@ if (count($post) <= 0) {
                                 <div class="person-post-bottom-content">
                                     <button class="btn me-3" title="Нравится">
                                         <svg height="28" width="28">
-                                            <use xlink:href="/app/img/icons/bootstrap.svg#heart"></use>
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#heart"></use>
                                         </svg>
                                     </button>
                                     <button class="btn" title="Комментарий">
                                         <svg height="28" width="28">
-                                            <use xlink:href="/app/img/icons/bootstrap.svg#chat-square"></use>
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#chat-square"></use>
                                         </svg>
                                     </button>
                                     <button class="ms-auto btn" title="Репост">
                                         <svg height="28" width="28">
-                                            <use xlink:href="/app/img/icons/bootstrap.svg#send"></use>
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#send"></use>
                                         </svg>
                                     </button>
                                 </div>

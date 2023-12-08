@@ -57,7 +57,7 @@
             </a>
             <a href="//aquariumsocial.t.me" target="_blank" class="link-empty ms-2">
                 <svg class="svg-normal">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#telegram"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#telegram"></use>
                 </svg>
             </a>
         </div>

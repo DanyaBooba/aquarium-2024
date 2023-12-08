@@ -274,7 +274,7 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
         <div style="margin-bottom: 30px">
             <div class="see-at-mobile mb-2 fs-5 d-flex align-items-center justify-content-center">
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 8/10
             </div>
@@ -283,34 +283,34 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
                     8/10
                 </span>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg width="20" height="20" class="me-1 svg-normal-2">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star"></use>
                 </svg>
                 <svg width="20" height="20" class="me-1 svg-normal-2">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star"></use>
                 </svg>
             </div>
             <div class="p-4 mb-3" style="background-color: var(--bg-light); border-radius: 8px;">
@@ -330,7 +330,7 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
         <div style="margin-bottom: 30px">
             <div class="see-at-mobile mb-2 fs-5 d-flex align-items-center justify-content-center">
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 8/10
             </div>
@@ -339,34 +339,34 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
                     8/10
                 </span>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg width="20" height="20" class="me-1 svg-normal-2">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star"></use>
                 </svg>
                 <svg width="20" height="20" class="me-1 svg-normal-2">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star"></use>
                 </svg>
             </div>
             <div class="p-4 mb-3" style="background-color: var(--bg-light); border-radius: 8px;">
@@ -382,7 +382,7 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
         <div style="margin-bottom: 30px">
             <div class="see-at-mobile mb-2 fs-5 d-flex align-items-center justify-content-center">
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 7/10
             </div>
@@ -391,34 +391,34 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
                     7/10
                 </span>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star-fill"></use>
                 </svg>
                 <svg width="20" height="20" class="me-1 svg-normal-2">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star"></use>
                 </svg>
                 <svg width="20" height="20" class="me-1 svg-normal-2">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star"></use>
                 </svg>
                 <svg width="20" height="20" class="me-1 svg-normal-2">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#star"></use>
                 </svg>
             </div>
             <div class="p-4 mb-3" style="background-color: var(--bg-light); border-radius: 8px;">

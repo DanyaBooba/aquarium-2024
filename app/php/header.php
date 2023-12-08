@@ -31,7 +31,7 @@
         <div class="col-md-3 header-app-icons see-at-pc ms-auto">
             <a href="//aquariumsocial.t.me" target="_blank" class="link-empty me-auto">
                 <svg class="svg-normal">
-                    <use xlink:href="/app/img/icons/bootstrap.svg#telegram"></use>
+                    <use xlink:href="/app/img/icons/bootstrap.min.svg#telegram"></use>
                 </svg>
             </a>
         </div>

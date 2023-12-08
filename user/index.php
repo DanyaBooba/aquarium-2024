@@ -173,7 +173,7 @@ if (count($user) <= 0) {
                     <div class="alert alert-primary d-flex align-items-center">
                         <a href="/login/" aria-label="Войти в аккаунт">
                             <svg height="32" width="32" class="me-3 svg-normal see-at-pc">
-                                <use xlink:href="/app/img/icons/bootstrap.svg#box-arrow-in-right"></use>
+                                <use xlink:href="/app/img/icons/bootstrap.min.svg#box-arrow-in-right"></use>
                             </svg>
                         </a>
                         <span>
@@ -235,7 +235,7 @@ if (count($user) <= 0) {
                                 <?php if ($find["emailverify"] == 1) : ?>
                                     <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?> <?php echo $buttonsubsbg ?>>
                                         <svg class="me-2" width="26" height="26">
-                                            <use xlink:href="/app/img/icons/bootstrap.svg#<?php echo $subslogo ?>"></use>
+                                            <use xlink:href="/app/img/icons/bootstrap.min.svg#<?php echo $subslogo ?>"></use>
                                         </svg>
                                         <?php echo $subs ?>
                                     </button>
@@ -243,7 +243,7 @@ if (count($user) <= 0) {
                             <?php else : ?>
                                 <button onClick="LoginToAccount()" class="btn btn-secondary d-flex align-items-center justify-content-center">
                                     <svg class="me-2" fill="white" width="26" height="26">
-                                        <use xlink:href="/app/img/icons/bootstrap.svg#plus-circle-dotted"></use>
+                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#plus-circle-dotted"></use>
                                     </svg>
                                     Подписаться
                                 </button>
@@ -322,7 +322,7 @@ if (count($user) <= 0) {
                             <div class="modal-content person-content">
                                 <div class="modal-header">
                                     <h3 class="modal-title fs-5" id="modalLabel">Подписчики</h3>
-                                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="btn modal-button-close" data-bs-dismiss="modal" aria-label="Close">
                                         <svg class="svg-normal" width="20" height="20">
                                             <use xlink:href="/app/img/icons/bootstrap.min.svg#x-lg"></use>
                                         </svg>
@@ -332,7 +332,7 @@ if (count($user) <= 0) {
                                     <ul class="list-group list-group-flush">
                                         <?php foreach ($userssubatme as $user) : ?>
                                             <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
-                                                <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
+                                                <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>" loading="lazy">
                                                 <?php if ($user["displaynick"] == 1) : ?>
                                                     <?php echo $user["nickname"] ?>
                                                 <?php else : ?>
@@ -353,7 +353,7 @@ if (count($user) <= 0) {
                             <div class="modal-content person-content">
                                 <div class="modal-header">
                                     <h3 class="modal-title fs-5" id="modalLabel">Подписан</h3>
-                                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="btn modal-button-close" data-bs-dismiss="modal" aria-label="Close">
                                         <svg class="svg-normal" width="20" height="20">
                                             <use xlink:href="/app/img/icons/bootstrap.min.svg#x-lg"></use>
                                         </svg>
@@ -363,7 +363,7 @@ if (count($user) <= 0) {
                                     <ul class="list-group list-group-flush">
                                         <?php foreach ($userssubme as $user) : ?>
                                             <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
-                                                <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
+                                                <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>" loading="lazy">
                                                 <?php if ($user["displaynick"] == 1) : ?>
                                                     <?php echo $user["nickname"] ?>
                                                 <?php else : ?>
@@ -384,7 +384,7 @@ if (count($user) <= 0) {
                             <div class="modal-content person-content">
                                 <div class="modal-header">
                                     <h3 class="modal-title fs-5" id="modalLabel">Достижения</h3>
-                                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="btn modal-button-close" data-bs-dismiss="modal" aria-label="Close">
                                         <svg class="svg-normal" width="20" height="20">
                                             <use xlink:href="/app/img/icons/bootstrap.min.svg#x-lg"></use>
                                         </svg>
@@ -393,8 +393,20 @@ if (count($user) <= 0) {
                                 <div class="modal-body person-search-list">
                                     <ul class="list-group list-group-flush">
                                         <?php foreach ($achivsblock as $achiv) : ?>
-                                            <li class="list-group-item">
-                                                <img src="/app/img/achivs/<?php echo $achiv["nameimg"] ?>.jpg" alt="<?php echo $achiv["name"] ?>">
+                                            <?php
+                                            $img = imageCreateFromJpeg("../app/img/achivs/" . $achiv["nameimg"] . ".jpg");
+
+                                            $width = ImageSX($img);
+                                            $height = ImageSY($img);
+
+                                            $thumb = imagecreatetruecolor(1, 1);
+                                            imagecopyresampled($thumb, $img, 0, 0, 0, 0, 1, 1, $width, $height);
+                                            $color = '#' . dechex(imagecolorat($thumb, 0, 0));
+
+                                            list($r, $g, $b) = sscanf($color, "#%02x%02x%02x");
+                                            ?>
+                                            <li class="list-group-item py-3">
+                                                <img src="/app/img/achivs/<?php echo $achiv["nameimg"] ?>.jpg" alt="<?php echo $achiv["name"] ?>" style="box-shadow: 0 .5rem 1rem rgba(<?php echo $r . ", " . $g . ", " . $b ?>, .3);" loading="lazy">
                                                 «<?php echo $achiv["name"] ?>»
                                             </li>
                                         <?php endforeach; ?>

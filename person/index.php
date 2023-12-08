@@ -234,7 +234,7 @@ $form = [
                 <div class="modal-content person-content">
                     <div class="modal-header">
                         <h3 class="modal-title fs-5" id="modalLabel">Подписчики</h3>
-                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                        <button type="button" class="btn modal-button-close" data-bs-dismiss="modal" aria-label="Close">
                             <svg class="svg-normal" width="20" height="20">
                                 <use xlink:href="/app/img/icons/bootstrap.min.svg#x-lg"></use>
                             </svg>
@@ -244,7 +244,7 @@ $form = [
                         <ul class="list-group list-group-flush">
                             <?php foreach ($userssubatme as $user) : ?>
                                 <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
-                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
+                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>" loading="lazy">
                                     <?php if ($user["displaynick"] == 1) : ?>
                                         <?php echo $user["nickname"] ?>
                                     <?php else : ?>
@@ -265,7 +265,7 @@ $form = [
                 <div class="modal-content person-content">
                     <div class="modal-header">
                         <h3 class="modal-title fs-5" id="modalLabel">Подписан</h3>
-                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                        <button type="button" class="btn modal-button-close" data-bs-dismiss="modal" aria-label="Close">
                             <svg class="svg-normal" width="20" height="20">
                                 <use xlink:href="/app/img/icons/bootstrap.min.svg#x-lg"></use>
                             </svg>
@@ -275,7 +275,7 @@ $form = [
                         <ul class="list-group list-group-flush">
                             <?php foreach ($userssubme as $user) : ?>
                                 <a href="/user/?id=<?php echo $user['id'] ?>" class="list-group-item list-group-item-action">
-                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
+                                    <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>" loading="lazy">
                                     <?php if ($user["displaynick"] == 1) : ?>
                                         <?php echo $user["nickname"] ?>
                                     <?php else : ?>
@@ -296,7 +296,7 @@ $form = [
                 <div class="modal-content person-content">
                     <div class="modal-header">
                         <h3 class="modal-title fs-5" id="modalLabel">Достижения</h3>
-                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                        <button type="button" class="btn modal-button-close" data-bs-dismiss="modal" aria-label="Close">
                             <svg class="svg-normal" width="20" height="20">
                                 <use xlink:href="/app/img/icons/bootstrap.min.svg#x-lg"></use>
                             </svg>
@@ -319,7 +319,7 @@ $form = [
                                 ?>
 
                                 <li class="list-group-item py-3">
-                                    <img src="/app/img/achivs/<?php echo $achiv["nameimg"] ?>.jpg" alt="<?php echo $achiv["name"] ?>" style="box-shadow: 0 .5rem 1rem rgba(<?php echo $r . ", " . $g . ", " . $b ?>, .3);">
+                                    <img src="/app/img/achivs/<?php echo $achiv["nameimg"] ?>.jpg" alt="<?php echo $achiv["name"] ?>" style="box-shadow: 0 .5rem 1rem rgba(<?php echo $r . ", " . $g . ", " . $b ?>, .3);" loading="lazy">
                                     «<?php echo $achiv["name"] ?>»
                                 </li>
                             <?php endforeach; ?>
