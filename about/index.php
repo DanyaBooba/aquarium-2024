@@ -17,6 +17,14 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>О проекте | Аквариум</title>
 
+<script src="/app/js/wow.js"></script>
+<!-- <script src="/app/js/countUp.js"></script> -->
+<link rel="stylesheet" href="/app/css/animate.css" />
+
+<script>
+    new WOW().init()
+</script>
+
 <style>
     .main-icon {
         margin-bottom: 30px;
@@ -42,7 +50,6 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
 <link rel="stylesheet" href="/app/css/pages/about.css" />
 
 <body class="container">
-    <!-- <?php include_once "../app/php/header.php"; ?> -->
     <main class="col-md-8 mx-auto" style="margin-bottom: 50px" id="main">
 
         <svg class="svg-normal img-fluid main-icon" viewBox="0 0 1403 270" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +93,7 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
                     созданию продукта, о котором хочется говорить.
                 </p>
             </div>
-            <div class="col p-3">
+            <div class="col p-3 wow fadeIn" data-wow-offset="300">
                 <p class="display-2">
                     🥰
                 </p>
@@ -96,7 +103,7 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
                     частью этого комьюнити на ранних этапах разработки.
                 </p>
             </div>
-            <div class="col p-2" style="background-color: var(--bg-light); border-radius: 8px;">
+            <div class="col p-2 wow fadeIn" data-wow-offset="300" style="background-color: var(--bg-light); border-radius: 8px;">
                 <div class="p-4">
                     <p>
                         <a href="//aquariumsocial.t.me">
@@ -116,73 +123,79 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
             </div>
         </div>
 
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="/app/img/content/about/aqua1.jpg" class="d-block img-fluid" alt="Bootstrap Themes" height="500">
-            </div>
-            <div class="col-lg-6">
-                <h2 class="display-5 mb-3">
-                    Что такое Аквариум?
-                </h2>
-                <p class="fs-5">
-                    Это ваш виртуальный мир под водой: это не просто еще одна соцсеть, это место, где Вы сможете создать свой уникальный подводный мир, отражающий Вашу личность, интересы и стиль жизни.
-                </p>
-            </div>
-        </div>
-
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-lg-6">
-                <h2 class="display-5 mb-3">
-                    Возможности
-                </h2>
-                <ul class="fs-5">
-                    <li>
-                        🐬 Уникальная тематика
-                    </li>
-                    <li>
-                        🌊 Погружение в красоту мира
-                    </li>
-                    <li>
-                        🎨 Кастомизация профиля
-                    </li>
-                    <li>
-                        💌 Общение с друзьями
-                    </li>
-                    <li>
-                        📸 Публикация фотографий и постов
-                    </li>
-                </ul>
-            </div>
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="/app/img/content/about/aqua2.jpg" class="d-block img-fluid" alt="Bootstrap Themes" height="500">
+        <div class="container">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5 wow fadeInUp" data-wow-offset="300">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="/app/img/content/about/aqua1.jpg" class="d-block img-fluid" alt="Bootstrap Themes" height="500">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-5 mb-3">
+                        Что такое Аквариум?
+                    </h2>
+                    <p class="fs-5">
+                        Это ваш виртуальный мир под водой: это не просто еще одна соцсеть, это место, где Вы сможете создать свой уникальный подводный мир, отражающий Вашу личность, интересы и стиль жизни.
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="/app/img/content/about/aqua3.jpg" class="d-block img-fluid" alt="Bootstrap Themes" height="500">
+        <div class="container">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5 wow fadeInUp" data-wow-offset="300">
+                <div class="col-lg-6">
+                    <h2 class="display-5 mb-3">
+                        Возможности
+                    </h2>
+                    <ul class="fs-5">
+                        <li>
+                            🐬 Уникальная тематика
+                        </li>
+                        <li>
+                            🌊 Погружение в красоту мира
+                        </li>
+                        <li>
+                            🎨 Кастомизация профиля
+                        </li>
+                        <li>
+                            💌 Общение с друзьями
+                        </li>
+                        <li>
+                            📸 Публикация фотографий и постов
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="/app/img/content/about/aqua2.jpg" class="d-block img-fluid" alt="Bootstrap Themes" height="500">
+                </div>
             </div>
-            <div class="col-lg-6">
-                <h2 class="display-5 mb-3">
-                    Для кого Аквариум?
-                </h2>
-                <ul class="fs-5">
-                    <li>
-                        Любители подводного мира и фотографии
-                    </li>
-                    <li>
-                        Путешественники и любители морских приключений
-                    </li>
-                    <li>
-                        Фотографы и художники
-                    </li>
-                    <li>
-                        Общественные личности
-                    </li>
-                    <li>
-                        Любознательные наблюдатели и обычные люди
-                    </li>
-                </ul>
+        </div>
+
+        <div class="container">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5 wow fadeInUp" data-wow-offset="300">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="/app/img/content/about/aqua3.jpg" class="d-block img-fluid" alt="Bootstrap Themes" height="500">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-5 mb-3">
+                        Для кого Аквариум?
+                    </h2>
+                    <ul class="fs-5">
+                        <li>
+                            Любители подводного мира и фотографии
+                        </li>
+                        <li>
+                            Путешественники и любители морских приключений
+                        </li>
+                        <li>
+                            Фотографы и художники
+                        </li>
+                        <li>
+                            Общественные личности
+                        </li>
+                        <li>
+                            Любознательные наблюдатели и обычные люди
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -191,7 +204,7 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
         <div class="row row-cols-1 row-cols-lg-2 g-2 fs-5" style="margin-bottom: 100px">
             <div class="col p-3">
                 <p>
-                    На нашей платформе зарегистрировано <span class="text-success fs-4"><?php echo $all ?></span> <?php echo $procenttext ?>,
+                    На нашей платформе зарегистрировано <span class="text-success fs-4" id="anim1"><?php echo $all ?></span> <?php echo $procenttext ?>,
                     из которых <span class="text-success fs-4"><?php echo $allconfirmprocent ?>%</span> имеют подтвержденные аккаунты.
                 </p>
                 <p class="text-more mb-0">
@@ -200,18 +213,8 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
             </div>
             <div class="col p-3">
                 <p>
-                    За 23 дня мы провели <span class="text-success fs-4">20</span> изменений,
-                    из которых <span class="text-success fs-4">5</span> оказались масштабными,
-                    сильно повлиявшие на развитие платформы.
-                </p>
-                <p class="text-more mb-0">
-                    На основе данных из <a href="//aquariumsocial.t.me" class="link">Телеграм канала</a>.
-                </p>
-            </div>
-            <div class="col p-3">
-                <p>
                     На страницы платформы с момента запуска
-                    пользователи заходили свыше <span class="text-success fs-4">1000</span> раз.
+                    пользователи заходили свыше <span class="text-success fs-4" id="anim2">5000</span> раз.
                 </p>
                 <p class="text-more mb-0">
                     На основе данных из Яндекс Метрики.
@@ -219,9 +222,49 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
             </div>
             <div class="col p-3">
                 <p>
+                    За 23 дня мы провели <span class="text-success fs-4" id="anim3">20</span> изменений,
+                    из которых <span class="text-success fs-4">5</span> оказались масштабными,
+                    сильно повлиявшими на проект.
+                </p>
+                <p class="text-more mb-0">
+                    На основе данных из <a href="//aquariumsocial.t.me" class="link">Телеграм канала</a>.
+                </p>
+            </div>
+            <div class="col p-3">
+                <p>
                     Почти каждый день происходит регистрация
-                    новых пользователей, хотя платформа находится
+                    <span class="text-success fs-4">новых</span> пользователей, хотя платформа находится
                     только в бета-тестировании.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="text-center h1 mb-3">Планы на ближайшее будущее</h3>
+
+        <div class="row row-cols-1 row-cols-lg-2 g-2 fs-5" style="margin-bottom: 100px">
+            <div class="col p-3">
+                <p>
+                    Добавление <span class="text-success">фотографий</span> для аватарок пользователей, шапок и постов.
+                    Возможность масштабировать изображение в круге, загрузка нескольких
+                    фотографий для постов.
+                </p>
+            </div>
+            <div class="col p-3">
+                <p>
+                    Разработка <span class="text-success">мобильного приложения</span> для Android, iOS, iPadOS с
+                    возможностью авторизации в аккаунт, поддержки полного функционала
+                    веб-версии приложения.
+                </p>
+            </div>
+            <div class="col p-3">
+                <p>
+                    Разработка <span class="text-success">настольного приложения</span> для платформы Windows, macOS,
+                    Linux с полным функционалом веб-версии.
+                </p>
+            </div>
+            <div class="col p-3">
+                <p>
+                    Разработка <span class="text-success">OAuth</span> протокола для авторизации с помощью сервиса Аквариум.
                 </p>
             </div>
         </div>
@@ -289,6 +332,58 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
                 <svg fill="#f1c40f" width="20" height="20" class="me-1">
                     <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
                 </svg>
+                8/10
+            </div>
+            <div class="d-flex align-items-center see-at-pc mb-2">
+                <span class="me-3 fs-5">
+                    8/10
+                </span>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
+                <svg width="20" height="20" class="me-1 svg-normal-2">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                </svg>
+                <svg width="20" height="20" class="me-1 svg-normal-2">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star"></use>
+                </svg>
+            </div>
+            <div class="p-4 mb-3" style="background-color: var(--bg-light); border-radius: 8px;">
+                <p class="fs-4 mb-0">
+                    «...»
+                </p>
+            </div>
+            <p class="text-more mb-0">
+                Илья, 19 лет.
+            </p>
+        </div>
+
+        <div style="margin-bottom: 30px">
+            <div class="see-at-mobile mb-2 fs-5 d-flex align-items-center justify-content-center">
+                <svg fill="#f1c40f" width="20" height="20" class="me-1">
+                    <use xlink:href="/app/img/icons/bootstrap.svg#star-fill"></use>
+                </svg>
                 7/10
             </div>
             <div class="d-flex align-items-center see-at-pc mb-2">
@@ -338,6 +433,18 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
         </div>
 
     </main>
+
+    <!-- <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            let max1 = document.getElementById("anim1").textContent;
+            let max2 = document.getElementById("anim2").textContent;
+            let max3 = document.getElementById("anim3").textContent;
+
+            new CountUp('anim1', 0, max1, 0, 2).start();
+            new CountUp('anim2', 0, max2, 0, 2).start();
+            new CountUp('anim3', 0, max3, 0, 2).start();
+        })
+    </script> -->
 
     <?php include_once "../app/php/bottom/footer-content.php"; ?>
 

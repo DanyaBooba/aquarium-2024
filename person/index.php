@@ -61,6 +61,9 @@ for ($i = 0; $i < $countachivs; $i++) {
 $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
 $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] : "";
 
+$countposts = count($posts);
+$countpoststext = FormOfWord($countposts, "запись", "записи", "записей");
+
 $form = [
     "achivs" => FormOfWord($countachivs, "Достижение", "Достижения", "Достижений"),
     "subs" => FormOfWord($countsubme, "Подписка", "Подписки", "Подписок"),
@@ -179,7 +182,7 @@ $randomimage = [
                     <?php endforeach; ?>
                 </div>
                 <div class="text-center">
-                    <?php echo count($posts) ?> записей.
+                    <?php echo $countposts . " " . $countpoststext ?>.
                 </div>
             <?php else : ?>
                 <div class="text-center" style="margin-bottom: 100px;">

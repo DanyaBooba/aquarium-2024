@@ -80,6 +80,9 @@ if (count($user) <= 0) {
     $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
     $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] : "";
 
+    $countposts = count($posts);
+    $countpoststext = FormOfWord($countposts, "запись", "записи", "записей");
+
     $form = [
         "achivs" => FormOfWord($countachivs, "Достижение", "Достижения", "Достижений"),
         "subs" => FormOfWord($countsubme, "Подписка", "Подписки", "Подписок"),
@@ -220,7 +223,7 @@ if (count($user) <= 0) {
                     </div>
                 </div>
 
-                <?php if (count($posts) > 0) : ?>
+                <?php if (count($posts) > 0 && count($find) > 0) : ?>
                     <div class="row row-cols-1 g-2 person-posts">
                         <?php $i = 0; ?>
                         <?php foreach ($posts as $post) : ?>
@@ -240,8 +243,41 @@ if (count($user) <= 0) {
                         <?php endforeach; ?>
                     </div>
                     <div class="text-center">
-                        <?php echo count($posts) ?> записей.
+                        <?php echo $countposts . " " . $countpoststext ?>.
                     </div>
+
+                    <script src="/app/js/person-openpost.js"></script>
+                    <script src="/app/js/fancybox.umd.js"></script>
+                    <script>
+                        Fancybox.bind("[data-fancybox]", {
+                            on: {
+                                "*": (fancybox, eventName) => {
+                                    if (eventName === "close") {
+                                        ClosePost();
+                                    }
+                                },
+                            },
+                        });
+
+                        Fancybox.bind('[data-fancybox="gallery"]', {
+                            Toolbar: {
+                                display: {
+                                    left: [
+                                        "infobar",
+                                    ],
+                                    middle: [],
+                                    right: [
+                                        "iterateZoom",
+                                        "download",
+                                        "close",
+                                    ],
+                                }
+                            },
+                            Images: {
+                                initialSize: "fit",
+                            },
+                        });
+                    </script>
                 <?php else : ?>
                     <div class="text-center" style="margin-bottom: 100px;">
                         У пользователя нет записей.
@@ -339,39 +375,6 @@ if (count($user) <= 0) {
                         </div>
                     </div>
                 <?php endif; ?>
-
-                <script src="/app/js/person-openpost.js"></script>
-                <script src="/app/js/fancybox.umd.js"></script>
-                <script>
-                    Fancybox.bind("[data-fancybox]", {
-                        on: {
-                            "*": (fancybox, eventName) => {
-                                if (eventName === "close") {
-                                    ClosePost();
-                                }
-                            },
-                        },
-                    });
-
-                    Fancybox.bind('[data-fancybox="gallery"]', {
-                        Toolbar: {
-                            display: {
-                                left: [
-                                    "infobar",
-                                ],
-                                middle: [],
-                                right: [
-                                    "iterateZoom",
-                                    "download",
-                                    "close",
-                                ],
-                            }
-                        },
-                        Images: {
-                            initialSize: "fit",
-                        },
-                    });
-                </script>
 
             <?php endif ?>
         </div>
