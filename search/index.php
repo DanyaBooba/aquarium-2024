@@ -53,14 +53,11 @@ $btnprev = $page == 1 ? "disabled" : "";
                 <ul class="list-group list-group-flush">
                     <?php if (count($users) > 0) : ?>
                         <?php foreach ($users as $user) : ?>
+                            <?php $name = $user["displaynick"] ? $user["nickname"] : ($user["firstName"] . " " . $user["lastName"]); ?>
                             <a href="/user/?id=<?php echo $user["id"] ?>" class="list-group-item list-group-item-action">
                                 <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
-                                <span title="123" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: center;">
-                                    <?php if ($user["displaynick"] == 1) : ?>
-                                        <?php echo $user["nickname"] ?>
-                                    <?php else : ?>
-                                        <?php echo $user["firstName"] . " " . $user["lastName"] ?>
-                                    <?php endif ?>
+                                <span title="<?php echo $name ?>" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: center;">
+                                    <?php echo $name ?>
                                 </span>
                                 <?php if ($user["accverify"] == 1) : ?>
                                     <span class="col-md-1">
