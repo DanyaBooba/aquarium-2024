@@ -3,6 +3,20 @@
     margin-bottom: 12px;
 }
 
+svg.person-verify-account {
+    margin-left: 5px;
+    width: 26px;
+    height: 26px;
+    fill: var(--verify-account);
+}
+
+svg.person-verify-account-min {
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+    fill: var(--verify-account);
+}
+
 .person-content .alert {
     border-radius: 8px;
     border: 0 !important;

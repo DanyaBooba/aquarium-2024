@@ -144,15 +144,22 @@ $form = [
             <div class="person-profile">
                 <div class="person-profile-content">
                     <div class="person-profile-content-name">
-                        <?php if ($user["emailverify"] == 1 && $user["displaynick"] == 0) : ?>
-                            <p class="person-profile-content-name-1 content-name-width" title="<?php echo $user["firstName"] . " " . $user["lastName"] ?>">
-                                <?php echo $user["firstName"] . " " . $user["lastName"] ?>
-                            </p>
-                        <?php else : ?>
-                            <p class="person-profile-content-name-1 content-name-width" title="<?php echo $user["nickname"] ?>">
-                                <?php echo $user["nickname"] ?>
-                            </p>
-                        <?php endif ?>
+                        <div class="d-flex align-items-center">
+                            <?php if ($user["emailverify"] == 1 && $user["displaynick"] == 0) : ?>
+                                <p class="person-profile-content-name-1 content-name-width" title="<?php echo $user["firstName"] . " " . $user["lastName"] ?>">
+                                    <?php echo $user["firstName"] . " " . $user["lastName"] ?>
+                                </p>
+                            <?php else : ?>
+                                <p class="person-profile-content-name-1 content-name-width" title="<?php echo $user["nickname"] ?>">
+                                    <?php echo $user["nickname"] ?>
+                                </p>
+                            <?php endif ?>
+                            <?php if ($user["accverify"] == 1) : ?>
+                                <svg class="person-verify-account">
+                                    <use xlink:href="/app/img/icons/bootstrap.svg#check-circle-fill"></use>
+                                </svg>
+                            <?php endif; ?>
+                        </div>
                         <?php if (mb_strlen($user["descr"]) > 0) : ?>
                             <p class="person-profile-content-name-2 content-name-width" title="<?php echo $user["descr"] ?>">
                                 <?php echo $user["descr"] ?>

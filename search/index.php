@@ -55,11 +55,20 @@ $btnprev = $page == 1 ? "disabled" : "";
                         <?php foreach ($users as $user) : ?>
                             <a href="/user/?id=<?php echo $user["id"] ?>" class="list-group-item list-group-item-action">
                                 <img src="/app/img/users/icons/<?php echo ($user["ismale"] == 1 ? "MAN" : "WOMAN") . $user["logoid"] ?>.png" alt="<?php echo $user["nickname"] ?>">
-                                <?php if ($user["displaynick"] == 1) : ?>
-                                    <?php echo $user["nickname"] ?>
-                                <?php else : ?>
-                                    <?php echo $user["firstName"] . " " . $user["lastName"] ?>
-                                <?php endif ?>
+                                <span title="123" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: center;">
+                                    <?php if ($user["displaynick"] == 1) : ?>
+                                        <?php echo $user["nickname"] ?>
+                                    <?php else : ?>
+                                        <?php echo $user["firstName"] . " " . $user["lastName"] ?>
+                                    <?php endif ?>
+                                </span>
+                                <?php if ($user["accverify"] == 1) : ?>
+                                    <span class="col-md-1">
+                                        <svg class="person-verify-account-min">
+                                            <use xlink:href="/app/img/icons/bootstrap.svg#check-circle-fill"></use>
+                                        </svg>
+                                    </span>
+                                <?php endif; ?>
                             </a>
                         <?php endforeach ?>
                     <?php else : ?>
