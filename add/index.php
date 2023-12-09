@@ -30,41 +30,7 @@ $user = $user[0];
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Добавить пост | Аквариум</title>
 
-<style>
-    .toolbar button {
-        border: 0 !important;
-        margin-bottom: 8px;
-        border-radius: 8px;
-        transition: .15s;
-    }
-
-    .toolbar button:hover,
-    .toolbar button:focus {
-        background: var(--bg-light-main-2);
-    }
-
-    .toolbar button svg {
-        width: 24px;
-        height: 24px;
-    }
-
-    .editor {
-        min-height: 150px;
-        border: 1px solid var(--text-color-4);
-        padding: 10px;
-        border-radius: 6px;
-        background: var(--bg-light);
-    }
-
-    .editor[placeholder]:empty:before {
-        content: attr(placeholder);
-        color: #555;
-    }
-
-    .editor[placeholder]:empty:focus:before {
-        content: '';
-    }
-</style>
+<link rel="stylesheet" href="/app/css/pages/add-post.css">
 
 <body class="container">
     <?php include_once "../app/php/person/header.php"; ?>

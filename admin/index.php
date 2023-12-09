@@ -22,6 +22,7 @@ if ($user["usertype"] != "adm") {
 }
 
 $users = R::getAll(SqlRequestSelectAllAdmin());
+$posts = R::getAll(SqlRequestFindAllPostsAdmin());
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -64,8 +65,21 @@ $users = R::getAll(SqlRequestSelectAllAdmin());
                 <?php foreach ($users as $u) : ?>
                     <li>
                         <?php echo $u["emailverify"] == 1 ? "<span class='text-success'>T</span>" : "<span class='text-danger'>F</span>" ?>
+                        <a href="/user/?id=<?php echo $u["id"] ?>" class="link">Открыть</a>
                         <?php echo $u["firstName"] . " " . $u["lastName"] ?>
                         [<?php echo $u["nickname"] . ", " . $u["id"] ?>]
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+            <h2>Записи</h2>
+            <ol>
+                <?php foreach ($posts as $p) : ?>
+                    <li>
+                        <a href="/post/?a=<?php echo $p["iduser"] ?>&p=<?php echo $p["idpost"] ?>" class="link">Открыть</a>
+                        id<?php echo $p["id"] ?>
+                        idpost<?php echo $p["idpost"] ?>
+                        user<?php echo $p["iduser"] ?>
+                        <?php echo $p["minipost"] ?>
                     </li>
                 <?php endforeach; ?>
             </ol>

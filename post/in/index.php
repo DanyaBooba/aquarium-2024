@@ -110,7 +110,7 @@ if (count($post) <= 0) {
                                 <a class="link-empty">
                                     <img src="/app/img/users/icons/<?php echo $logo ?>" alt="<?php echo $authorname ?>">
                                 </a>
-                                <div class="post-content-user-content">
+                                <div class="post-content-user-content w-75">
                                     <span title="<?php echo $authorname ?>" aria-label="<?php echo $authorname ?>">
                                         <a class="link-empty">
                                             <?php echo $authorname ?>

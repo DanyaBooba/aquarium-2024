@@ -133,7 +133,7 @@ if (count($post) <= 0) {
                                     <a href="/user/?id=1">
                                         <img src="/app/img/users/icons/<?php echo $authorlogo ?>" alt="<?php echo $authorname ?>">
                                     </a>
-                                    <div class="post-content-user-content">
+                                    <div class="post-content-user-content w-75">
                                         <span title="<?php echo $authorname ?>" aria-label="<?php echo $authorname ?>">
                                             <a href="/user/?id=<?php echo $postinfo["author"] ?>" class="link">
                                                 <?php echo $authorname ?>
