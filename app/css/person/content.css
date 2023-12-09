@@ -123,9 +123,9 @@
     fill: var(--text-color-2) !important;
 }
 
-.person-profile-content-buttons .btn-secondary:hover svg,
-.person-profile-content-buttons .btn-secondary:focus svg {
-    fill: var(--text-color) !important;
+.person-profile-content-buttons button.btn-secondary:hover svg,
+.person-profile-content-buttons button.btn-secondary:focus svg {
+    fill: var(--text-default) !important;
 }
 
 .person-profile-bg

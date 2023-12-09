@@ -31,43 +31,21 @@ $user = $user[0];
 <title>Добавить пост | Аквариум</title>
 
 <style>
-    .toolbar a {
-        display: inline-block;
-        border: 1px solid #888;
-        padding: 5px 8px;
-        margin: 0 5px 10px 0;
-        color: #000;
-        border-radius: 3px;
-        font-size: 12px;
-        box-shadow: 1px 1px 2px #ddd;
-        background: #fff;
-        vertical-align: top;
-        text-decoration: none;
+    .toolbar button {
+        border: 0 !important;
+        margin-bottom: 8px;
+        border-radius: 8px;
+        transition: .15s;
     }
 
-    .toolbar input {
-        display: inline-block;
-        height: 28px;
-        line-height: 28px;
-        background: #fff;
-        padding: 0;
-        margin: 0 5px 10px 0;
-        color: #000;
-        box-shadow: 1px 1px 2px #ddd;
-        border-radius: 3px;
-        vertical-align: top;
-        font-size: 12px;
+    .toolbar button:hover,
+    .toolbar button:focus {
+        background: var(--bg-light-main-2);
     }
 
-    .toolbar span {
-        display: inline-block;
-        height: 30px;
-        line-height: 30px;
-        padding: 0;
-        margin: 0 0 10px 0;
-        color: #000;
-        vertical-align: top;
-        font-size: 12px;
+    .toolbar button svg {
+        width: 24px;
+        height: 24px;
     }
 
     .editor {
@@ -107,22 +85,26 @@ $user = $user[0];
                                 <?php endif; ?>
                                 <div>
                                     <div class="toolbar">
-                                        <button class="btn" id="toolbar-bold" title="Жирный">
-                                            B
-                                        </button>
-                                        <button class="btn" id="toolbar-italic" title="Курсив">
-                                            I
+                                        <button class="btn" id="toolbar-h" title="Параграф">
+                                            <svg>
+                                                <use xlink:href="/app/img/icons/bootstrap.svg#h-square"></use>
+                                            </svg>
                                         </button>
                                         <button class="btn" id="toolbar-parag" title="Параграф">
-                                            P
+                                            <svg>
+                                                <use xlink:href="/app/img/icons/bootstrap.svg#fonts"></use>
+                                            </svg>
                                         </button>
-                                        <button class="btn" id="toolbar-h" title="Параграф">
-                                            H
+                                        <button class="btn" id="toolbar-bold" title="Жирный">
+                                            <svg>
+                                                <use xlink:href="/app/img/icons/bootstrap.svg#type-bold"></use>
+                                            </svg>
                                         </button>
-                                        <a href="#" class="toolbar-img far fa-image" title="Изображение">image</a>
-                                        <a href="#" class="toolbar-a fas fa-link" title="Ссылка">link</a>
-                                        <a href="#" class="toolbar-unlink fas fa-unlink" title="Удаление ссылки">unlink</a>
-                                        <a href="#" class="toolbar-text" title="Вставить текст">Text</a>
+                                        <button class="btn" id="toolbar-italic" title="Курсив">
+                                            <svg>
+                                                <use xlink:href="/app/img/icons/bootstrap.svg#type-italic"></use>
+                                            </svg>
+                                        </button>
                                     </div>
                                     <div class="editor" contenteditable="true" name="example123" placeholder="Введите текст"></div>
                                 </div>
@@ -160,26 +142,8 @@ $user = $user[0];
             return false;
         });
 
-        $('body').on('click', '.toolbar-img', function() {
-            var url = prompt('Введите адрес изображения', 'https://snipp.ru/demo/526/image.jpg');
-            document.execCommand('insertImage', false, url);
-            return false;
-        });
-
-        $('body').on('click', '.toolbar-a', function() {
-            var url = prompt('Введите URL', '');
-            document.execCommand('CreateLink', false, url);
-            return false;
-        });
-
-        $('body').on('click', '.toolbar-unlink', function() {
-            document.execCommand('unlink', false, null);
-            return false;
-        });
-
-        $('body').on('click', '.toolbar-text', function() {
-            var text = prompt('Введите текст', '');
-            document.execCommand('insertText', false, text);
+        $('body').on('click', '.toolbar #toolbar-parag', function() {
+            document.execCommand('formatBlock', false, 'p');
             return false;
         });
 

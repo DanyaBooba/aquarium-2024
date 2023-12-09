@@ -38,7 +38,8 @@ if (count($user) <= 0) {
         $buttonsubs = $find["id"] == $user["id"] ? "disabled" : "";
         $isubs = in_array(intval($user["id"]), json_decode($find["isubs"]));
         $atmesubs = in_array(intval($find["id"]), json_decode($user["isubs"]));
-        $buttonsubsbg = $isubs ? "" : "style='background-color: var(--bg-light-main-2) !important;'";
+        $buttonsubsbg = $isubs || $find["id"] == $user["id"] ? "btn-secondary" : "btn-primary";
+        $buttonsubssvg = $isubs ? "" : "fill='white'";
 
         $subs = $isubs ? "Подписан" : "Подписаться";
         $subslogo = $isubs ? "check" : "plus-circle-dotted";
@@ -62,6 +63,7 @@ if (count($user) <= 0) {
     $subatmecopy = $subatme;
     $subatmeimage = [];
     if ($countsubatme > 0) {
+
         for ($i = 0; $i < min(2, $countsubatme); $i++) {
             $index = random_int(0, count($subatmecopy) - 1);
             $userid = $subatmecopy[$index];
@@ -233,15 +235,15 @@ if (count($user) <= 0) {
                         <div class="person-profile-content-buttons person-profile-content-buttons-width">
                             <?php if (count($find) > 0) : ?>
                                 <?php if ($find["emailverify"] == 1) : ?>
-                                    <button onClick="Subscribe()" class="btn btn-secondary d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?> <?php echo $buttonsubsbg ?>>
-                                        <svg class="me-2" width="26" height="26">
+                                    <button onClick="Subscribe()" class="btn <?php echo $buttonsubsbg ?> d-flex align-items-center justify-content-center" <?php echo $buttonsubs ?>>
+                                        <svg class="me-2" width="26" height="26" <?php echo $buttonsubssvg ?>>
                                             <use xlink:href="/app/img/icons/bootstrap.min.svg#<?php echo $subslogo ?>"></use>
                                         </svg>
                                         <?php echo $subs ?>
                                     </button>
                                 <?php endif; ?>
                             <?php else : ?>
-                                <button onClick="LoginToAccount()" class="btn btn-secondary d-flex align-items-center justify-content-center">
+                                <button onClick="LoginToAccount()" class="btn btn-primary d-flex align-items-center justify-content-center">
                                     <svg class="me-2" fill="white" width="26" height="26">
                                         <use xlink:href="/app/img/icons/bootstrap.min.svg#plus-circle-dotted"></use>
                                     </svg>

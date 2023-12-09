@@ -139,9 +139,9 @@ if (count($post) <= 0) {
                                                 <?php echo $authorname ?>
                                             </a>
                                         </span>
-                                        <p>
+                                        <div>
                                             <?php echo $post["text"] ?>
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
