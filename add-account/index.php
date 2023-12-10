@@ -1,6 +1,5 @@
 <?php
 if (!isset($_SESSION)) session_start();
-
 include_once "../api/auth-errors.php";
 
 include_once "../api/rb-mysql.php";
@@ -9,28 +8,34 @@ include_once "../api/token.php";
 
 R::setup('mysql:host=' . Token()["host"] . ';dbname=' . Token()["database"], Token()["username"], Token()["password"]);
 
+$secondemail = $_SESSION["secondlogin"];
+
 $find = @R::getAll(SqlRequestFind($_SESSION["login"]));
 
-if (count($find) > 0) {
-
-    if ($find[0]["isblock"] == 1) {
-        header("Location: /block/");
-        die();
-    }
-
+if (count($find) <= 0) {
     header("Location: /person/");
+    die();
+}
+
+if (!empty($secondemail)) {
+    header("Location: /person/");
+    die();
+}
+
+if ($find[0]["isblock"] == 1) {
+    header("Location: /block/");
     die();
 }
 
 $yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
     'client_id' => TokenYandex()["client_id"],
-    'redirect_uri' => TokenYandex()["redirect_uri"],
+    'redirect_uri' => TokenYandex()["redirect_uri_second"],
     'response_type' => 'code'
 ]));
 
 $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query([
     'client_id'     => TokenGoogle()["client_id"],
-    'redirect_uri'  => TokenGoogle()["redirect_uri"],
+    'redirect_uri'  => TokenGoogle()["redirect_uri_second"],
     'response_type' => 'code',
     'scope'         => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
 ]));
@@ -38,14 +43,14 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
 
 <?php include_once "../app/php/head.php"; ?>
 
-<?php $error = @RegistrationError($_GET["e"]) ?>
+<?php $error = @LoginError($_GET["e"]) ?>
 
-<?php $g = @$_GET["g"] ?>
+<?php $email = @$_GET["g"] ?>
 
 <link rel="stylesheet" href="/app/css/auth/login.css" />
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
-<title>Регистрация | Аквариум</title>
+<title>Добавить аккаунт | Аквариум</title>
 
 <body>
     <main class="form-signin w-100 m-auto">
@@ -64,55 +69,27 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                     </svg>
                 </a>
             </div>
-            <h1 class="h4">Регистрация</h1>
+            <h1 class="h4">Добавить аккаунт</h1>
             <?php if (empty($error) == false) : ?>
                 <div class="alert alert-danger" role="alert">
                     <?php echo $error ?>
                 </div>
             <?php endif; ?>
-            <form class="needs-validation" action="/api/php/registration.php" method="post" novalidate>
+            <form class="needs-validation" action="/api/php/secondlogin.php" method="post" novalidate>
                 <div class="input-group-sm">
-                    <input class="form-control" type="email" autocomplete="email" id="email" onInput="CheckFormData()" name="email" placeholder="Почта" value="<?php echo $g ?>" aria-label="Почта" required>
+                    <input class="form-control" autocomplete="email" id="email" type="email" onInput="CheckFormData()" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите почту.
                     </div>
-                    <p class="form-more">
-                        Используется для авторизации.
-                    </p>
                 </div>
                 <div class="input-group-sm">
-                    <input class="form-control" type="password" autocomplete="new-password" id="new-password" onInput="CheckFormData()" name="password" placeholder="Пароль" aria-label="Пароль" required>
+                    <input class="form-control" type="password" autocomplete="current-password" id="password" onInput="CheckFormData()" name="password" placeholder="Пароль" aria-label="Пароль" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите пароль.
                     </div>
-                    <p class="form-more">
-                        Можно восстановить после регистрации.
-                    </p>
                 </div>
-                <div class="input-group-sm">
-                    <input class="form-control" type="password" autocomplete="new-password" id="new-password" onInput="CheckFormData()" name="confirm_password" placeholder="Подтвердите пароль" aria-label="Подтвердите пароль" required>
-                    <div class="invalid-feedback">
-                        Пожалуйста, подтвердите введеный пароль.
-                    </div>
-                    <p class="form-more">
-                        Повторите введенный вами пароль.
-                    </p>
-                </div>
-                <div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="1" name="confirm" id=" invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
-                            Подтверждаете <a href="/about/user/privacypolicy/" class="link">
-                                политику конфиденциальности
-                            </a>
-                        </label>
-                        <div class="invalid-feedback">
-                            Пожалуйста, подтвердите политику.
-                        </div>
-                    </div>
-                </div>
-                <button class="btn btn-success w-100" type="submit">
-                    Зарегистрироваться
+                <button class="w-100 btn btn-primary" type="submit">
+                    Добавить
                 </button>
             </form>
             <div class="container auth-registration-social">
@@ -127,25 +104,8 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                             <img src="/app/img/content/social-logos/google.png" width="42" alt="Логотип Google">
                         </a>
                     </div>
-                    <!-- <div class="col">
-                        <a href="#vk" aria-label="Регистрация через Вконтакте">
-                            <img src="/app/img/content/social-logos/vk.jpg" width="42" alt="Логотип Вконтакте">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="#github" aria-label="Регистрация через GitHub">
-                            <img src="/app/img/content/social-logos/github.jpg" width="40" alt="Логотип GitHub">
-                        </a>
-                    </div> -->
                 </div>
             </div>
-            <ul class="auth-login--restore">
-                <li>
-                    <a href="/login/" class="link">
-                        Уже зарегистрированы?
-                    </a>
-                </li>
-            </ul>
         </div>
         <div class="auth-login-bottom">
             <ul>

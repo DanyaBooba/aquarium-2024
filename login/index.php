@@ -22,7 +22,7 @@ if (count($find) > 0) {
 
 $yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
     'client_id' => TokenYandex()["client_id"],
-    'redirect_uri' => 'https://aquarium.org.ru/api/php/authyandex-gettoken.php',
+    'redirect_uri' => TokenYandex()["redirect_uri"],
     'response_type' => 'code'
 ]));
 
