@@ -21,6 +21,13 @@ if ($user[0]["isblock"] == 1) {
 }
 
 $user = $user[0];
+
+$findchangeemail = R::getAll(SqlRequestFindChangeEmail($user["id"], $user["email"]));
+
+if (count($findchangeemail) <= 0) {
+    header("Location: /change-email");
+    die();
+}
 ?>
 
 <?php include_once "../../app/php/head.php"; ?>
@@ -28,7 +35,7 @@ $user = $user[0];
 <?php $error = @ChangeEmailError($_GET["e"]) ?>
 
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
-<title>Смена почты | Аквариум</title>
+<title>Подтверждение смены почты | Аквариум</title>
 
 <body class="container">
     <?php include_once "../../app/php/person/header.php"; ?>
@@ -36,64 +43,42 @@ $user = $user[0];
     <main class="row row-cols-1 g-2">
         <?php include_once "../../app/php/person/left-bar.php"; ?>
         <div class="col-md-10 person-content">
-            <div class="d-flex align-items-center mb-1">
-                <svg class="svg-normal me-1" width="14" height="14">
-                    <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-left"></use>
-                </svg>
-                <a href="/settings/" class="link">
-                    Назад
-                </a>
-            </div>
-            <h1>Смена почты</h1>
+            <h1>Подтверждение смены почты</h1>
             <div class="container px-0">
                 <div class="person-setting row row-cols-1 g-2">
                     <div class="person-rightbar-content">
                         <div class="person-setting-bg person-setting-content">
-                            <div class="alert alert-background d-flex align-items-center" role="alert">
-                                <svg height="32" width="32" class="me-3 svg-normal col-md-1 see-at-full-pc">
-                                    <use xlink:href="/app/img/icons/bootstrap.min.svg#cone-striped"></use>
-                                </svg>
-                                <span>
-                                    После смены почты, Вам нужно будет заново авторизоваться.
-                                </span>
-                            </div>
-                            <form class="needs-validation" action="/api/php/person/person-changeemail.php" method="post" novalidate>
+                            <form class="needs-validation" action="/api/php/person/person-changeemail-confirm.php" method="post" novalidate>
                                 <?php if (empty($error) == false) : ?>
                                     <div class="alert alert-danger" role="alert">
                                         <?php echo $error ?>
                                     </div>
                                 <?php endif; ?>
                                 <div>
-                                    <input class="form-control" type="email" name="email" placeholder="Текущая почта" aria-label="Текущая почта" required>
+                                    <input class="form-control" type="number" name="code" placeholder="Код" aria-label="Код" required>
                                     <div class="invalid-feedback">
-                                        Пожалуйста, введите текущую почту.
-                                    </div>
-                                </div>
-                                <div>
-                                    <input class="form-control mb-3" type="email" name="newemail" placeholder="Новая почта" aria-label="Новая почта" required>
-                                    <div class="invalid-feedback">
-                                        Пожалуйста, введите новую почту.
-                                    </div>
-                                </div>
-                                <div>
-                                    <input class="form-control" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
-                                    <div class="invalid-feedback">
-                                        Пожалуйста, введите пароль.
-                                    </div>
-                                </div>
-                                <div>
-                                    <input class="form-control" type="text" name="confirm" placeholder="Подтвердите удаление" aria-label="Подтвердите удаление" required>
-                                    <div class="invalid-feedback">
-                                        Пожалуйста, подтвердите удаление.
+                                        Пожалуйста, введите код.
                                     </div>
                                     <p class="form-more form-delete-string">
-                                        Введите следующую строчку: <b>Подтверждаю смену почты <?php echo $user["email"] ?></b>.
+                                        Введите код с текущей почты.
+                                    </p>
+                                </div>
+                                <div>
+                                    <input class="form-control" type="number" name="codenew" placeholder="Код с новой почты" aria-label="Код с новой почты" required>
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, введите код.
+                                    </div>
+                                    <p class="form-more form-delete-string">
+                                        Введите код с новой почты.
                                     </p>
                                 </div>
                                 <button class="btn btn-danger w-100" type="submit">
-                                    Удалить аккаунт
+                                    Сменить почту
                                 </button>
                             </form>
+                            <a href="/api/php/person/delete-changeemail.php" class="link">
+                                Отменить смену почты
+                            </a>
                         </div>
                     </div>
                     <div class="person-rightbar-empty"></div>

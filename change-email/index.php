@@ -21,6 +21,13 @@ if ($user[0]["isblock"] == 1) {
 }
 
 $user = $user[0];
+
+$findchangeemail = R::getAll(SqlRequestFindChangeEmail($user["id"], $user["email"]));
+
+if (count($findchangeemail) > 0) {
+    header("Location: /change-email/submit");
+    die();
+}
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -36,14 +43,6 @@ $user = $user[0];
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-10 person-content">
-            <div class="d-flex align-items-center mb-1">
-                <svg class="svg-normal me-1" width="14" height="14">
-                    <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-left"></use>
-                </svg>
-                <a href="/settings/" class="link">
-                    Назад
-                </a>
-            </div>
             <h1>Смена почты</h1>
             <div class="container px-0">
                 <div class="person-setting row row-cols-1 g-2">
@@ -70,7 +69,7 @@ $user = $user[0];
                                     </div>
                                 </div>
                                 <div>
-                                    <input class="form-control mb-3" type="email" name="email" placeholder="Новая почта" aria-label="Новая почта" required>
+                                    <input class="form-control mb-3" type="email" name="newemail" placeholder="Новая почта" aria-label="Новая почта" required>
                                     <div class="invalid-feedback">
                                         Пожалуйста, введите новую почту.
                                     </div>
@@ -82,16 +81,16 @@ $user = $user[0];
                                     </div>
                                 </div>
                                 <div>
-                                    <input class="form-control" type="text" name="string" placeholder="Подтвердите удаление" aria-label="Подтвердите удаление" required>
+                                    <input class="form-control" type="text" name="confirm" placeholder="Подтвердите смену почты" aria-label="Подтвердите смену почты" required>
                                     <div class="invalid-feedback">
-                                        Пожалуйста, подтвердите удаление.
+                                        Пожалуйста, подтвердите смену почты.
                                     </div>
                                     <p class="form-more form-delete-string">
                                         Введите следующую строчку: <b>Подтверждаю смену почты <?php echo $user["email"] ?></b>.
                                     </p>
                                 </div>
                                 <button class="btn btn-danger w-100" type="submit">
-                                    Удалить аккаунт
+                                    Сменить почту
                                 </button>
                             </form>
                         </div>
