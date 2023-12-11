@@ -165,8 +165,8 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
         </div>
     </main>
 
-    <script src="/app/js/form-edit-url.js"></script>
-    <script src="/app/js/form-button-active.js"></script>
+    <script src="/app/js/person/formediturl.js"></script>
+    <script src="/app/js/person/formbuttonactive.js"></script>
     <script src="/app/js/confirm-form.js"></script>
 
     <?php include_once "../app/php/bottom/javascript.php"; ?>

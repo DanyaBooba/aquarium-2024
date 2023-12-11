@@ -139,7 +139,7 @@ if (count($post) <= 0) {
                     </div>
                 </div>
 
-                <script src="/app/js/fancybox.umd.js"></script>
+                <script src="/app/js/modules/fancybox.js"></script>
                 <script>
                     Fancybox.bind("[data-fancybox]", {});
                     Fancybox.bind('[data-fancybox="gallery"]', {

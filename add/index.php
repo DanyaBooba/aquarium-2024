@@ -87,11 +87,11 @@ $user = $user[0];
         </div>
     </main>
 
-    <script src="/app/js/button.js"></script>
-    <script src="/app/js/form-edit-url.js"></script>
+    <script src="/app/js/person/leftbarbuttons.js"></script>
+    <script src="/app/js/person/formediturl.js"></script>
     <script src="/app/js/confirm-form.js"></script>
 
-    <script src="/app/js/jquery.js"></script>
+    <script src="/app/js/modules/jquery.js"></script>
     <script>
         $('body').on('click', '.toolbar #toolbar-bold', function() {
             document.execCommand('bold', false, null);

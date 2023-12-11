@@ -493,9 +493,9 @@ $secondemail = $_SESSION["secondlogin"];
 
     <?php include_once "../app/php/footer.php"; ?>
 
-    <script src="/app/js/button.js"></script>
-    <script src="/app/js/form-edit-url.js"></script>
-    <script src="/app/js/person-settingschange.js"></script>
+    <script src="/app/js/person/leftbarbuttons.js"></script>
+    <script src="/app/js/person/formediturl.js"></script>
+    <script src="/app/js/person/settingschange.js"></script>
 
 </body>
 

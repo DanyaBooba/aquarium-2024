@@ -339,8 +339,8 @@ $form = [
 
     <?php include_once "../app/php/footer.php"; ?>
 
-    <script src="/app/js/person-openpost.js"></script>
-    <script src="/app/js/fancybox.umd.js"></script>
+    <script src="/app/js/person/openpost.js"></script>
+    <script src="/app/js/modules/fancybox.js"></script>
     <script>
         Fancybox.bind("[data-fancybox]", {
             on: {

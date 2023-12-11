@@ -105,11 +105,11 @@ if (count($post) <= 0) {
         </div>
     </main>
 
-    <script src="/app/js/button.js"></script>
+    <script src="/app/js/person/leftbarbuttons.js"></script>
     <script src="/app/js/confirm-form.js"></script>
 
-    <script src="/app/js/jquery.js"></script>
-    <script src="/app/js/person-addpost.js"></script>
+    <script src="/app/js/modules/jquery.js"></script>
+    <script src="/app/js/person/addpost.js"></script>
 
     <?php include_once "../../app/php/footer.php"; ?>
 </body>

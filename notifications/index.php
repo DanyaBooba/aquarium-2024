@@ -64,7 +64,7 @@ $nots = R::getAll(SqlRequestFindNotifications($find[0]["email"]));
         </div>
     </main>
 
-    <script src="/app/js/person-notifications.js"></script>
+    <script src="/app/js/person/notifications.js"></script>
 
     <?php include_once "../app/php/footer.php"; ?>
 </body>

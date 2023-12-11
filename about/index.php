@@ -17,8 +17,8 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>О проекте | Аквариум</title>
 
-<script src="/app/js/wow.js"></script>
-<!-- <script src="/app/js/countUp.js"></script> -->
+<script src="/app/js/modules/wow.js"></script>
+<!-- <script src="/app/js/modules/countUp.js"></script> -->
 <link rel="stylesheet" href="/app/css/animate.css" />
 
 <script>

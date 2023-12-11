@@ -93,7 +93,7 @@ $btnprev = $page == 1 ? "disabled" : "";
         <div id="search-get" class="d-none"><?php echo $_GET["s"] ?></div>
     </main>
 
-    <script src="/app/js/person-search.js"></script>
+    <script src="/app/js/person/search.js"></script>
 
     <?php include_once "../app/php/footer.php"; ?>
 </body>

@@ -95,9 +95,9 @@
         </a>
     </div>
 
-    <script src="/app/js/about-addlinkhead.js"></script>
+    <script src="/app/js/pages/about-addlinkhead.js"></script>
 
-    <script src="/app/js/about-addupbutton.js"></script>
+    <script src="/app/js/pages/about-addupbutton.js"></script>
 
     <?php include_once "../../app/php/bottom/footer-content.php"; ?>
 

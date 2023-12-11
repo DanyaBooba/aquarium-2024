@@ -284,8 +284,8 @@ if (count($user) <= 0) {
                         <?php echo $countposts . " " . $countpoststext ?>.
                     </div>
 
-                    <script src="/app/js/person-openpost.js"></script>
-                    <script src="/app/js/fancybox.umd.js"></script>
+                    <script src="/app/js/person/openpost.js"></script>
+                    <script src="/app/js/modules/fancybox.js"></script>
                     <script>
                         Fancybox.bind("[data-fancybox]", {
                             on: {
@@ -323,7 +323,7 @@ if (count($user) <= 0) {
                 <?php endif ?>
 
                 <div class="d-none" id="person-id"><?php echo $user["id"] ?></div>
-                <script src="/app/js/person-user.js"></script>
+                <script src="/app/js/person/user.js"></script>
 
                 <?php if ($countsubatme > 0) : ?>
                     <div class="modal fade" id="modalFriends" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">

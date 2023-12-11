@@ -101,8 +101,8 @@ if (count($findchangeemail) > 0) {
         </div>
     </main>
 
-    <script src="/app/js/button.js"></script>
-    <script src="/app/js/form-edit-url.js"></script>
+    <script src="/app/js/person/leftbarbuttons.js"></script>
+    <script src="/app/js/person/formediturl.js"></script>
     <script src="/app/js/confirm-form.js"></script>
 
     <?php include_once "../app/php/footer.php"; ?>
