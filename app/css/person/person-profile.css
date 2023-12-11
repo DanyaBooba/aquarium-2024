@@ -1,0 +1,190 @@
+.person-profile {
+    background: var(--bg-light);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.person-profile-content {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.person-profile-content-name {
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+    padding-top: 10px;
+    margin-right: auto;
+}
+
+.person-profile-content-name-1 {
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-family: NeueMachina;
+    padding-left: 12px;
+}
+
+.person-profile-content-name-2 {
+    margin-bottom: 8px !important;
+    padding-left: 12px;
+    font-size: 15px;
+}
+
+@media(min-width: 992px) {
+    .content-name-width {
+        max-width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .content-name-width {
+        max-width: 230px;
+    }
+}
+
+@media(max-width: 993px) and (min-width: 768px) {
+    .person-setting-bar {
+        padding-left: 16px !important;
+    }
+}
+
+@media(max-width: 992px) {
+    .content-name-width {
+        max-width: 300px;
+        word-wrap: break-word;
+    }
+
+    .person-setting-bar svg {
+        display: none;
+    }
+}
+
+@media(max-width: 991px) {
+    .person-profile-content-name-1 {
+        padding: 0px;
+    }
+
+    .person-profile-content-name-2 {
+        padding: 0px;
+    }
+}
+
+@media(max-width: 371px) {
+    .content-name-width {
+        max-width: 150px;
+    }
+}
+
+.person-profile-content-buttons {
+    padding: 10px;
+    display: flex;
+    height: 60px;
+    justify-content: end;
+}
+
+.person-profile-content-buttons .btn-secondary {
+    background: var(--bg-light) !important;
+    border: 0 !important;
+    --bs-btn-focus-shadow-rgb: var(--bg-light) !important;
+    color: var(--text-color-2) !important;
+    transition: .15s;
+}
+
+.person-profile-content-buttons .btn-secondary:hover,
+.person-profile-content-buttons .btn-secondary:focus {
+    border: 0 !important;
+    color: var(--text-color) !important;
+}
+
+.person-profile-content-buttons .btn-secondary svg {
+    fill: var(--text-color-2) !important;
+}
+
+.person-profile-content-buttons button.btn-secondary:hover svg,
+.person-profile-content-buttons button.btn-secondary:focus svg {
+    fill: var(--text-default) !important;
+}
+
+.person-profile-bg {
+    border-radius: 8px 8px 0 0;
+    background-position: center;
+    padding: 50px 25px;
+    height: 250px;
+    margin-bottom: -10px;
+
+    background-size: cover;
+}
+
+.person-profile-bg img {
+    width: 170px;
+    height: 170px !important;
+    border-radius: 100%;
+    margin-top: 100px;
+    max-width: 100%;
+    height: auto;
+    background-color: var(--bg-light);
+}
+
+.person-profile-subs .person-profile-subs-sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person-profile-subs .person-profile-subs-sub b {
+    margin-right: 5px;
+}
+
+.person-profile-subs .person-profile-subs-sub span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 13px;
+}
+
+.person-profile-subs .person-profile-subs-sub span img {
+    margin-right: -8px;
+    background: var(--bg-light);
+    border: 1px solid var(--bg-light);
+}
+
+.person-profile-subs {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+.person-profile-subs button {
+    color: var(--text-color);
+    background: var(--bg-light);
+    border: 0 !important;
+    font-size: 15px;
+    transition: .15s;
+}
+
+.person-profile-subs button:hover,
+.person-profile-subs button:focus,
+.person-profile-subs button:active {
+    background: var(--bg-light-main-2);
+}
+
+.person-profile-subs button:hover img,
+.person-profile-subs button:focus img,
+.person-profile-subs button:active img {
+    background: var(--bg-light-main-2);
+    border-color: var(--bg-light-main-2);
+}
+
+.person-profile-subs button:disabled {
+    border: 0 !important;
+}
+
+.person-profile-content-buttons-width {
+    min-width: 238px;
+}

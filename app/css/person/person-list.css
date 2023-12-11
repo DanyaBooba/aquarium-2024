@@ -1,0 +1,14 @@
+.person-content .list-group {
+    --bs-list-group-border-color: var(--text-color-3);
+    --bs-list-group-action-hover-bg: var(--bg-light);
+    --bs-list-group-action-active-bg: var(--bg-light-active);
+}
+
+.person-content .list-group a {
+    transition: .3s;
+}
+
+.person-content .list-group a:hover,
+.person-content .list-group a:focus {
+    color: var(--text-color);
+}

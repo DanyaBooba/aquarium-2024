@@ -12,17 +12,36 @@
 @import "main/form-delete.css";
 @import "main/fancybox.css";
 
+
+@import "person/person-leftbar.css";
+@import "person/content.css";
+@import "person/person-background.css";
+@import "person/person-settingsimage.css";
+@import "person/person-settings.css";
+@import "person/person-search.css";
+@import "person/person-rightbar.css";
+@import "person/person-profileadaptive.css";
+@import "person/person-profile.css";
+@import "person/person-post.css";
+@import "person/person-notifications.css";
+@import "person/person-messages.css";
+@import "person/person-list.css";
+@import "person/person-alert.css";
+@import "person/person-addpost.css";
+@import "person/person-achivs.css";
+
+
 @import "header/main.css";
 @import "header/bottom.css";
 
+
 @import "footer/main.css";
+
 
 @import "adaptive/see.css";
 
+
 @import "theme/theme-toggle.css";
 
-@import "pages/login.css";
 
-@import "person/left-bar.css";
-@import "person/content.css";
-@import "person/background.css";
+@import "pages/login.css";

@@ -66,7 +66,7 @@ if (count($post) <= 0) {
                     }, 3000);
                 </script>
             <?php else : ?>
-                <link rel="stylesheet" href="/app/css/fancybox.css" />
+                <link rel="stylesheet" href="/app/css/modules/fancybox.css" />
 
                 <div class="row row-cols-1 person-post-content">
                     <div class="col-md-6 person-post-content-img">

@@ -19,7 +19,7 @@ $procenttext = FormOfWord($all, "человек", "человека", "чело�
 
 <script src="/app/js/modules/wow.js"></script>
 <!-- <script src="/app/js/modules/countUp.js"></script> -->
-<link rel="stylesheet" href="/app/css/animate.css" />
+<link rel="stylesheet" href="/app/css/modules/animate.css" />
 
 <script>
     new WOW().init()

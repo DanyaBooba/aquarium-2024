@@ -119,7 +119,7 @@ $form = [
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Личный кабинет | Аквариум</title>
 
-<link rel="stylesheet" href="/app/css/fancybox.css" />
+<link rel="stylesheet" href="/app/css/modules/fancybox.css" />
 
 <body class="container <?php echo $background ?>">
     <?php include_once "../app/php/person/header.php"; ?>

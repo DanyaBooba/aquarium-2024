@@ -1,0 +1,90 @@
+.person-search-list ul a::after {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    padding: 0;
+}
+
+.person-search-list ul a img {
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.person-search-list ul a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: NeueMachina;
+}
+
+.person-search-list ul li a img {
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.person-search-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.person-search-pagination button {
+    display: flex;
+    align-items: center;
+
+    background: var(--bg-color) !important;
+    color: var(--button-primary);
+    fill: var(--button-primary);
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border-radius: 8px;
+    border: 1px solid var(--bg-color);
+}
+
+.person-search-pagination button:hover,
+.person-search-pagination button:focus {
+    border: 1px solid var(--text-color-4);
+    color: var(--button-primary);
+}
+
+.person-search-pagination button:disabled {
+    border: 0;
+    color: var(--text-default) !important;
+}
+
+.person-search-pagination button:disabled svg {
+    fill: var(--text-default);
+}
+
+.person-search-pagination button svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--button-primary);
+}
+
+.person-search-list ul li::after {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    padding: 0;
+}
+
+.person-search-list ul li img {
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.person-search-list ul li {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: NeueMachina;
+}
+
+.person-search-list ul li img {
+    border-radius: 50%;
+    margin-right: 15px;
+}

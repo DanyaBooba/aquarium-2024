@@ -141,7 +141,7 @@ if (count($user) <= 0) {
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title><?php echo ($user["emailverify"] == 1 && $user["displaynick"] == 0) ? $user["firstName"] . " " . $user["lastName"] : $user["nickname"] ?> | Аквариум</title>
 
-<link rel="stylesheet" href="/app/css/fancybox.css" />
+<link rel="stylesheet" href="/app/css/modules/fancybox.css" />
 
 <body class="container <?php echo $background ?>">
     <?php include_once "../app/php/person/header.php"; ?>

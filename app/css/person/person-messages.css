@@ -1,0 +1,164 @@
+.person-messages-bg {
+    background: var(--bg-light);
+    border-radius: 8px;
+}
+
+.person-messages-bg ul {
+    border-radius: 8px !important;
+}
+
+.person-messages-bg ul a {
+    background: var(--bg-light) !important;
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+}
+
+.person-messages-bg ul a img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.person-messages-bg ul a span {
+    font-family: NeueMachina;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.person-messages-bg ul a.list-active {
+    border: 1px solid var(--text-color-4);
+}
+
+.person-messages-header {
+    padding: 12px 30px;
+    border-bottom: 1px solid var(--text-color-4);
+}
+
+.person-messages-header-user {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.person-messages-header-user img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.person-messages-header-user span.header-user-name {
+    font-family: NeueMachina;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-right: auto;
+}
+
+.person-messages-header-user span a svg {
+    fill: var(--text-color);
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+}
+
+.person-messages-content {
+    padding: 10px 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: auto;
+}
+
+.person-messages-content .message-he {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: auto;
+}
+
+.person-messages-content .message-he span.message {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    background: var(--bg-color);
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    max-width: 200px;
+}
+
+.person-messages-content .message-he span.message-text {
+    text-align: start;
+    word-wrap: break-word;
+}
+
+.person-messages-content .message-me {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: auto;
+}
+
+.person-messages-content .message-me span.message {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    background: var(--bg-message-me);
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    max-width: 200px;
+}
+
+.person-messages-content .message-me span.message-text {
+    text-align: start;
+    word-wrap: break-word;
+}
+
+.person-messages-content span.message-time {
+    font-size: 12px;
+    color: var(--text-color-2);
+    margin-top: -10px;
+}
+
+.person-messages-input {
+    border-top: 1px solid var(--text-color-4);
+    padding: 5px;
+}
+
+.person-messages-input form {
+    display: flex;
+}
+
+.person-messages-input form button[type="submit"] {
+    margin-left: 5px;
+    background: var(--bg-light) !important;
+    border: 0 !important;
+}
+
+.person-messages-input form button[type="submit"] svg {
+    fill: var(--button-primary);
+    width: 24px;
+    height: 24px;
+}
+
+.person-messages-input form button[type="submit"]:hover svg {
+    fill: var(--button-primary-hover-2);
+}
+
+.person-messages-input form input[name="message"] {
+    background: var(--bg-light) !important;
+    border: 0 !important;
+    outline: 0 !important;
+}
+
+.person-messages-input form input[name="message"]:active {
+    outline: 0 !important;
+    border: 0 !important;
+}
+
+.person-messages-content .message-empty {
+    margin-top: auto;
+    text-align: center;
+}

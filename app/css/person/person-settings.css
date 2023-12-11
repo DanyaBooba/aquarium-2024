@@ -1,0 +1,80 @@
+.form-delete-account {
+    width: 50%;
+}
+
+.form-delete-account button {
+    border-radius: 8px;
+}
+
+@media(max-width: 991px) {
+    .form-delete-account {
+        width: 100%;
+    }
+}
+
+.person-setting-bg {
+    background: var(--bg-light);
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin-bottom: 8px;
+    border: 1px solid var(--bg-light-active);
+}
+
+.person-setting-bg ul {
+    background: var(--bg-light);
+    margin: 0;
+    padding: 0;
+}
+
+.person-setting-bg ul li {
+    background: var(--bg-light);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.person-setting-bg ul li a {
+    background: var(--bg-light) !important;
+}
+
+.person-setting-bg ul li:last-child {
+    margin-bottom: 0 !important;
+}
+
+.person-setting-content h2 {
+    margin-top: 10px;
+}
+
+.person-setting-content form {
+    margin-bottom: 10px;
+}
+
+@media(min-width: 992px) {
+    .person-setting-bg form {
+        width: 50%;
+    }
+}
+
+.person-setting-bg form input {
+    margin-bottom: 6px;
+    border-radius: 8px;
+}
+
+.person-setting-bg form textarea {
+    margin-bottom: 6px;
+    border-radius: 8px;
+}
+
+.person-setting-bg .alert {
+    border-radius: 8px;
+}
+
+.person-setting-bg form button[type="submit"] {
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.person-setting-bg form button.btn-danger {
+    border-radius: 8px;
+}

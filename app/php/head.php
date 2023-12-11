@@ -53,7 +53,7 @@
     <link rel="stylesheet" id="stylesheetlight" href="/app/css/light.css" media="(prefers-color-scheme: light)" />
     <link rel="stylesheet" id="stylesheetdark" href="/app/css/dark.css" media="(prefers-color-scheme: dark)" />
 
-    <link rel="stylesheet" href="/app/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/app/css/modules/bootstrap.css" />
     <link rel="stylesheet" href="/app/css/index.css" />
 
     <!-- Yandex.Metrika counter -->

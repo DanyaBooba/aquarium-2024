@@ -1,0 +1,23 @@
+.person-block-add-post form {
+    width: 100% !important;
+}
+
+.person-block-add-post form textarea {
+    background-color: var(--bg-light) !important;
+}
+
+.person-form {
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background: var(--bg-light);
+    padding: 6px;
+}
+
+.person-form form {
+    margin: 0 !important;
+}
+
+.person-form form input {
+    background: var(--bg-light) !important;
+    border: 0 !important;
+}

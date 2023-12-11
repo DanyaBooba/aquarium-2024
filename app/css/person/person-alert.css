@@ -1,0 +1,23 @@
+.person-content .alert a {
+    text-decoration-color: var(--text-default) !important;
+}
+
+.person-content .alert-primary {
+    background-color: var(--alert-primary);
+}
+
+.header-content-mypost {
+    margin-left: auto !important;
+    display: flex !important;
+    padding: 10px 20px !important;
+    flex-wrap: wrap;
+}
+
+.header-content-mypost div {
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 8px;
+    font-size: 12px !important;
+}
