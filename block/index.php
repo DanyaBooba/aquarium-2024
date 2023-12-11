@@ -73,7 +73,7 @@ if (intval($data["timecreate"]) > intval($data["totime"])) {
         </div>
     <?php endif; ?>
     <div class="d-flex justify-content-center">
-        <a href="/api/php/person/person-exit.php" aria-label="Выйти из аккаунта" class="link">
+        <a href="/api/php/person/exit/person-exit.php" aria-label="Выйти из аккаунта" class="link">
             Вы можете выйти из аккаунта
         </a>
     </div>

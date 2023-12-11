@@ -56,7 +56,7 @@ if (count($findchangeemail) > 0) {
                                     После смены почты, Вам нужно будет заново авторизоваться.
                                 </span>
                             </div>
-                            <form class="needs-validation" action="/api/php/person/person-changeemail.php" method="post" novalidate>
+                            <form class="needs-validation" action="/api/php/person/change-email/person-changeemail.php" method="post" novalidate>
                                 <?php if (empty($error) == false) : ?>
                                     <div class="alert alert-danger" role="alert">
                                         <?php echo $error ?>

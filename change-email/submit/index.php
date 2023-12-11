@@ -48,7 +48,7 @@ if (count($findchangeemail) <= 0) {
                 <div class="person-setting row row-cols-1 g-2">
                     <div class="person-rightbar-content">
                         <div class="person-setting-bg person-setting-content">
-                            <form class="needs-validation" action="/api/php/person/person-changeemail-confirm.php" method="post" novalidate>
+                            <form class="needs-validation" action="/api/php/person/change-email/person-changeemail-confirm.php" method="post" novalidate>
                                 <?php if (empty($error) == false) : ?>
                                     <div class="alert alert-danger" role="alert">
                                         <?php echo $error ?>
@@ -76,7 +76,7 @@ if (count($findchangeemail) <= 0) {
                                     Сменить почту
                                 </button>
                             </form>
-                            <a href="/api/php/person/delete-changeemail.php" class="link">
+                            <a href="/api/php/person/change-email/delete-changeemail.php" class="link">
                                 Отменить смену почты
                             </a>
                         </div>

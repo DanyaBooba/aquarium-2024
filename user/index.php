@@ -167,7 +167,7 @@ if (count($user) <= 0) {
                             </svg>
                             <span>
                                 Аккаунт не подтвержден, Вас не видят другие пользователи.
-                                <a href="/api/php/person/send-verify.php" class="link">Отправить письмо для подтверждения?</a>
+                                <a href="/api/php/person/verify/send-verify.php" class="link">Отправить письмо для подтверждения?</a>
                             </span>
                         </div>
                     <?php endif; ?>

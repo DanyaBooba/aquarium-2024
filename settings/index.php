@@ -109,7 +109,7 @@ $secondemail = $_SESSION["secondlogin"];
                                 </div>
                             <?php endif ?>
                             <h2 id="password">Пароль</h2>
-                            <form class="needs-validation" action="/api/php/person/edit-pass.php" method="post" novalidate>
+                            <form class="needs-validation" action="/api/php/person/edit/edit-pass.php" method="post" novalidate>
                                 <?php if (empty($error_pass) == false) : ?>
                                     <div class="alert alert-danger" role="alert">
                                         <?php echo $error_pass ?>
@@ -149,7 +149,7 @@ $secondemail = $_SESSION["secondlogin"];
                             </div>
                             <hr>
                             <h2 id="data">Личные данные</h2>
-                            <form class="needs-validation" action="/api/php/person/edit-name.php" method="post" novalidate>
+                            <form class="needs-validation" action="/api/php/person/edit/edit-name.php" method="post" novalidate>
                                 <?php if (empty($error_data) == false) : ?>
                                     <div class="alert alert-danger" role="alert">
                                         <?php echo $error_data ?>
@@ -182,7 +182,7 @@ $secondemail = $_SESSION["secondlogin"];
                             </form>
                             <hr>
                             <h2 id="info">Сведения</h2>
-                            <form class="needs-validation" action="/api/php/person/edit-info.php" method="post" novalidate>
+                            <form class="needs-validation" action="/api/php/person/edit/edit-info.php" method="post" novalidate>
                                 <?php if (empty($error_info) == false) : ?>
                                     <div class="alert alert-danger" role="alert">
                                         <?php echo $error_info ?>
@@ -230,7 +230,7 @@ $secondemail = $_SESSION["secondlogin"];
                             </form>
                             <hr>
                             <h2 id="notifications">Уведомления</h2>
-                            <form class="needs-validation" action="/api/php/person/edit-notifications.php" method="post" novalidate>
+                            <form class="needs-validation" action="/api/php/person/edit/edit-notifications.php" method="post" novalidate>
                                 <p style="margin-bottom: 4px">
                                     Уведомлять о действиях:
                                 </p>
@@ -252,7 +252,7 @@ $secondemail = $_SESSION["secondlogin"];
                             </form>
                             <hr>
                             <h2 id="icon">Фотография</h2>
-                            <form class="needs-validation person-settings-form-image" action="/api/php/person/edit-icon.php" method="post" novalidate>
+                            <form class="needs-validation person-settings-form-image" action="/api/php/person/edit/edit-icon.php" method="post" novalidate>
                                 <div class="row row-cols-2 row-cols-lg-4 g-2">
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon1" value="1" <?php echo $formicon[1] ?>>
@@ -304,7 +304,7 @@ $secondemail = $_SESSION["secondlogin"];
                             </form>
                             <hr>
                             <h2 id="cap">Обложка</h2>
-                            <form class="needs-validation person-settings-form-image form-image-bg" action="/api/php/person/edit-bg.php" method="post" novalidate>
+                            <form class="needs-validation person-settings-form-image form-image-bg" action="/api/php/person/edit/edit-bg.php" method="post" novalidate>
                                 <div class="row row-cols-1 row-cols-lg-2 g-2">
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="bg" id="bg1" value="1" <?php echo $formbg[1] ?>>
@@ -355,7 +355,7 @@ $secondemail = $_SESSION["secondlogin"];
                             </form>
                             <hr>
                             <h2 id="theme">Тема</h2>
-                            <form class="needs-validation person-settings-form-image form-image-bg" action="/api/php/person/edit-theme.php" method="post" novalidate>
+                            <form class="needs-validation person-settings-form-image form-image-bg" action="/api/php/person/edit/edit-theme.php" method="post" novalidate>
                                 <div class="row row-cols-1 row-cols-lg-3 g-2">
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="theme" id="theme1" value="1" <?php echo $formtheme[1] ?>>
@@ -481,7 +481,7 @@ $secondemail = $_SESSION["secondlogin"];
                             </div>
                         <?php endif; ?>
                         <div class="person-setting-bg person-setting-bar">
-                            <a href="/api/php/person/person-exit.php" class="link-danger">
+                            <a href="/api/php/person/exit/person-exit.php" class="link-danger">
                                 Выйти из аккаунта
                             </a>
                         </div>

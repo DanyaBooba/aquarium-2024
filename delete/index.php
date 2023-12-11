@@ -58,7 +58,7 @@ $user = $user[0];
                                     будет восстановить.
                                 </span>
                             </div>
-                            <form class="needs-validation" action="/api/php/person/person-delete.php" method="post" novalidate>
+                            <form class="needs-validation" action="/api/php/person/delete/person-delete.php" method="post" novalidate>
                                 <?php if (empty($error) == false) : ?>
                                     <div class="alert alert-danger" role="alert">
                                         <?php echo $error ?>

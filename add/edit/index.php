@@ -58,7 +58,7 @@ if (count($post) <= 0) {
                     <div class="person-setting row row-cols-1 g-2">
                         <div class="person-rightbar-content">
                             <div class="person-setting-bg person-block-add-post">
-                                <form class="needs-validation" action="/api/php/person/edit-post.php" id="formPost" method="post" novalidate>
+                                <form class="needs-validation" action="/api/php/person/edit/edit-post.php" id="formPost" method="post" novalidate>
                                     <?php if (empty($error) == false) : ?>
                                         <div class="alert alert-danger" role="alert">
                                             <?php echo $error ?>
