@@ -20,7 +20,7 @@ if (count($find) > 0) {
 
 $yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
     'client_id' => TokenYandex()["client_id"],
-    'redirect_uri' => 'https://aquarium.org.ru/api/php/authyandex-gettoken.php',
+    'redirect_uri' => TokenYandex()["redirect_uri"],
     'response_type' => 'code'
 ]));
 
@@ -68,7 +68,7 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                         <path d="M0.900024 173.6C0.900024 149.9 15 133.7 49.8 130.1L109.2 124.4C107.7 97.1 93 83.6 67.2 83.6C45.6 83.6 25.5 93.2 25.5 121.4H1.50003C1.50003 90.5 24.9 62.9 67.2 62.9C108.9 62.9 133.8 90.5 133.8 130.4V194H155.7V215H129.3C117.9 215 111.6 208.7 111.6 197.6V189.5L115.5 173.9H108.3C102.6 196.7 86.7 218 50.7 218C7.50003 218 0.900024 189.2 0.900024 173.6ZM25.5 170.6C25.5 187.7 36.3 197 53.7 197C87.6 197 109.2 173.6 109.2 142.7L54 148.4C35.1 150.2 25.5 155.9 25.5 170.6Z" />
                     </svg>
                     <h3 class="h4">Войти</h3>
-                    <form class="needs-validation" action="/api/php/login.php" method="post" novalidate>
+                    <form class="needs-validation" action="/api/php/auth/login/login.php" method="post" novalidate>
                         <div class="input-group-sm">
                             <input class="form-control" type="email" autocomplete="email" id="email" name="email" placeholder="Почта" aria-label="Почта" required>
                             <div class="invalid-feedback">

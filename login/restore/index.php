@@ -56,7 +56,7 @@ if (count($find) > 0) {
                         <?php echo $error ?>
                     </div>
                 <?php endif; ?>
-                <form class="needs-validation" action="/api/php/restore.php" method="post" novalidate>
+                <form class="needs-validation" action="/api/php/auth/login/restore/restore.php" method="post" novalidate>
                     <div class="input-group-sm">
                         <input class="form-control" onInput="CheckFormData()" autocomplete="email" id="email" type="email" name="email_restore" placeholder="Почта" aria-label="Почта" required>
                         <div class="invalid-feedback">

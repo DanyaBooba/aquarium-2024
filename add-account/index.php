@@ -75,7 +75,7 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                     <?php echo $error ?>
                 </div>
             <?php endif; ?>
-            <form class="needs-validation" action="/api/php/secondlogin.php" method="post" novalidate>
+            <form class="needs-validation" action="/api/php/auth/login/second/login.php" method="post" novalidate>
                 <div class="input-group-sm">
                     <input class="form-control" autocomplete="email" id="email" type="email" onInput="CheckFormData()" name="email" placeholder="Почта" aria-label="Почта" value="<?php echo $email ?>" required>
                     <div class="invalid-feedback">

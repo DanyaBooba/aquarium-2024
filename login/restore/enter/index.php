@@ -77,7 +77,7 @@ $email = $find[0]["email"];
                     <?php echo $error ?>
                 </div>
             <?php endif; ?>
-            <form class="needs-validation" action="/api/php/restore-password.php" method="post" novalidate>
+            <form class="needs-validation" action="/api/php/auth/login/restore/restore-password.php" method="post" novalidate>
                 <div class="input-group-sm">
                     <input class="form-control" type="password" autocomplete="new-password" id="password" onInput="CheckFormData()" name="password" placeholder="Пароль" aria-label="Пароль" required>
                     <div class="invalid-feedback">
