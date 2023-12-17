@@ -20,6 +20,11 @@ if ($user[0]["isblock"] == 1) {
     die();
 }
 
+if ($user[0]["usertype"] == "tst") {
+    header("Location: /settings");
+    return;
+}
+
 $user = $user[0];
 
 $findchangeemail = R::getAll(SqlRequestFindChangeEmail($user["id"], $user["email"]));

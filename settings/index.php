@@ -146,16 +146,18 @@ if (count($seconduser) <= 0) {
                                     Сохранить изменения
                                 </button>
                             </form>
-                            <div class="form-delete-account">
-                                <button class="btn btn-danger w-100" onClick="ChangeEmail()">
-                                    Сменить почту
-                                </button>
-                            </div>
-                            <div class="form-delete-account">
-                                <button class="btn btn-danger w-100" onClick="DeleteAccount()" style="margin-top: 10px;">
-                                    Удалить аккаунт
-                                </button>
-                            </div>
+                            <?php if ($user["usertype"] != "tst") : ?>
+                                <div class="form-delete-account">
+                                    <button class="btn btn-danger w-100" onClick="ChangeEmail()">
+                                        Сменить почту
+                                    </button>
+                                </div>
+                                <div class="form-delete-account">
+                                    <button class="btn btn-danger w-100" onClick="DeleteAccount()" style="margin-top: 10px;">
+                                        Удалить аккаунт
+                                    </button>
+                                </div>
+                            <?php endif; ?>
                             <hr>
                             <h2 id="data">Личные данные</h2>
                             <form class="needs-validation" action="/api/php/person/edit/edit-name.php" method="post" novalidate>
@@ -261,7 +263,7 @@ if (count($seconduser) <= 0) {
                             </form>
                             <hr>
                             <h2 id="icon">Фотография</h2>
-                            <form class="needs-validation person-settings-form-image" action="/api/php/person/edit/edit-icon.php" method="post" novalidate>
+                            <form class="needs-validation person-settings-form-image w-100" action="/api/php/person/edit/edit-icon.php" method="post" novalidate>
                                 <div class="row row-cols-2 row-cols-lg-4 g-2">
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon1" value="1" <?php echo $formicon[1] ?>>
@@ -313,7 +315,7 @@ if (count($seconduser) <= 0) {
                             </form>
                             <hr>
                             <h2 id="cap">Обложка</h2>
-                            <form class="needs-validation person-settings-form-image form-image-bg" action="/api/php/person/edit/edit-bg.php" method="post" novalidate>
+                            <form class="needs-validation person-settings-form-image form-image-bg w-100" action="/api/php/person/edit/edit-bg.php" method="post" novalidate>
                                 <div class="row row-cols-1 row-cols-lg-2 g-2">
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="bg" id="bg1" value="1" <?php echo $formbg[1] ?>>
@@ -364,7 +366,7 @@ if (count($seconduser) <= 0) {
                             </form>
                             <hr>
                             <h2 id="theme">Тема</h2>
-                            <form class="needs-validation person-settings-form-image form-image-bg" action="/api/php/person/edit/edit-theme.php" method="post" novalidate>
+                            <form class="needs-validation person-settings-form-image form-image-bg w-100" action="/api/php/person/edit/edit-theme.php" method="post" novalidate>
                                 <div class="row row-cols-1 row-cols-lg-3 g-2">
                                     <div class="col">
                                         <input class="form-check-input visually-hidden" type="radio" name="theme" id="theme1" value="1" <?php echo $formtheme[1] ?>>

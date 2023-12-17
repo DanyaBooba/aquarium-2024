@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <meta name="description" content="Аквариум — ваш виртуальный мир под водой: это не просто еще одна соцсеть, это место, где Вы сможете создать свой уникальный подводный мир, отражающий Вашу личность, интересы и стиль жизни." />
     <meta name="keywords" content="соцсеть аквариум, социальная сеть аквариум, социальная сеть, соцсеть, соцсеть дыбка, соцсеть дыбка аквариум, соцсеть даниил дыбка, социальная сеть даниила дыбка, даниил дыбка, дыбка" />

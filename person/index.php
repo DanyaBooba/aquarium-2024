@@ -214,12 +214,40 @@ $form = [
                         $posturl = "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
                         $postinurl = "/post/in/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
                         ?>
-                        <div class="col-md-4">
-                            <a href="<?php echo $postinurl ?>" class="person-posts-pc" dataurl="<?php echo $posturl ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="1000" data-height="470">
-                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"]; ?>">
+                        <div class="col-md-4 mb-sm-0">
+                            <a href="<?php echo $postinurl ?>" dataurl="<?php echo $posturl ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="1000" data-height="470" class="card card--link card--rounded person-posts-pc">
+                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="card-img" alt="Alt text">
+                                <div class="d-flex card-img-overlay card--bg-gradient">
+                                    <div class="d-flex mt-auto flex-column card--title-1-padding">
+                                        <p class="card-title text-white card--title card--title-1">
+                                            <?php echo $post["minipost"] . "..." ?>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex card-img-overlay card--bg-gradient-2">
+                                    <div class="d-flex mt-auto flex-column card--title-1-padding">
+                                        <p class="card-title card--title card--title-1" style="color: <?php echo ContrastColor(ActionColorOfImage("../app/img/posts/posts-" . max(1, intval($post["idpost"]) % 6) . ".jpg")) ?> !important;">
+                                            <?php echo $post["minipost"] . "..." ?>
+                                        </p>
+                                    </div>
+                                </div>
                             </a>
-                            <a href="<?php echo $posturl ?>" class="person-posts-mobile">
-                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="person-posts-img" alt="<?php echo $post["minipost"]; ?>">
+                            <a href="<?php echo $posturl ?>" class="card card--link card--rounded person-posts-mobile">
+                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="card-img" alt="Alt text">
+                                <div class="d-flex card-img-overlay card--bg-gradient">
+                                    <div class="d-flex mt-auto flex-column card--title-1-padding">
+                                        <p class="card-title text-white card--title card--title-1">
+                                            <?php echo $post["minipost"] . "..." ?>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex card-img-overlay card--bg-gradient-2">
+                                    <div class="d-flex mt-auto flex-column card--title-1-padding">
+                                        <p class="card-title card--title card--title-1" style="color: <?php echo ContrastColor(ActionColorOfImage("../app/img/posts/posts-" . max(1, intval($post["idpost"]) % 6) . ".jpg")) ?> !important;">
+                                            <?php echo $post["minipost"] . "..." ?>
+                                        </p>
+                                    </div>
+                                </div>
                             </a>
                         </div>
                     <?php endforeach; ?>

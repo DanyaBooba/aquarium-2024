@@ -26,13 +26,70 @@ if ($find[0]["isblock"] == 1) {
 <!-- PHP. Author: Daniil Dybka, daniil@dybka.ru -->
 <title>Лента | Аквариум</title>
 
+<style>
+    @media(max-width: 991px) {
+        .col-md-5 {
+            display: none !important;
+        }
+
+        .col-md-7 {
+            width: 100% !important;
+        }
+    }
+</style>
+
 <body class="container">
     <?php include_once "../app/php/person/header.php"; ?>
 
     <main class="row row-cols-1 g-2">
         <?php include_once "../app/php/person/left-bar.php"; ?>
         <div class="col-md-10 person-content">
-            <p>Лента</p>
+
+
+            <div class="container px-0">
+                <div class="person-setting row row-cols-1 g-2">
+                    <div class="col-md-7">
+                        <?php for ($i = 0; $i < 15; $i++) : ?>
+                            <div class="person-setting-bg person-setting-content">
+                                <div class="d-flex flex-column">
+                                    <div>
+                                        <a href="">
+                                            user
+                                        </a>
+                                    </div>
+                                    <div>
+                                        image
+                                    </div>
+                                    <div>
+                                        post
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endfor; ?>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="person-setting-bg person-setting-bar">
+                            <ul>
+                                <li>
+                                    <a href="#" class="link">
+                                        Список
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="person-setting-bg person-setting-bar d-flex align-items-center">
+                            <svg class="svg-normal me-3" width="16" height="16">
+                                <use xlink:href="/app/img/icons/bootstrap.min.svg#question-circle"></use>
+                            </svg>
+                            <a href="#" class="link">
+                                Информация
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </main>
 

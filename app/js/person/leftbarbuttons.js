@@ -1,19 +1,19 @@
 function ButtonLeftBar(i) {
-	if (i == "feed") window.open("/feed/", "_self");
+	if (i == "feed") LeftBarOpenLink("feed");
 
-	if (i == "search") window.open("/search/", "_self");
+	if (i == "search") LeftBarOpenLink("search");
 
-	if (i == "person") window.open("/person/", "_self");
+	if (i == "person") LeftBarOpenLink("person");
 
-	if (i == "notifications") window.open("/notifications/", "_self");
+	if (i == "notifications") LeftBarOpenLink("notifications");
 
-	if (i == "messages") window.open("/messages/", "_self");
+	if (i == "messages") LeftBarOpenLink("messages");
 
-	if (i == "achivments") window.open("/achivments/", "_self");
+	if (i == "achivments") LeftBarOpenLink("achivments");
 
-	if (i == "settings") window.open("/settings/", "_self");
+	if (i == "settings") LeftBarOpenLink("settings");
 
-	if (i == "add") window.open("/add/", "_self");
+	if (i == "add") LeftBarOpenLink("add");
 }
 
 function DeleteAccount() {
@@ -22,4 +22,14 @@ function DeleteAccount() {
 
 function ChangeEmail() {
 	window.open("/change-email/", "_self");
+}
+
+function LeftBarOpenLink(link) {
+	let pathurl = window.location.pathname.split("/")[1];
+
+	if (pathurl === link) {
+		window.open("#", "_self");
+	} else {
+		window.open("/" + link, "_self");
+	}
 }

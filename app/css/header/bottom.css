@@ -20,6 +20,13 @@
 
 .fixed-bottom__link
 {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
     display: flex;
     flex-direction: column;
     justify-content: start;

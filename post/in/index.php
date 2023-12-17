@@ -38,6 +38,8 @@ if (count($post) <= 0) {
     $logo = ($author["ismale"] == 1 ? "MAN" : "WOMAN") . $author["logoid"] . ".png";
     $authorname = ($author["displaynick"] == 1) ? ($author["nickname"]) : ($author["firstName"] . " " . $author["lastName"]);
 
+    $mypost = $user["id"] == $author["id"];
+
     $postimage = [
         null,
         "/app/img/posts/posts-1.jpg",
