@@ -48,10 +48,10 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
             <div class="col-md-6 see-at-pc d-flex justify-content-end px-0">
                 <div class="p-3 d-flex">
                     <a href="/search/" aria-label="Скачать для Android" style="margin-right: -30px">
-                        <img src="/app/img/content/mainpage/android.png" class="img-fluid" width="240">
+                        <img src="/app/img/content/mainpage/phones/android.png" class="img-fluid" width="240">
                     </a>
                     <a href="/user/?id=1" aria-label="Скачать для iOS">
-                        <img src="/app/img/content/mainpage/iphone.png" class="img-fluid" width="250">
+                        <img src="/app/img/content/mainpage/phones/iphone.png" class="img-fluid" width="250">
                     </a>
                 </div>
             </div>
@@ -85,20 +85,6 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
                             Войти
                         </button>
                     </form>
-                    <!-- <div class="container auth-registration-social">
-                        <div class="row row-cols-2 row-cols-lg-2 g-2">
-                            <div class="col">
-                                <a href="<?php echo $yandexurl ?>" aria-label="Регистрация через Яндекс">
-                                    <img src="/app/img/content/social-logos/yandex.jpg" width="44" alt="Логотип Яндекса">
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="<?php echo $googleurl ?>" aria-label="Регистрация через Google">
-                                    <img src="/app/img/content/social-logos/google.png" width="42" alt="Логотип Google">
-                                </a>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="page-login--new-page">
                         <a href="/login/" class="link">
                             Открыть отдельно
@@ -132,74 +118,86 @@ $googleurl = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build
             <div class="row row-cols-1 row-cols-lg-3 g-4">
                 <div class="col text-center">
                     <div class="p-4">
-                        <h3 class="display-1">🐠</h3>
-                        <h3 class="mb-1">Соцсеть</h3>
-                        <p class="mb-0 fs-6">
-                            Социальная сеть для всех.<br>Поиск друзей и общения.
+                        <img src="/app/img/content/mainpage/icons/fish.png" width="80" class="img-fluid mb-2" alt="Рыбка плывет">
+                        <h3 class="mb-1">Тематика</h3>
+                        <p class="mb-0 fs-6 mx-auto col-md-8">
+                            Социальная сеть для всех. Поиск друзей и общения.
                         </p>
                     </div>
                 </div>
                 <div class="col text-center">
                     <div class="p-4">
-                        <h3 class="display-1">👭</h3>
-                        <h3 class="mb-1">Друзья</h3>
-                        <p class="mb-0 fs-6">
-                            Найдите себе людей по вкусу, подпишитесь на человека, следите за его новостями.
+                        <img src="/app/img/content/mainpage/icons/friends.png" width="80" class="img-fluid mb-2" alt="Друзья">
+                        <h3 class="mb-1">Аудитория</h3>
+                        <p class="mb-0 fs-6 mx-auto col-md-8">
+                            Находите единомышленников и друзей.
                         </p>
                     </div>
                 </div>
                 <div class="col text-center">
                     <div class="p-4">
-                        <h3 class="display-1">💫</h3>
+                        <img src="/app/img/content/mainpage/icons/dizzy.png" width="80" class="img-fluid mb-2" alt="Звезда">
                         <h3 class="mb-1">Лента</h3>
-                        <p class="mb-0 fs-6">
-                            Ваша лента с новостями,<br> с записями друзей.
+                        <p class="mb-0 fs-6 mx-auto col-md-8">
+                            Ваша лента с новостями и записями друзей.
                         </p>
                     </div>
                 </div>
                 <div class="col text-center">
                     <div class="p-4">
-                        <h3 class="display-1">🤖</h3>
+                        <img src="/app/img/content/mainpage/icons/robot.png" width="80" class="img-fluid mb-2" alt="Робот">
                         <h3 class="mb-1">Безопасность</h3>
-                        <p class="mb-0 fs-6">
-                            Шифрование пароля, защищенные запросы и полная конфиденциальность данных.
+                        <p class="mb-0 fs-6 mx-auto col-md-8">
+                            Шифрование и конфиденциальность.
                         </p>
                     </div>
                 </div>
                 <div class="col text-center">
                     <div class="p-4">
-                        <h3 class="display-1">❤️</h3>
+                        <img src="/app/img/content/mainpage/icons/heart.png" width="80" class="img-fluid mb-2" alt="Сердце">
                         <h3 class="mb-1">Эмоции</h3>
-                        <p class="mb-0 fs-6">
-                            Сохраняйте Ваши приятные воспоминания, и делитесь ими с друзьями.
+                        <p class="mb-0 fs-6 mx-auto col-md-8">
+                            Сохраняйте воспоминания и делитесь с друзьями.
                         </p>
                     </div>
                 </div>
                 <div class="col text-center">
                     <div class="p-4">
-                        <h3 class="display-1">🌠</h3>
+                        <img src="/app/img/content/mainpage/icons/shooting-star.png" width="80" class="img-fluid mb-2" alt="Падающая звезда">
                         <h3 class="mb-1">Фотографии</h3>
-                        <p>
-                            Публикуйте фотографии, делитесь ими с друзьями и добавляйте записи к ним.
+                        <p class="mb-0 fs-6 mx-auto col-md-8">
+                            Публикуйте фотографии, расскажите друзьям.
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="px-4 py-5 my-5 text-center">
-            <a href="//aquariumsocial.t.me" aria-label="Перейти в телеграм Аквариум">
-                <img src="/app/img/content/social-logos/telegram.jpg" class="d-block rounded-circle mx-auto mb-4" alt="Логотип Телеграма" width="80">
-            </a>
-            <h1 class="">Ведём Телеграм</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="mb-4">
-                    Подписывайтесь: рассказываем факты о Аквариуме,<br>
-                    проводим конкурсы. Дадим уникальное достижение.
-                </p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <a href="//aquariumsocial.t.me" aria-label="Открыть телеграм Аквариум" class="link">
-                        Открыть телеграм
-                    </a>
+                <div class="col text-center">
+                    <div class="p-4">
+                        <img src="/app/img/content/mainpage/icons/rocket.png" width="80" class="img-fluid mb-2" alt="Ракета">
+                        <h3 class="mb-1">Скорость</h3>
+                        <p class="mb-0 fs-6 mx-auto col-md-8">
+                            Быстрая скорость работы благодаря оптимизации.
+                        </p>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="p-4">
+                        <img src="/app/img/content/mainpage/icons/dove.png" width="80" class="img-fluid mb-2" alt="Белый голубь">
+                        <h3 class="mb-1">Свобода</h3>
+                        <p class="mb-0 fs-6 mx-auto col-md-8">
+                            Выражайте любое мнение, Вы никогда не будете за него заблокированы.
+                        </p>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="p-4">
+                        <a href="//aquariumsocial.t.me" aria-label="Открыть Телеграм канал">
+                            <img src="/app/img/content/social-logos/telegram.jpg" width="80" class="img-fluid rounded-circle mb-2" alt="Логотип Телеграм">
+                        </a>
+                        <h3 class="mb-1">Телеграм</h3>
+                        <p class="mb-0 fs-6 mx-auto col-md-8">
+                            Рассказываем про обновления Аквариума и делимся фактами.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

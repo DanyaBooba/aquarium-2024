@@ -31,7 +31,8 @@
 }
 
 .footer__center .link {
-    font-size: 14px;
+    font-size: 12px;
+    margin-bottom: 2px;
 }
 
 .footer__left
@@ -50,6 +51,7 @@
 .footer__left p {
     padding: 0;
     margin: 0;
+    font-size: 12px;
 }
 
 @media(max-width: 991px) {
@@ -65,5 +67,21 @@
 
     .footer__left {
         margin-right: 0 !important;
+    }
+}
+
+@media(max-width: 500px) {
+    .footer__center {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .footer__center .link {
+        font-size: 12px;
+        margin-bottom: 4px;
     }
 }
