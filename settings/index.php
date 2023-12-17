@@ -422,6 +422,37 @@ if (count($seconduser) <= 0) {
                         </div>
                     </div>
                     <div class="person-rightbar-bar">
+                        <?php if ($user["emailverify"] == 1) : ?>
+                            <?php if ($havesecondaccount == false) : ?>
+                                <div class="person-setting-bg person-setting-bar d-flex align-items-center">
+                                    <svg class="svg-normal me-3" width="16" height="16">
+                                        <use xlink:href="/app/img/icons/bootstrap.svg#arrow-repeat"></use>
+                                    </svg>
+                                    <a href="/add-account/" class="link">
+                                        Добавить аккаунт
+                                    </a>
+                                </div>
+                            <?php else : ?>
+                                <div class="person-setting-bg person-setting-bar">
+                                    <a href="/api/php/person/change-account/change.php" class="d-flex align-items-center link-empty">
+                                        <img src="/app/img/users/icons/<?php echo $secondusericon ?>.png" width="32" class="rounded-circle me-2" alt="<?php echo $secondusername ?>">
+                                        <div class="d-flex flex-column">
+                                            <div style="font-size: 12px">
+                                                Сменить аккаунт
+                                            </div>
+                                            <div class="content-name-width text-start" style="font-family: NeueMachina">
+                                                <?php echo $secondusername ?>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="person-setting-bg person-setting-bar">
+                                    <a href="/api/php/person/exit/second-exit.php" class="link-danger">
+                                        Убрать второй аккаунт
+                                    </a>
+                                </div>
+                            <?php endif; ?>
+                        <?php endif; ?>
                         <div class="person-setting-bg person-setting-bar">
                             <ul>
                                 <li>
@@ -476,35 +507,6 @@ if (count($seconduser) <= 0) {
                                 </svg>
                                 <a href="/user/?id=<?php echo $user["id"] ?>" class="link">
                                     Профиль со стороны
-                                </a>
-                            </div>
-                        <?php endif; ?>
-                        <?php if ($havesecondaccount == false) : ?>
-                            <div class="person-setting-bg person-setting-bar d-flex align-items-center">
-                                <svg class="svg-normal me-3" width="16" height="16">
-                                    <use xlink:href="/app/img/icons/bootstrap.svg#arrow-repeat"></use>
-                                </svg>
-                                <a href="/add-account/" class="link">
-                                    Добавить аккаунт
-                                </a>
-                            </div>
-                        <?php else : ?>
-                            <div class="person-setting-bg person-setting-bar">
-                                <a href="/api/php/person/change-account/change.php" class="d-flex align-items-center link-empty">
-                                    <img src="/app/img/users/icons/<?php echo $secondusericon ?>.png" width="32" class="rounded-circle me-2" alt="<?php echo $secondusername ?>">
-                                    <div class="d-flex flex-column">
-                                        <div style="font-size: 12px">
-                                            Сменить аккаунт
-                                        </div>
-                                        <div class="content-name-width" style="font-family: NeueMachina">
-                                            <?php echo $secondusername ?>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="person-setting-bg person-setting-bar">
-                                <a href="/api/php/person/exit/second-exit.php" class="link-danger">
-                                    Убрать второй аккаунт
                                 </a>
                             </div>
                         <?php endif; ?>

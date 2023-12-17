@@ -8,23 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="Аквариум — ваш виртуальный мир под водой: это не просто еще одна соцсеть, это место,
-        где Вы сможете создать свой уникальный подводный мир, отражающий Вашу личность, интересы и стиль жизни." />
-    <meta name="keywords" content="соцсеть аквариум, социальная сеть аквариум, социальная сеть, соцсеть, соцсеть дыбка,
-        соцсеть дыбка аквариум, соцсеть даниил дыбка, социальная сеть даниила дыбка, даниил дыбка, дыбка" />
+    <meta name="description" content="Аквариум — ваш виртуальный мир под водой: это не просто еще одна соцсеть, это место, где Вы сможете создать свой уникальный подводный мир, отражающий Вашу личность, интересы и стиль жизни." />
+    <meta name="keywords" content="соцсеть аквариум, социальная сеть аквариум, социальная сеть, соцсеть, соцсеть дыбка, соцсеть дыбка аквариум, соцсеть даниил дыбка, социальная сеть даниила дыбка, даниил дыбка, дыбка" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Аквариум" />
     <meta property="og:site_name" content="Аквариум" />
-    <meta property="og:description" content="Аквариум — ваш виртуальный мир под водой: это не просто еще одна соцсеть, это место,
-        где Вы сможете создать свой уникальный подводный мир, отражающий Вашу личность, интересы и стиль жизни." />
+    <meta property="og:description" content="Аквариум — ваш виртуальный мир под водой: это не просто еще одна соцсеть, это место, где Вы сможете создать свой уникальный подводный мир, отражающий Вашу личность, интересы и стиль жизни." />
     <meta property="og:url" content="https://aquarium.org.ru/" />
     <meta property="og:image" content="https://aquarium.org.ru/app/img/logo/cap.jpg" />
     <meta property="og:image:width" content="1456" />
     <meta property="og:image:height" content="816" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Аквариум" />
-    <meta name="twitter:description" content="Аквариум — ваш виртуальный мир под водой: это не просто еще одна соцсеть, это место,
-        где Вы сможете создать свой уникальный подводный мир, отражающий Вашу личность, интересы и стиль жизни." />
+    <meta name="twitter:description" content="Аквариум — ваш виртуальный мир под водой: это не просто еще одна соцсеть, это место, где Вы сможете создать свой уникальный подводный мир, отражающий Вашу личность, интересы и стиль жизни." />
     <meta name="twitter:site" content="https://aquarium.org.ru/" />
     <meta name="twitter:image" content="https://aquarium.org.ru/app/img/logo/favicon.ico" />
     <meta name="Author" content="Даниил Дыбка" />
