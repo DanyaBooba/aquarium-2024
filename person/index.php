@@ -257,6 +257,11 @@ $form = [
                                     <?php else : ?>
                                         <?php echo $user["firstName"] . " " . $user["lastName"] ?>
                                     <?php endif ?>
+                                    <?php if ($user["accverify"] == 1) : ?>
+                                        <svg class="person-verify-account-min">
+                                            <use xlink:href="/app/img/icons/bootstrap.svg#check-circle-fill"></use>
+                                        </svg>
+                                    <?php endif; ?>
                                 </a>
                             <?php endforeach; ?>
                         </ul>
@@ -288,6 +293,11 @@ $form = [
                                     <?php else : ?>
                                         <?php echo $user["firstName"] . " " . $user["lastName"] ?>
                                     <?php endif ?>
+                                    <?php if ($user["accverify"] == 1) : ?>
+                                        <svg class="person-verify-account-min">
+                                            <use xlink:href="/app/img/icons/bootstrap.svg#check-circle-fill"></use>
+                                        </svg>
+                                    <?php endif; ?>
                                 </a>
                             <?php endforeach; ?>
                         </ul>

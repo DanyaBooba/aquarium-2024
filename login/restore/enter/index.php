@@ -79,7 +79,7 @@ $email = $find[0]["email"];
             <?php endif; ?>
             <form class="needs-validation" action="/api/php/auth/login/restore/restore-password.php" method="post" novalidate>
                 <div class="input-group-sm">
-                    <input class="form-control" type="password" autocomplete="new-password" id="password" onInput="CheckFormData()" name="password" placeholder="Пароль" aria-label="Пароль" required>
+                    <input class="form-control" type="password" autocomplete="off" id="password" onInput="CheckFormData()" name="password" placeholder="Пароль" aria-label="Пароль" required>
                     <div class="invalid-feedback">
                         Пожалуйста, введите пароль.
                     </div>
@@ -88,7 +88,7 @@ $email = $find[0]["email"];
                     </p>
                 </div>
                 <div class="input-group-sm">
-                    <input class="form-control" type="password" autocomplete="new-password" id="password" onInput="CheckFormData()" name="confirm_password" placeholder="Подтвердите пароль" aria-label="Подтвердите пароль" required>
+                    <input class="form-control" type="password" autocomplete="off" id="password" onInput="CheckFormData()" name="confirm_password" placeholder="Подтвердите пароль" aria-label="Подтвердите пароль" required>
                     <div class="invalid-feedback">
                         Пожалуйста, подтвердите введеный пароль.
                     </div>

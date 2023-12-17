@@ -75,7 +75,16 @@ $formnotif = [
 
 $formmale = $sex == 1 ? "MAN" : "WOMAN";
 
-$secondemail = $_SESSION["secondlogin"];
+$havesecondaccount = true;
+$seconduser = @R::getAll(SqlRequestFind($_SESSION["secondlogin"]));
+if (count($seconduser) <= 0) {
+    $_SESSION["secondlogin"] = "";
+    $havesecondaccount = false;
+} else {
+    $seconduser = $seconduser[0];
+    $secondusericon = ($seconduser["ismale"] == 1 ? "MAN" : "WOMAN") . $seconduser["logoid"];
+    $secondusername = $seconduser["displaynick"] == 1 ? $seconduser["nickname"] : ($seconduser["firstName"] . " " . $seconduser["lastName"]);
+}
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -470,13 +479,32 @@ $secondemail = $_SESSION["secondlogin"];
                                 </a>
                             </div>
                         <?php endif; ?>
-                        <?php if (empty($secondemail)) : ?>
+                        <?php if ($havesecondaccount == false) : ?>
                             <div class="person-setting-bg person-setting-bar d-flex align-items-center">
                                 <svg class="svg-normal me-3" width="16" height="16">
                                     <use xlink:href="/app/img/icons/bootstrap.svg#arrow-repeat"></use>
                                 </svg>
                                 <a href="/add-account/" class="link">
                                     Добавить аккаунт
+                                </a>
+                            </div>
+                        <?php else : ?>
+                            <div class="person-setting-bg person-setting-bar">
+                                <a href="/api/php/person/change-account/change.php" class="d-flex align-items-center link-empty">
+                                    <img src="/app/img/users/icons/<?php echo $secondusericon ?>.png" width="32" class="rounded-circle me-2" alt="<?php echo $secondusername ?>">
+                                    <div class="d-flex flex-column">
+                                        <div style="font-size: 12px">
+                                            Сменить аккаунт
+                                        </div>
+                                        <div class="content-name-width" style="font-family: NeueMachina">
+                                            <?php echo $secondusername ?>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="person-setting-bg person-setting-bar">
+                                <a href="/api/php/person/exit/second-exit.php" class="link-danger">
+                                    Убрать второй аккаунт
                                 </a>
                             </div>
                         <?php endif; ?>
