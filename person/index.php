@@ -220,14 +220,14 @@ $form = [
                                 <div class="d-flex card-img-overlay card--bg-gradient">
                                     <div class="d-flex mt-auto flex-column card--title-1-padding">
                                         <p class="card-title text-white card--title card--title-1">
-                                            <?php echo $post["minipost"] . "..." ?>
+                                            <?php echo ClearMiniPostUser($post["minipost"]) ?>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="d-flex card-img-overlay card--bg-gradient-2">
                                     <div class="d-flex mt-auto flex-column card--title-1-padding">
                                         <p class="card-title card--title card--title-1" style="color: <?php echo ContrastColor(ActionColorOfImage("../app/img/posts/posts-" . max(1, intval($post["idpost"]) % 6) . ".jpg")) ?> !important;">
-                                            <?php echo $post["minipost"] . "..." ?>
+                                            <?php echo ClearMiniPostUser($post["minipost"]) ?>
                                         </p>
                                     </div>
                                 </div>
@@ -237,14 +237,14 @@ $form = [
                                 <div class="d-flex card-img-overlay card--bg-gradient">
                                     <div class="d-flex mt-auto flex-column card--title-1-padding">
                                         <p class="card-title text-white card--title card--title-1">
-                                            <?php echo $post["minipost"] . "..." ?>
+                                            <?php echo ClearMiniPostUser($post["minipost"]) ?>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="d-flex card-img-overlay card--bg-gradient-2">
                                     <div class="d-flex mt-auto flex-column card--title-1-padding">
                                         <p class="card-title card--title card--title-1" style="color: <?php echo ContrastColor(ActionColorOfImage("../app/img/posts/posts-" . max(1, intval($post["idpost"]) % 6) . ".jpg")) ?> !important;">
-                                            <?php echo $post["minipost"] . "..." ?>
+                                            <?php echo ClearMiniPostUser($post["minipost"]) ?>
                                         </p>
                                     </div>
                                 </div>
