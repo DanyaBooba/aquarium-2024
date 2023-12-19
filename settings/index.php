@@ -85,6 +85,8 @@ if (count($seconduser) <= 0) {
     $secondusericon = ($seconduser["ismale"] == 1 ? "MAN" : "WOMAN") . $seconduser["logoid"];
     $secondusername = $seconduser["displaynick"] == 1 ? $seconduser["nickname"] : ($seconduser["firstName"] . " " . $seconduser["lastName"]);
 }
+
+$sharelink = "https://aquarium.org.ru/registration/?token=" . $user["token"];
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -117,47 +119,24 @@ if (count($seconduser) <= 0) {
                                     </span>
                                 </div>
                             <?php endif ?>
-                            <h2 id="password">Пароль</h2>
-                            <form class="needs-validation" action="/api/php/person/edit/edit-pass.php" method="post" novalidate>
-                                <?php if (empty($error_pass) == false) : ?>
-                                    <div class="alert alert-danger" role="alert">
-                                        <?php echo $error_pass ?>
+                            <h2 id="friend">Пригласи друга</h2>
+                            <div>
+                                <p class="col-md-8">
+                                    Делись ссылкой с друзьями, кто больше людей пригласит — тот получит подарки.
+                                    <a href="/about/faq/#пригласи-друга" class="link">#пригласидруга</a>.
+                                </p>
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <input class="form-control" id="sharelinktocopy" type="text" value="<?php echo $sharelink ?>" placeholder="Ссылка" aria-label="Ссылка" disabled readonly>
                                     </div>
-                                <?php endif; ?>
-                                <div>
-                                    <input class="form-control" type="password" name="current_password" placeholder="Текущий пароль" aria-label="Текущий пароль" required>
-                                    <div class="invalid-feedback">
-                                        Пожалуйста, введите текущий пароль.
-                                    </div>
-                                </div>
-                                <div>
-                                    <input class="form-control" type="password" name="new_password" placeholder="Новый пароль" aria-label="Новый пароль" required>
-                                    <div class="invalid-feedback">
-                                        Пожалуйста, введите новый пароль.
-                                    </div>
-                                </div>
-                                <div>
-                                    <input class="form-control" type="password" name="confirm_password" placeholder="Подтвердите пароль" aria-label="Подтвердите пароль" required>
-                                    <div class="invalid-feedback">
-                                        Пожалуйста, подтвердите введенный пароль.
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary w-100" type="submit">
-                                    Сохранить изменения
-                                </button>
-                            </form>
-                            <?php if ($user["usertype"] != "tst") : ?>
-                                <div class="form-delete-account">
-                                    <button class="btn btn-danger w-100" onClick="ChangeEmail()">
-                                        Сменить почту
+                                    <button type="button" onClick="CopyShareLink()" class="btn btn-primary mb-2 w-100">
+                                        Скопировать ссылку
+                                    </button>
+                                    <button type="button" onClick="UpdateShareLink()" class="btn btn-secondary w-100">
+                                        Обновить ссылку
                                     </button>
                                 </div>
-                                <div class="form-delete-account">
-                                    <button class="btn btn-danger w-100" onClick="DeleteAccount()" style="margin-top: 10px;">
-                                        Удалить аккаунт
-                                    </button>
-                                </div>
-                            <?php endif; ?>
+                            </div>
                             <hr>
                             <h2 id="data">Личные данные</h2>
                             <form class="needs-validation" action="/api/php/person/edit/edit-name.php" method="post" novalidate>
@@ -191,6 +170,18 @@ if (count($seconduser) <= 0) {
                                     Сохранить изменения
                                 </button>
                             </form>
+                            <?php if ($user["usertype"] != "tst") : ?>
+                                <div class="form-delete-account">
+                                    <button class="btn btn-danger w-100" onClick="ChangeEmail()">
+                                        Сменить почту
+                                    </button>
+                                </div>
+                                <div class="form-delete-account">
+                                    <button class="btn btn-danger w-100" onClick="DeleteAccount()" style="margin-top: 10px;">
+                                        Удалить аккаунт
+                                    </button>
+                                </div>
+                            <?php endif; ?>
                             <hr>
                             <h2 id="info">Сведения</h2>
                             <form class="needs-validation" action="/api/php/person/edit/edit-info.php" method="post" novalidate>
@@ -421,6 +412,36 @@ if (count($seconduser) <= 0) {
                                     Сохранить изменения
                                 </button>
                             </form>
+                            <hr>
+                            <h2 id="password">Пароль</h2>
+                            <form class="needs-validation" action="/api/php/person/edit/edit-pass.php" method="post" novalidate>
+                                <?php if (empty($error_pass) == false) : ?>
+                                    <div class="alert alert-danger" role="alert">
+                                        <?php echo $error_pass ?>
+                                    </div>
+                                <?php endif; ?>
+                                <div>
+                                    <input class="form-control" type="password" name="current_password" placeholder="Текущий пароль" aria-label="Текущий пароль" required>
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, введите текущий пароль.
+                                    </div>
+                                </div>
+                                <div>
+                                    <input class="form-control" type="password" name="new_password" placeholder="Новый пароль" aria-label="Новый пароль" required>
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, введите новый пароль.
+                                    </div>
+                                </div>
+                                <div>
+                                    <input class="form-control" type="password" name="confirm_password" placeholder="Подтвердите пароль" aria-label="Подтвердите пароль" required>
+                                    <div class="invalid-feedback">
+                                        Пожалуйста, подтвердите введенный пароль.
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary w-100" type="submit">
+                                    Сохранить изменения
+                                </button>
+                            </form>
                         </div>
                     </div>
                     <div class="person-rightbar-bar">
@@ -458,8 +479,8 @@ if (count($seconduser) <= 0) {
                         <div class="person-setting-bg person-setting-bar">
                             <ul>
                                 <li>
-                                    <a href="#password" class="link">
-                                        Пароль
+                                    <a href="#friend" class="link">
+                                        Пригласи друга
                                     </a>
                                 </li>
                                 <li>
@@ -490,6 +511,11 @@ if (count($seconduser) <= 0) {
                                 <li>
                                     <a href="#theme" class="link">
                                         Тема
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#password" class="link">
+                                        Пароль
                                     </a>
                                 </li>
                             </ul>

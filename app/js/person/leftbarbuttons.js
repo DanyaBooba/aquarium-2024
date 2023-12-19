@@ -16,14 +16,6 @@ function ButtonLeftBar(i) {
 	if (i == "add") LeftBarOpenLink("add");
 }
 
-function DeleteAccount() {
-	window.open("/delete/", "_self");
-}
-
-function ChangeEmail() {
-	window.open("/change-email/", "_self");
-}
-
 function LeftBarOpenLink(link) {
 	let pathurl = window.location.pathname.split("/");
 	pathurl.shift();
@@ -36,4 +28,22 @@ function LeftBarOpenLink(link) {
 	} else {
 		window.open("/" + link, "_self");
 	}
+}
+
+function DeleteAccount() {
+	window.open("/delete/", "_self");
+}
+
+function ChangeEmail() {
+	window.open("/change-email/", "_self");
+}
+
+function CopyShareLink() {
+	let link = document.getElementById("sharelinktocopy");
+
+	if (link) navigator.clipboard.writeText(link.getAttribute("value"));
+}
+
+function UpdateShareLink() {
+	window.open("/api/php/person/share/update.php", "_self");
 }
