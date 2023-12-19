@@ -22,6 +22,12 @@ if (count($find) > 0) {
     die();
 }
 
+$token = $_GET["token"];
+
+if (!empty($token)) {
+    $_SESSION["token"] = $token;
+}
+
 $yandexurl = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
     'client_id' => TokenYandex()["client_id"],
     'redirect_uri' => TokenYandex()["redirect_uri"],

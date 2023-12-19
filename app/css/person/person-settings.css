@@ -20,6 +20,12 @@
     border: 1px solid var(--bg-light-active);
 }
 
+.person-setting-bg input {
+    background: var(--bg-input) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--bg-input-border) !important;
+}
+
 .person-setting-bg ul {
     background: var(--bg-light);
     margin: 0;
