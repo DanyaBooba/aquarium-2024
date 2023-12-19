@@ -1,6 +1,11 @@
+.toolbar {
+    display: flex;
+    align-items: center;
+}
+
 .toolbar button {
     border: 0 !important;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     border-radius: 8px;
     padding: 8px;
     transition: .15s;
@@ -23,6 +28,18 @@
     padding: 10px;
     border-radius: 6px;
     background: var(--bg-light-main-2);
+    tab-size: 3;
+    white-space: pre-wrap;
+    /* display: inline-block;
+    width: 100%; */
+}
+
+.editor p {
+    margin-bottom: 4px;
+}
+
+.editor pre {
+    font-size: 1em !important;
 }
 
 .editor[placeholder]:empty:before {
@@ -32,4 +49,77 @@
 
 .editor[placeholder]:empty:focus:before {
     content: '';
+}
+
+.toolbar-smiles
+{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: auto;
+}
+
+.toolbar-smiles button {
+    padding: 6px 10px;
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
+.toolbar-smiles button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.modal-smiles {
+    padding: 0px;
+}
+
+.modal-smiles h5 {
+    margin-bottom: 4px;
+}
+
+.modal-smiles-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.modal-smiles button {
+    padding: 6px 10px;
+    margin-bottom: 4px;
+    font-size: 20px;
+
+    border: 0 !important;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    transition: .15s;
+}
+
+.modal-smiles button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.modal-smiles button:hover,
+.modal-smiles button:focus {
+    background: var(--bg-light-main-2);
+}
+
+@media(max-width: 575px) {
+    .toolbar {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .toolbar-smiles {
+        margin: 0;
+    }
+
+    .person-setting-bg {
+        background: none !important;
+        padding: 0;
+        margin: 0;
+        border: none !important;
+    }
 }

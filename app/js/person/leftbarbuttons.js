@@ -25,9 +25,13 @@ function ChangeEmail() {
 }
 
 function LeftBarOpenLink(link) {
-	let pathurl = window.location.pathname.split("/")[1];
+	let pathurl = window.location.pathname.split("/");
+	pathurl.shift();
+	pathurl.pop();
 
-	if (pathurl === link) {
+	let linkurl = pathurl[0];
+
+	if (linkurl === link && pathurl.length === 1) {
 		window.open("#", "_self");
 	} else {
 		window.open("/" + link, "_self");

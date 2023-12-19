@@ -161,10 +161,16 @@ a.person-post-back svg {
 .person-post-content-user .post-content-user-content {
     display: flex;
     flex-direction: column;
+    font-size: 16px;
 }
 
 .person-post-content-user .post-content-user-content p {
     margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.person-post-content-user .post-content-user-content pre {
+    font-size: 16px;
 }
 
 .person-post-content-user .post-content-user-content span {
