@@ -104,14 +104,13 @@ $posts = R::getAll(SqlRequestFindPostsEmail($user["email"]));
 $background = intval($user["themeid"]) != 0 ? "background-" . $user["themeid"] : "";
 
 $countposts = count($posts);
-$countpoststext = FormOfWord($countposts, "запись", "записи", "записей");
+$countpoststext = FormOfWord($countposts, "пост", "поста", "постов");
 
 $form = [
     "achivs" => FormOfWord($countachivs, "Достижение", "Достижения", "Достижений"),
     "subs" => FormOfWord($countsubme, "Подписка", "Подписки", "Подписок"),
     "atmesubs" => FormOfWord($countsubatme, "Подписчик", "Подписчика", "Подписчиков"),
 ];
-
 ?>
 
 <?php include_once "../app/php/head.php"; ?>
@@ -207,43 +206,13 @@ $form = [
             </div>
             <?php if (count($posts) > 0) : ?>
                 <div class="row row-cols-1 g-2 person-posts">
-                    <?php $i = 0; ?>
                     <?php foreach ($posts as $post) : ?>
-                        <?php
-                        $i++;
-                        $posturl = "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
-                        $postinurl = "/post/in/?a=" . $post["iduser"] . "&p=" . $post["idpost"];
-                        ?>
-                        <div class="col-md-4 mb-sm-0">
-                            <a href="<?php echo $postinurl ?>" dataurl="<?php echo $posturl ?>" id="openpost-<?php echo $i ?>" onClick="OpenPost('openpost-<?php echo $i ?>')" data-fancybox data-type="iframe" data-width="1000" data-height="470" class="card card--link card--rounded person-posts-pc">
-                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="card-img" alt="Alt text">
-                                <div class="d-flex card-img-overlay card--bg-gradient">
-                                    <div class="d-flex mt-auto flex-column card--title-1-padding">
-                                        <p class="card-title text-white card--title card--title-1">
-                                            <?php echo ClearMiniPostUser($post["minipost"]) ?>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="d-flex card-img-overlay card--bg-gradient-2">
-                                    <div class="d-flex mt-auto flex-column card--title-1-padding">
-                                        <p class="card-title card--title card--title-1" style="color: <?php echo ContrastColor(ActionColorOfImage("../app/img/posts/posts-" . max(1, intval($post["idpost"]) % 6) . ".jpg")) ?> !important;">
-                                            <?php echo ClearMiniPostUser($post["minipost"]) ?>
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="<?php echo $posturl ?>" class="card card--link card--rounded person-posts-mobile">
-                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="card-img" alt="Alt text">
-                                <div class="d-flex card-img-overlay card--bg-gradient">
-                                    <div class="d-flex mt-auto flex-column card--title-1-padding">
-                                        <p class="card-title text-white card--title card--title-1">
-                                            <?php echo ClearMiniPostUser($post["minipost"]) ?>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="d-flex card-img-overlay card--bg-gradient-2">
-                                    <div class="d-flex mt-auto flex-column card--title-1-padding">
-                                        <p class="card-title card--title card--title-1" style="color: <?php echo ContrastColor(ActionColorOfImage("../app/img/posts/posts-" . max(1, intval($post["idpost"]) % 6) . ".jpg")) ?> !important;">
+                        <div class="col-md-4">
+                            <a href="<?php echo "/post/?a=" . $post["iduser"] . "&p=" . $post["idpost"] ?>" class="card">
+                                <img src="/app/img/posts/posts-<?php echo max(1, intval($post["idpost"]) % 6); ?>.jpg" class="card-img" alt="<?php echo ClearMiniPostUser($post["minipost"]) ?>">
+                                <div class="card-img-overlay person-posts-background">
+                                    <div class="person-posts-content">
+                                        <p class="card-title">
                                             <?php echo ClearMiniPostUser($post["minipost"]) ?>
                                         </p>
                                     </div>

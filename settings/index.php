@@ -120,7 +120,7 @@ $sharelink = "https://aquarium.org.ru/registration/?token=" . $user["token"];
                                 </div>
                             <?php endif ?>
                             <h2 id="friend">Пригласи друга</h2>
-                            <div>
+                            <div class="invite-friend">
                                 <p class="col-md-8">
                                     Делись ссылкой с друзьями, кто больше людей пригласит — тот получит подарки.
                                     <a href="/about/faq/#пригласи-друга" class="link">#пригласидруга</a>.

@@ -20,7 +20,7 @@
     border: 1px solid var(--bg-light-active);
 }
 
-.person-setting-bg input {
+.person-setting-bg .invite-friend input {
     background: var(--bg-input) !important;
     color: var(--text-color) !important;
     border: 1px solid var(--bg-input-border) !important;

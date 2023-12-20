@@ -109,9 +109,29 @@ $flags = ["🏁", "🎌", "🏳", "🏳️‍🌈", "🏴", "🏴‍☠️", "�
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="editor" contenteditable="true" name="example123" placeholder="Введите текст"></div>
+                                    <div class="editor" id="editor" contenteditable="true" name="example123" placeholder="Введите текст"></div>
                                 </div>
                                 <textarea id="textarea" name="text" style="display: none;"></textarea>
+
+                                <button class="btn editor-more" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMore" aria-expanded="false" aria-controls="collapseMore">
+                                    <svg>
+                                        <use xlink:href="/app/img/icons/bootstrap.min.svg#chevron-down"></use>
+                                    </svg>
+                                    Дополнительные настройки
+                                </button>
+
+                                <div class="collapse editor-collapse" id="collapseMore">
+                                    <!-- <p style="margin-bottom: 4px">
+                                            Уведомлять о действиях:
+                                        </p> -->
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="notif1" name="publicpost" value="1" checked>
+                                        <label class="form-check-label" for="notif1">
+                                            Публичная запись
+                                        </label>
+                                    </div>
+                                </div>
+
                                 <button class="btn btn-primary w-100" type="submit">
                                     Добавить пост
                                 </button>

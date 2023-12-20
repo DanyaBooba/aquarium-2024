@@ -14,29 +14,42 @@ function escapeText(text) {
 
 // document.execCommand("defaultParagraphSeparator", false, "div");
 
+$(document).ready(function () {
+	$(".editor").focus();
+});
+
+// $(".modal").scroll(function () {
+// 	console.log($(".modal").scrollTop());
+// });
+
 // Buttons
 
 $("body").on("click", ".toolbar #toolbar-bold", function () {
+	$(".editor").focus();
 	document.execCommand("bold", false, null);
 	return false;
 });
 
 $("body").on("click", ".toolbar #toolbar-italic", function () {
+	$(".editor").focus();
 	document.execCommand("italic", false, null);
 	return false;
 });
 
 $("body").on("click", ".toolbar #toolbar-h", function () {
+	$(".editor").focus();
 	document.execCommand("formatBlock", false, "h6");
 	return false;
 });
 
 $("body").on("click", ".toolbar #toolbar-parag", function () {
+	$(".editor").focus();
 	document.execCommand("formatBlock", false, "p");
 	return false;
 });
 
 $("body").on("click", ".toolbar #toolbar-monospace", function () {
+	$(".editor").focus();
 	document.execCommand("formatBlock", false, "pre");
 	return false;
 });
@@ -44,6 +57,7 @@ $("body").on("click", ".toolbar #toolbar-monospace", function () {
 // Smile
 
 $("body").on("click", ".toolbar #toolbar-smile", function () {
+	$(".editor").focus();
 	document.execCommand("insertText", false, $(this).text());
 	return false;
 });
@@ -83,16 +97,24 @@ $("body").on("paste", ".editor", function (e) {
 	document.execCommand("insertHtml", false, escapeText(text));
 });
 
+// Modal buttons
+
+$("body").on("click", ".modal-smiles #toolbar-smile", function () {
+	$(".modal").animate(
+		{
+			scrollTop: $(".modal").scrollTop(),
+		},
+		1
+	);
+
+	$(".editor").focus();
+	document.execCommand("insertText", false, $(this).text());
+	return false;
+});
+
 // Submit
 
 $("#formPost").on("submit", function () {
 	$("#formPost #textarea").val($(".editor").html());
 	return true;
-});
-
-// Modal buttons
-
-$("body").on("click", ".modal-smiles #toolbar-smile", function () {
-	document.execCommand("insertText", false, $(this).text());
-	return false;
 });

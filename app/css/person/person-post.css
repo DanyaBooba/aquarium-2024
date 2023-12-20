@@ -177,6 +177,8 @@ a.person-post-back svg {
     font-family: NeueMachina;
 }
 
+/* Person posts */
+
 .person-posts {
     margin-bottom: 30px;
 }
@@ -209,39 +211,4 @@ a.person-post-back svg {
     .person-posts-mobile {
         display: none;
     }
-}
-
-/* Post text */
-
-a.card--link:hover .card--bg-gradient,
-a.card--link:focus .card--bg-gradient {
-    opacity: 1;
-}
-
-.card--bg-gradient-2 {
-    transition: .3s;
-    background: linear-gradient(0deg, rgba(2, 0, 36, 0.5564819677871149) 0%, rgba(2, 0, 36, 0.07749037114845936) 30%, rgba(255, 255, 255, 0) 100%);
-    border-radius: 8px !important;
-}
-
-a.card--link:hover .card--bg-gradient-2,
-a.card--link:focus .card--bg-gradient-2 {
-    opacity: 0 !important;
-}
-
-.card--rounded
-{
-    border: 0 !important;
-    border-radius: 8px !important;
-}
-
-.card-img {
-    border-radius: 8px !important;
-}
-
-.card--bg-gradient {
-    transition: .3s;
-    opacity: 0;
-    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(2, 0, 36, 0.8590029761904762) 30%, rgba(255, 255, 255, 0) 100%);
-    border-radius: 8px !important;
 }

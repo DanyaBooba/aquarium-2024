@@ -123,3 +123,43 @@
         border: none !important;
     }
 }
+
+/* More */
+
+button.editor-more {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
+    margin-top: 10px;
+    margin-bottom: 4px;
+
+    transition: .3s;
+    color: var(--button-primary);
+}
+
+button.editor-more svg {
+    fill: var(--button-primary);
+    width: 20px;
+    height: 20px;
+}
+
+button.editor-more:hover,
+button.editor-more:focus {
+    color: var(--text-default) !important;
+}
+
+button.editor-more:hover svg,
+button.editor-more:focus svg {
+    fill: var(--text-default) !important;
+}
+
+.editor-collapse
+{
+    margin-top: 4px;
+    margin-bottom: 20px;
+    padding-left: 24px;
+}
