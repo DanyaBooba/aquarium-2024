@@ -196,7 +196,7 @@ a.person-post-back svg {
 }
 
 @media(max-width: 991px) {
-    .person-posts .person-posts-pc {
+    .person-posts-pc {
         display: none;
     }
 
@@ -206,7 +206,7 @@ a.person-post-back svg {
 }
 
 @media(min-width: 992px) {
-    .person-posts .person-posts-mobile {
+    .person-posts-mobile {
         display: none;
     }
 }

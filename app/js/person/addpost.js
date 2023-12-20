@@ -27,7 +27,7 @@ $("body").on("click", ".toolbar #toolbar-italic", function () {
 });
 
 $("body").on("click", ".toolbar #toolbar-h", function () {
-	document.execCommand("formatBlock", false, "h3");
+	document.execCommand("formatBlock", false, "h6");
 	return false;
 });
 
