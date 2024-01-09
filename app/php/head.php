@@ -68,15 +68,14 @@
         })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        ym(89421065, "init", {
+        ym(96071353, "init", {
             clickmap: true,
             trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
+            accurateTrackBounce: true
         });
     </script>
     <noscript>
-        <div><img src="https://mc.yandex.ru/watch/89421065" style="position:absolute; left:-9999px;" alt="" /></div>
+        <div><img src="https://mc.yandex.ru/watch/96071353" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
 </head>
