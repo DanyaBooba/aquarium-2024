@@ -1,0 +1,11 @@
+ul li {
+    padding-left: .25rem;
+}
+
+ul li.left-bar-anchors-h3 {
+    padding-left: 1rem;
+}
+
+ul li.left-bar-anchors-h4 {
+    padding-left: 1.5rem;
+}

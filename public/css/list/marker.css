@@ -1,0 +1,7 @@
+ul li::marker {
+    color: var(--list-marker-color) !important;
+}
+
+ol li::marker {
+    color: var(--list-marker-color) !important;
+}

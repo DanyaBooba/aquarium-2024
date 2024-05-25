@@ -1,0 +1,31 @@
+@font-face {
+    font-family: ResistSans;
+    font-style: normal;
+    font-display: swap;
+    src: local("ResistSansText-Regular"),
+        local("ResistSansText Regular"),
+        url("/fonts/ResistSans/ResistSansText-Regular.woff") format("woff"),
+        url("/fonts/ResistSans/ResistSansText-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Inter;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: local("Inter-Regular"),
+        local("Inter Regular"),
+        url("/fonts/Inter/Inter-Regular.woff") format("woff"),
+        url("/fonts/Inter/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Inter-Bold;
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    src: local("Inter-Medium"),
+        local("Inter Medium"),
+        url("/fonts/Inter/Inter-Bold.woff") format("woff"),
+        url("/fonts/Inter/Inter-Bold.woff2") format("woff2");
+}

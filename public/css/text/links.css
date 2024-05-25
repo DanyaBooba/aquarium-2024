@@ -1,0 +1,27 @@
+a {
+    color: var(--text-color) !important;
+    text-decoration-thickness: .05rem !important;
+    text-underline-offset: .3rem;
+    text-decoration-color: var(--text-color-link-underline) !important;
+}
+
+a:is(:focus, :focus-within, :focus-visible) {
+    color: var(--text-color-hover) !important;
+    text-decoration: none;
+}
+
+/* media */
+
+@media(hover: hover) {
+    a:hover {
+        color: var(--text-color-hover) !important;
+        text-decoration-color: var(--text-color-hover) !important;
+    }
+}
+
+@media(hover: none) {
+    a:active {
+        color: var(--text-color-hover) !important;
+        text-decoration-color: var(--text-color-hover) !important;
+    }
+}

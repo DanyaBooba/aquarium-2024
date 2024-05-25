@@ -1,0 +1,73 @@
+p,
+div,
+nobr,
+a,
+nav,
+main,
+header,
+footer {
+    font-family: Inter;
+}
+
+b,
+strong,
+.fw-bold {
+    font-family: Inter-Bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: ResistSans;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+.h1 a,
+.h2 a,
+.h3 a,
+.h4 a,
+.h5 a,
+.h6 a {
+    font-family: ResistSans;
+}
+
+h1 b,
+h1 nobr,
+h2 b,
+h2 nobr,
+h3 b,
+h3 nobr,
+h4 b,
+h4 nobr,
+h5 b,
+h5 nobr,
+h6 b,
+h6 nobr,
+.h1 b,
+.h1 nobr,
+.h2 b,
+.h2 nobr,
+.h3 b,
+.h3 nobr,
+.h4 b,
+.h4 nobr,
+.h5 b,
+.h5 nobr,
+.h6 b,
+.h6 nobr {
+    font-family: ResistSans;
+}

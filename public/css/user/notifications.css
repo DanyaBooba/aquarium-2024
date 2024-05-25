@@ -1,0 +1,46 @@
+.user-notifications .accordion {
+    margin-bottom: .5rem;
+}
+
+.user-notifications .accordion .accordion-item {
+    background-color: var(--collapse-body-background) !important;
+    border-color: var(--collapse-border) !important;
+}
+
+.user-notifications .accordion .accordion-item .accordion-header button {
+    background-color: var(--collapse-button-background) !important;
+    color: var(--text-color) !important;
+}
+
+.user-notifications .accordion .accordion-item .accordion-header button::after {
+    filter: var(--collapse-filter) !important;
+}
+
+.user-notifications .accordion .accordion-item,
+.user-notifications .accordion .accordion-item .accordion-header,
+.user-notifications .accordion .accordion-item .accordion-header button {
+    border-radius: 8px !important;
+}
+
+.user-notifications .accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius: 8px !important;
+    border-bottom-left-radius: 8px !important;
+}
+
+.user-notifications .accordion .accordion-item h2.accordion-header button {
+    display: flex;
+    align-items: center;
+}
+
+.user-notifications .accordion .accordion-item h2.accordion-header button svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* media */
+
+@media(min-width: 1023.98px) {
+    .user-notifications {
+        max-width: 70%;
+    }
+}

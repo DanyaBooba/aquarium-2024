@@ -1,0 +1,56 @@
+.cookie-accept {
+    position: fixed;
+    bottom: 20px;
+    left: 18px;
+
+    z-index: 300;
+
+    margin: 0px;
+    right: unset;
+    min-width: 342px;
+    max-width: 342px;
+
+    border-radius: 12px;
+    background-color: var(--cookie-accept-background);
+    border: .1rem solid var(--cookie-accept-border);
+    box-shadow: 0 0.125rem 0.25rem var(--cookie-accept-shadow) !important;
+}
+
+.cookie-accept .cookie-accept-container {
+    padding: 1rem;
+}
+
+.cookie-accept .cookie-accept-container div {
+    margin-bottom: 1rem;
+}
+
+.cookie-accept .cookie-accept-container button {
+    width: 100%;
+    border-radius: 8px;
+
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+
+    color: var(--text-invert);
+    background-color: var(--cookie-accept-button-background);
+    border-color: var(--cookie-accept-button-background);
+}
+
+.cookie-accept .cookie-accept-container button:is(:focus, :focus-visible, :focus-within) {
+    background-color: var(--cookie-accept-button-hover);
+    border-color: var(--cookie-accept-button-hover);
+}
+
+@media(hover: hover) {
+    .cookie-accept .cookie-accept-container button:hover {
+        background-color: var(--cookie-accept-button-hover);
+        border-color: var(--cookie-accept-button-hover);
+    }
+}
+
+@media(hover: none) {
+    .cookie-accept .cookie-accept-container button:active {
+        background-color: var(--cookie-accept-button-hover);
+        border-color: var(--cookie-accept-button-hover);
+    }
+}

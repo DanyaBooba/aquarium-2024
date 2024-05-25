@@ -1,0 +1,53 @@
+.container-simple {
+    max-width: 800px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.container-simple .logo {
+    margin-top: 5rem;
+}
+
+.container-simple svg.logo {
+    fill: var(--svg-icon);
+}
+
+.container-simple .row .col {
+    margin-bottom: 1rem;
+}
+
+.container-simple-numbers-text {
+    margin-top: 2rem;
+}
+
+.container-simple-numbers {
+    margin-right: 1rem;
+}
+
+.container-simple-numbers svg {
+    width: calc(1.525rem + 3.3vw);
+    height: calc(1.525rem + 3.3vw);
+}
+
+/* media */
+
+@media(max-width: 991.98px) {
+    .container-simple .row .col {
+        width: 100% !important;
+        flex: 1 0 100% !important;
+
+        margin-right: auto;
+        margin-left: auto;
+
+        text-align: start !important;
+    }
+
+    .container-simple {
+        max-width: 400px;
+    }
+
+    .container-simple-numbers-text {
+        margin-top: .8rem !important;
+        margin-bottom: 1rem;
+    }
+}

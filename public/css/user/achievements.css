@@ -1,0 +1,63 @@
+.list-achievements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-achievements div {
+    display: flex;
+    align-items: start;
+    min-width: 300px;
+    margin-bottom: 1rem;
+}
+
+.list-achievements div span {
+    background-color: transparent !important;
+    border-radius: 50%;
+    padding: 2rem;
+}
+
+.list-achievements div img {
+    width: 200px;
+    height: 200px;
+
+    padding: .5rem;
+    border-radius: 50%;
+}
+
+.list-achievements div p {
+    font-family: ResistSans;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.list-achievements div section {
+    position: absolute;
+
+    margin-top: .5%;
+    margin-left: .5%;
+}
+
+.list-achievements div section svg {
+    width: 250px;
+    height: 250px;
+}
+
+/* media */
+
+@media(max-width: 767.98px) {
+    .list-achievements div img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .list-achievements div section svg {
+        width: 230px;
+        height: 230px;
+    }
+
+    .list-achievements div {
+        min-width: 246px;
+        max-width: 305px;
+    }
+}

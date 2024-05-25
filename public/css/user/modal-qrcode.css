@@ -1,0 +1,87 @@
+.modal.modal-qrcode .modal-dialog .modal-content .modal-header {
+    padding-bottom: 0;
+}
+
+.modal.modal-qrcode .modal-dialog .modal-content .modal-header .btn-close {
+    filter: var(--collapse-filter) !important;
+}
+
+.modal.modal-qrcode .modal-dialog .modal-content .modal-header h4 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    margin-bottom: 0;
+    padding-left: 32px;
+}
+
+.modal.modal-qrcode .modal-dialog .modal-content {
+    max-width: 400px;
+    background-color: var(--modal-background);
+
+    border: none !important;
+    border-radius: 12px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal.modal-qrcode .modal-dialog .modal-content .modal-header {
+    border-bottom: none !important;
+}
+
+.modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator {
+    padding: .5rem;
+}
+
+.modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator svg {
+    max-width: 100%;
+    height: auto;
+
+    padding: .5rem;
+}
+
+.modal.modal-qrcode .modal-dialog .modal-content .modal-footer {
+    display: flex;
+
+    border-top: none !important;
+    padding-top: 0 !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.modal.modal-qrcode .modal-dialog .modal-content .modal-footer button {
+    width: 100%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-radius: 8px;
+
+    color: var(--text-invert);
+    background-color: var(--cookie-accept-button-background);
+    border-color: var(--cookie-accept-button-background);
+}
+
+/* media */
+
+@media(max-width: 424.98px) {
+    .modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator svg,
+    .modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator {
+        padding: 0;
+    }
+}
+
+@media(hover: hover) {
+    .modal.modal-qrcode .modal-dialog .modal-content .modal-footer button:hover {
+        color: var(--text-invert);
+        background-color: var(--cookie-accept-button-hover);
+        border-color: var(--cookie-accept-button-hover);
+    }
+}
+
+@media(hover: none) {
+    .modal.modal-qrcode .modal-dialog .modal-content .modal-footer button:active {
+        color: var(--text-invert);
+        background-color: var(--cookie-accept-button-hover);
+        border-color: var(--cookie-accept-button-hover);
+    }
+}

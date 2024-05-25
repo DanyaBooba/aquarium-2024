@@ -1,0 +1,26 @@
+.container-addpost .container-addpost-left {
+    width: 70%;
+}
+
+.container-addpost .container-addpost-right {
+    width: 30%;
+}
+
+/* media */
+
+@media(max-width: 1023.98px) {
+    .container-addpost .container-addpost-left {
+        width: 100%;
+    }
+
+    .container-addpost .container-addpost-right {
+        width: 100%;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .container-addpost .container-addpost-main {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Аквариум",
+    "background_color": "#f9f9f9",
+    "description": "Аквариум — это место, где вы можете создать свой уникальный мир, отражающий вашу личность, интересы и стиль жизни",
+    "icons": [
+        { "src": "favicon.ico", "type": "ico", "sizes": "256x256" },
+        { "src": "favicon.svg", "type": "svg", "sizes": "256x256" }
+    ]
+}

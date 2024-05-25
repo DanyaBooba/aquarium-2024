@@ -1,0 +1,11 @@
+.page-download .page-download__container {
+    background-color: var(--blog-white-post);
+    border-radius: 24px;
+}
+
+.page-download .page-download__container h2 {
+    margin-bottom: 0;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}

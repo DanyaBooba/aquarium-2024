@@ -1,0 +1,48 @@
+.faq-design-button {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 200px;
+    margin-bottom: 12px;
+}
+
+.faq-design-button div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-design-button div.faq-design-button-light {
+    background-color: #fff;
+    border-radius: 8px 0 0 8px;
+}
+
+.faq-design-button div.faq-design-button-dark {
+    background-color: #123;
+    border-radius: 0 8px 8px 0;
+}
+
+.faq-design-button div button {
+    border-radius: 8px;
+
+    padding: .75rem 1.25rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* media */
+
+@media(max-width: 525.98px) {
+    .faq-design-button {
+        flex-direction: column;
+    }
+
+    .faq-design-button div.faq-design-button-light {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .faq-design-button div.faq-design-button-dark {
+        border-radius: 0 0 8px 8px;
+    }
+}

@@ -1,0 +1,11 @@
+table tr td, th {
+    color: var(--text-color) !important;
+}
+
+table.table-hover tbody tr:hover {
+    background-color: var(--table-tr-hover) !important;
+}
+
+table {
+    border-color: var(--table-border) !important;
+}

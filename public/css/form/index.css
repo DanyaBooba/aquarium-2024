@@ -1,0 +1,49 @@
+form input[type="password"],
+form input[type="email"],
+form input[type="text"],
+form input[type="number"],
+form input[type="search"],
+form textarea {
+    background: var(--body-color);
+    color: var(--text-color) !important;
+    border: .1rem solid var(--form-input-border) !important;
+}
+
+form input.form-check-input {
+    border: .1rem solid var(--form-input-border);
+}
+
+form textarea {
+    background: var(--body-color);
+    border: .1rem solid var(--form-input-border);
+}
+
+form .input-password .form-floating {
+    width: 100%;
+}
+
+form .input-password a.input-group-text {
+    position: absolute;
+
+    border: none !important;
+    background: transparent !important;
+
+    margin-left: 80% !important;
+    margin-top: 10px;
+}
+
+/* media */
+
+@media(hover: hover) {
+    form .input-password a.input-group-text:hover {
+        stroke: var(--text-color-hover);
+        cursor: pointer;
+    }
+}
+
+@media(hover: none) {
+    form .input-password a.input-group-text:active {
+        stroke: var(--text-color-hover);
+        cursor: pointer;
+    }
+}

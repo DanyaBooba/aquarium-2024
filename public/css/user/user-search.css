@@ -1,0 +1,160 @@
+.user-search {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.user-search .user-search-input input[type="search"] {
+    background-color: var(--body-color);
+    color: var(--text-color) !important;
+    border: .1rem solid var(--form-input-border) !important;
+
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.user-search .user-search-select select {
+    background-color: var(--body-color);
+    color: var(--text-color) !important;
+    border: .1rem solid var(--form-input-border) !important;
+
+    background-image: var(--form-select-cursor) !important;
+
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+}
+
+.search-users {
+    margin-top: 1rem;
+}
+
+.search-users div.search-users__profile {
+    display: flex;
+    padding: .5rem;
+    margin: 0;
+}
+
+.search-users div.search-users__profile p {
+    max-width: 155px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search-users a.search-users-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem !important;
+
+    min-width: 192px;
+    min-height: 230px;
+
+    border: .1rem solid var(--user-search-border);
+    border-radius: 8px;
+
+    background-color: var(--user-serach-background);
+    text-decoration: none !important;
+
+    padding: 1rem;
+
+    transition: .15s;
+}
+
+.search-users a.search-users-content:is(:focus, :focus-visible, :focus-within) {
+    color: var(--text-color) !important;
+    background-color: var(--user-serach-background-hover);
+}
+
+.search-users .search-users-content img {
+    width: 80px;
+
+    margin-bottom: .5rem;
+    border-radius: 100px;
+}
+
+.search-users .search-users-content button svg {
+    stroke: var(--text-color);
+}
+
+.search-users .search-users-content button:not(:focus, :focus-visible, :focus-within, :hover, :active) {
+    color: var(--text-muted) !important;
+}
+
+.search-users .search-users-content button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    border: .1rem solid transparent;
+    color: var(--text-color);
+    transition: .15s;
+}
+
+.search-users .search-users-content button:is(:focus, :focus-visible, :focus-within) {
+    border: .1rem solid var(--user-search-button-background);
+    color: var(--text-color) !important;
+    background-color: transparent;
+}
+
+.user-search-filters button {
+    color: var(--text-color);
+}
+
+/* media */
+
+@media(max-width: 767.98px) {
+    .search-users div.search-users__profile {
+        justify-content: center;
+        width: 50%;
+        min-width: 200px;
+    }
+
+    .search-users {
+        width: 100% !important;
+        flex-wrap: wrap;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@media(hover: hover) {
+    .search-users a.search-users-content:hover {
+        color: var(--text-color) !important;
+        background-color: var(--user-serach-background-hover);
+    }
+
+    .search-users .search-users-content button:hover {
+        border: .1rem solid var(--user-search-button-background);
+        background-color: transparent;
+    }
+
+    .user-search-filters button:hover {
+        color: var(--text-color-hover);
+    }
+}
+
+@media(hover: none) {
+    .search-users a.search-users-content:active {
+        color: var(--text-color) !important;
+        background-color: var(--user-serach-background-hover);
+    }
+
+    .search-users .search-users-content button:active {
+        border: .1rem solid var(--user-search-button-background);
+        background-color: transparent;
+    }
+
+    .user-search-filters button:active {
+        color: var(--text-color-hover);
+    }
+}
+
+@media(max-width: 447.98px) {
+    .search-users div.search-users__profile {
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,37 @@
+.profile-info {
+    display: flex;
+    overflow: scroll;
+    margin-top: .5rem;
+}
+
+.profile-info::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.profile-info__item {
+    border: .1rem solid var(--settings-main-border);
+    padding: .25rem;
+    border-radius: 16px;
+    min-width: 330px;
+    max-width: 330px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile-info__container {
+    display: flex;
+    flex-direction: column;
+    background: var(--settings-main-background);
+    padding: .75rem;
+    border-radius: 12px;
+    height: 100%;
+}
+
+.profile-info__container svg {
+    margin-bottom: 1rem;
+}
+
+.profile-info__container span {
+    margin-bottom: .3rem;
+}

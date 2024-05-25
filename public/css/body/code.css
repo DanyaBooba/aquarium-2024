@@ -1,0 +1,56 @@
+code pre {
+    color: var(--text-code);
+    margin-top: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+pre {
+    padding-left: 1rem;
+    border-left: .1rem solid var(--text-code-border);
+}
+
+button.code-copy {
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: Inter !important;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: .5rem;
+    text-decoration: none;
+
+    color: var(--text-color) !important;
+    font-size: 1rem !important;
+
+    max-width: fit-content;
+}
+
+button.code-copy svg {
+    width: 16px;
+    height: 16px;
+    margin-right: .25rem;
+}
+
+button.code-copy:is(:focus, :focus-within, :focus-visible) {
+    color: var(--text-color-hover) !important;
+    text-decoration: none;
+}
+
+@media(hover: hover) {
+    button.code-copy:hover {
+        color: var(--text-color-hover) !important;
+        text-decoration-color: var(--text-color-hover) !important;
+    }
+}
+
+@media(hover: none) {
+    button.code-copy:active {
+        color: var(--text-color-hover) !important;
+        text-decoration-color: var(--text-color-hover) !important;
+    }
+}

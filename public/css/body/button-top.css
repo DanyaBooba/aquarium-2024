@@ -1,0 +1,52 @@
+.button-top {
+    position: fixed;
+    bottom: 50px;
+    right: 90px;
+}
+
+.button-top a svg {
+    width: 45px;
+    height: 45px;
+    stroke: var(--text-color);
+
+    background-color: var(--button-top-background);
+    border: .1rem solid var(--button-top-border);
+    border-radius: 50%;
+    padding: .25rem;
+    padding-bottom: .4rem;
+
+    transition: .3s;
+}
+
+.button-top-disabled {
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+.button-top-active {
+    opacity: 1;
+    transition: .3s opacity;
+}
+
+/* media */
+
+@media(max-width: 991.98px) {
+    .button-top {
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+@media(hover: hover) {
+    .button-top a:hover svg {
+        stroke: var(--text-color-hover);
+        background-color: var(--button-top-border);
+    }
+}
+
+@media(hover: none) {
+    .button-top a:active svg {
+        stroke: var(--text-color-hover);
+        background-color: var(--button-top-border);
+    }
+}

@@ -1,0 +1,60 @@
+.fixed-bottom-nav {
+    position: fixed;
+    min-height: 60px;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+
+    background-color: var(--user-nav-background);
+    border-top: .1rem solid var(--user-nav-border);
+
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.fixed-bottom-nav .container-fluid.row {
+    --bs-gutter-x: 0 !important;
+}
+
+.fixed-bottom-nav .container-fluid {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 100%;
+
+    padding-top: 8px;
+}
+
+.fixed-bottom-nav .container-fluid div {
+    flex: 1;
+}
+
+.fixed-bottom-nav .container-fluid div a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.fixed-bottom-nav .container-fluid div a svg {
+    margin-bottom: .25rem;
+    margin-right: .1rem;
+}
+
+.fixed-bottom-nav .container-fluid div a.active {
+    color: var(--user-nav-link-active) !important;
+}
+
+.fixed-bottom-nav .container-fluid div a.active svg {
+    stroke: var(--user-nav-link-active) !important;
+}
+
+@media(min-width: 768px) {
+    .fixed-bottom-nav {
+        display: none;
+    }
+}

@@ -1,0 +1,32 @@
+.modal .modal-dialog .modal-content {
+    background-color: var(--modal-background) !important;
+    border-radius: 8px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal .modal-dialog .modal-content .modal-header {
+    border: none !important;
+}
+
+.modal .modal-dialog .modal-content .modal-header h3 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.modal .modal-dialog .modal-content button.btn-close {
+    filter: var(--collapse-filter) !important;
+    position: absolute;
+    margin-left: 105%;
+}
+
+@media(max-width: 499.98px) {
+    .modal .modal-dialog .modal-content button.btn-close {
+        filter: var(--collapse-filter) !important;
+        position: absolute;
+        margin-left: 90%;
+        margin-top: -15%;
+    }
+}

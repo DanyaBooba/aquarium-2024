@@ -1,0 +1,23 @@
+.settings-verified {
+    border: .1rem solid var(--settings-main-border);
+    border-radius: 20px;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    max-width: 400px;
+}
+
+.settings-verified div {
+    background-color: var(--settings-main-background);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.settings-verified div p:has(a) {
+    margin-bottom: 0;
+}
+
+.settings-verified div svg {
+    margin-bottom: .5rem;
+    width: 34px;
+    height: 34px;
+}

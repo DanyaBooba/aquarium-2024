@@ -1,0 +1,283 @@
+.authentication svg.authentication-logo {
+    fill: var(--svg-icon);
+}
+
+.authentication.col-md-4 {
+    padding: 1rem !important;
+}
+
+.authentication .authentication-text-more {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    font-size: .875rem;
+    text-align: center;
+
+    color: var(--text-muted);
+}
+
+.authentication .authentication-back {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.authentication .authentication-back a.authentication-back-back {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    color: var(--text-muted) !important;
+}
+
+.authentication .authentication-back a.authentication-back-close {
+    margin-left: auto;
+}
+
+.authentication .authentication-back a.authentication-back-close svg {
+    width: 40px;
+    height: 40px;
+
+    background-color: var(--authentication-back);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.authentication h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.authentication input:is(
+    [type="text"],
+    [type="email"],
+    [type="password"],
+) {
+    background-color: var(--form-input-background) !important;
+}
+
+.authentication input:not(:checked)[type="checkbox"] {
+    background-color: var(--form-input-background) !important;
+}
+
+.authentication input {
+    border-radius: var(--border-radius-default);
+    margin-bottom: .5rem;
+}
+
+.authentication button[type="submit"] {
+    border-radius: var(--border-radius-default);
+    width: 100%;
+}
+
+/* signin choose */
+
+.authentication #signin-choose .d-flex div {
+    margin-bottom: .5rem;
+}
+
+.authentication #signin-choose .d-flex a.simple {
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    color: var(--text-color);
+    background-color: var(--body-color);
+    border: none !important;
+
+    border-radius: 8px;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.authentication #signin-choose .d-flex div a {
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    color: var(--text-color);
+    background-color: var(--body-color);
+    border: .1rem solid var(--signin-choose-background-color);
+
+    border-radius: 8px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    transition: .15s !important;
+}
+
+.authentication #signin-choose .d-flex div a:is(:focus, :focus-within, :focus-visible) {
+    color: var(--text-color) !important;
+    background-color: var(--signin-choose-background-color-hover) !important;
+}
+
+.authentication #signin-choose .d-flex div button {
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text-color);
+    background-color: var(--body-color);
+    border: .1rem solid var(--signin-choose-background-color);
+
+    border-radius: 8px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    transition: .15s !important;
+}
+
+.authentication #signin-choose .d-flex div#signin-choose-yandex button svg {
+    height: 30px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.authentication #signin-choose .d-flex div#signin-choose-vk button svg {
+    height: 30px;
+}
+
+.authentication #signin-choose .d-flex div#signin-choose-mailru button svg {
+    height: 30px;
+}
+
+.authentication #signin-choose .d-flex div#signin-choose-google button svg {
+    width: 30px;
+        height: 30px;
+}
+
+.authentication #signin-choose .d-flex div#signin-choose-github button svg {
+    width: 30px;
+        height: 30px;
+}
+
+.authentication #signin-choose .d-flex div#signin-choose-email button svg {
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+}
+
+.authentication #signin-choose .d-flex div button:is(:focus, :focus-visible, :focus-within) {
+    background-color: var(--signin-choose-background-color-hover);
+}
+
+.authentication #signin-choose .signin-choose-or-background {
+    margin-left: 1rem;
+        margin-right: 1rem;
+
+        border-bottom: .1rem solid var(--signin-choose-or-border-bottom);
+    margin-top: 20px;
+    margin-bottom: 16px !important;
+}
+
+.authentication #signin-choose .signin-choose-or {
+    color: var(--signin-choose-or-text-color);
+    margin-top: -37px;
+    margin-bottom: 16px !important;
+    text-align: center;
+}
+
+.authentication #signin-choose .signin-choose-or-white {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.authentication #signin-choose .signin-choose-or-white span {
+    background-color: var(--body-color) !important;
+    margin-top: -22px;
+    width: 50px !important;
+    height: 20px !important;
+}
+
+.authentication #signin-choose .signin-choose-or span {
+    background: var(--body-color);
+}
+
+.authentication #signin-email .buttons {
+    margin-top: 1rem;
+}
+
+/* signin email */
+
+.authentication #signin-email .buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: .25rem;
+    border-radius: 8px;
+}
+
+.authentication #signin-email .buttons button svg {
+    margin-right: .25rem;
+}
+
+.authentication .alert-error p {
+    text-align: center;
+}
+
+.authentication .alert-error {
+    background-color: transparent !important;
+    border: none !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    font-size: .875rem;
+}
+
+.authentication .alert-error ul {
+    padding-left: 1rem !important;
+}
+
+.authentication .alert-error ul li:not(:last-child) {
+    padding-bottom: .5rem;
+}
+
+/* media */
+
+@media(max-width: 767.98px) {
+    .authentication.col-md-4 {
+        padding: 0rem !important;
+    }
+}
+
+@media(hover: hover) {
+    .authentication #signin-choose .d-flex div button:hover {
+        background-color: var(--signin-choose-background-color-hover);
+    }
+
+    .authentication #signin-choose .d-flex div a:hover {
+        color: var(--text-color) !important;
+        background-color: var(--signin-choose-background-color-hover) !important;
+    }
+
+    .authentication .authentication-back a.authentication-back-back:hover {
+        color: var(--text-color) !important;
+    }
+}
+
+@media(hover: none) {
+    .authentication #signin-choose .d-flex div button:active {
+        background-color: var(--signin-choose-background-color-hover);
+    }
+
+    .authentication #signin-choose .d-flex div a:active {
+        color: var(--text-color) !important;
+        background-color: var(--signin-choose-background-color-hover) !important;
+    }
+
+    .authentication .authentication-back a.authentication-back-back:active {
+        color: var(--text-color) !important;
+    }
+}
