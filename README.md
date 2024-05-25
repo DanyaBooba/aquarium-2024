@@ -2,7 +2,7 @@
 
 Социальная сеть Аквариум — это место, где вы можете создать свой мир, отражающий вашу личность, интересы и уникальность.
 
-`HTML` `CSS` `JS` `PHP` `MySQL` `MD5`
+`Laravel` `Docker` `Bootstrap` `MySQL` `Bcrypt` 
 
 Сайт: [aquarium.org.ru](https://aquarium.org.ru)
 
