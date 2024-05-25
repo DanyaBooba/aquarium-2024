@@ -21,3 +21,4 @@ yarn-error.log
 /database
 .env
 /app
+/resources/views/admin
