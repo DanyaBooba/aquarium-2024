@@ -4,7 +4,9 @@
 
 `Laravel` `Docker` `Bootstrap` `MySQL` `Bcrypt` 
 
-Сайт: [aquarium.org.ru](https://aquarium.org.ru)
+Сайт: [aquariumsocial.ru](https://aquariumsocial.ru)
+
+Информация: [DanyaBooba/aquarium](https://github.com/DanyaBooba/aquarium)
 
 Автор: Даниил Дыбка, daniil@dybka.ru, [@ddybka](https://ddybka.t.me)
 
