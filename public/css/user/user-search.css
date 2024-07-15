@@ -35,10 +35,35 @@
 }
 
 .search-users div.search-users__profile p {
+    margin-bottom: .5rem;
     max-width: 155px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.search-users div.search-users__profile .search-users-content-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.search-users div.search-users__profile .search-users-content-info .search-users-content-info__block { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-muted);
+}
+
+.search-users div.search-users__profile .search-users-content-info .search-users-content-info__block div:first-child {
+    font-family: ResistSans;
+    font-size: 1.5rem;
+    margin-bottom: -.5rem;
+}
+
+.search-users div.search-users__profile .search-users-content-info .search-users-content-info__block div:not(:first-child) {
+    font-size: .6rem;
 }
 
 .search-users a.search-users-content {
@@ -47,13 +72,13 @@
     align-items: center;
     padding-top: 2rem !important;
 
-    min-width: 192px;
-    min-height: 230px;
+    width: 192px;
+    height: 230px;
 
     border: .1rem solid var(--user-search-border);
     border-radius: 8px;
 
-    background-color: var(--user-serach-background);
+    background-color: var(--user-search-background);
     text-decoration: none !important;
 
     padding: 1rem;
@@ -61,9 +86,13 @@
     transition: .15s;
 }
 
+.search-users a.search-users-content:focus .search-users-content-info .search-users-content-info__block {
+    color: var(--text-color) !important;
+}
+
 .search-users a.search-users-content:is(:focus, :focus-visible, :focus-within) {
     color: var(--text-color) !important;
-    background-color: var(--user-serach-background-hover);
+    background-color: var(--user-search-background-hover);
 }
 
 .search-users .search-users-content img {
@@ -124,7 +153,11 @@
 @media(hover: hover) {
     .search-users a.search-users-content:hover {
         color: var(--text-color) !important;
-        background-color: var(--user-serach-background-hover);
+        background-color: var(--user-search-background-hover);
+    }
+    
+    .search-users a.search-users-content:hover .search-users-content-info .search-users-content-info__block {
+        color: var(--text-color) !important;
     }
 
     .search-users .search-users-content button:hover {
@@ -140,7 +173,11 @@
 @media(hover: none) {
     .search-users a.search-users-content:active {
         color: var(--text-color) !important;
-        background-color: var(--user-serach-background-hover);
+        background-color: var(--user-search-background-hover);
+    }
+
+    .search-users a.search-users-content:active .search-users-content-info .search-users-content-info__block {
+        color: var(--text-color) !important;
     }
 
     .search-users .search-users-content button:active {
@@ -153,8 +190,34 @@
     }
 }
 
-@media(max-width: 447.98px) {
+@media(max-width: 767.98px) {
+    .search-users {
+        gap: 0 !important;
+        flex-direction: row !important;
+    }
+
+    .search-users .search-users__profile {
+        width: 100% !important;
+        min-width: auto !important;
+        justify-content: start !important;
+        padding: 0 !important;
+    }
+
+    .search-users .search-users__profile a {
+        width: 100% !important;
+        height: auto !important;
+        border: none !important;
+        flex-direction: row !important;
+        gap: 1rem;
+    }
+
+    .search-users .search-users__profile a p {
+        margin-bottom: .25rem;
+    }
+}
+
+/* @media(max-width: 447.98px) {
     .search-users div.search-users__profile {
         width: 100% !important;
     }
-}
+} */

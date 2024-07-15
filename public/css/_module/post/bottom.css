@@ -1,0 +1,7 @@
+.post-show-bottom {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 1.5rem;
+}

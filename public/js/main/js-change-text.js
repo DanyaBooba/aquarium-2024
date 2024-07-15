@@ -25,7 +25,9 @@ function textValue() {
     }
 }
 
-const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+function delay(ms) {
+    return new Promise((res) => setTimeout(res, ms))
+}
 
 const changeText = async () => {
     let d = random(50, 70);

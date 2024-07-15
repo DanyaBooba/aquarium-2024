@@ -1,4 +1,6 @@
-const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+function delay(ms) {
+    return new Promise((res) => setTimeout(res, ms))
+}
 
 const checkSuccessAlerts = async () => {
     let alert = document.querySelector("#alert-success");

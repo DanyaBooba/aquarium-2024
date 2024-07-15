@@ -23,18 +23,10 @@
     border-bottom: none !important;
 }
 
-.container-settings .container-settings-main ul li:last-child a {
-    padding-bottom: .25rem !important;
-}
-
 .container-settings .container-settings-main ul li:last-child {
     border-bottom-width: 0 !important;
     border-bottom-left-radius: 12px !important;
     border-bottom-right-radius: 12px !important;
-}
-
-.container-settings .container-settings-main ul li:first-child a {
-    padding-top: .25rem !important;
 }
 
 .container-settings .container-settings-main ul li:first-child {
@@ -60,7 +52,7 @@
     width: 100% !important;
     padding-bottom: .9rem;
     margin-top: 1rem;
-    border-bottom: .1rem solid var(--settings-main-border);
+    border-bottom: 1px solid var(--settings-main-border);
 }
 
 .container-settings .container-settings-main ul li:hover a span {

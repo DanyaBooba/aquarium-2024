@@ -1,6 +1,7 @@
 @extends('layouts.auth.base')
 
 @section('auth.root')
+@include('includes.header')
 <main class="form-signin w-100 m-auto">
     <div class="authentication">
         <div id="signin-choose">
@@ -16,7 +17,3 @@
     </div>
 </main>
 @endsection
-
-@push('js')
-<script src="{{ asset('js/page/go-main.js') }}"></script>
-@endpush

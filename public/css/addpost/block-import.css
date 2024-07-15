@@ -1,0 +1,41 @@
+.addpost-import-container {
+    padding: .25rem;
+    border: .1rem solid var(--accent-light-55);
+    border-radius: 14px;
+    margin-bottom: 1.5rem;
+}
+
+.addpost-import {
+    background-color: var(--accent-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.addpost-import p:has(a) {
+    max-width: fit-content;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border: .1rem dashed var(--accent);
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+
+.addpost-import p a {
+    text-decoration: none !important;
+}
+
+.addpost-import p a:focus {
+    color: var(--text-invert) !important;
+}
+
+@media(hover: hover) {
+    .addpost-import p a:hover {
+        color: var(--text-invert) !important;
+    }
+}
+
+@media(hover: none) {
+    .addpost-import p a:active {
+        color: var(--text-invert) !important;
+    }
+}

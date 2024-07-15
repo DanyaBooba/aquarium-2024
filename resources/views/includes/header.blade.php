@@ -11,6 +11,7 @@
                 <ul class="nav col-12 ms-lg-3 col-lg-auto me-lg-auto mb-md-0 header-content-links">
                     <li><a href="{{ route('main.about') }}" class="nav-link {{ header_route_active_link('main.about') }}">{{ __('Информация') }}</a></li>
                     <li><a href="{{ route('main.faq') }}" class="nav-link {{ header_route_active_link('main.faq') }}">{{ __('FAQ') }}</a></li>
+                    <li><a href="{{ route('main.history') }}" class="nav-link {{ header_route_active_link('main.history') }}">{{ __('История') }}</a></li>
                     <li><a href="{{ route('blog.index') }}" class="nav-link {{ header_route_visible_link('blog.index') }}">{{ __('Новости') }}</a></li>
                     <li><a href="{{ route('main.api') }}" class="nav-link {{ header_route_visible_link('main.api') }}">{{ __('API') }}</a></li>
                     <li><a href="{{ route('main.oauth') }}" class="nav-link {{ header_route_visible_link('main.oauth') }}">{{ __('OAuth') }}</a></li>
@@ -31,7 +32,7 @@
                         </a>
                     </li>
                     @endif
-                    {{-- <li><a href="{{ route('main.download') }}" class="nav-link link-download">{{ __('Скачать') }}</a></li> --}}
+                    <li><a href="{{ route('main.download') }}" class="nav-link link-download">{{ __('Скачать') }}</a></li>
                 </ul>
             </div>
         </div>

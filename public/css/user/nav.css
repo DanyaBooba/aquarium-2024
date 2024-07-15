@@ -1,6 +1,6 @@
 .fixed-bottom-nav {
     position: fixed;
-    min-height: 60px;
+    min-height: 50px;
 
     right: 0;
     bottom: 0;
@@ -14,6 +14,7 @@
 }
 
 .fixed-bottom-nav .container-fluid.row {
+    padding-top: 6px;
     --bs-gutter-x: 0 !important;
 }
 
@@ -37,11 +38,13 @@
     align-items: center;
 
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .fixed-bottom-nav .container-fluid div a svg {
-    margin-bottom: .25rem;
+    width: 20px;
+    height: 20px;
+    margin-bottom: .1rem;
     margin-right: .1rem;
 }
 

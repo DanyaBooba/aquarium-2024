@@ -1,17 +1,12 @@
 <ul>
     <li>
-        <a href="#">
-            123
+        <a href="{{ route('admin') }}">
+            главная
         </a>
     </li>
     <li>
-        <a href="#">
-            123
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            123
+        <a href="{{ route('admin.posts') }}">
+            посты
         </a>
     </li>
 </ul>

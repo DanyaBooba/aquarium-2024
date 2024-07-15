@@ -2,18 +2,20 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                @if($nickname)
-                <h4>
-                    {{ $nickname }}
-                </h4>
+                @if ($nickname)
+                    <h4>
+                        {{ $nickname }}
+                    </h4>
                 @endif
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div id="qr-code-generator" class="qr-code-generator" title="{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}"></div>
+                <div id="qr-code-generator" class="qr-code-generator"
+                    title="{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}"></div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-dark" onClick="buttonCopyURL('{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}')">
+                <button type="button" class="btn btn-dark"
+                    onClick="buttonCopyURL('{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}')">
                     {{ __('Скопировать') }}
                 </button>
             </div>
@@ -55,5 +57,4 @@
     let qrcodeHtml = document.querySelector("#qr-code-generator svg");
 
     qrcodeHtml.setAttribute("viewBox", `0 0 ${size} ${size}`);
-
 </script>

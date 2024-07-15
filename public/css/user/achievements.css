@@ -15,14 +15,18 @@
     background-color: transparent !important;
     border-radius: 50%;
     padding: 2rem;
+    padding-left: 2.5rem;
+    padding-top: 2.5rem;
 }
 
 .list-achievements div img {
-    width: 200px;
-    height: 200px;
+    width: 190px;
+    height: 190px;
 
-    padding: .5rem;
+    /* padding: .5rem; */
     border-radius: 50%;
+
+    box-shadow: 0 .5rem 1rem var(--achiv-shadow) !important;
 }
 
 .list-achievements div p {

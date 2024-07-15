@@ -1,0 +1,7 @@
+body {
+    color: var(--text-color) !important;
+}
+
+.text-success {
+    color: var(--text-success) !important;
+}

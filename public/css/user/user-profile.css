@@ -19,12 +19,26 @@
 }
 
 .user-profile .user-profile-right div {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.user-profile .user-profile-right div button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none !important;
 
-    margin-right: 2rem;
-    margin-bottom: 1rem;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.user-profile .user-profile-right div button:focus {
+    color: var(--text-color-hover);
 }
 
 .user-profile .user-profile-right div p:first-child {
@@ -89,6 +103,7 @@
 
 .user-profile .user-profile-image img {
     max-width: 100%;
+    width: 100% !important;
     height: auto;
 
     border-radius: 50%;
@@ -154,8 +169,8 @@
     overflow: scroll;
 
     margin-top: .25rem;
-    padding: .2rem;
-    padding-bottom: .5rem;
+    padding: .2rem 0;
+    margin-bottom: .5rem;
 }
 
 .user-profile .user-profile-buttons button.user-button-mobile {
@@ -174,9 +189,14 @@
 
     padding: .5rem 1rem;
     margin-right: .5rem;
+    /* outline: none !important; */
 
     transition: .15s;
 }
+
+/* .user-profile .user-profile-buttons button:focus {
+    outline: none !important;
+} */
 
 .user-profile .user-profile-buttons button:disabled {
     background-color: var(--body-color);
@@ -203,6 +223,11 @@
 /* media */
 
 @media(max-width: 767.98px) {
+    .container {
+        padding-left: .6rem !important;
+        padding-right: .6rem !important;
+    }
+    
     .user-profile-content {
         flex-direction: column;
         padding-left: 1rem !important;
@@ -299,6 +324,10 @@
     .user-profile .user-profile-buttons button.button__accent:hover {
         background-color: var(--user-profile-button-accent-hover) !important;
     }
+
+    .user-profile .user-profile-right div button:hover {
+        color: var(--text-color-hover);
+    }
 }
 
 @media(hover: none) {
@@ -308,5 +337,9 @@
 
     .user-profile .user-profile-buttons button.button__accent:active {
         background-color: var(--user-profile-button-accent-hover) !important;
+    }
+
+    .user-profile .user-profile-right div button:active {
+        color: var(--text-color-hover);
     }
 }

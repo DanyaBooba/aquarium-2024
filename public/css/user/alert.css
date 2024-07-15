@@ -17,6 +17,7 @@
 .alert span {
     display: flex;
     align-items: center;
+    padding-left: 1rem;
 }
 
 .alert span a svg {

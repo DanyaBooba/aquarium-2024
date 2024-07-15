@@ -1,0 +1,157 @@
+:root {
+    --accent: #8e95ff;
+    --accent-highlight: #8e95ff;
+    --accent-light: #575FCF;
+    --accent-light-55: #575FCF55;
+
+    --body-color: #17152b;
+    --body-color-rgb: 23, 21, 43;
+    --body-color-alpha: #17152b99;
+    --bg-white: #1b1935;
+
+    --text-color: #fff;
+    --text-invert: #000;
+    --text-code: #fff;
+    --text-muted: #6c757d;
+    --text-success: #2ed573;
+
+    --text-color-hover: #0984e3;
+    --text-color-link-underline: #5c569d;
+    --text-code-border: #0984e3;
+
+    --svg-icon: #fff;
+    --svg-icon-invert: #000;
+    --svg-github: #fff;
+
+    --header-background: rgb(25, 23, 49, .84);
+    --header-border: #211f41;
+    --header-link-download-background: #1f1b3b;
+    --header-link-download-border: #221d3f;
+
+    --footer-background: #17152b;
+    --footer-border: #433e6d;
+
+    --signin-choose-background-color: #34305e;
+    --signin-choose-background-color-hover: #34305e;
+
+    --signin-choose-or-border-bottom: #2f2c52;
+    --signin-choose-or-text-color: #746eac;
+
+    --authentication-back: #262443;
+
+    --list-marker-color: #615f74;
+
+    --blog-text-on-dark: #212529;
+    --blog-dark-post: #d3cfff;
+    --blog-white-post: #1c1935;
+
+    --pagination-active: #fff;
+
+    --form-input-border: #34305e;
+    --form-input-background: #2a274e;
+
+    --main-dark-block: #c57aff;
+    --main-dark-block-image: url('/img/main/main_cap@dark.jpg');
+    --main-dark-block-button: rgb(158, 86, 185, .9);
+    --main-list-item-1: #747238;
+    --main-list-item-2: #386a74;
+    --main-list-item-3: #403874;
+    --main-darklight-icon: #575FCF;
+
+    --user-bar: #1f1d3a;
+    --user-bar-exit: #dd303f;
+
+    --user-nav-link-active: #0984e3;
+    --user-nav-background: #17152c;
+    --user-nav-border: #232140;
+
+    --user-profile-image-background: #221f40;
+    --user-profile-image-background-image: #221f40;
+    --user-profile-image-border: #302d57;
+    --user-profile-button: #221f40;
+    --user-profile-button-accent: #3a7075;
+    --user-profile-button-accent-hover: #4e8d93;
+    --user-profile-button-accent-text: #fff;
+    --user-profile-button-hover: #342f5e;
+    --user-profile-button-text: #fff;
+
+    --user-search-border: #35315c;
+    --user-search-background: #18162d;
+    --user-search-background-hover: #35315c;
+    --user-search-button-background: #726bc0;
+
+    --faq-design-button: #123;
+
+    --user-alert-text-warning: #ca8726;
+    --user-alert-border: #343b42;
+
+    --settings-main-background: #1f1d3a;
+    --settings-main-border: #333060;
+    --settings-main-svg: #fff;
+
+    --settings-background-profile: #718093;
+    --settings-background-notifications: #e84118;
+    --settings-background-privacy: #0097e6;
+    --settings-background-data: #0be881;
+    --settings-background-devices: #ffa801;
+    --settings-background-personalization: #cd84f1;
+
+    --button-top-background: #1f1d3a;
+    --button-top-border: #38355f;
+
+    --collapse-button-background: #302d57;
+    --collapse-body-background: #17152c;
+    --collapse-border: #433e6d;
+
+    --modal-background: #1f1c38;
+
+    --settings-image-active: #0984e3;
+
+    --achivs-background: #17152b;
+
+    --cookie-accept-background: #1c1a36;
+    --cookie-accept-border: #2f2b5a;
+    --cookie-accept-shadow: rgb(50, 46, 91, .07);
+
+    --cookie-accept-button-background: #fff;
+    --cookie-accept-button-hover: #d2d2d2;
+
+    --setting-background-hover: #323060;
+
+    --code-screen-str: #080;
+    --code-screen-kwd: #5485d8;
+    --code-screen-com: #d33a3a;
+    --code-screen-typ: #606;
+    --code-screen-lit: #069999;
+    --code-screen-pun: #969600;
+    --code-screen-tag: #008;
+    --code-screen-atn: #606;
+    --code-screen-atv: #080;
+    --code-screen-dec: #606;
+    --code-screen-fun: #f00;
+
+    --code-screen-projection-str: #060;
+    --code-screen-projection-kwd: #006;
+    --code-screen-projection-com: #600;
+    --code-screen-projection-typ: #404;
+    --code-screen-projection-lit: #044;
+    --code-screen-projection-pun: #717100;
+    --code-screen-projection-tag: #006;
+    --code-screen-projection-atn: #404;
+    --code-screen-projection-atv: #060;
+
+    --code-L: #27234b;
+
+    --user-alert-background-success: #1b8145;
+
+    --trix-button-accent: #366182;
+    --table-border: #3e3a68;
+    --table-tr-hover: #3e3a68;
+
+    --mark-background: #5e5943;
+
+    --post-bg: #1f1d3a;
+    --post-border: #312f59;
+
+    --achiv-shadow: rgba(80, 70, 143, .15);
+}

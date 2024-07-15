@@ -12,6 +12,23 @@
 
 <x-form.error-first />
 
+@if($useService)
+
+<form action={{ route('user.delete.service.post') }} method="post">
+    @csrf
+    <div class="form-floating">
+        <input type="text" name="confirmDelete" class="form-control" id="confirmDelete" placeholder="Подтвердите удаление аккаунта" onInput="checkOnInput()" value="{{ old('confirmDelete') }}" required>
+        <label for="confirmDelete">{{ __('Подтвердите удаление') }}</label>
+        <p style="color: var(--text-muted); font-size: .875rem; margin-bottom: 0; user-select: none;">
+            Введите: <span style="color: var(--text-color) !important">Подтверждаю удаление аккаунта</span>
+        </p>
+    </div>
+
+    <button class="btn btn-danger py-3 mt-3" type="submit">{{ __('Удалить') }}</button>
+</form>
+
+@else
+
 <form action={{ route('user.delete.post') }} method="post">
     @csrf
     <div class="form-floating">
@@ -39,4 +56,7 @@
 
     <button class="btn btn-danger py-3 mt-3" type="submit">{{ __('Удалить') }}</button>
 </form>
+
+@endif
+
 @endsection

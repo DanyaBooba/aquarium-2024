@@ -1,0 +1,46 @@
+.post-show-back {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.post-show-back a.post-show-back__edit {
+    font-size: .875rem;
+}
+
+.post-show-back a.post-show-back__profile {
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.post-show-back a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.post-show-back a svg {
+    width: 32px;
+    height: 32px;
+}
+
+.post-show-back a img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.post-show-back a div {
+    font-family: ResistSans;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+@media (min-width: 768px) {
+    .post-show-back {
+        margin-top: 1.5rem;
+    }
+}

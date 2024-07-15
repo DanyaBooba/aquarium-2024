@@ -20,6 +20,11 @@
     text-align: end;
 }
 
+.container-settings-header div.header-links {
+    text-decoration: none !important;
+    text-align: end;
+}
+
 .container-settings-header a.header-back {
     display: flex;
     align-items: center;

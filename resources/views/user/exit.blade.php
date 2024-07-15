@@ -9,5 +9,5 @@
 @endsection
 
 @section('auth.sign')
-<button class="btn btn-danger mb-2 fs-6 py-3" type="submit" onClick="buttonOpenURL('{{ route('user.exit.exactly') }}')">{{ __('Выйти из аккаунта') }}</button>
+<button type="submit" class="btn btn-danger mb-2 fs-6 py-3" onClick="buttonOpenURL('{{ route('user.exit.exactly') }}')">{{ __('Выйти из аккаунта') }}</button>
 @endsection

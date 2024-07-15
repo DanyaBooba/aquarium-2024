@@ -11,6 +11,7 @@
             @include('includes.user.bar')
         </section>
         <main class="flex-grow-1 row-user-content px-0">
+            @include('includes.user.header')
             @yield('user.alert')
             <section class="py-3">
                 <div class="container">

@@ -9,7 +9,7 @@
 </x-settings.header>
 
 <p class="text-title">
-    {{ __('Сведение') }}
+    {{ __('Сведения') }}
 </p>
 
 <x-form.error-first />
@@ -47,7 +47,7 @@
 </form>
 
 <p class="text-title">
-{{ __('Доступ') }}
+{{ __('Восстановить доступ') }}
 </p>
 
 <div class="container-settings-main">
@@ -66,6 +66,8 @@
                 </span>
             </a>
         </li>
+    </ul>
+    <ul class="list-group">
         <li class="list-group-item">
             <a href="{{ route('user.delete') }}">
                 <span class="text-danger">

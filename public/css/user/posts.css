@@ -1,4 +1,200 @@
-.profile-posts {
-    margin-top: 1.5rem;
+.posts {
+    margin-top: 0.5rem;
     padding: 0 !important;
+}
+
+.posts .row .col-img {
+    padding-bottom: 1.4rem;
+}
+
+.posts .row a.card-overflow {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    height: auto !important;
+    background: transparent !important;
+    border-radius: 0px !important;
+    text-decoration-color: var(--text-default) !important;
+    transition: .3s !important;
+}
+
+.posts .row a.card-overflow .card-overflow__profile {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    margin-right: auto;
+}
+
+.posts .row a.card-overflow .card-overflow__profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transform: scale(1.0) !important;
+}
+
+.posts .row a.card-overflow .card-overflow__profile span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.posts .row .col-img a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 300px;
+
+    overflow: hidden;
+    border: none;
+    border-radius: 12px;
+
+    transition: .3s;
+}
+
+.posts .row .col-img img {
+    transition: .3s;
+}
+
+.posts .row .col-img .card-img-overlay {
+    display: flex;
+    background: linear-gradient(-180deg, transparent, rgba(0, 0, 0, .65));
+}
+
+.posts .row .col-img .card-img-overlay .post {
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}   
+
+.posts .row .col-img .card-img-overlay .post p {
+    font-family: ResistSans;
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 4px #000;
+    margin-bottom: .25rem;
+    line-height: 105%;
+
+    max-height: 97px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.posts .row .col-text {
+    padding-bottom: 1.4rem;
+    transition: .3s !important;
+    height: 322.4px;
+}
+
+.posts .row .col-img a.card-overflow {
+    color: white !important;
+}
+
+.posts .row .col-text a.card-overflow {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    height: auto !important;
+    background: transparent !important;
+    border-radius: 0px !important;
+    transition: .3s !important;
+}
+
+.posts .row .col-text a {
+    height: 100%;
+    background-color: var(--post-bg) !important;
+    border-color: var(--post-border) !important;
+    border-radius: 12px;
+    padding: 1rem;
+    text-decoration: none !important;
+    transition: .3s;
+}
+
+.posts .row .col-text a .post {
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+}
+
+.posts .row .col-text a .post p {
+    margin-bottom: 0;
+    max-height: 97px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-family: ResistSans;
+    font-size: 1.5rem;
+    margin-bottom: .25rem;
+    line-height: 105%;
+
+    max-height: 97px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media(hover: hover) {
+    .posts .row .col-img:hover a {
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .2);
+        transition: .3s;
+    }
+    
+    .posts .row .col-img:hover img {
+        transform: scale(1.05);
+        transition: .3s;
+    }
+
+    .posts .row .col-text:hover a {
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .1);
+        border-color: var(--text-color-hover) !important;
+    }
+
+    .posts .row .col-img:hover a.card-overflow {
+        color: white !important;
+        text-decoration: underline;
+        text-decoration-color: white !important;
+    }
+}
+
+@media(hover: none) {
+    .posts .row .col-img:active a {
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .2);
+        transition: .3s;
+    }
+
+    .posts .row .col-img:active img {
+        transform: scale(1.05);
+        transition: .3s;
+    }
+
+    .posts .row .col-text:active a {
+        border-color: var(--text-color-hover) !important;
+    }
+
+    .posts .row .col-img:active a.card-overflow {
+        color: var(--text-default) !important;
+        text-decoration: underline;
+        text-decoration-color: var(--text-default) !important;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .posts .row .col-text {
+        height: auto !important;
+        min-height: 200px;
+    }
 }
