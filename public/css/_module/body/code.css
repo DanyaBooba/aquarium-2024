@@ -7,7 +7,7 @@ code pre {
 
 pre {
     padding-left: 1rem;
-    border-left: .1rem solid var(--text-code-border);
+    border-left: .1rem solid var(--text-link-hover);
 }
 
 button.code-copy {
@@ -37,20 +37,20 @@ button.code-copy svg {
 }
 
 button.code-copy:is(:focus, :focus-within, :focus-visible) {
-    color: var(--text-color-hover) !important;
+    color: var(--text-link-hover) !important;
     text-decoration: none;
 }
 
 @media(hover: hover) {
     button.code-copy:hover {
-        color: var(--text-color-hover) !important;
-        text-decoration-color: var(--text-color-hover) !important;
+        color: var(--text-link-hover) !important;
+        text-decoration-color: var(--text-link-hover) !important;
     }
 }
 
 @media(hover: none) {
     button.code-copy:active {
-        color: var(--text-color-hover) !important;
-        text-decoration-color: var(--text-color-hover) !important;
+        color: var(--text-link-hover) !important;
+        text-decoration-color: var(--text-link-hover) !important;
     }
 }

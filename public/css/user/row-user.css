@@ -2,13 +2,13 @@
     position: sticky;
     top: 1rem;
 
-    background: linear-gradient(90deg, var(--user-bar) 0%, var(--user-bar) 93%, var(--body-color) 100%);
+    /* background: linear-gradient(90deg, var(--user-bar) 0%, var(--user-bar) 93%, var(--body-bg) 100%); */
     padding: 3rem 2rem;
 }
 
 .row-user-bar svg.logo {
     margin-bottom: 3rem;
-    fill: var(--svg-icon);
+    fill: var(--svg-color);
 }
 
 .row-user-bar ul {
@@ -41,11 +41,11 @@
 }
 
 .row-user-bar ul li a.active {
-    color: var(--text-color-hover) !important;
+    color: var(--text-link-hover) !important;
 }
 
 .row-user-bar ul li a.active svg {
-    stroke: var(--text-color-hover);
+    stroke: var(--text-link-hover);
 }
 
 .row-user-bar .social {
@@ -63,11 +63,11 @@
 }
 
 .row-user-bar .social .social-left div {
-    margin-right: .75rem;
+    margin-right: 1rem;
 }
 
 .row-user-bar .social .social-right div {
-    margin-left: .75rem;
+    margin-left: 1rem;
 }
 
 .row-user-bar .social .social-left div a.social-left-exit svg {
@@ -75,7 +75,7 @@
 }
 
 .row-user-bar .social a.active svg {
-    stroke: var(--text-color-hover);
+    stroke: var(--text-link-hover);
 }
 
 /* media */

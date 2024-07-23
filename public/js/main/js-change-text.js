@@ -3,9 +3,22 @@ let locale = document.querySelector("html").lang.toLowerCase();
 
 let index = -1;
 
-let len = 3;
-let listRu = ["удобная", "приятная", "классная"];
-let listEn = ["convenient", "pleasant", "cool"];
+let len = 5
+let listRu = [
+    'удобная',
+    'современная',
+    'адаптивная',
+    'актуальная',
+    'свободная'
+]
+
+let listEn = [
+    'convenient',
+    'modern',
+    'adaptive',
+    'topical',
+    'free'
+]
 
 function random(min, max) {
     return Math.random() * (max - min) + min;

@@ -66,8 +66,8 @@
     border-radius: 8px;
 
     color: var(--text-invert);
-    background-color: var(--cookie-accept-button-background);
-    border-color: var(--cookie-accept-button-background);
+    background-color: var(--user-qrcode-button-bg);
+    border-color: var(--user-qrcode-button-bg);
 }
 
 /* media */
@@ -82,15 +82,15 @@
 @media(hover: hover) {
     .modal.modal-qrcode .modal-dialog .modal-content .modal-footer button:hover {
         color: var(--text-invert);
-        background-color: var(--cookie-accept-button-hover);
-        border-color: var(--cookie-accept-button-hover);
+        background-color: var(--user-qrcode-button-bg-hover);
+        border-color: var(--user-qrcode-button-bg-hover);
     }
 }
 
 @media(hover: none) {
     .modal.modal-qrcode .modal-dialog .modal-content .modal-footer button:active {
         color: var(--text-invert);
-        background-color: var(--cookie-accept-button-hover);
-        border-color: var(--cookie-accept-button-hover);
+        background-color: var(--user-qrcode-button-bg-hover);
+        border-color: var(--user-qrcode-button-bg-hover);
     }
 }

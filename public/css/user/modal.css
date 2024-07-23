@@ -3,6 +3,10 @@
     border-radius: 12px;
 }
 
+.user-modal .modal-content .modal-header {
+    border: none !important;
+}
+
 .user-modal .modal-content .modal-body {
     padding: 1.25rem 1rem;
 }
@@ -76,4 +80,16 @@
     position: absolute;
     width: 237px;
     margin-top: -5px;
+}
+
+@media(min-width: 768px) {
+    .user-modal .modal-content .modal-header {
+        display: none !important;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .user-modal .modal-content .modal-body {
+        padding-top: 0 !important;
+    }
 }

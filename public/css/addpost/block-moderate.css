@@ -1,0 +1,30 @@
+.addpost-moderate {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--addpost-moderate-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.addpost-moderate p {
+    margin-bottom: 0;
+    font-size: .875rem;
+}
+
+.addpost-moderate svg {
+    width: auto;
+    height: 42px;
+}
+
+@media(max-width: 767.98px) {
+    .addpost-moderate {
+        flex-wrap: wrap;
+    }
+
+    .addpost-moderate svg {
+        width: 24px;
+        height: 24px;
+    }
+}

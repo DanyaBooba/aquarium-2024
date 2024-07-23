@@ -1,4 +1,5 @@
 .page-download .page-download__container {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
     background-color: var(--blog-white-post);
     border-radius: 24px;
 }

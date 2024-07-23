@@ -1,5 +1,5 @@
 .user-profile {
-    background-color: var(--body-color);
+    background-color: var(--body-bg);
 }
 
 .user-profile .user-profile-left {
@@ -20,7 +20,7 @@
 
 .user-profile .user-profile-right div {
     margin-right: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: .7rem;
 }
 
 .user-profile .user-profile-right div button {
@@ -38,7 +38,7 @@
 }
 
 .user-profile .user-profile-right div button:focus {
-    color: var(--text-color-hover);
+    color: var(--text-link-hover);
 }
 
 .user-profile .user-profile-right div p:first-child {
@@ -69,7 +69,7 @@
     margin-top: 112px;
 
     border-radius: 50%;
-    background: var(--user-profile-image-background);
+    background: var(--user-profile-image-bg);
 }
 
 .user-profile .user-profile-image-point span {
@@ -98,6 +98,9 @@
     height: 150px;
 
     border-radius: 50%;
+}
+
+.user-profile .user-profile-image:has(:not(.user-profile-image-service)) {
     border: .1rem solid var(--user-profile-image-border);
 }
 
@@ -107,7 +110,7 @@
     height: auto;
 
     border-radius: 50%;
-    background: var(--user-profile-image-background-image);
+    background: var(--user-profile-image-bg-image);
 }
 
 .user-profile .user-profile-image img:not(.user-profile-image-service) {
@@ -136,10 +139,14 @@
     display: flex;
     position: relative;
     min-height: 116px;
+    margin-top: -100px !important;
 
     flex-wrap: wrap;
 
-    background: var(--user-profile-image-background);
+    background: var(--user-profile-image-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
 
     padding: 1rem;
     padding-left: 2rem;
@@ -150,7 +157,7 @@
 
 .user-profile img.user-profile-cap {
     width: 100% !important;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
 
     border-top-left-radius: 12px;
@@ -168,7 +175,7 @@
 
     overflow: scroll;
 
-    margin-top: .25rem;
+    margin-top: .5rem;
     padding: .2rem 0;
     margin-bottom: .5rem;
 }
@@ -184,12 +191,13 @@
 
     color: var(--user-profile-button-text);
     background-color: var(--user-profile-button);
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
     border: none;
     border-radius: 8px;
 
-    padding: .5rem 1rem;
+    padding: .7rem 1.4rem;
     margin-right: .5rem;
-    /* outline: none !important; */
+    margin-left: .5rem;
 
     transition: .15s;
 }
@@ -199,7 +207,7 @@
 } */
 
 .user-profile .user-profile-buttons button:disabled {
-    background-color: var(--body-color);
+    background-color: var(--body-bg);
     outline: .2rem var(--user-profile-button) dashed;
     margin-right: .75rem;
 }
@@ -207,10 +215,6 @@
 .user-profile .user-profile-buttons button.button__accent {
     background-color: var(--user-profile-button-accent);
     color: var(--user-profile-button-accent-text) !important;
-}
-
-.user-profile .user-profile-buttons button:last-of-type {
-    margin-right: 0;
 }
 
 .user-profile .user-profile-buttons button svg {
@@ -227,7 +231,7 @@
         padding-left: .6rem !important;
         padding-right: .6rem !important;
     }
-    
+
     .user-profile-content {
         flex-direction: column;
         padding-left: 1rem !important;
@@ -269,7 +273,7 @@
     }
 
     .user-profile img.user-profile-cap {
-        height: 200px;
+        height: 300px;
     }
 
     .user-profile .user-profile-buttons button.user-button-mobile {
@@ -326,7 +330,7 @@
     }
 
     .user-profile .user-profile-right div button:hover {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
     }
 }
 
@@ -340,6 +344,6 @@
     }
 
     .user-profile .user-profile-right div button:active {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
     }
 }

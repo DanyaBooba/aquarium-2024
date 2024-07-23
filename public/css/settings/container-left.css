@@ -1,46 +1,73 @@
-.container-settings .container-settings-left h2 {
+.container-settings h2 {
     margin-bottom: 1rem;
 }
 
-.container-settings .container-settings-left .text-title {
+.container-settings .text-title {
     text-transform: uppercase;
     color: var(--text-muted);
     margin-bottom: .75rem;
+    font-size: .875rem;
+    letter-spacing: 1px;
 }
 
-.container-settings .container-settings-left form .input-password div label {
+.container-settings form .input-password div label {
     margin-bottom: .5rem;
 }
 
-.container-settings .container-settings-left form .input-password a {
+.container-settings form .input-password a {
     top: 32px;
     margin-left: 88% !important;
 }
 
-.container-settings .container-settings-left form .input-password div {
+.container-settings form .input-password div {
     width: 100%;
 }
 
-.container-settings .container-settings-left form:not(.form-settings-image) {
+.container-settings form:not(.form-settings-image) {
     max-width: 500px;
 }
 
-.container-settings .container-settings-left form.form-settings-image .col label {
+.col-load {
+    background-color: var(--form-input-background) !important;
+    border-radius: 12px;
+    height: 130px !important;
+    width: 130px;
+}
+
+.col-load label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 12px !important;
+    font-size: .875rem;
+    height: 100%;
+
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.col-load label svg {
+    margin-bottom: .5rem;
+    stroke: var(--text-muted);
+}
+
+.container-settings form.form-settings-image .col label {
     background-color: transparent;
     border-radius: 0;
 
     border: none !important;
 }
 
-.container-settings .container-settings-left form.form-settings-image .col label:not(.list-group-item-another) {
+.container-settings form.form-settings-image .col label:not(.list-group-item-another) {
     padding: .5rem !important;
 }
 
-.container-settings .container-settings-left form.form-settings-image .col label.list-group-item-another {
+.container-settings form.form-settings-image .col label.list-group-item-another {
     padding: 0 !important;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col button {
+.container-settings form.form-settings-image .row.row-settings-avatar .col button {
     width: 100%;
     height: 100%;
     border: none !important;
@@ -50,89 +77,90 @@
     background-color: var(--form-input-background);
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col button:focus {
+.container-settings form.form-settings-image .row.row-settings-avatar .col button:focus {
     color: var(--text-color);
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col button:focus p {
+.container-settings form.form-settings-image .row.row-settings-avatar .col button:focus p {
     color: var(--text-color);
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col button svg {
+.container-settings form.form-settings-image .row.row-settings-avatar .col button svg {
     width: 32px;
     height: 32px;
     margin-bottom: 1rem;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col label {
+.container-settings form.form-settings-image .row.row-settings-avatar .col label {
     background-color: var(--form-input-background) !important;
-    border-radius: 50% !important;
+    border-radius: 50%;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col label {
-    border-radius: 16px !important;
+.container-settings form.form-settings-image .row.row-settings-cap .col label {
+    border-radius: 9px !important;
+    padding: .1rem !important;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col {
-    margin-bottom: .5rem;
+.container-settings form.form-settings-image .row.row-settings-cap .col {
+    /* margin-bottom: .5rem; */
 }
 
-.container-settings .container-settings-left form.form-settings-image .row .col label img {
+.container-settings form.form-settings-image .row .col label img {
     width: 100%;
     height: auto;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col label img {
+.container-settings form.form-settings-image .row.row-settings-avatar .col label img {
     border-radius: 50%;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col label img {
+.container-settings form.form-settings-image .row.row-settings-cap .col label img {
     border-radius: 8px;
 }
 
-.container-settings .container-settings-left form.form-settings-image .col input:is(:checked, :focus, :focus-within, :focus-visible) + label {
+.container-settings form.form-settings-image .col input:is(:checked, :focus, :focus-within, :focus-visible) + label {
     outline: 3px solid var(--settings-image-active);
 }
 
-.container-settings .container-settings-left form.form-settings-image button[type="submit"] {
+.container-settings form.form-settings-image button[type="submit"] {
     margin-top: 1.5rem !important;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar {
+.container-settings form.form-settings-image .row.row-settings-avatar {
     margin-bottom: 1rem;
 
     --bs-gutter-y: 0.5rem;
     --bs-gutter-x: 0.5rem;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-cap {
+.container-settings form.form-settings-image .row.row-settings-cap {
     margin-bottom: 1rem;
 
     --bs-gutter-y: 0.5rem;
     --bs-gutter-x: 0.5rem;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col {
+.container-settings form.form-settings-image .row.row-settings-avatar .col {
     max-width: 135px !important;
     flex: 1 0 100%;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col {
+.container-settings form.form-settings-image .row.row-settings-cap .col {
     max-width: 360px !important;
     flex: 1 0 100%;
 }
 
-.container-settings .container-settings-left form:not(.form-settings-image) div:has(input):not(.input-password) {
+.container-settings form:not(.form-settings-image) div:has(input):not(.input-password) {
     margin-bottom: 1rem;
 }
 
-.container-settings .container-settings-left form div input:not(:checked)[role="switch"] {
+.container-settings form div input:not(:checked)[role="switch"] {
     background-color: var(--form-input-background);
 }
 
-.container-settings .container-settings-left form div input[type="text"],
-.container-settings .container-settings-left form div input[type="email"],
-.container-settings .container-settings-left form div input[type="password"] {
+.container-settings form div input[type="text"],
+.container-settings form div input[type="email"],
+.container-settings form div input[type="password"] {
     background-color: var(--form-input-background) !important;
     border-radius: 8px;
 
@@ -142,62 +170,77 @@
     margin-bottom: .25rem;
 }
 
-.container-settings .container-settings-left form div p {
+.container-settings form div p {
     color: var(--text-muted);
     font-size: .875rem;
     margin-bottom: 0;
 }
 
-.container-settings .container-settings-left form button[type="submit"] {
+.container-settings form button[type="submit"] {
     border-radius: 8px;
     padding: .8rem 3rem;
     margin-top: .5rem;
 }
 
+.container-settings .settings-form-block {
+    background-color: var(--settings-main-background);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 /* media */
 
 @media(hover: hover) {
-    .container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col label:hover {
+    .container-settings form.form-settings-image .row.row-settings-avatar .col label:hover {
         cursor: pointer;
     }
 
-    .container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col button:hover {
+    .container-settings form.form-settings-image .row.row-settings-avatar .col button:hover {
         color: var(--text-color);
     }
 
-    .container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col button:hover p {
+    .container-settings form.form-settings-image .row.row-settings-avatar .col button:hover p {
         color: var(--text-color);
+    }
+
+    .col-load:hover label {
+        color: var(--text-color) !important;
+    }
+
+    .col-load:hover label svg {
+        stroke: var(--text-color);
     }
 }
 
 @media(hover: none) {
-    .container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col label:active {
+    .container-settings form.form-settings-image .row.row-settings-avatar .col label:active {
         cursor: pointer;
     }
 
-    .container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col button:active {
+    .container-settings form.form-settings-image .row.row-settings-avatar .col button:active {
         color: var(--text-color);
     }
 
-    .container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col button:active p {
+    .container-settings form.form-settings-image .row.row-settings-avatar .col button:active p {
         color: var(--text-color);
     }
 }
 
 @media(max-width: 1023.98px) {
-    .container-settings .container-settings-left form button[type="submit"] {
+    .container-settings form button[type="submit"] {
         display: none !important;
     }
 }
 
 @media(max-width: 767.98px) {
-    .container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar {
+    .container-settings form.form-settings-image .row.row-settings-avatar {
         justify-content: center;
     }
 }
 
 @media(max-width: 424.98px) {
-    .container-settings .container-settings-left form .input-password a {
+    .container-settings form .input-password a {
         margin-left: 85% !important;
     }
 }

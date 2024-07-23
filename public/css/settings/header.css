@@ -3,16 +3,16 @@
     align-items: center;
 
     border-bottom: .1rem solid var(--header-border);
-    background-color: var(--body-color);
+    background-color: var(--body-bg);
 
     margin-bottom: 2rem;
 
     padding-bottom: 1rem;
     padding-top: 1.25rem;
 
-    -webkit-box-shadow: 4px 4px 30px 18px var(--body-color);
-    -moz-box-shadow: 4px 4px 30px 18px var(--body-color);
-    box-shadow: 4px 4px 30px 18px var(--body-color);
+    -webkit-box-shadow: 4px 4px 30px 18px var(--body-bg);
+    -moz-box-shadow: 4px 4px 30px 18px var(--body-bg);
+    box-shadow: 4px 4px 30px 18px var(--body-bg);
 }
 
 .container-settings-header a.header-confirm {

@@ -9,6 +9,9 @@
             aria-labelledby="{{ $modal }}Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                     <div class="modal-body">
                         @if ($loop->iteration != 3)
                             <ul class="user-modal-list-people">

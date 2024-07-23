@@ -27,7 +27,7 @@ body {
 }
 
 .form-signup-logo {
-    fill: var(--svg-icon);
+    fill: var(--svg-color);
     max-width: 300px;
 }
 

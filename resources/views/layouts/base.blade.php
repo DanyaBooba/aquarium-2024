@@ -12,7 +12,7 @@
     <link rel="manifest" href="{{ env('APP_URL') }}/manifest.webmanifest">
     <link rel="manifest" href="{{ env('APP_URL') }}/manifest.json">
 
-    <meta name="theme-color" content="#575FCF" />
+    <meta name="theme-color" content="#8D77FE" />
 
     <meta name="description" content="{{ env('APP_DESC') }}">
     <meta name="keywords" content="{{ env('APP_KEYWORDS') }}">

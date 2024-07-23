@@ -1,8 +1,6 @@
-DirectoryIndex public/index.php
-
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
-        Options -Indexes
+        Options -MultiViews -Indexes
     </IfModule>
 
     RewriteEngine On
@@ -19,5 +17,5 @@ DirectoryIndex public/index.php
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ public/index.php [L]
+    RewriteRule ^ index.php [L]
 </IfModule>

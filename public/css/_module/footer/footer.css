@@ -44,19 +44,19 @@ footer.footer .container div.footer__social .footer__language a:not(.footer__soc
 }
 
 footer.footer .container div.footer__social a:not(.footer__social_active):is(:focus, :focus-visible, :focus-within) {
-    color: var(--text-color-hover) !important;
+    color: var(--text-link-hover) !important;
 }
 
 /* media */
 
 @media(hover: hover) {
     footer.footer .container div.footer__social a:not(.footer__social_active):hover {
-        color: var(--text-color-hover) !important;
+        color: var(--text-link-hover) !important;
     }
 }
 
 @media(hover: none) {
     footer.footer .container div.footer__social a:not(.footer__social_active):active {
-        color: var(--text-color-hover) !important;
+        color: var(--text-link-hover) !important;
     }
 }

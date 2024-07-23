@@ -9,7 +9,7 @@
 }
 
 .container-simple svg.logo {
-    fill: var(--svg-icon);
+    fill: var(--svg-color);
 }
 
 .container-simple .row .col {

@@ -1,13 +1,9 @@
 header {
-    /* background-color: var(--header-background); */
-    /* -webkit-backdrop-filter: blur(25px); */
-    /* backdrop-filter: blur(25px); */
     padding-left: 0;
     padding-right: 0;
 }
 
 header.header {
-    min-height: 74px;
     z-index: 500;
     position: fixed;
     left: 0;
@@ -26,10 +22,10 @@ header.header {
 
 header.header .container {
     border: .1rem solid var(--header-border);
-    background-color: var(--header-background);
+    background-color: var(--header-bg);
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
-    border-radius: 36px;
+    border-radius: 40px;
     margin-top: .4rem;
     padding: 1rem 1.5rem;
 }
@@ -51,7 +47,7 @@ header.header .header-content-logo {
 
 header.header .header-content-logo svg {
     width: 200px;
-    fill: var(--svg-icon);
+    fill: var(--svg-color);
 }
 
 header.header .header-content-links a.link-download:is(:focus, :focus-within, :focus-visible) {
@@ -63,7 +59,7 @@ header.header .header-content-links a.link-download {
     justify-content: center;
     width: 124px !important;
 
-    background-color: var(--header-link-download-background);
+    background-color: var(--header-link-download-bg);
     border: .1rem solid var(--header-link-download-border);
     border-radius: 22px;
 
@@ -128,7 +124,7 @@ header.header .header-content-links li a {
 }
 
 header.header .header-content button.navbar-toggler svg {
-    stroke: var(--svg-icon);
+    stroke: var(--svg-color);
 }
 
 header.header .header-content button.navbar-toggler {
@@ -141,12 +137,12 @@ header.header .header-content-profile {
 }
 
 header.header .header-content-links li a:focus {
-    color: var(--text-color-hover);
+    color: var(--text-link-hover);
     text-decoration: none;
 }
 
 header.header a.header-content-profile:focus p {
-    color: var(--text-color-hover);
+    color: var(--text-link-hover);
     text-decoration: none;
 }
 
@@ -159,6 +155,12 @@ header.header .header-content button.navbar-toggler {
 }
 
 /* media */
+
+@media(min-width: 575px) {
+    header.header {
+        min-height: 74px;
+    }
+}
 
 @media(max-width: 991.98px) {
     .header-content-links {
@@ -195,7 +197,7 @@ header.header .header-content button.navbar-toggler {
 
     header.header .header-content-links li a.active {
         text-decoration: none !important;
-        background-color: var(--text-color-link-underline);
+        background-color: var(--header-link-active);
         border-radius: 8px;
     }
 }
@@ -215,7 +217,7 @@ header.header .header-content button.navbar-toggler {
 
 @media(min-width: 992px) {
     header.header .header-content-links li a {
-        text-underline-offset: 1.74rem !important;
+        text-underline-offset: 1.8rem !important;
         text-decoration-thickness: 0.2rem !important;
     }
 
@@ -232,17 +234,17 @@ header.header .header-content button.navbar-toggler {
 
 @media(hover: hover) {
     header.header a.header-content-profile:hover p {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
         text-decoration: underline;
     }
 
     header.header .header-content-links li a:hover {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
         text-decoration: underline;
     }
 
     header.header .header-content button.navbar-toggler:active svg {
-        stroke: var(--text-color-hover);
+        stroke: var(--text-link-hover);
     }
 
     header.header .header-content-links a.link-download:hover {
@@ -253,17 +255,17 @@ header.header .header-content button.navbar-toggler {
 
 @media(hover: none) {
     header.header a.header-content-profile:active p {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
         text-decoration: underline;
     }
 
     header.header .header-content-links li a:active {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
         text-decoration: underline;
     }
 
     header.header .header-content button.navbar-toggler:active svg {
-        stroke: var(--text-color-hover);
+        stroke: var(--text-link-hover);
     }
 
     header.header .header-content-links a.link-download:active {

@@ -39,14 +39,14 @@
 
 @media(hover: hover) {
     .button-top a:hover svg {
-        stroke: var(--text-color-hover);
+        stroke: var(--text-link-hover);
         background-color: var(--button-top-border);
     }
 }
 
 @media(hover: none) {
     .button-top a:active svg {
-        stroke: var(--text-color-hover);
+        stroke: var(--text-link-hover);
         background-color: var(--button-top-border);
     }
 }

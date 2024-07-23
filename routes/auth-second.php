@@ -11,7 +11,7 @@ use App\Http\Controllers\Auth\TestAccountController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('second')->middleware(['login.session'])->group(function () {
+Route::prefix('second')->middleware(['login.session', 'login.no-test'])->group(function () {
     Route::prefix('sign')->group(function () {
         Route::get('help', [AuthController::class, 'help'])->name('second.auth.help');
 

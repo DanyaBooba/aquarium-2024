@@ -1,110 +1,174 @@
 :root {
-    --accent: #575FCF;
-    --accent-highlight: #363b8b;
 
-    --body-color: #f5f7fa;
-    --body-color-alpha: #f9f9f999;
+    /* Accent */
+
+    --accent: #8D77FE;
+    --accent-55: #575FCF55;
+    --accent-2: #00BFFF;
+
+    /* Body */
+
+    --body-bg: #f9f9f9;
+    --body-bg-alpha: #f9f9f999;
+    --body-bg-white: #fff;
+
+    /* Text */
 
     --text-color: #000;
     --text-invert: #fff;
     --text-code: #000;
     --text-muted: #6c757d;
+    --text-success: #198754;
+    --text-link-hover: #0984e3;
+    --text-link-underline: #a8a8a8;
 
-    --text-color-hover: #091ee3;
-    --text-color-link-underline: #a5bcde;
-    --text-code-border: #091ee3;
+    /* Svg */
 
-    --svg-icon: #000;
-    --svg-icon-invert: #fff;
-    --svg-github: #24292f;
+    --svg-color: #000;
+    --svg-color-invert: #fff;
+    --svg-color-github: #24292f;
 
-    --header-background: rgba(241, 244, 250, .84);
-    --header-border: #d7e1f1;
-    --header-link-download-background: #fff;
-    --header-link-download-border: #d7e1f1;
+    /* Header */
 
-    --footer-background: #f5f7fa;
-    --footer-border: #d7e1f1;
+    --header-bg: rgba(255, 255, 255, .84);
+    --header-border: #ebeff2;
+    --header-link-download-bg: #fff;
+    --header-link-download-border: #dee2e6;
+    --header-link-active: #ebeff2;
 
-    --signin-choose-background-color: #d9d9d9;
-    --signin-choose-background-color-hover: #d9d9d9;
+    /* Footer */
 
-    --signin-choose-or-border-bottom: #e2e2e2;
-    --signin-choose-or-text-color: #acacac;
+    --footer-background: #fff;
+    --footer-border: #dee2e6;
 
+    /* Auth */
+
+    --auth-choose-bg: #d9d9d9;
+    --auth-choose-bg-hover: #d9d9d9;
+    --auth-choose-border: #e2e2e2;
+    --auth-choose-color: #acacac;
     --authentication-back: #efefef;
+
+    /* List */
 
     --list-marker-color: #bababa;
 
-    --blog-text-on-dark: #fff;
-    --blog-dark-post: #212529;
-    --blog-white-post: #fff;
+    /* Blog */
 
+    --blog-text-on-dark: #fff;
+    --blog-dark-post: #575FCF;
+    --blog-white-post: #fff;
     --pagination-active: #000;
+
+    /* Form */
 
     --form-input-border: #ced4db;
     --form-input-background: #fff;
 
-    --main-dark-block: #0984e3;
-    --main-dark-block-button: rgb(19, 102, 166, .9);
+    /* Main */
+
+    --main-block-image: url('/img/main/main_cap@light.jpg');
+    --main-block-button-shadow: rgb(70, 76, 180, .9);
+    --main-list-item-1: #81b0ff;
+    --main-list-item-2: #9ff18e;
+    --main-list-item-3: #b5a6ff;
+    --main-darklight-icon: #f1c40f;
+
+    /* Cookie */
+
+    --cookie-accept-background: #fff;
+    --cookie-accept-border: #ecf1f6;
+    --cookie-accept-shadow: rgb(151, 149, 194, .07);
+    --cookie-accept-button-background: #1d2228;
+    --cookie-accept-button-hover: #121417;
+
+    /* User Nav */
 
     --user-bar: #f1f1f4;
     --user-bar-exit: #dd303f;
-
     --user-nav-link-active: #0984e3;
     --user-nav-background: #fff;
     --user-nav-border: #edeff2;
     --user-nav-border-text: #000;
 
-    --user-profile-image-background: #fff;
-    --user-profile-image-background-image: #fff;
+    /* User Profile */
+
+    --user-profile-image-bg: #fff;
+    --user-profile-image-bg-image: #fff;
     --user-profile-image-border: #d9d9e0;
     --user-profile-button: #fff;
-    --user-profile-button-hover: #fff;
+    --user-profile-button-accent: #0984e3;
+    --user-profile-button-accent-hover: #3caaff;
+    --user-profile-button-accent-text: #fff;
+    --user-profile-button-hover: #ebebeb;
+
+    /* User Search */
 
     --user-search-border: #ced4db;
     --user-search-background: #f9f9f9;
     --user-search-background-hover: #f1f1f4;
     --user-search-button-background: #c9daeb;
 
-    --faq-design-button: #123;
+    /* User Alert */
 
     --user-alert-text-warning: #ca8726;
     --user-alert-border: #dee2e6;
+    --user-alert-success-bg: #2ecc71;
+
+    /* User Post */
+
+    --post-bg: #fff;
+    --post-border: #d6dae0;
+
+    /* User Add Post */
+
+    --addpost-moderate-bg: #ececec;
+
+    /* Settings */
 
     --settings-main-background: #fff;
-    --settings-main-border: #dedeeb;
+    --settings-main-border: #efefef;
     --settings-main-svg: #fff;
-
     --settings-background-profile: #718093;
     --settings-background-notifications: #e84118;
     --settings-background-privacy: #0097e6;
     --settings-background-data: #0be881;
     --settings-background-devices: #ffa801;
     --settings-background-personalization: #cd84f1;
+    --settings-image-active: #0984e3;
+    --settings-bg-hover: #efefef;
+
+    /* Button Top */
 
     --button-top-background: #fff;
     --button-top-border: #e6e6e6;
 
+    /* Collapse */
+
     --collapse-button-background: #fff;
     --collapse-body-background: #fff;
     --collapse-border: #dfdfdf;
-    --collapse-filter: ;
+
+    /* Modal */
 
     --modal-background: #fff;
 
-    --settings-image-active: #0984e3;
+    /* User Achivs */
 
     --achivs-background: #fff;
+    --achiv-shadow: rgba(0, 0, 0, .15);
 
-    --cookie-accept-background: #fff;
-    --cookie-accept-border: #ecf1f6;
-    --cookie-accept-shadow: rgb(151, 149, 194, .07);
+    /* Trix */
 
-    --cookie-accept-button-background: #1d2228;
-    --cookie-accept-button-hover: #121417;
+    --trix-button-accent: #4e96ff;
+    --table-border: #dde1e8;
+    --table-tr-hover: #dde1e8;
 
-    --setting-background-hover: #dedeeb;
+    /* Mark */
+
+    --mark-background: #faf2cd;
+
+    /* Code */
 
     --code-screen-str: #080;
     --code-screen-kwd: #008;
@@ -117,7 +181,6 @@
     --code-screen-atv: #080;
     --code-screen-dec: #606;
     --code-screen-fun: #f00;
-
     --code-screen-projection-str: #060;
     --code-screen-projection-kwd: #006;
     --code-screen-projection-com: #600;
@@ -127,9 +190,6 @@
     --code-screen-projection-tag: #006;
     --code-screen-projection-atn: #404;
     --code-screen-projection-atv: #060;
-
+    --text-code-border: #0984e3;
     --code-L: #eee;
-
-    --post-bg: #fff;
-    --post-border: #d6dae0;
 }

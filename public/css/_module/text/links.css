@@ -1,12 +1,12 @@
 a {
     color: var(--text-color) !important;
-    text-decoration-thickness: .05rem !important;
+    text-decoration-thickness: .1rem !important;
     text-underline-offset: .3rem;
-    text-decoration-color: var(--text-color-link-underline) !important;
+    text-decoration-color: var(--text-link-underline) !important;
 }
 
 a:is(:focus, :focus-within, :focus-visible) {
-    color: var(--text-color-hover) !important;
+    color: var(--text-link-hover) !important;
     text-decoration: none;
 }
 
@@ -14,14 +14,14 @@ a:is(:focus, :focus-within, :focus-visible) {
 
 @media(hover: hover) {
     a:hover {
-        color: var(--text-color-hover) !important;
-        text-decoration-color: var(--text-color-hover) !important;
+        color: var(--text-link-hover) !important;
+        text-decoration-color: var(--text-link-hover) !important;
     }
 }
 
 @media(hover: none) {
     a:active {
-        color: var(--text-color-hover) !important;
-        text-decoration-color: var(--text-color-hover) !important;
+        color: var(--text-link-hover) !important;
+        text-decoration-color: var(--text-link-hover) !important;
     }
 }

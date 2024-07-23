@@ -7,6 +7,10 @@ use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\ExitController;
 use App\Http\Controllers\User\DeleteController;
 use App\Http\Controllers\User\Post\AddPostController;
+use App\Http\Controllers\User\Post\DeletePostController;
+use App\Http\Controllers\User\Post\EditPostController;
+use App\Http\Controllers\User\Post\ImportPostController;
+use App\Http\Controllers\User\Post\LikePostController;
 use App\Http\Controllers\User\Settings\AppearanceController;
 use App\Http\Controllers\User\Settings\NotificationsController;
 use App\Http\Controllers\User\Settings\ProfileController;
@@ -38,6 +42,11 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
 
     Route::get('addpost', [AddPostController::class, 'index'])->name('user.addpost');
     Route::post('addpost', [AddPostController::class, 'post'])->name('user.addpost.post');
+
+    Route::post('changepost', [EditPostController::class, 'post'])->name('user.changepost.post');
+
+    Route::get('importpost', [ImportPostController::class, 'index'])->name('user.import.post');
+    Route::post('importpost', [ImportPostController::class, 'post'])->name('user.import.post');
 
     Route::get('delete', [DeleteController::class, 'index'])->name('user.delete');
     Route::post('delete', [DeleteController::class, 'post'])->name('user.delete.post');
@@ -73,8 +82,12 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
 
 Route::get('user/exit/exactly', [ExitController::class, 'exit'])->name('user.exit.exactly');
 
-Route::get('user/{nickname}', [ShowUserController::class, 'nickname'])->name('user.show.nickname');
-Route::get('user/id/{id}', [ShowUserController::class, 'id'])->name('user.show.id');
+Route::get('user/editpost/{idPost}', [EditPostController::class, 'index'])->name('user.post.edit');
+Route::get('user/deletepost/{idPost}', [DeletePostController::class, 'delete'])->name('user.post.delete');
 
-Route::get('user/{nickname}/{idPost}', [ViewPostController::class, 'nickname'])->name('user.post.show.nickname');
+Route::get('user/likepost/{id}/{idPost}', [LikePostController::class, 'like'])->name('user.post.like');
+
+Route::get('user/id/{id}', [ShowUserController::class, 'id'])->name('user.show.id');
+Route::get('user/{nickname}', [ShowUserController::class, 'nickname'])->name('user.show.nickname');
+
 Route::get('user/id/{id}/{idPost}', [ViewPostController::class, 'id'])->name('user.post.show.id');

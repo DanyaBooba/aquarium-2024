@@ -36,10 +36,18 @@ return [
             'throw' => false,
         ],
 
+        'image_load' => [
+            'driver' => 'local',
+            'root' => public_path(),
+            'url' => env('APP_URL') . 'loads',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
             'throw' => false,
         ],

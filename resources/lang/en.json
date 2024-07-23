@@ -508,7 +508,7 @@
     "Добро пожаловать!": "Welcome!",
     "Переключить аккаунт": "Switch account",
     "Сведения": "Information",
-    "Может содержать только латинские буквы в нижнем регистре и цифры.": "Can only contain lower case Latin letters and numbers.",
+    "Может содержать только латинские буквы в нижнем регистре <nobr>и цифры</nobr>.": "Can only contain lower case Latin letters <nobr>and numbers</nobr>.",
     "Описание": "Description",
     "Пару слов о вас": "A few words about you",
     "Краткая информация о вас, к примеру возраст, город проживания, сфера деятельности.": "Brief information about you, e.g. age, city of residence, field of activity.",
@@ -554,5 +554,18 @@
     "Аквариума": "Aquarium",
     "Реализовали за всё время": "Realized for the whole time",
     "Обновленный": "Updated",
-    "переход": "update"
+    "переход": "update",
+    "Всегда темная": "Always dark",
+    "Всегда светлая": "Always light",
+    "Системная": "System",
+    "Настройки темы": "Theme Settings",
+    "Ваш профиль не видят другие, подтвердите аккаунт через письмо.": "Your profile is not being seen by others, confirm your account via email.",
+    "Отправить письмо повторно": "Resend the letter",
+    "Если зарегистрироваться, можно получить больше возможностей.": "If you register, you can get more opportunities.",
+    "Импортируйте записи из других соцсетей": "Import records from other social networks",
+    "Для этого достаточно просто поделиться ссылкой на пост.": "All you have to do is simply share the link to the post.",
+    "Импортировать посты": "Import posts",
+    "Имя и фамилия": "First and last name",
+    "Изменение данных": "Data change",
+    "По умолчанию": "Default"
 }

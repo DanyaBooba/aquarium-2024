@@ -26,6 +26,7 @@ Route::prefix('/')->group(function () {
         Route::get('brand', [MainRouteController::class, 'brand'])->name('main.brand');
         Route::get('accessibility', [MainRouteController::class, 'accessibility'])->name('main.accessibility');
         Route::get('history', [MainRouteController::class, 'history'])->name('main.history');
+        Route::get('smi', [MainRouteController::class, 'smi'])->name('main.smi');
 
         Route::prefix('terms')->group(function () {
             Route::get('/', [MainUserController::class, 'index'])->name('main.terms');

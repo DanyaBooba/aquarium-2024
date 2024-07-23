@@ -4,7 +4,7 @@ form input[type="text"],
 form input[type="number"],
 form input[type="search"],
 form textarea {
-    background: var(--body-color);
+    background: var(--body-bg);
     color: var(--text-color) !important;
     border: .1rem solid var(--form-input-border) !important;
 }
@@ -14,7 +14,7 @@ form input.form-check-input {
 }
 
 form textarea {
-    background: var(--body-color);
+    background: var(--body-bg);
     border: .1rem solid var(--form-input-border);
 }
 
@@ -36,14 +36,14 @@ form .input-password a.input-group-text {
 
 @media(hover: hover) {
     form .input-password a.input-group-text:hover {
-        stroke: var(--text-color-hover);
+        stroke: var(--text-link-hover);
         cursor: pointer;
     }
 }
 
 @media(hover: none) {
     form .input-password a.input-group-text:active {
-        stroke: var(--text-color-hover);
+        stroke: var(--text-link-hover);
         cursor: pointer;
     }
 }

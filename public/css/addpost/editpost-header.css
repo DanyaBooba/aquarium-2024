@@ -1,0 +1,15 @@
+.editpost-header {
+    display: flex;
+    align-items: start;
+    margin-bottom: .5rem;
+}
+
+.editpost-header h1 {
+    margin: 0 !important;
+}
+
+@media (min-width: 768px) {
+    .editpost-header {
+        margin-top: 1.5rem;
+    }
+}

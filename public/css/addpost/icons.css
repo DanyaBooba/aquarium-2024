@@ -50,9 +50,10 @@ form:has(trix-editor) input {
     padding-bottom: .5rem !important;
 }
 
-form:has(trix-editor) button[type='submit'] {
+form:has(trix-editor) button.btn, .btn-danger {
     border-radius: 6px;
     padding: .5rem 1.5rem;
+    min-width: 200px;
 }
 
 trix-editor h1 {

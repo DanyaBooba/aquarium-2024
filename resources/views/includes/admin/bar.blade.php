@@ -9,4 +9,9 @@
             посты
         </a>
     </li>
+    <li>
+        <a href="{{ route('admin.complains') }}">
+            жалобы
+        </a>
+    </li>
 </ul>

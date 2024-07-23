@@ -14,12 +14,12 @@
             <x-sign.logo.yandex />
         </button>
     </div>
-    <div id="signin-choose-google">
-        <button class="btn fs-5" onClick="buttonOpenURL('{{ $vkUri }}')">
-            <x-sign.logo.vk />
-        </button>
-    </div>
-    <div class="row row-cols-2 gx-2 mb-0">
+    <div class="row row-cols-3 gx-2 mb-0">
+        <div id="signin-choose-google">
+            <button class="btn fs-5" onClick="buttonOpenURL('{{ $vkUri }}')">
+                <x-sign.logo.vk />
+            </button>
+        </div>
         <div id="signin-choose-google">
             <button class="btn fs-5" onClick="buttonOpenURL('{{ $googleUri }}')">
                 <x-sign.logo.google />

@@ -5,3 +5,7 @@ function buttonOpenURL(url) {
 function buttonCopyURL(url) {
     navigator.clipboard.writeText(url);
 }
+
+function buttonCopyCurrentURL() {
+    buttonCopyURL(window.location.href);
+}

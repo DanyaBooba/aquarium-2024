@@ -5,3 +5,38 @@
     padding-bottom: 2rem;
     gap: 1.5rem;
 }
+
+.post-show-bottom button {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-show-bottom .post-show-bottom__like svg.heart-fill {
+    fill: var(--user-bar-exit) !important;
+}
+
+@media(hover: hover) {
+    .post-show-bottom .post-show-bottom__like:hover svg.heart-stroke {
+        stroke: var(--user-bar-exit);
+    }
+
+    .post-show-bottom button:hover svg {
+        stroke: var(--text-link-hover);
+    }
+}
+
+@media(hover: none) {
+    .post-show-bottom .post-show-bottom__like:active svg.heart-stroke {
+        stroke: var(--user-bar-exit);
+    }
+
+    .post-show-bottom button:active svg {
+        stroke: var(--text-link-hover);
+    }
+}

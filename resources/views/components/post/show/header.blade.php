@@ -1,8 +1,10 @@
 @props([
     'userId' => '',
+    'postId' => '',
     'avatar' => '',
     'avatarDefault' => '',
     'name' => '',
+    'mypost' => false,
 ])
 
 <div class="post-show-back">
@@ -15,7 +17,9 @@
         <x-user.profile.image :avatar="$avatar" :avatar-default="$avatarDefault" />
         <div>{{ $name }}</div>
     </a>
-    <a href="#" class="post-show-back__edit">
-        Редактировать
-    </a>
+    @if ($mypost)
+        <a href="{{ route('user.post.edit', $postId) }}" class="post-show-back__edit">
+            Редактировать
+        </a>
+    @endif
 </div>

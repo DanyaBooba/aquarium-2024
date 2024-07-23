@@ -49,10 +49,20 @@
 }
 
 .container-settings .container-settings-main ul li a span {
+    display: flex;
+    align-items: center;
     width: 100% !important;
     padding-bottom: .9rem;
     margin-top: 1rem;
     border-bottom: 1px solid var(--settings-main-border);
+}
+
+.container-settings .container-settings-main ul li a span svg {
+    width: 24px !important;
+    height: 24px !important;
+    padding: 0 !important;
+    margin-left: auto !important;
+    stroke: var(--settings-icon-right) !important;
 }
 
 .container-settings .container-settings-main ul li:hover a span {
@@ -81,36 +91,48 @@
     margin-right: 1rem;
 }
 
-.container-settings .container-settings-main ul li a.settings-profile svg {
+.container-settings .container-settings-main ul li a.settings-profile > svg {
     background-color: var(--settings-background-profile);
 }
 
-.container-settings .container-settings-main ul li a.settings-notifications svg {
+.container-settings .container-settings-main ul li a.settings-notifications > svg {
     background-color: var(--settings-background-notifications);
 }
 
-.container-settings .container-settings-main ul li a.settings-privacy svg {
+.container-settings .container-settings-main ul li a.settings-privacy > svg {
     background-color: var(--settings-background-privacy);
 }
 
-.container-settings .container-settings-main ul li a.settings-data svg {
+.container-settings .container-settings-main ul li a.settings-data > svg {
     background-color: var(--settings-background-data);
 }
 
-.container-settings .container-settings-main ul li a.settings-devices svg {
+.container-settings .container-settings-main ul li a.settings-devices > svg {
     background-color: var(--settings-background-devices);
 }
 
-.container-settings .container-settings-main ul li a.settings-personalization svg {
+.container-settings .container-settings-main ul li a.settings-personalization > svg {
     background-color: var(--settings-background-personalization);
 }
 
-.container-settings .container-settings-main ul li a.settings-current-locale svg {
+.container-settings .container-settings-main ul li a.settings-current-locale > svg {
     background-color: var(--settings-background-privacy);
 }
 
-.container-settings .container-settings-main ul li a.settings-locale svg {
+.container-settings .container-settings-main ul li a.settings-locale > svg {
     background-color: var(--settings-background-profile);
+}
+
+.container-settings .container-settings-main ul li a.settings-home > svg {
+    background-color: var(--settings-background-home);
+}
+
+.container-settings .container-settings-main ul li a.settings-exit > svg {
+    background-color: var(--settings-background-exit);
+}
+
+.container-settings .container-settings-main ul li a.settings-session > svg {
+    background-color: var(--settings-background-session);
 }
 
 /* media */
@@ -140,28 +162,28 @@
 
 @media(hover: hover) {
     .container-settings .container-settings-main ul li a:hover svg {
-        stroke: var(--svg-icon-invert);
+        stroke: var(--svg-color-invert);
     }
 
     .container-settings .container-settings-main ul li a:hover {
-        color: var(--text-color-hover) !important;
+        color: var(--text-link-hover) !important;
     }
 
     .container-settings .container-settings-main ul li:hover {
-        background-color: var(--setting-background-hover) !important;
+        background-color: var(--settings-bg-hover) !important;
     }
 }
 
 @media(hover: none) {
     .container-settings .container-settings-main ul li a:active svg {
-        stroke: var(--svg-icon-invert);
+        stroke: var(--svg-color-invert);
     }
 
     .container-settings .container-settings-main ul li a:active {
-        color: var(--text-color-hover) !important;
+        color: var(--text-link-hover) !important;
     }
 
     .container-settings .container-settings-main ul li:active {
-        background-color: var(--setting-background-hover) !important;
+        background-color: var(--settings-bg-hover) !important;
     }
 }

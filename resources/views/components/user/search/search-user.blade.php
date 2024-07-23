@@ -7,7 +7,7 @@
             <div class="search-users-content-info">
                 <div class="search-users-content-info__block">
                     <div>
-                        {{ $user->subs }}
+                        {{ profile_text_info($user->subs) }}
                     </div>
                     <div>
                         {{ use_form_word($user->subs, __('подписчик'), __('подписчика'), __('подписчиков')) }}
@@ -15,7 +15,7 @@
                 </div>
                 <div class="search-users-content-info__block">
                     <div>
-                        {{ $user->sub }}
+                        {{ profile_text_info($user->sub) }}
                     </div>
                     <div>
                         {{ use_form_word($user->sub, __('подписка'), __('подписки'), __('подписок')) }}

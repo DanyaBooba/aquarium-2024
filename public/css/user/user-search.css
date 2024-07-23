@@ -4,7 +4,7 @@
 }
 
 .user-search .user-search-input input[type="search"] {
-    background-color: var(--body-color);
+    background-color: var(--body-bg);
     color: var(--text-color) !important;
     border: .1rem solid var(--form-input-border) !important;
 
@@ -14,7 +14,7 @@
 }
 
 .user-search .user-search-select select {
-    background-color: var(--body-color);
+    background-color: var(--body-bg);
     color: var(--text-color) !important;
     border: .1rem solid var(--form-input-border) !important;
 
@@ -40,6 +40,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-align: center;
 }
 
 .search-users div.search-users__profile .search-users-content-info {
@@ -49,7 +50,7 @@
     gap: 1rem;
 }
 
-.search-users div.search-users__profile .search-users-content-info .search-users-content-info__block { 
+.search-users div.search-users__profile .search-users-content-info .search-users-content-info__block {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,7 +156,7 @@
         color: var(--text-color) !important;
         background-color: var(--user-search-background-hover);
     }
-    
+
     .search-users a.search-users-content:hover .search-users-content-info .search-users-content-info__block {
         color: var(--text-color) !important;
     }
@@ -166,7 +167,7 @@
     }
 
     .user-search-filters button:hover {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
     }
 }
 
@@ -186,7 +187,7 @@
     }
 
     .user-search-filters button:active {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
     }
 }
 
