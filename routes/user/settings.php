@@ -12,11 +12,8 @@ use App\Http\Controllers\User\Settings\SessionController;
 use App\Http\Controllers\User\SettingsController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('user/settings')->middleware(
-    ['login.session', 'user.blocked', 'user.verified']
-)->group(function () {
-
-    Route::get('/', [SettingsController::class, 'index'])->name('settings');
+Route::prefix('user/settings')->middleware(['login.session', 'user.blocked', 'user.verified'])->group(function () {
+    Route::get('', [SettingsController::class, 'index'])->name('settings');
 
     Route::prefix('profile')->group(function () {
         Route::get('', [ProfileController::class, 'index'])->name('settings.profile');
@@ -40,6 +37,9 @@ Route::prefix('user/settings')->middleware(
 
     Route::get('session', [SessionController::class, 'index'])->name('settings.session');
     Route::post('session', [SessionController::class, 'store'])->name('settings.session.store');
+
+    Route::get('themes', [SettingsController::class, 'themes'])->name('settings.themes');
+    Route::get('language', [SettingsController::class, 'language'])->name('settings.language');
 
     // Route::get('test', [App\Http\Controllers\TestController::class, 'test']);
 });

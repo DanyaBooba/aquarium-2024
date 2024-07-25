@@ -1,8 +1,20 @@
-.row-user-bar {
-    position: sticky;
-    top: 1rem;
+.row-user {
+    justify-content: center !important;
+}
 
-    /* background: linear-gradient(90deg, var(--user-bar) 0%, var(--user-bar) 93%, var(--body-bg) 100%); */
+.row-user-bar {
+    padding: 0;
+}
+
+.row-user-bar-container {
+    /* overflow-y: scroll;
+    position: sticky;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important; */
+
+    position: sticky;
+    top: 0;
     padding: 3rem 2rem;
 }
 
@@ -76,6 +88,11 @@
 
 .row-user-bar .social a.active svg {
     stroke: var(--text-link-hover);
+}
+
+.row-user-content {
+    max-width: 880px !important;
+    padding: 0 !important;
 }
 
 /* media */

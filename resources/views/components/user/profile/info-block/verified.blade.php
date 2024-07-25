@@ -3,7 +3,7 @@
     <span>
         {{ __('Ваш профиль не видят другие, подтвердите аккаунт через письмо.') }}
     </span>
-    <a href="{{ route('user.setverify') }}">
+    <a href="{{ route('verify.set') }}">
         {{ __('Отправить письмо повторно') }}
     </a>
 </x-user.profile.info-block>

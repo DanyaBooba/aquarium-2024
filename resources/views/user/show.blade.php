@@ -26,5 +26,6 @@
     <x-user.profile :profile="$profile" :issub=$issub :itsme=$itsme />
     <x-user.profile.modal :listData="$listData" />
     <x-user.profile.posts :posts="$posts" />
+    <x-user.profile.toasts />
 
 @endsection

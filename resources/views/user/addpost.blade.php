@@ -14,7 +14,7 @@
             @else
                 <x-addpost.post-moderate />
             @endif
-            <form action="{{ route('user.addpost.post') }}" method="post">
+            <form action="{{ route('post.add.store') }}" method="post">
                 @csrf
                 <input id="x" type="hidden" name="message">
                 <trix-editor input="x" placeholder="{{ __('Сообщение') }}"></trix-editor>

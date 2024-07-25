@@ -8,8 +8,8 @@
 
     /* Body */
 
-    --body-bg: #f9f9f9;
-    --body-bg-alpha: #f9f9f999;
+    --body-bg: #f7f8fc;
+    --body-bg-alpha: #f7f8fc99;
     --body-bg-white: #fff;
 
     /* Text */
@@ -201,4 +201,13 @@
     --code-screen-projection-atv: #060;
     --text-code-border: #0984e3;
     --code-L: #eee;
+
+    /* Toast */
+
+    --toast-bg: #ffffff;
+    --toast-border: #ebeff2;
+
+    /* Offcanvas */
+
+    --offcanvas-bg: #ffffff;
 }

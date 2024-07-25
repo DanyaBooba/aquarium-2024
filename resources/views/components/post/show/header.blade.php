@@ -18,7 +18,7 @@
         <div>{{ $name }}</div>
     </a>
     @if ($mypost)
-        <a href="{{ route('user.post.edit', $postId) }}" class="post-show-back__edit">
+        <a href="{{ route('post.edit', $postId) }}" class="post-show-back__edit">
             Редактировать
         </a>
     @endif

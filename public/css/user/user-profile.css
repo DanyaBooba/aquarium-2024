@@ -1,5 +1,5 @@
 .user-profile {
-    background-color: var(--body-bg);
+    margin-bottom: 1rem;
 }
 
 .user-profile .user-profile-left {
@@ -19,8 +19,8 @@
 }
 
 .user-profile .user-profile-right div {
-    margin-right: 2rem;
-    margin-bottom: .7rem;
+    margin-left: 1.5rem;
+    margin-bottom: .5rem;
 }
 
 .user-profile .user-profile-right div button {
@@ -45,7 +45,7 @@
     font-size: 2rem;
     font-family: ResistSans;
 
-    margin-bottom: -.5rem;
+    margin-bottom: -12px;
 }
 
 .user-profile .user-profile-right div p:not(:first-child) {
@@ -148,10 +148,8 @@
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
 
-    padding: 1rem;
-    padding-left: 2rem;
+    padding: 1rem 2rem;
     margin-top: -14px;
-
     border-radius: 12px;
 }
 
@@ -165,8 +163,8 @@
 }
 
 .user-profile .user-profile-buttons::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 .user-profile .user-profile-buttons {
@@ -176,7 +174,7 @@
     overflow: scroll;
 
     margin-top: .5rem;
-    padding: .2rem 0;
+    padding: .2rem;
     margin-bottom: .5rem;
 }
 
@@ -191,13 +189,12 @@
 
     color: var(--user-profile-button-text);
     background-color: var(--user-profile-button);
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
     border: none;
     border-radius: 8px;
 
     padding: .7rem 1.4rem;
-    margin-right: .5rem;
-    margin-left: .5rem;
+    margin-right: .7rem;
+    /* margin-left: .5rem; */
 
     transition: .15s;
 }
@@ -224,9 +221,35 @@
     margin-right: .5rem;
 }
 
+.user-profile .user-profile-text p.user-profile-name::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.user-profile .user-profile-text p.user-profile-name {
+    max-width: 300px;
+
+    overflow: scroll;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
+}
+
+.user-profile .user-profile-text p.user-profile-desc::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.user-profile .user-profile-text p.user-profile-desc {
+    max-width: 300px;
+
+    overflow: scroll;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
+}
+
 /* media */
 
-@media(max-width: 767.98px) {
+@media(max-width: 860px) {
     .container {
         padding-left: .6rem !important;
         padding-right: .6rem !important;
@@ -275,25 +298,11 @@
     .user-profile img.user-profile-cap {
         height: 300px;
     }
+}
 
+@media(max-width: 767.98px) {
     .user-profile .user-profile-buttons button.user-button-mobile {
         display: block;
-    }
-
-    .user-profile .user-profile-text p.user-profile-name {
-        max-width: 300px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .user-profile .user-profile-text p.user-profile-desc {
-        max-width: 300px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     }
 }
 
@@ -302,22 +311,10 @@
         min-width: 380px !important;
         min-height: 156px !important;
     }
+}
 
-    .user-profile .user-profile-text p.user-profile-name {
-        max-width: 300px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .user-profile .user-profile-text p.user-profile-desc {
-        max-width: 300px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+.user-profile .user-profile-buttons button:not(:disabled) {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
 }
 
 @media(hover: hover) {

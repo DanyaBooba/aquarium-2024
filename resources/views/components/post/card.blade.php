@@ -13,7 +13,7 @@
                 </div>
             </a>
         @endif
-        <a href="{{ route('user.post.show.id', [$post->idUser, $post->idPost]) }}" class="card">
+        <a href="{{ route('post.show', [$post->idUser, $post->idPost]) }}" class="card">
             <img src="{{ asset('img/user/posts/' . $post->idUser . '-' . $post->idPost . '.jpg') }}" class="card-img">
             <div class="card-img-overlay">
                 <div class="post">
@@ -34,7 +34,7 @@
                 </div>
             </a>
         @endif
-        <a href="{{ route('user.post.show.id', [$post->idUser, $post->idPost]) }}" class="card">
+        <a href="{{ route('post.show', [$post->idUser, $post->idPost]) }}" class="card">
             <div class="post">
                 <p>
                     {{ $post->desc }}

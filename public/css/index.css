@@ -1,5 +1,7 @@
 @import "_module/header/header.css";
 @import "_module/footer/footer.css";
+@import "_module/toast/toast.css";
+@import "_module/offcanvas/offcanvas.css";
 @import "_module/body/index.css";
 @import "_module/text/index.css";
 @import "_module/fonts/index.css";

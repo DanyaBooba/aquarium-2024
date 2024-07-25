@@ -17,26 +17,30 @@
     margin: 0;
 }
 
+.post-show-bottom button svg {
+    stroke: var(--text-color) !important;
+}
+
 .post-show-bottom .post-show-bottom__like svg.heart-fill {
     fill: var(--user-bar-exit) !important;
 }
 
 @media(hover: hover) {
     .post-show-bottom .post-show-bottom__like:hover svg.heart-stroke {
-        stroke: var(--user-bar-exit);
+        stroke: var(--user-bar-exit) !important;
     }
 
     .post-show-bottom button:hover svg {
-        stroke: var(--text-link-hover);
+        stroke: var(--text-link-hover) !important;
     }
 }
 
 @media(hover: none) {
     .post-show-bottom .post-show-bottom__like:active svg.heart-stroke {
-        stroke: var(--user-bar-exit);
+        stroke: var(--user-bar-exit) !important;
     }
 
     .post-show-bottom button:active svg {
-        stroke: var(--text-link-hover);
+        stroke: var(--text-link-hover) !important;
     }
 }

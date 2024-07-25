@@ -95,7 +95,7 @@
     --user-profile-image-bg: #221f40ee;
     --user-profile-image-bg-image: #221f40;
     --user-profile-image-border: #302d57;
-    --user-profile-button: #1f1d3a;
+    --user-profile-button: #222040;
     --user-profile-button-accent-text: #fff;
     --user-profile-button-hover: #342f5e;
     --user-profile-button-text: #fff;
@@ -160,7 +160,7 @@
     /* User Achivs */
 
     --achivs-background: #17152b;
-    --achiv-shadow: rgba(80, 70, 143, .15);
+    --achiv-shadow: rgba(0, 0, 0, .15);
 
     /* User Qr Code */
 
@@ -200,4 +200,13 @@
     --code-screen-projection-atn: #404;
     --code-screen-projection-atv: #060;
     --code-L: #27234b;
+
+    /* Toast */
+
+    --toast-bg: #1c1935;
+    --toast-border: #211f41;
+
+    /* Offcanvas */
+
+    --offcanvas-bg: #1c1935;
 }

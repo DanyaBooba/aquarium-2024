@@ -9,6 +9,14 @@
 @section('page.title', __('Пост'))
 
 @section('user.alert')
+    @if ($alert = session()->pull('alert.error'))
+        <x-user.alert.alert :close=false>
+            {{ $alert }}
+        </x-user.alert.alert>
+    @endif
+@endsection
+
+@section('user.alert')
     @if ($active == 0)
         <x-user.alert.alert :close=false>
             {{ __('Запись находится на модерации') }}

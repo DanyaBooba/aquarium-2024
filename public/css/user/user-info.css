@@ -2,7 +2,7 @@
     display: flex;
     overflow: scroll;
     margin-bottom: 1rem;
-    padding: .2rem 0;
+    padding: .2rem;
 }
 
 .profile-info::-webkit-scrollbar {
@@ -18,7 +18,7 @@
     min-width: 330px;
     max-width: 330px;
     margin-right: .5rem;
-    margin-left: .5rem;
+    /* margin-left: .5rem; */
     /* margin-bottom: 1rem; */
 }
 

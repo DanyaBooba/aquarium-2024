@@ -14,8 +14,7 @@
             </a>
         </div>
         <div>
-            <a href="{{ profile_route_active_link('user.addpost') }}"
-                class="{{ header_route_active_link('user.addpost') }}">
+            <a href="{{ profile_route_active_link('post.add') }}" class="{{ header_route_active_link('post.add') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10" />

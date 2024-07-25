@@ -37,10 +37,15 @@
 .search-users div.search-users__profile p {
     margin-bottom: .5rem;
     max-width: 155px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: scroll;
+    /* text-overflow: ellipsis; */
     white-space: nowrap;
     text-align: center;
+}
+
+.search-users div.search-users__profile p::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
 }
 
 .search-users div.search-users__profile .search-users-content-info {
@@ -208,6 +213,7 @@
         width: 100% !important;
         height: auto !important;
         border: none !important;
+        padding-top: 1rem !important;
         flex-direction: row !important;
         gap: 1rem;
     }
@@ -216,9 +222,3 @@
         margin-bottom: .25rem;
     }
 }
-
-/* @media(max-width: 447.98px) {
-    .search-users div.search-users__profile {
-        width: 100% !important;
-    }
-} */

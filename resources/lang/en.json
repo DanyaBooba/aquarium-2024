@@ -567,5 +567,17 @@
     "Импортировать посты": "Import posts",
     "Имя и фамилия": "First and last name",
     "Изменение данных": "Data change",
-    "По умолчанию": "Default"
+    "По умолчанию": "Default",
+    "Язык системы": "System language",
+    "Загрузить аватарку": "Upload avatar",
+    "Загрузить шапку": "Upload cap",
+    "Загрузить": "Download",
+    "Информация о профиле": "Profile information",
+    "с первых минут": "from the first minutes",
+    "любовь к проекту": "love of the project",
+    "поддержка проекта": "project support",
+    "автор проекта": "project author",
+    "менеджер проекта": "project manager",
+    "подписка на телеграм": "Telegram subscription",
+    "яндекс": "yandex"
 }

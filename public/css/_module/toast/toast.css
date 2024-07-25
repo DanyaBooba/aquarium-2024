@@ -1,0 +1,29 @@
+.toast {
+    border: .1rem solid var(--toast-border) !important;
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
+    border-radius: 8px !important;
+    background-color: var(--toast-bg) !important;
+}
+
+.toast-body {
+    font-size: 1rem;
+    padding: .75rem 1rem !important;
+}
+
+.toast-container {
+    position: fixed;
+    padding: 1rem;
+    right: 0 !important;
+}
+
+@media(min-width: 768px) {
+    .toast-container {
+        bottom: 0px !important;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .toast-container {
+        bottom: 45px !important;
+    }
+}

@@ -5,7 +5,7 @@
 @section('addpost.content')
     <div class="container-settings-main">
         <div class="editpost-header">
-            <a href="{{ route('user.post.show.id', [$userId, $post->idPost]) }}">
+            <a href="{{ route('post.show', [$userId, $post->idPost]) }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-chevron-left">
@@ -20,7 +20,7 @@
 
         <div class="addpost-container">
             <x-addpost.post-change />
-            <form action="{{ route('user.changepost.post') }}" method="post">
+            <form action="{{ route('post.edit.store') }}" method="post">
                 @csrf
                 <input id="x" type="hidden" name="message">
                 <input type="hidden" name="idPost" value="{{ $post->idPost }}">
@@ -29,7 +29,7 @@
                     {{ __('Изменить') }}
                 </button>
             </form>
-            <button class="btn btn-danger mt-3" onclick="buttonOpenURL('{{ route('user.post.delete', $post->idPost) }}')">
+            <button class="btn btn-danger mt-3" onclick="buttonOpenURL('{{ route('post.delete', $post->idPost) }}')">
                 {{ __('Удалить пост') }}
             </button>
         </div>

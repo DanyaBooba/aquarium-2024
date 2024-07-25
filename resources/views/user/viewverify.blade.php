@@ -13,7 +13,7 @@
     <p class="text-center">
         Чтобы взаимодействовать с пользователями, пройдите по ссылке в письме.
     </p>
-    <a href="{{ route('user.setverify') }}" class="simple">
+    <a href="{{ route('verify.set') }}" class="simple">
         {{ __('Отправить ещё раз?') }}
     </a>
     <a href="{{ route('user.exit.exactly') }}" class="simple">

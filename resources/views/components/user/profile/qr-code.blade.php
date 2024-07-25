@@ -26,11 +26,11 @@
 <script src="{{ asset('js/user/qrcode-copy.js') }}"></script>
 <script src="{{ asset('js/user/qrcode.min.js') }}"></script>
 <script>
-    let qrcodeBlock = document.getElementById("qr-code-generator");
-    let data = "{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}";
-    let size = 512;
+    const qrcodeBlock = document.getElementById("qr-code-generator");
+    const data = "{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}";
+    const size = 512
 
-    let qrcode = new QRCodeStyling({
+    const qrcode = new QRCodeStyling({
         width: size,
         height: size,
         type: "svg",
@@ -55,7 +55,7 @@
 
     qrcode.append(qrcodeBlock);
 
-    let qrcodeHtml = document.querySelector("#qr-code-generator svg");
+    const qrcodeHtml = document.querySelector("#qr-code-generator svg");
 
     qrcodeHtml.setAttribute("viewBox", `0 0 ${size} ${size}`);
 </script>

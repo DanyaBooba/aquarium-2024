@@ -20,5 +20,6 @@
     <x-user.profile.modal :listData="$listData" />
     <x-user.profile.me-info :profile="$profile" />
     <x-user.profile.posts :posts="$posts" />
+    <x-user.profile.toasts />
 
 @endsection
